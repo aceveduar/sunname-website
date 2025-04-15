@@ -3,15 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Web</title>
+    <meta name="description" content="Sunname - Respaldados por los mejores partners y certificaciones en implementaciones ERP">
+    <title>Sunname | Respaldados por los Mejores</title>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">   
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Bienvenido</h1>
-        <p>Esta es una página de ejemplo</p>
-        <button id="miBoton">¡Haz clic aquí!</button>
-    </div>
-    <script src="script.js"></script>
+    <main class="sunname-sections">
+        <section class="partners" aria-labelledby="partners-title">
+            <div class="container">
+                <header>
+                    <h2 id="partners-title" class="partners__title">Respaldados por los Mejores</h2>
+                    <p class="partners__subtitle">
+                        Nuestros expertos certificados te garantizan implementaciones exitosas, sin complicaciones.
+                    </p>
+                </header>
+                
+                <div class="partners__grid" role="list">
+                    <article class="partner-card" role="listitem" aria-labelledby="odoo-title" style="--order: 1">
+                        <div class="partner-card__header">
+                            <div class="partner-card__logo-container">
+                                <img class="partner-card__logo" src="https://odoocdn.com/openerp_website/static/src/img/assets/svg/odoo_learning_partner_rgb.svg" alt="Logo Odoo Learning Partner" width="200" height="80" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="partner-card__body">
+                            <h3 id="odoo-title" class="partner-card__title">Odoo Learning Partner</h3>
+                            <p class="partner-card__text">
+                                Como partner oficial de Odoo, contamos con el respaldo y la certificación necesaria para ofrecer implementaciones, personalizaciones y capacitaciones de la más alta calidad. Nuestro equipo está certificado para ayudarte a aprovechar al máximo esta potente plataforma.
+                            </p>
+
+                            <button class="btn btn--primary" type="button">Explorar soluciones</button>
+                        </div>
+                    </article>
+
+                    <article class="partner-card" role="listitem" aria-labelledby="certification-title" style="--order: 2">
+                        <div class="partner-card__header">
+                            <div class="partner-card__certification">
+                                <i class="fas fa-certificate" aria-hidden="true"></i>
+                                <h3 id="certification-title">Experiencia Certificada</h3>
+                            </div>
+                        </div>
+                        <div class="partner-card__body">
+                            <h3 class="partner-card__title">Expertos en Implementación</h3>
+                            <p class="partner-card__text">
+                                Nuestro equipo cuenta con amplia experiencia en la implementación y personalización de Odoo para diferentes industrias. Hemos ayudado a numerosas empresas a optimizar sus procesos y maximizar el retorno de su inversión en tecnología.
+                            </p>
+                            <div class="partner-card__tags" role="list">
+                                <span class="partner-card__tag" role="listitem">Manufactura</span>
+                                <span class="partner-card__tag" role="listitem">Retail</span>
+                                <span class="partner-card__tag" role="listitem">Servicios</span>
+                                <span class="partner-card__tag" role="listitem">Logística</span>
+                            </div>
+                            <button class="btn btn--secondary" type="button">Ver casos de éxito</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
 </body>
-</html> 
+</html>
