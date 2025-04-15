@@ -6,11 +6,14 @@
     <meta name="description" content="Sunname - Respaldados por los mejores partners y certificaciones en implementaciones ERP">
     <title>Sunname | Respaldados por los Mejores</title>
     <!--Font Awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!--AOS Animation-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <main class="sunname-sections">
+        <!-- Sección de Partners -->
         <section class="partners" aria-labelledby="partners-title">
             <div class="container">
                 <header>
@@ -61,7 +64,362 @@
                 </div>
             </div>
         </section>
+
+        <!-- Sección de Servicios -->
+        <section class="services" aria-labelledby="services-title">
+            <div class="container">
+                <header>
+                    <h2 id="services-title" class="services__title">Nuestros Servicios</h2>
+                    <p class="services__subtitle">
+                        Soluciones tecnológicas pensadas para hacer crecer tu empresa y optimizar tus procesos.
+                    </p>
+                </header>
+          
+                <div class="services__grid" role="list">
+                    <!-- Servicio 1 -->
+                    <article class="service-card" role="listitem" aria-labelledby="service-erp-title" style="--order: 1" data-aos="fade-up">
+                        <div class="service-card__icon-circle">
+                            <i class="fas fa-cogs" aria-hidden="true"></i>
+                        </div>
+                        <div class="service-card__body">
+                            <h3 id="service-erp-title" class="service-card__title">Implementación de ERP (Odoo)</h3>
+                            <p class="service-card__text">
+                                Implementamos y configuramos Odoo adaptado a las necesidades específicas de tu empresa.
+                            </p>
+                            <ul class="service-card__list">
+                                <li class="service-card__item">Configuración, personalización y capacitación.</li>
+                                <li class="service-card__item">Soporte post-implementación.</li>
+                                <li class="service-card__item">Experiencia en múltiples industrias y sectores.</li>
+                            </ul>
+                        </div>
+                    </article>
+          
+                    <!-- Servicio 2 -->
+                    <article class="service-card" role="listitem" aria-labelledby="service-dev-title" style="--order: 2" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-card__icon-circle">
+                            <i class="fas fa-code" aria-hidden="true"></i>
+                        </div>
+                        <div class="service-card__body">
+                            <h3 id="service-dev-title" class="service-card__title">Desarrollo a la Medida</h3>
+                            <p class="service-card__text">
+                                Creamos soluciones personalizadas que se adaptan perfectamente a tus procesos de negocio.
+                            </p>
+                            <ul class="service-card__list">
+                                <li class="service-card__item">Adaptación de módulos y procesos específicos.</li>
+                                <li class="service-card__item">Integración con sistemas actuales.</li>
+                                <li class="service-card__item">Desarrollo de funcionalidades exclusivas para tu empresa.</li>
+                            </ul>
+                        </div>
+                    </article>
+          
+                    <!-- Servicio 3 -->
+                    <article class="service-card" role="listitem" aria-labelledby="service-strategy-title" style="--order: 3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-card__icon-circle">
+                            <i class="fas fa-chart-line" aria-hidden="true"></i>
+                        </div>
+                        <div class="service-card__body">
+                            <h3 id="service-strategy-title" class="service-card__title">Estrategia y definición de procesos</h3>
+                            <p class="service-card__text">
+                                Analizamos y optimizamos tus procesos para maximizar la eficiencia y productividad.
+                            </p>
+                            <ul class="service-card__list">
+                                <li class="service-card__item">Optimización de procesos internos.</li>
+                                <li class="service-card__item">Estrategia a medida para impulsar tu negocio.</li>
+                                <li class="service-card__item">Consultoría especializada en transformación digital.</li>
+                            </ul>
+                        </div>
+                    </article>
+          
+                    <!-- Servicio 4 -->
+                    <article class="service-card" role="listitem" aria-labelledby="service-ecommerce-title" style="--order: 4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-card__icon-circle">
+                            <i class="fas fa-store" aria-hidden="true"></i>
+                        </div>
+                        <div class="service-card__body">
+                            <h3 id="service-ecommerce-title" class="service-card__title">Creación de Tiendas en Línea</h3>
+                            <p class="service-card__text">
+                                Desarrollamos plataformas de e-commerce integradas con tu sistema ERP para una gestión unificada.
+                            </p>
+                            <ul class="service-card__list">
+                                <li class="service-card__item">Desarrollo de e-commerce.</li>
+                                <li class="service-card__item">Carga automática de productos con web scraping.</li>
+                                <li class="service-card__item">Integración completa con tu inventario y logística.</li>
+                            </ul>
+                        </div>
+                    </article>
+          
+                    <!-- Servicio 5 -->
+                    <article class="service-card" role="listitem" aria-labelledby="service-support-title" style="--order: 5" data-aos="fade-up" data-aos-delay="400">
+                        <div class="service-card__icon-circle">
+                            <i class="fas fa-tools" aria-hidden="true"></i>
+                        </div>
+                        <div class="service-card__body">
+                            <h3 id="service-support-title" class="service-card__title">Soporte Técnico y Mantenimiento</h3>
+                            <p class="service-card__text">
+                                Ofrecemos soporte continuo para garantizar el óptimo funcionamiento de tus sistemas.
+                            </p>
+                            <ul class="service-card__list">
+                                <li class="service-card__item">Pólizas de soporte, mantenimiento y actualizaciones.</li>
+                                <li class="service-card__item">Garantía de 2 meses tras la implementación.</li>
+                                <li class="service-card__item">Atención personalizada y tiempos de respuesta garantizados.</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Confianza -->
+        <section class="trust" aria-labelledby="trust-title">
+            <div class="container">
+                <header>
+                    <h2 id="trust-title" class="trust__title">Confianza que Nos Impulsa</h2>
+                    <p class="trust__subtitle">
+                        Estamos orgullosos de trabajar con marcas líderes en el mercado que comparten nuestro compromiso con la calidad y la innovación.
+                    </p>
+                </header>
+                
+                <div class="trust__grid" role="list">
+                    <!-- Logo 1 -->
+                    <div class="brand-card" role="listitem" data-aos="fade-up">
+                        <svg viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100" height="50" fill="#263980" rx="5"/>
+                            <text x="50" y="30" font-family="Arial" font-size="20" fill="#fff" text-anchor="middle">LOGO 1</text>
+                        </svg>
+                    </div>
+                    <!-- Logo 2 -->
+                    <div class="brand-card" role="listitem" data-aos="fade-up" data-aos-delay="100">
+                        <svg viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100" height="50" fill="#46C2CE" rx="5"/>
+                            <text x="50" y="30" font-family="Arial" font-size="20" fill="#fff" text-anchor="middle">LOGO 2</text>
+                        </svg>
+                    </div>
+                    <!-- Logo 3 -->
+                    <div class="brand-card" role="listitem" data-aos="fade-up" data-aos-delay="200">
+                        <svg viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100" height="50" fill="#2C1A56" rx="5"/>
+                            <text x="50" y="30" font-family="Arial" font-size="20" fill="#fff" text-anchor="middle">LOGO 3</text>
+                        </svg>
+                    </div>
+                    <!-- Logo 4 -->
+                    <div class="brand-card" role="listitem" data-aos="fade-up" data-aos-delay="300">
+                        <svg viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100" height="50" fill="#7F52A0" rx="5"/>
+                            <text x="50" y="30" font-family="Arial" font-size="20" fill="#fff" text-anchor="middle">LOGO 4</text>
+                        </svg>
+                    </div>
+                    <!-- Logo 5 -->
+                    <div class="brand-card" role="listitem" data-aos="fade-up" data-aos-delay="400">
+                        <svg viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="25" r="20" fill="#263980"/>
+                            <text x="50" y="28" font-family="Arial" font-size="14" fill="#fff" text-anchor="middle">CÍRCULO</text>
+                        </svg>
+                    </div>
+                    <!-- Logo 6 -->
+                    <div class="brand-card" role="listitem" data-aos="fade-up" data-aos-delay="500">
+                        <svg viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
+                            <polygon points="50,5 90,45 10,45" fill="#46C2CE"/>
+                            <text x="50" y="35" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle">TRIÁNG</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Cuidamos los resultados -->
+        <section class="results" aria-labelledby="results-title">
+            <div class="container">
+                <div class="results__content">
+                    <div class="results__text">
+                        <h2 id="results-title" class="results__title">Cuidamos los resultados</h2>
+                        <p class="results__lead">
+                            Con más de 45 proyectos exitosos, combinamos pasión y estrategia para impulsar el éxito de nuestros clientes, asegurando resultados que marcan la diferencia en el futuro.
+                        </p>
+                        
+                        <div class="results__info-box">
+                            <h3 class="results__info-title">Más información</h3>
+                            <ul class="results__features-list">
+                                <li class="results__feature-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Soluciones adaptadas a tus necesidades</span>
+                                </li>
+                                <li class="results__feature-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Enfoque personalizado en cada proyecto</span>
+                                </li>
+                                <li class="results__feature-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Resultados medibles y garantizados</span>
+                                </li>
+                            </ul>
+                            
+                            <div class="results__quote-box">
+                                <p>"Como socio comprometido, creamos soluciones personalizadas que brindan tranquilidad y confianza. En Sunname, buscamos siempre superar tus expectativas para que te enfoques en lo que realmente importa: hacer crecer tu negocio."</p>
+                            </div>
+                            
+                            <button class="btn btn--primary">Descubrir más</button>
+                        </div>
+                    </div>
+                    
+                    <div class="results__image" data-aos="fade-left">
+                        <div class="results__image-placeholder">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Estadísticas -->
+        <section class="stats" aria-labelledby="stats-title">
+            <div class="container">
+                <div class="stats__grid" role="list">
+                    <div class="stats__card" role="listitem" data-aos="fade-up">
+                        <div class="stats__number">+45</div>
+                        <div class="stats__label">Empresas felices</div>
+                    </div>
+                    <div class="stats__card" role="listitem" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stats__number">10</div>
+                        <div class="stats__label">Empresas de fabricación</div>
+                    </div>
+                    <div class="stats__card" role="listitem" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stats__number">15</div>
+                        <div class="stats__label">Páginas increíbles</div>
+                    </div>
+                    <div class="stats__card" role="listitem" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stats__number">10</div>
+                        <div class="stats__label">Puntos de venta</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Proceso -->
+        <section class="process" aria-labelledby="process-title">
+            <div class="container">
+                <header>
+                    <h2 id="process-title" class="process__title">Nuestro Proceso</h2>
+                </header>
+                <div class="process__steps" role="list">
+                    <div class="process__step" role="listitem" data-aos="fade-up">
+                        <div class="process__step-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h3 class="process__step-title">Programamos una demo</h3>
+                        <p class="process__step-description">Hacemos un levantamiento de alto nivel a su propósito.</p>
+                    </div>
+                    <div class="process__step" role="listitem" data-aos="fade-up" data-aos-delay="100">
+                        <div class="process__step-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3 class="process__step-title">Te damos una propuesta</h3>
+                        <p class="process__step-description">Adaptamos nuestra solución a sus necesidades específicas.</p>
+                    </div>
+                    <div class="process__step" role="listitem" data-aos="fade-up" data-aos-delay="200">
+                        <div class="process__step-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3 class="process__step-title">Hacemos análisis</h3>
+                        <p class="process__step-description">Validamos todos los requerimientos técnicos.</p>
+                    </div>
+                    <div class="process__step" role="listitem" data-aos="fade-up" data-aos-delay="300">
+                        <div class="process__step-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3 class="process__step-title">Implementación</h3>
+                        <p class="process__step-description">Comenzamos el desarrollo de su solución.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Testimonial -->
+        <section class="testimonial" aria-labelledby="testimonial-title">
+            <div class="container">
+                <div class="testimonial__card" data-aos="fade-up">
+                    <div class="testimonial__content">
+                        <blockquote class="testimonial__quote">
+                            "Más de 50,000 empresas utilizan Odoo para hacer crecer su negocio. Confíenos y juntos mejoraremos su empresa"
+                        </blockquote>
+                        <div class="testimonial__cta">
+                            <button class="btn btn--primary">Confíenos</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <h2 class="footer__logo">Sunname</h2>
+                    <p class="footer__tagline">IMPULSA TU NEGOCIO</p>
+                </div>
+                
+                <div class="footer__grid">
+                    <div class="footer__links">
+                        <h3 class="footer__heading">Servicios</h3>
+                        <ul class="footer__menu">
+                            <li><a href="#" class="footer__link">Implementación Odoo</a></li>
+                            <li><a href="#" class="footer__link">Desarrollo a Medida</a></li>
+                            <li><a href="#" class="footer__link">Consultoría</a></li>
+                            <li><a href="#" class="footer__link">E-commerce</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__links">
+                        <h3 class="footer__heading">Empresa</h3>
+                        <ul class="footer__menu">
+                            <li><a href="#" class="footer__link">Nosotros</a></li>
+                            <li><a href="#" class="footer__link">Equipo</a></li>
+                            <li><a href="#" class="footer__link">Clientes</a></li>
+                            <li><a href="#" class="footer__link">Contacto</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__contact">
+                        <h3 class="footer__heading">Contacto</h3>
+                        <ul class="footer__contact-list">
+                            <li class="footer__contact-item">
+                                <i class="fas fa-map-marker-alt"></i> 
+                                <span>Av. Ejemplo 123, CDMX</span>
+                            </li>
+                            <li class="footer__contact-item">
+                                <i class="fas fa-phone"></i> 
+                                <span>+52 55 1234 5678</span>
+                            </li>
+                            <li class="footer__contact-item">
+                                <i class="fas fa-envelope"></i> 
+                                <span>info@sunname.com</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2023 Sunname. Todos los derechos reservados.</p>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="footer__social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="footer__social-link"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__wave"></div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 800
+        });
+    </script>
 </body>
 </html>
