@@ -3,62 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sunname - Respaldados por los mejores partners y certificaciones en implementaciones ERP">
-    <title>Sunname | Respaldados por los Mejores</title>
+    <meta name="description" content="OdooExperts - Soluciones ERP Premium y servicios de implementación Odoo">
+    <title>OdooExperts | Soluciones ERP Premium</title>
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <!--AOS Animation-->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <main class="sunname-sections">
+    <main class="sun">
+        <!-- NUEVA SECCIÓN HERO - INICIO -->
+        <section class="odoo-hero" id="Inicio">
+            <div class="odoo-hero__container">
+                <div class="odoo-hero__content">
+                    <div class="odoo-hero__text">
+                        <div class="odoo-hero__badge">SOLUCIONES ERP PREMIUM</div>
+                        <h1 class="odoo-hero__title">Impulsa tu negocio <span class="odoo-hero__highlight">con Odoo</span></h1>
+                        <p class="odoo-hero__description">En <span class="odoo-hero__highlight">Sunname</span>, adaptamos Odoo a las necesidades de tu empresa y entrenamos a tu equipo para sacar el máximo provecho de cada módulo, optimizando tus procesos y facilitando el crecimiento.</p>
+                        <div class="odoo-hero__buttons">
+                            <a href="#Contacto" class="odoo-hero__button odoo-hero__button--primary">
+                                Contáctanos
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                            <a href="#Nuestros-Servicios" class="odoo-hero__button odoo-hero__button--secondary">
+                                <i class="fa fa-list-check odoo-hero__play-icon" aria-hidden="true"></i>
+                                Ver nuestros servicios
+                            </a>
+                        </div>
+                        <div class="odoo-hero__clients">
+                            <div class="odoo-hero__avatars">
+                                <div class="odoo-hero__avatar" style="background-color: var(--sun-color-primary)"></div>
+                                <div class="odoo-hero__avatar" style="background-color: var(--sun-color-secondary)"></div>
+                                <div class="odoo-hero__avatar" style="background-color: var(--sun-color-dark)"></div>
+                                <div class="odoo-hero__avatar" style="background-color: var(--sun-color-purple-light, #7F52A0)"></div>
+                            </div>
+                            <div class="odoo-hero__client-text">
+                                <span class="odoo-hero__highlight">+50</span> empresas confían en nosotros
+                            </div>
+                        </div>
+                    </div>
+                    <div class="odoo-hero__image">
+                        <div class="odoo-hero__dashboard-container">
+                            <img src="https://www.sunname.com.mx/web/image/33366-484237c5/image.png?height=256" alt="Dashboard Odoo en acción" class="odoo-hero__dashboard-image">
+                            <div class="odoo-hero__version-badge">Versión 18</div>
+                        </div>
+                        <div class="odoo-hero__glow-effect"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- NUEVA SECCIÓN HERO - FIN -->
+
         <!-- Sección de Partners -->
-        <section class="partners" aria-labelledby="partners-title">
-            <div class="container">
-                <header>
-                    <h2 id="partners-title" class="partners__title">Respaldados por los Mejores</h2>
-                    <p class="partners__subtitle">
+        <section class="sun__section sun__section--light" id="Partners" aria-labelledby="partners-title">
+            <div class="sun__container">
+                <header class="sun-header">
+                    <h2 id="partners-title" class="sun-header__title">Respaldados por los Mejores</h2>
+                    <p class="sun-header__subtitle">
                         Nuestros expertos certificados te garantizan implementaciones exitosas, sin complicaciones.
                     </p>
                 </header>
                 
-                <div class="partners__grid" role="list">
-                    <article class="partner-card" role="listitem" aria-labelledby="odoo-title" style="--order: 1">
-                        <div class="partner-card__header">
-                            <div class="partner-card__logo-container">
-                                <img class="partner-card__logo" src="https://odoocdn.com/openerp_website/static/src/img/assets/svg/odoo_learning_partner_rgb.svg" alt="Logo Odoo Learning Partner" width="200" height="80" loading="lazy">
+                <div class="sun-grid sun-grid--2col" role="list">
+                    <article class="sun-card sun-partner-card" role="listitem" aria-labelledby="odoo-title" style="--order: 1">
+                        <div class="sun-partner-card__header">
+                            <div class="sun-partner-card__logo-container">
+                                <img class="sun-partner-card__logo" src="https://odoocdn.com/openerp_website/static/src/img/assets/svg/odoo_learning_partner_rgb.svg" alt="Logo Odoo Learning Partner" width="200" height="80" loading="lazy">
                             </div>
                         </div>
-                        <div class="partner-card__body">
-                            <h3 id="odoo-title" class="partner-card__title">Odoo Learning Partner</h3>
-                            <p class="partner-card__text">
+                        <div class="sun-card__body">
+                            <h3 id="odoo-title" class="sun-card__title">Odoo Learning Partner</h3>
+                            <p class="sun-card__text">
                                 Como partner oficial de Odoo, contamos con el respaldo y la certificación necesaria para ofrecer implementaciones, personalizaciones y capacitaciones de la más alta calidad. Nuestro equipo está certificado para ayudarte a aprovechar al máximo esta potente plataforma.
                             </p>
 
-                            <button class="btn btn--primary" type="button">Explorar soluciones</button>
+                            <button class="sun-btn sun-btn--primary" type="button">Explorar soluciones</button>
                         </div>
                     </article>
 
-                    <article class="partner-card" role="listitem" aria-labelledby="certification-title" style="--order: 2">
-                        <div class="partner-card__header">
-                            <div class="partner-card__certification">
+                    <article class="sun-card sun-partner-card" role="listitem" aria-labelledby="certification-title" style="--order: 2">
+                        <div class="sun-partner-card__header">
+                            <div class="sun-partner-card__certification">
                                 <i class="fas fa-certificate" aria-hidden="true"></i>
                                 <h3 id="certification-title">Experiencia Certificada</h3>
                             </div>
                         </div>
-                        <div class="partner-card__body">
-                            <h3 class="partner-card__title">Expertos en Implementación</h3>
-                            <p class="partner-card__text">
+                        <div class="sun-card__body">
+                            <h3 class="sun-card__title">Expertos en Implementación</h3>
+                            <p class="sun-card__text">
                                 Nuestro equipo cuenta con amplia experiencia en la implementación y personalización de Odoo para diferentes industrias. Hemos ayudado a numerosas empresas a optimizar sus procesos y maximizar el retorno de su inversión en tecnología.
                             </p>
-                            <div class="partner-card__tags" role="list">
-                                <span class="partner-card__tag" role="listitem">Manufactura</span>
-                                <span class="partner-card__tag" role="listitem">Retail</span>
-                                <span class="partner-card__tag" role="listitem">Servicios</span>
-                                <span class="partner-card__tag" role="listitem">Logística</span>
+                            <div class="sun-tags" role="list">
+                                <span class="sun-tag" role="listitem">Manufactura</span>
+                                <span class="sun-tag" role="listitem">Retail</span>
+                                <span class="sun-tag" role="listitem">Servicios</span>
+                                <span class="sun-tag" role="listitem">Logística</span>
                             </div>
-                            <button class="btn btn--secondary" type="button">Ver casos de éxito</button>
+                            <button class="sun-btn sun-btn--secondary" type="button">Ver casos de éxito</button>
                         </div>
                     </article>
                 </div>
@@ -66,204 +106,178 @@
         </section>
 
         <!-- Sección de Servicios -->
-        <section class="services" aria-labelledby="services-title">
-            <div class="container">
-                <header>
-                    <h2 id="services-title" class="services__title">Nuestros Servicios</h2>
-                    <p class="services__subtitle">
+        <section class="sun__section sun__section--white" id="Nuestros-Servicios" aria-labelledby="services-title">
+            <div class="sun__container">
+                <header class="sun-header">
+                    <h2 id="services-title" class="sun-header__title">Nuestros Servicios</h2>
+                    <p class="sun-header__subtitle">
                         Soluciones tecnológicas pensadas para hacer crecer tu empresa y optimizar tus procesos.
                     </p>
                 </header>
           
-                <div class="services__grid" role="list">
+                <div class="sun-grid sun-grid--3col" role="list">
                     <!-- Servicio 1 -->
-                    <article class="service-card" role="listitem" aria-labelledby="service-erp-title" style="--order: 1" data-aos="fade-up">
-                        <div class="service-card__icon-circle">
+                    <article class="sun-card sun-service-card" role="listitem" aria-labelledby="service-erp-title" style="--order: 1">
+                        <div class="sun-icon-circle">
                             <i class="fas fa-cogs" aria-hidden="true"></i>
                         </div>
-                        <div class="service-card__body">
-                            <h3 id="service-erp-title" class="service-card__title">Implementación de ERP (Odoo)</h3>
-                            <p class="service-card__text">
-                                Implementamos y configuramos Odoo adaptado a las necesidades específicas de tu empresa.
-                            </p>
-                            <ul class="service-card__list">
-                                <li class="service-card__item">Configuración, personalización y capacitación.</li>
-                                <li class="service-card__item">Soporte post-implementación.</li>
-                                <li class="service-card__item">Experiencia en múltiples industrias y sectores.</li>
-                            </ul>
-                        </div>
+                        <h3 id="service-erp-title" class="sun-card__title">Implementación de ERP (Odoo)</h3>
+                        <p class="sun-card__text">
+                            Implementamos y configuramos Odoo adaptado a las necesidades específicas de tu empresa.
+                        </p>
+                        <ul class="sun-list">
+                            <li class="sun-list__item">Configuración, personalización y capacitación.</li>
+                            <li class="sun-list__item">Soporte post-implementación.</li>
+                            <li class="sun-list__item">Experiencia en múltiples industrias y sectores.</li>
+                        </ul>
                     </article>
-          
+
                     <!-- Servicio 2 -->
-                    <article class="service-card" role="listitem" aria-labelledby="service-dev-title" style="--order: 2" data-aos="fade-up" data-aos-delay="100">
-                        <div class="service-card__icon-circle">
+                    <article class="sun-card sun-service-card" role="listitem" aria-labelledby="service-dev-title" style="--order: 2">
+                        <div class="sun-icon-circle">
                             <i class="fas fa-code" aria-hidden="true"></i>
                         </div>
-                        <div class="service-card__body">
-                            <h3 id="service-dev-title" class="service-card__title">Desarrollo a la Medida</h3>
-                            <p class="service-card__text">
-                                Creamos soluciones personalizadas que se adaptan perfectamente a tus procesos de negocio.
-                            </p>
-                            <ul class="service-card__list">
-                                <li class="service-card__item">Adaptación de módulos y procesos específicos.</li>
-                                <li class="service-card__item">Integración con sistemas actuales.</li>
-                                <li class="service-card__item">Desarrollo de funcionalidades exclusivas para tu empresa.</li>
-                            </ul>
-                        </div>
+                        <h3 id="service-dev-title" class="sun-card__title">Desarrollo a la Medida</h3>
+                        <p class="sun-card__text">
+                            Creamos soluciones personalizadas que se adaptan perfectamente a tus procesos de negocio.
+                        </p>
+                        <ul class="sun-list">
+                            <li class="sun-list__item">Adaptación de módulos y procesos específicos.</li>
+                            <li class="sun-list__item">Integración con sistemas actuales.</li>
+                            <li class="sun-list__item">Desarrollo de funcionalidades exclusivas para tu empresa.</li>
+                        </ul>
                     </article>
-          
+
                     <!-- Servicio 3 -->
-                    <article class="service-card" role="listitem" aria-labelledby="service-strategy-title" style="--order: 3" data-aos="fade-up" data-aos-delay="200">
-                        <div class="service-card__icon-circle">
+                    <article class="sun-card sun-service-card" role="listitem" aria-labelledby="service-strategy-title" style="--order: 3">
+                        <div class="sun-icon-circle">
                             <i class="fas fa-chart-line" aria-hidden="true"></i>
                         </div>
-                        <div class="service-card__body">
-                            <h3 id="service-strategy-title" class="service-card__title">Estrategia y definición de procesos</h3>
-                            <p class="service-card__text">
-                                Analizamos y optimizamos tus procesos para maximizar la eficiencia y productividad.
-                            </p>
-                            <ul class="service-card__list">
-                                <li class="service-card__item">Optimización de procesos internos.</li>
-                                <li class="service-card__item">Estrategia a medida para impulsar tu negocio.</li>
-                                <li class="service-card__item">Consultoría especializada en transformación digital.</li>
-                            </ul>
-                        </div>
+                        <h3 id="service-strategy-title" class="sun-card__title">Estrategia y definición de procesos</h3>
+                        <p class="sun-card__text">
+                            Analizamos y optimizamos tus procesos para maximizar la eficiencia y productividad.
+                        </p>
+                        <ul class="sun-list">
+                            <li class="sun-list__item">Optimización de procesos internos.</li>
+                            <li class="sun-list__item">Estrategia a medida para impulsar tu negocio.</li>
+                            <li class="sun-list__item">Consultoría especializada en transformación digital.</li>
+                        </ul>
                     </article>
-          
+
                     <!-- Servicio 4 -->
-                    <article class="service-card" role="listitem" aria-labelledby="service-ecommerce-title" style="--order: 4" data-aos="fade-up" data-aos-delay="300">
-                        <div class="service-card__icon-circle">
+                    <article class="sun-card sun-service-card" role="listitem" aria-labelledby="service-ecommerce-title" style="--order: 4">
+                        <div class="sun-icon-circle">
                             <i class="fas fa-store" aria-hidden="true"></i>
                         </div>
-                        <div class="service-card__body">
-                            <h3 id="service-ecommerce-title" class="service-card__title">Creación de Tiendas en Línea</h3>
-                            <p class="service-card__text">
-                                Desarrollamos plataformas de e-commerce integradas con tu sistema ERP para una gestión unificada.
-                            </p>
-                            <ul class="service-card__list">
-                                <li class="service-card__item">Desarrollo de e-commerce.</li>
-                                <li class="service-card__item">Carga automática de productos con web scraping.</li>
-                                <li class="service-card__item">Integración completa con tu inventario y logística.</li>
-                            </ul>
-                        </div>
+                        <h3 id="service-ecommerce-title" class="sun-card__title">Creación de Tiendas en Línea</h3>
+                        <p class="sun-card__text">
+                            Desarrollamos plataformas de e-commerce integradas con tu sistema ERP para una gestión unificada.
+                        </p>
+                        <ul class="sun-list">
+                            <li class="sun-list__item">Desarrollo de e-commerce.</li>
+                            <li class="sun-list__item">Carga automática de productos con web scraping.</li>
+                            <li class="sun-list__item">Integración completa con tu inventario y logística.</li>
+                        </ul>
                     </article>
-          
+
                     <!-- Servicio 5 -->
-                    <article class="service-card" role="listitem" aria-labelledby="service-support-title" style="--order: 5" data-aos="fade-up" data-aos-delay="400">
-                        <div class="service-card__icon-circle">
+                    <article class="sun-card sun-service-card" role="listitem" aria-labelledby="service-support-title" style="--order: 5">
+                        <div class="sun-icon-circle">
                             <i class="fas fa-tools" aria-hidden="true"></i>
                         </div>
-                        <div class="service-card__body">
-                            <h3 id="service-support-title" class="service-card__title">Soporte Técnico y Mantenimiento</h3>
-                            <p class="service-card__text">
-                                Ofrecemos soporte continuo para garantizar el óptimo funcionamiento de tus sistemas.
-                            </p>
-                            <ul class="service-card__list">
-                                <li class="service-card__item">Pólizas de soporte, mantenimiento y actualizaciones.</li>
-                                <li class="service-card__item">Garantía de 2 meses tras la implementación.</li>
-                                <li class="service-card__item">Atención personalizada y tiempos de respuesta garantizados.</li>
-                            </ul>
-                        </div>
+                        <h3 id="service-support-title" class="sun-card__title">Soporte Técnico y Mantenimiento</h3>
+                        <p class="sun-card__text">
+                            Ofrecemos soporte continuo para garantizar el óptimo funcionamiento de tus sistemas.
+                        </p>
+                        <ul class="sun-list">
+                            <li class="sun-list__item">Pólizas de soporte, mantenimiento y actualizaciones.</li>
+                            <li class="sun-list__item">Garantía de 2 meses tras la implementación.</li>
+                            <li class="sun-list__item">Atención personalizada y tiempos de respuesta garantizados.</li>
+                        </ul>
                     </article>
                 </div>
             </div>
         </section>
 
         <!-- Sección de Confianza -->
-        <section class="trust" aria-labelledby="trust-title">
-            <div class="container">
-                <header>
-                    <h2 id="trust-title" class="trust__title">Confianza que Nos Impulsa</h2>
-                    <p class="trust__subtitle">
+        <section class="sun__section sun__section--light" id="Clientes" aria-labelledby="trust-title">
+            <div class="sun__container">
+                <header class="sun-header">
+                    <h2 id="trust-title" class="sun-header__title">Confianza que Nos Impulsa</h2>
+                    <p class="sun-header__subtitle">
                         Estamos orgullosos de trabajar con marcas líderes en el mercado que comparten nuestro compromiso con la calidad y la innovación.
                     </p>
                 </header>
                 
-                <div class="trust__grid" role="list">
+                <div class="sun-grid sun-grid--6col" role="list">
                     <!-- Logo 1 -->
-                    <div class="brand-card" role="listitem" data-aos="fade-up">
-                        <svg viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="100" height="50" fill="#263980" rx="5"/>
-                            <text x="50" y="30" font-family="Arial" font-size="20" fill="#fff" text-anchor="middle">LOGO 1</text>
-                        </svg>
+                    <div class="sun-brand-card" role="listitem">
+                        <img class="sn-trust__brand-img" src="https://www.sunname.com.mx/web/image/33009-46c4d09b/referencias_01.webp" alt="Logo referencia 1" loading="lazy">
                     </div>
                     <!-- Logo 2 -->
-                    <div class="brand-card" role="listitem" data-aos="fade-up" data-aos-delay="100">
-                        <svg viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="100" height="50" fill="#46C2CE" rx="5"/>
-                            <text x="50" y="30" font-family="Arial" font-size="20" fill="#fff" text-anchor="middle">LOGO 2</text>
-                        </svg>
+                    <div class="sun-brand-card" role="listitem">
+                        <img class="sn-trust__brand-img" src="https://www.sunname.com.mx/web/image/33010-0aa494dc/referencias_02.webp" alt="Logo referencia 2" loading="lazy">
                     </div>
                     <!-- Logo 3 -->
-                    <div class="brand-card" role="listitem" data-aos="fade-up" data-aos-delay="200">
-                        <svg viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="100" height="50" fill="#2C1A56" rx="5"/>
-                            <text x="50" y="30" font-family="Arial" font-size="20" fill="#fff" text-anchor="middle">LOGO 3</text>
-                        </svg>
+                    <div class="sun-brand-card" role="listitem">
+                        <img class="sn-trust__brand-img" src="https://www.sunname.com.mx/web/image/33011-55981491/referencias_03.webp" alt="Logo referencia 3" loading="lazy">
                     </div>
                     <!-- Logo 4 -->
-                    <div class="brand-card" role="listitem" data-aos="fade-up" data-aos-delay="300">
-                        <svg viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="100" height="50" fill="#7F52A0" rx="5"/>
-                            <text x="50" y="30" font-family="Arial" font-size="20" fill="#fff" text-anchor="middle">LOGO 4</text>
-                        </svg>
+                    <div class="sun-brand-card" role="listitem">
+                        <img class="sn-trust__brand-img" src="https://www.sunname.com.mx/web/image/33012-2d129d51/referencias_04.webp" alt="Logo referencia 4" loading="lazy">
                     </div>
                     <!-- Logo 5 -->
-                    <div class="brand-card" role="listitem" data-aos="fade-up" data-aos-delay="400">
-                        <svg viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="50" cy="25" r="20" fill="#263980"/>
-                            <text x="50" y="28" font-family="Arial" font-size="14" fill="#fff" text-anchor="middle">CÍRCULO</text>
-                        </svg>
+                    <div class="sun-brand-card" role="listitem">
+                        <img class="sn-trust__brand-img" src="https://www.sunname.com.mx/web/image/33013-4f5181f7/referencias_05.webp" alt="Logo referencia 5" loading="lazy">
                     </div>
                     <!-- Logo 6 -->
-                    <div class="brand-card" role="listitem" data-aos="fade-up" data-aos-delay="500">
-                        <svg viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
-                            <polygon points="50,5 90,45 10,45" fill="#46C2CE"/>
-                            <text x="50" y="35" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle">TRIÁNG</text>
-                        </svg>
+                    <div class="sun-brand-card" role="listitem">
+                        <img class="sn-trust__brand-img" src="https://www.sunname.com.mx/web/image/33014-53d98983/referencias_06.webp" alt="Logo referencia 6" loading="lazy">
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Sección Cuidamos los resultados -->
-        <section class="results" aria-labelledby="results-title">
-            <div class="container">
-                <div class="results__content">
-                    <div class="results__text">
-                        <h2 id="results-title" class="results__title">Cuidamos los resultados</h2>
-                        <p class="results__lead">
+        <section class="sun__section sun__section--white" id="Resultados" aria-labelledby="results-title">
+            <div class="sun__container">
+                <div class="sun-results__content">
+                    <div class="sun-results__text">
+                        <header class="sun-header">
+                            <h2 id="results-title" class="sun-header__title sun-header__title--left">Cuidamos los resultados</h2>
+                        </header>
+                        <p class="sun-results__lead">
                             Con más de 45 proyectos exitosos, combinamos pasión y estrategia para impulsar el éxito de nuestros clientes, asegurando resultados que marcan la diferencia en el futuro.
                         </p>
                         
-                        <div class="results__info-box">
-                            <h3 class="results__info-title">Más información</h3>
-                            <ul class="results__features-list">
-                                <li class="results__feature-item">
+                        <div class="sun-results__info-box">
+                            <h3 class="sun-results__info-title">Más información</h3>
+                            <ul class="sun-list">
+                                <li class="sun-list__item--check-circle">
                                     <i class="fas fa-check-circle"></i>
                                     <span>Soluciones adaptadas a tus necesidades</span>
                                 </li>
-                                <li class="results__feature-item">
+                                <li class="sun-list__item--check-circle">
                                     <i class="fas fa-check-circle"></i>
                                     <span>Enfoque personalizado en cada proyecto</span>
                                 </li>
-                                <li class="results__feature-item">
+                                <li class="sun-list__item--check-circle">
                                     <i class="fas fa-check-circle"></i>
                                     <span>Resultados medibles y garantizados</span>
                                 </li>
                             </ul>
                             
-                            <div class="results__quote-box">
-                                <p>"Como socio comprometido, creamos soluciones personalizadas que brindan tranquilidad y confianza. En Sunname, buscamos siempre superar tus expectativas para que te enfoques en lo que realmente importa: hacer crecer tu negocio."</p>
+                            <div class="sun-quote">
+                                <p>"Como socio comprometido, creamos soluciones personalizadas que brindan tranquilidad y confianza. En OdooExperts, buscamos siempre superar tus expectativas para que te enfoques en lo que realmente importa: hacer crecer tu negocio."</p>
                             </div>
                             
-                            <button class="btn btn--primary">Descubrir más</button>
+                            <button class="sun-btn sun-btn--primary">Descubrir más</button>
                         </div>
                     </div>
                     
-                    <div class="results__image" data-aos="fade-left">
-                        <div class="results__image-placeholder">
-                            <i class="fas fa-chart-line"></i>
+                    <div class="sun-results__image">
+                        <div class="sun-results__image-placeholder">
+                            <i class="fas fa-rocket" style="font-size:6rem;color:#46c2ce;"></i>
                         </div>
                     </div>
                 </div>
@@ -271,155 +285,184 @@
         </section>
 
         <!-- Sección de Estadísticas -->
-        <section class="stats" aria-labelledby="stats-title">
-            <div class="container">
-                <div class="stats__grid" role="list">
-                    <div class="stats__card" role="listitem" data-aos="fade-up">
-                        <div class="stats__number">+45</div>
-                        <div class="stats__label">Empresas felices</div>
+        <section class="sun__section sun__section--gradient" id="Estadisticas" aria-labelledby="stats-title">
+            <div class="sun__container">
+                <div class="sun-grid sun-grid--4col" role="list">
+                    <div class="sun-stats-card" role="listitem">
+                        <div class="sun-stats-card__number">+45</div>
+                        <div class="sun-stats-card__label">Empresas felices</div>
                     </div>
-                    <div class="stats__card" role="listitem" data-aos="fade-up" data-aos-delay="100">
-                        <div class="stats__number">10</div>
-                        <div class="stats__label">Empresas de fabricación</div>
+                    <div class="sun-stats-card" role="listitem">
+                        <div class="sun-stats-card__number">10</div>
+                        <div class="sun-stats-card__label">Empresas de fabricación</div>
                     </div>
-                    <div class="stats__card" role="listitem" data-aos="fade-up" data-aos-delay="200">
-                        <div class="stats__number">15</div>
-                        <div class="stats__label">Páginas increíbles</div>
+                    <div class="sun-stats-card" role="listitem">
+                        <div class="sun-stats-card__number">15</div>
+                        <div class="sun-stats-card__label">Páginas increíbles</div>
                     </div>
-                    <div class="stats__card" role="listitem" data-aos="fade-up" data-aos-delay="300">
-                        <div class="stats__number">10</div>
-                        <div class="stats__label">Puntos de venta</div>
+                    <div class="sun-stats-card" role="listitem">
+                        <div class="sun-stats-card__number">10</div>
+                        <div class="sun-stats-card__label">Puntos de venta</div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Sección de Proceso -->
-        <section class="process" aria-labelledby="process-title">
-            <div class="container">
-                <header>
-                    <h2 id="process-title" class="process__title">Nuestro Proceso</h2>
+        <section class="sun__section sun__section--light" id="Proceso" aria-labelledby="process-title">
+            <div class="sun__container">
+                <header class="sun-header">
+                    <h2 id="process-title" class="sun-header__title">Nuestro Proceso</h2>
                 </header>
-                <div class="process__steps" role="list">
-                    <div class="process__step" role="listitem" data-aos="fade-up">
-                        <div class="process__step-icon">
+                <div class="sun-grid sun-grid--4col" role="list">
+                    <div class="sun-process-step" role="listitem">
+                        <div class="sun-icon-circle sun-icon-circle--large">
                             <i class="fas fa-calendar-check"></i>
                         </div>
-                        <h3 class="process__step-title">Programamos una demo</h3>
-                        <p class="process__step-description">Hacemos un levantamiento de alto nivel a su propósito.</p>
+                        <h3 class="sun-process-step__title">Programamos una demo</h3>
+                        <p class="sun-process-step__description">Hacemos un levantamiento de alto nivel a su propósito.</p>
                     </div>
-                    <div class="process__step" role="listitem" data-aos="fade-up" data-aos-delay="100">
-                        <div class="process__step-icon">
+                    <div class="sun-process-step" role="listitem">
+                        <div class="sun-icon-circle sun-icon-circle--large">
                             <i class="fas fa-file-alt"></i>
                         </div>
-                        <h3 class="process__step-title">Te damos una propuesta</h3>
-                        <p class="process__step-description">Adaptamos nuestra solución a sus necesidades específicas.</p>
+                        <h3 class="sun-process-step__title">Te damos una propuesta</h3>
+                        <p class="sun-process-step__description">Adaptamos nuestra solución a sus necesidades específicas.</p>
                     </div>
-                    <div class="process__step" role="listitem" data-aos="fade-up" data-aos-delay="200">
-                        <div class="process__step-icon">
+                    <div class="sun-process-step" role="listitem">
+                        <div class="sun-icon-circle sun-icon-circle--large">
                             <i class="fas fa-search"></i>
                         </div>
-                        <h3 class="process__step-title">Hacemos análisis</h3>
-                        <p class="process__step-description">Validamos todos los requerimientos técnicos.</p>
+                        <h3 class="sun-process-step__title">Hacemos análisis</h3>
+                        <p class="sun-process-step__description">Validamos todos los requerimientos técnicos.</p>
                     </div>
-                    <div class="process__step" role="listitem" data-aos="fade-up" data-aos-delay="300">
-                        <div class="process__step-icon">
+                    <div class="sun-process-step" role="listitem">
+                        <div class="sun-icon-circle sun-icon-circle--large">
                             <i class="fas fa-rocket"></i>
                         </div>
-                        <h3 class="process__step-title">Implementación</h3>
-                        <p class="process__step-description">Comenzamos el desarrollo de su solución.</p>
+                        <h3 class="sun-process-step__title">Implementación</h3>
+                        <p class="sun-process-step__description">Comenzamos el desarrollo de su solución.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Sección Testimonial -->
-        <section class="testimonial" aria-labelledby="testimonial-title">
-            <div class="container">
-                <div class="testimonial__card" data-aos="fade-up">
-                    <div class="testimonial__content">
-                        <blockquote class="testimonial__quote">
+        <section class="sun__section sun__section--white" id="Testimonios" aria-labelledby="testimonial-title">
+            <div class="sun__container">
+                <div class="sun-testimonial-card">
+                    <div class="sun-testimonial-card__content">
+                        <blockquote class="sun-quote sun-quote--large">
                             "Más de 50,000 empresas utilizan Odoo para hacer crecer su negocio. Confíenos y juntos mejoraremos su empresa"
                         </blockquote>
-                        <div class="testimonial__cta">
-                            <button class="btn btn--primary">Confíenos</button>
+                        <div class="sun-testimonial-card__cta">
+                            <a href="#Contacto" class="sun-btn sun-btn--primary">Confíenos</a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Testimonios de Clientes -->
+        <section class="sun__section sun__section--light" id="TestimoniosClientes" aria-labelledby="clientes-testimonios-title">
+            <div class="sun__container">
+                <header class="sun-header">
+                    <h2 id="clientes-testimonios-title" class="sun-header__title">Testimonios de Clientes</h2>
+                    <p class="sun-header__subtitle">Lo que dicen quienes ya confiaron en nosotros</p>
+                </header>
+                <div class="sun-grid sun-grid--3col">
+                    <article class="sun-card" style="text-align:center;">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto cliente 1" style="width:70px;height:70px;border-radius:50%;margin:0 auto 1.5rem auto;box-shadow:0 2px 8px #46c2ce33;display:block;padding:0.6rem 0.6rem 0.6rem 0.6rem;background:#f7fafc;">
+                        <blockquote class="sun-quote">"El equipo de Sunname superó nuestras expectativas. La implementación fue rápida y el soporte excelente."</blockquote>
+                        <div style="font-weight:700;">Carlos Méndez</div>
+                        <div style="font-size:0.95rem;color:#263980;">Director de Operaciones, Grupo MZ</div>
+                    </article>
+                    <article class="sun-card" style="text-align:center;">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Foto cliente 2" style="width:70px;height:70px;border-radius:50%;margin:0 auto 1.5rem auto;box-shadow:0 2px 8px #46c2ce33;display:block;padding:0.6rem 0.6rem 0.6rem 0.6rem;background:#f7fafc;">
+                        <blockquote class="sun-quote">"Gracias a Sunname, nuestros procesos son más eficientes y el equipo está mucho más motivado."</blockquote>
+                        <div style="font-weight:700;">Laura Torres</div>
+                        <div style="font-size:0.95rem;color:#263980;">CEO, Tienda Nova</div>
+                    </article>
+                    <article class="sun-card" style="text-align:center;">
+                        <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Foto cliente 3" style="width:70px;height:70px;border-radius:50%;margin:0 auto 1.5rem auto;box-shadow:0 2px 8px #46c2ce33;display:block;padding:0.6rem 0.6rem 0.6rem 0.6rem;background:#f7fafc;">
+                        <blockquote class="sun-quote">"La personalización y el acompañamiento de Sunname fue clave para el éxito de nuestro proyecto."</blockquote>
+                        <div style="font-weight:700;">Javier López</div>
+                        <div style="font-size:0.95rem;color:#263980;">Gerente IT, Logística Express</div>
+                    </article>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__content">
-                <div class="footer__brand">
-                    <h2 class="footer__logo">Sunname</h2>
-                    <p class="footer__tagline">IMPULSA TU NEGOCIO</p>
+    <footer class="sun-footer" id="Contacto">
+        <div class="sun__container">
+            <div class="sun-footer__content">
+                <div class="sun-footer__brand" style="display:flex;flex-direction:column;align-items:center;">
+                    <img src="https://www.sunname.com.mx/web/image/website/1/logo/Sunname%20Technologies?unique=4a29342" alt="Logo Sunname Technologies" class="sun-footer__logo-img" style="max-width:260px;filter:brightness(0) invert(1);display:block;margin-bottom:1.2rem;">
                 </div>
                 
-                <div class="footer__grid">
-                    <div class="footer__links">
-                        <h3 class="footer__heading">Servicios</h3>
-                        <ul class="footer__menu">
-                            <li><a href="#" class="footer__link">Implementación Odoo</a></li>
-                            <li><a href="#" class="footer__link">Desarrollo a Medida</a></li>
-                            <li><a href="#" class="footer__link">Consultoría</a></li>
-                            <li><a href="#" class="footer__link">E-commerce</a></li>
+                <div class="sun-footer__grid">
+                    <div class="sun-footer__links">
+                        <h3 class="sun-footer__heading">Servicios</h3>
+                        <ul class="sun-footer__menu">
+                            <li><a href="#Nuestros-Servicios" class="sun-footer__link">Implementación Odoo</a></li>
+                            <li><a href="#Nuestros-Servicios" class="sun-footer__link">Desarrollo a Medida</a></li>
+                            <li><a href="#Nuestros-Servicios" class="sun-footer__link">Consultoría</a></li>
+                            <li><a href="#Nuestros-Servicios" class="sun-footer__link">E-commerce</a></li>
                         </ul>
                     </div>
                     
-                    <div class="footer__links">
-                        <h3 class="footer__heading">Empresa</h3>
-                        <ul class="footer__menu">
-                            <li><a href="#" class="footer__link">Nosotros</a></li>
-                            <li><a href="#" class="footer__link">Equipo</a></li>
-                            <li><a href="#" class="footer__link">Clientes</a></li>
-                            <li><a href="#" class="footer__link">Contacto</a></li>
+                    <div class="sun-footer__links">
+                        <h3 class="sun-footer__heading">Empresa</h3>
+                        <ul class="sun-footer__menu">
+                            <li><a href="#Inicio" class="sun-footer__link">Nosotros</a></li>
+                            <li><a href="#Proceso" class="sun-footer__link">Equipo</a></li>
+                            <li><a href="#Clientes" class="sun-footer__link">Clientes</a></li>
+                            <li><a href="#Contacto" class="sun-footer__link">Contacto</a></li>
                         </ul>
                     </div>
                     
-                    <div class="footer__contact">
-                        <h3 class="footer__heading">Contacto</h3>
-                        <ul class="footer__contact-list">
-                            <li class="footer__contact-item">
+                    <div class="sun-footer__contact">
+                        <h3 class="sun-footer__heading">Contacto</h3>
+                        <ul class="sun-footer__contact-list">
+                            <li class="sun-footer__contact-item">
                                 <i class="fas fa-map-marker-alt"></i> 
-                                <span>Av. Ejemplo 123, CDMX</span>
+                                <span>Zimapán, Hidalgo, México</span>
                             </li>
-                            <li class="footer__contact-item">
+                            <li class="sun-footer__contact-item">
                                 <i class="fas fa-phone"></i> 
-                                <span>+52 55 1234 5678</span>
+                                <span>+52 56 5430 4171</span>
                             </li>
-                            <li class="footer__contact-item">
+                            <li class="sun-footer__contact-item">
                                 <i class="fas fa-envelope"></i> 
-                                <span>info@sunname.com</span>
+                                <span>info@sunname.com.mx</span>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
             
-            <div class="footer__bottom">
-                <p class="footer__copyright">&copy; 2023 Sunname. Todos los derechos reservados.</p>
-                <div class="footer__social">
-                    <a href="#" class="footer__social-link"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="footer__social-link"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="footer__social-link"><i class="fab fa-youtube"></i></a>
+            <div class="sun-footer__bottom">
+                <div style="display:flex;flex-direction:column;align-items:center;width:100%;">
+                    <p class="sun-footer__copyright" style="margin-bottom:0.3rem;">
+                        &copy; 2023 OdooExperts. Todos los derechos reservados.
+                    </p>
+                    <div class="sun-footer__legal" style="font-size:0.95rem;">
+                        <a href="#" class="sun-footer__link">Política de Privacidad</a>
+                        <span style="color:#46c2ce;font-weight:bold;">|</span>
+                        <a href="#" class="sun-footer__link">Aviso Legal</a>
+                    </div>
+                </div>
+                <div class="sun-footer__social">
+                    <a href="https://www.facebook.com/sunnametech" class="sun-footer__social-link" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.sunname.com.mx/website/social/linkedin" class="sun-footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/sunnametech" class="sun-footer__social-link" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/5654304171?text=Hola%2C%20me%20interesa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20servicios%20que%20ofrecen" class="sun-footer__social-link" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
-        <div class="footer__wave"></div>
     </footer>
-
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            once: true,
-            duration: 800
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
