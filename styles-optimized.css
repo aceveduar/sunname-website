@@ -1989,11 +1989,13 @@
              ========================================================================== */
       .sun-pricing-table {
         width: 100%;
-        border-collapse: collapse;
+        border-collapse: separate;
+        border-spacing: 0;
         margin-bottom: var(--sun-space-xl);
         box-shadow: var(--sun-shadow-md);
         border-radius: var(--sun-radius-lg);
         overflow: hidden;
+        background: var(--sun-color-white);
       }
       
       .sun-pricing-table__head {
@@ -2002,15 +2004,44 @@
       }
       
       .sun-pricing-table__head th {
-        padding: var(--sun-space-md);
+        padding: 2.2rem 1rem 1rem 1rem;
         text-align: center;
         font-weight: var(--sun-font-weight-bold);
         font-size: 1.2rem;
+        position: relative;
+        background: none;
+        border: none;
+        z-index: 1;
       }
       
       .sun-pricing-table__head th:first-child {
         text-align: left;
         background-color: var(--sun-color-primary);
+      }
+      
+      .sun-pricing-table__popular {
+        position: relative;
+        z-index: 2;
+        background: none;
+        overflow: visible;
+      }
+      
+      .sun-pricing-table__popular::after {
+        content: "Más popular";
+        position: absolute;
+        top: 0.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--sun-color-accent);
+        color: var(--sun-color-white);
+        padding: 0.3rem 1.2rem;
+        font-size: 0.85rem;
+        font-weight: var(--sun-font-weight-bold);
+        border-radius: var(--sun-radius-full);
+        box-shadow: 0 2px 8px #f59e0b33;
+        white-space: nowrap;
+        z-index: 10;
+        pointer-events: none;
       }
       
       .sun-pricing-table__feature-row {
@@ -2083,28 +2114,33 @@
         width: 80%;
       }
       
-      .sun-pricing-table__cta-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: var(--sun-shadow-md);
-      }
-      
       .sun-pricing-table__cta-btn--secondary {
         background: transparent;
         color: var(--sun-color-primary);
         border: 2px solid var(--sun-color-primary);
       }
       
-      .sun-pricing-table__cta-btn--secondary:hover {
-        background-color: var(--sun-color-primary);
-        color: var(--sun-color-white);
-      }
-      
       .sun-pricing-table__cta-btn--accent {
         background-color: var(--sun-color-accent);
       }
       
-      .sun-pricing-table__cta-btn--accent:hover {
-        background-color: #e69008;
+      @media (max-width: 992px) {
+        .sun-pricing-table {
+          display: block;
+          overflow-x: auto;
+          white-space: nowrap;
+        }
+        .sun-pricing-table__head th {
+          min-width: 180px;
+          font-size: 1rem;
+          padding-top: 2.8rem;
+        }
+        .sun-pricing-table__popular::after {
+          font-size: 0.75rem;
+          min-width: 90px;
+          padding: 0.18rem 0.7rem;
+          top: 0.3rem;
+        }
       }
       
       .sun-pricing-table__feature-check {
@@ -2115,24 +2151,6 @@
       .sun-pricing-table__feature-cross {
         color: #e53e3e;
         font-size: 1.2rem;
-      }
-      
-      .sun-pricing-table__popular {
-        position: relative;
-      }
-      
-      .sun-pricing-table__popular::after {
-        content: "Más popular";
-        position: absolute;
-        top: 0;
-        right: 0;
-        background-color: var(--sun-color-accent);
-        color: var(--sun-color-white);
-        padding: 0.25rem 1rem;
-        font-size: 0.8rem;
-        font-weight: var(--sun-font-weight-bold);
-        transform: translateY(-50%);
-        border-radius: var(--sun-radius-full);
       }
       
       .sun-pricing__toggle {
@@ -2910,4 +2928,3 @@
     }
   }
 
-  
