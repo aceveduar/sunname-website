@@ -237,6 +237,36 @@ function createHeroBubbles() {
 }
 window.addEventListener('DOMContentLoaded', createHeroBubbles);
 
+// Mostrar video en el hero al hacer clic en el badge 'Versión 18'
+document.addEventListener('DOMContentLoaded', function() {
+  var versionBadge = document.querySelector('.odoo-hero__version-badge');
+  var heroImg = document.getElementById('odoo-hero-img');
+  var heroVideo = document.getElementById('odoo-hero-video');
+  if (versionBadge && heroImg && heroVideo) {
+    versionBadge.style.cursor = 'pointer';
+    versionBadge.addEventListener('click', function(e) {
+      e.preventDefault();
+      heroImg.style.display = 'none';
+      heroVideo.style.display = 'block';
+      heroVideo.setAttribute('controls', 'controls');
+      heroVideo.currentTime = 0;
+      heroVideo.play();
+    });
+  }
+});
+
+// Pausar el video del hero cuando ya no es visible en pantalla
+window.addEventListener('scroll', function() {
+  var heroVideo = document.getElementById('odoo-hero-video');
+  if (heroVideo && heroVideo.style.display === 'block') {
+    var rect = heroVideo.getBoundingClientRect();
+    var completelyOut = rect.bottom < 0 || rect.top > window.innerHeight;
+    if (completelyOut && !heroVideo.paused) {
+      heroVideo.pause();
+    }
+  }
+});
+
 // Animación de aparición con escala y opacidad para cualquier elemento con la clase .sun-animate-on-scroll
 function animateOnScroll() {
   const elements = document.querySelectorAll('.sun-animate-on-scroll');
@@ -299,3 +329,29 @@ function addScrollAnimClass() {
   });
 }
 window.addEventListener('DOMContentLoaded', addScrollAnimClass);
+
+// Animación para los módulos de Odoo
+function animateOdooModules() {
+  const moduleItems = document.querySelectorAll('.odoo-modules__item');
+  
+  moduleItems.forEach((item, index) => {
+    setTimeout(() => {
+      item.classList.add('sun-animated');
+    }, 100 * index);
+  });
+}
+
+// Ejecutar la animación cuando la sección sea visible
+function handleOdooModulesVisibility() {
+  const modulesSection = document.querySelector('.odoo-modules');
+  if (!modulesSection) return;
+  
+  const rect = modulesSection.getBoundingClientRect();
+  if (rect.top < window.innerHeight && rect.bottom > 0) {
+    animateOdooModules();
+    window.removeEventListener('scroll', handleOdooModulesVisibility);
+  }
+}
+
+window.addEventListener('scroll', handleOdooModulesVisibility);
+window.addEventListener('DOMContentLoaded', handleOdooModulesVisibility);

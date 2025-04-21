@@ -670,12 +670,212 @@
     background-color: transparent;
     border: 1px solid currentColor;
   }
+ 
+/* ==========================================================================
+   SECCIÓN MÓDULOS ODOO
+   ========================================================================== */
+/* Opción 2: Fondo sólido blanco y franja superior con degradado */
+.odoo-modules {
+  background: var(--sun-color-white);
+  color: var(--sun-color-text);
+  position: relative;
+  margin-top: 4.5rem;
+}
+.odoo-modules::before {
+  display: none !important;
+}
+.odoo-modules__content {
+  position: relative;
+  z-index: 2;
+}
   
+  .odoo-modules__title {
+    font-size: 3rem;
+    color: var(--sun-color-primary);
+    margin-bottom: var(--sun-space-md);
+    text-align: center;
+    font-weight: var(--sun-font-weight-black);
+    letter-spacing: var(--sun-letter-spacing-tight);
+    position: relative;
+    padding-bottom: var(--sun-space-md);
+  }
+  .odoo-modules__title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--sun-gradient-primary);
+    border-radius: var(--sun-radius-sm);
+  }
+  .odoo-modules__subtitle {
+    font-size: 1.4rem;
+    color: var(--sun-color-text-light);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+    margin-bottom: var(--sun-space-xl);
+  }
+  
+  .odoo-modules__browser {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: var(--sun-color-white);
+    border-radius: var(--sun-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--sun-shadow-lg);
+  }
+  
+  .odoo-modules__browser-bar {
+    background-color: #333;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+  }
+  .odoo-modules__browser-dot--red {
+    background-color: #ff5f57;
+  }
+  
+  .odoo-modules__browser-dot--yellow {
+    background-color: #febc2e;
+  }
+  
+  .odoo-modules__browser-dot--green {
+    background-color: #28c840;
+  }
+  
+  .odoo-modules__browser-address {
+    flex: 1;
+    background-color: var(--sun-color-white);
+    border-radius: var(--sun-radius-sm);
+    padding: 0.375rem 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #555;
+    font-size: 0.875rem;
+  }
+  
+  .odoo-modules__browser-actions {
+    margin-left: 1rem;
+    display: flex;
+    gap: 0.75rem;
+    color: #aaa;
+  }
+  
+  .odoo-modules__browser-content {
+    padding: 2rem;
+    background-color: var(--sun-color-white);
+  }
+  
+  .odoo-modules__grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .odoo-modules__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .odoo-modules__item.sun-animated {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .odoo-modules__icon-container {
+    width: 4rem;
+    height: 4rem;
+    border-radius: var(--sun-radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    background-color: #f0f9ff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .odoo-modules__item:nth-child(2n) .odoo-modules__icon-container {
+    background-color: #f0fff4;
+  }
+  
+  .odoo-modules__item:nth-child(3n) .odoo-modules__icon-container {
+    background-color: #fff0f0;
+  }
+  
+  .odoo-modules__item:nth-child(4n) .odoo-modules__icon-container {
+    background-color: #fffaf0;
+  }
+  
+  .odoo-modules__item:hover .odoo-modules__icon-container {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .odoo-modules__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: contain;
+  }
+  
+  .odoo-modules__name {
+    font-size: 0.875rem;
+    color: var(--sun-color-text);
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 992px) {
+    .odoo-modules__grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .odoo-modules__title {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .odoo-modules__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .odoo-modules__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .odoo-modules__title {
+      font-size: 2rem;
+    }
+    
+    .odoo-modules__browser-address {
+      max-width: 150px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }  
   /* ==========================================================================
          6. SECCIONES ESPECÍFICAS
          ========================================================================== */
   
-  /* 6.1 Sección Partners
+  
+  
+  
+  
+  
+         /* 6.1 Sección Partners
          ========================================================================== */
   .sun-partner-card {
     opacity: 0;
@@ -2575,6 +2775,12 @@
     color: var(--color-white);
     overflow: hidden;
     position: relative;
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   
   .odoo-hero::before {
@@ -2611,7 +2817,7 @@
   .odoo-hero__badge {
     display: inline-block;
     background-color: var(--sun-color-secondary-20);
-    color: var(--color-secondary);
+    color: var(--sun-color-secondary);
     padding: 0.5rem 1rem;
     border-radius: var(--sun-radius-full);
     font-size: 0.875rem;
@@ -2634,7 +2840,7 @@
   }
   
   .odoo-hero__highlight {
-    color: var(--color-secondary);
+    color: var(--sun-color-secondary);
     position: relative;
     display: inline-block;
   }
@@ -2646,7 +2852,7 @@
     left: 0;
     width: 100%;
     height: 4px;
-    background: var(--color-secondary);
+    background: var(--sun-color-secondary);
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.3s ease;
@@ -2795,11 +3001,14 @@
     width: 100%;
     border-radius: var(--sun-radius-sm);
     box-shadow: var(--sun-shadow-sm);
-    transition: transform var(--sun-transition-normal);
+    transition: transform 0.4s cubic-bezier(.4,1.4,.6,1), box-shadow 0.3s;
+    cursor: zoom-in;
   }
   
   .odoo-hero__dashboard-image:hover {
-    transform: scale(1.02);
+    transform: scale(1.32);
+    box-shadow: 0 8px 32px rgba(38,57,128,0.18);
+    z-index: 2;
   }
   
   .odoo-hero__version-badge {
@@ -2926,5 +3135,36 @@
     .odoo-hero__client-text {
       color: #ffffff;
     }
+  }
+
+  /* Estilo para resaltar y animar la frase 'Nosotros te capacitamos' igual que 'Sunname' en el hero */
+  .odoo-cta-highlight {
+    color: var(--sun-color-secondary);
+    position: relative;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  .odoo-cta-highlight::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--sun-color-secondary);
+    border-radius: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s cubic-bezier(.4,1.4,.6,1);
+    opacity: 0.18;
+  }
+  .odoo-cta-highlight:hover {
+    color: var(--sun-color-primary);
+  }
+  .odoo-cta-highlight:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+    opacity: 0.5;
   }
 
