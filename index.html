@@ -7,26 +7,26 @@
     <title>OdooExperts | Soluciones ERP Premium</title>
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="styles-optimized.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main class="sun">
-        <!-- 1. SECCIÓN HERO - INICIO -->
-        <section class="odoo-hero" id="Inicio">
-            <div class="odoo-hero__container">
+        <!-- ================= SECCIÓN HERO (Presentación principal) ================= -->
+        <section class="odoo-hero" id="Inicio" aria-labelledby="hero-title">
+            <div class="odoo-hero__container sun__container">
                 <div class="odoo-hero__content">
                     <div class="odoo-hero__text">
-                        <div class="odoo-hero__badge">SOLUCIONES ERP PREMIUM</div>
-                        <h1 class="odoo-hero__title">Impulsa tu negocio <span class="odoo-hero__highlight">con Odoo</span></h1>
+                        <div class="odoo-hero__badge sun-badge sun-badge--secondary">SOLUCIONES ERP PREMIUM</div>
+                        <h1 id="hero-title" class="odoo-hero__title">Impulsa tu negocio <span class="odoo-hero__highlight">con Odoo</span></h1>
                         <p class="odoo-hero__description">En <span class="odoo-hero__highlight">Sunname</span>, adaptamos Odoo a las necesidades de tu empresa y entrenamos a tu equipo para sacar el máximo provecho de cada módulo, optimizando tus procesos y facilitando el crecimiento.</p>
                         <div class="odoo-hero__buttons">
-                            <a href="#Contacto" class="odoo-hero__button odoo-hero__button--primary">
+                            <a href="#Contacto" class="odoo-hero__button sun-btn sun-btn--primary">
                                 Contáctanos
                                 <i class="fa fa-arrow-right" aria-hidden="true"></i>
                             </a>
-                            <a href="#Nuestros-Servicios" class="odoo-hero__button odoo-hero__button--secondary">
+                            <a href="#Nuestros-Servicios" class="odoo-hero__button sun-btn sun-btn--secondary">
                                 <i class="fa fa-list-check odoo-hero__play-icon" aria-hidden="true"></i>
-                                Ver nuestros servicios
+                                Ver servicios
                             </a>
                         </div>
                         <div class="odoo-hero__clients">
@@ -37,28 +37,29 @@
                                 <div class="odoo-hero__avatar" style="background-color: var(--sun-color-purple-light, #7F52A0)"></div>
                             </div>
                             <div class="odoo-hero__client-text">
-                                <span class="odoo-hero__highlight">+50</span> empresas confían en nosotros
+                                <span class="odoo-hero__highlight">+60</span> empresas confían en nosotros
                             </div>
                         </div>
                     </div>
                     <div class="odoo-hero__image">
-                        <div class="odoo-hero__dashboard-container" id="odoo-hero-media">
-                            <img src="https://www.sunname.com.mx/web/image/31307-f605dcc9/apps-odoo-boton-v15.svg" alt="Dashboard Odoo en acción" class="odoo-hero__dashboard-image" id="odoo-hero-img">
-                            <video src="https://download.odoocdn.com/videos/odoo_com/video_homepage.webm" class="odoo-hero__dashboard-video" id="odoo-hero-video" style="display:none;width:100%;height:auto;border-radius:inherit;object-fit:cover;box-shadow:var(--sun-shadow-sm);background:#000;" preload="none"></video>
-                            <div class="odoo-hero__version-badge">Video demo</div>
-                        </div>
+                        <figure class="odoo-hero__dashboard-container" id="odoo-hero-media">
+                            <img src="https://www.sunname.com.mx/web/image/33986-301e94df/toda_tecnologia_una_plataforma_web.webp" alt="Dashboard Odoo en acción" class="odoo-hero__dashboard-image" id="odoo-hero-img">
+                            <video src="https://download.odoocdn.com/videos/odoo_com/video_homepage.webm" class="odoo-hero__dashboard-video u-hidden" id="odoo-hero-video" style="width:100%;height:auto;border-radius:inherit;object-fit:cover;box-shadow:var(--sun-shadow-sm);background:#000;" preload="none" controls aria-label="Video demo del dashboard de Odoo"></video>
+                            <figcaption class="odoo-hero__version-badge">Video demo</figcaption>
+                        </figure>
                         <div class="odoo-hero__glow-effect"></div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- SECCIÓN HERO - FIN -->
 
-        <!-- Sección de Módulos Odoo - Agregar después de la sección Hero -->
-        <section class="odoo-modules" id="Modulos">
+
+        
+        <!-- =============== SECCIÓN MÓDULOS ODOO (Grid de módulos) =============== -->
+        <section class="odoo-modules sun__section sun__section--white" id="Modulos" aria-labelledby="modules-title">
             <div class="sun__container">
                 <div class="odoo-modules__content">
-                    <h2 class="odoo-modules__title">Unifica tu negocio en una sola plataforma</h2>
+                    <h2 id="modules-title" class="odoo-modules__title">Unifica tu negocio en una sola plataforma</h2>
                     <p class="odoo-modules__subtitle">¿Buscas optimizar algún proceso? Tenemos la herramienta perfecta para ti.</p>
                     <div class="odoo-modules__browser">
                         <div class="odoo-modules__browser-bar">
@@ -68,144 +69,140 @@
                                 <span class="odoo-modules__browser-dot odoo-modules__browser-dot--green"></span>
                             </div>
                             <div class="odoo-modules__browser-address">
-                                <i class="fas fa-globe"></i>
+                                <i class="fas fa-globe" aria-hidden="true"></i>
                                 <span>odoo.com</span>
                             </div>
                             <div class="odoo-modules__browser-actions">
-                                <i class="fas fa-bookmark"></i>
-                                <i class="fas fa-ellipsis-h"></i>
+                                <i class="fas fa-bookmark" aria-hidden="true"></i>
+                                <i class="fas fa-ellipsis-h" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="odoo-modules__browser-content">
-                            <div class="odoo-modules__grid">
-                                <!-- Fila 1 -->
+                            <div class="odoo-modules__grid sun-grid">
                                 <div class="odoo-modules__item sun-animate-on-scroll">
-                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31325-redirect/icon.svg" alt="Contabilidad" class="odoo-modules__icon"></div>
+                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31325-redirect/icon.svg" alt="Icono Contabilidad" class="odoo-modules__icon"></div>
                                     <span class="odoo-modules__name">Contabilidad</span>
                                 </div>
                                 <div class="odoo-modules__item sun-animate-on-scroll">
-                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31326-redirect/icon.svg" alt="Información" class="odoo-modules__icon"></div>
+                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31326-redirect/icon.svg" alt="Icono Información" class="odoo-modules__icon"></div>
                                     <span class="odoo-modules__name">Información</span>
                                 </div>
                                 <div class="odoo-modules__item sun-animate-on-scroll">
-                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31327-redirect/icon.svg" alt="Firma" class="odoo-modules__icon"></div>
+                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31327-redirect/icon.svg" alt="Icono Firma" class="odoo-modules__icon"></div>
                                     <span class="odoo-modules__name">Firma</span>
                                 </div>
-                                <!-- Fila 2 -->
                                 <div class="odoo-modules__item sun-animate-on-scroll">
-                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31328-redirect/icon.svg" alt="CRM" class="odoo-modules__icon"></div>
+                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31328-redirect/icon.svg" alt="Icono CRM" class="odoo-modules__icon"></div>
                                     <span class="odoo-modules__name">CRM</span>
                                 </div>
                                 <div class="odoo-modules__item sun-animate-on-scroll">
-                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31329-redirect/icon.svg" alt="Studio" class="odoo-modules__icon"></div>
+                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31329-redirect/icon.svg" alt="Icono Studio" class="odoo-modules__icon"></div>
                                     <span class="odoo-modules__name">Studio</span>
                                 </div>
                                 <div class="odoo-modules__item sun-animate-on-scroll">
-                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31330-redirect/icon.svg" alt="Suscripciones" class="odoo-modules__icon"></div>
+                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31330-redirect/icon.svg" alt="Icono Suscripciones" class="odoo-modules__icon"></div>
                                     <span class="odoo-modules__name">Suscripciones</span>
                                 </div>
-                                <!-- Fila 3 -->
                                 <div class="odoo-modules__item sun-animate-on-scroll">
-                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31331-redirect/icon.svg" alt="Alquiler" class="odoo-modules__icon"></div>
+                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31331-redirect/icon.svg" alt="Icono Alquiler" class="odoo-modules__icon"></div>
                                     <span class="odoo-modules__name">Alquiler</span>
                                 </div>
                                 <div class="odoo-modules__item sun-animate-on-scroll">
-                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31332-redirect/icon.svg" alt="Punto de venta" class="odoo-modules__icon"></div>
+                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31332-redirect/icon.svg" alt="Icono Punto de venta" class="odoo-modules__icon"></div>
                                     <span class="odoo-modules__name">Punto de venta</span>
                                 </div>
                                 <div class="odoo-modules__item sun-animate-on-scroll">
-                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31333-redirect/icon.svg" alt="Conversaciones" class="odoo-modules__icon"></div>
+                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31333-redirect/icon.svg" alt="Icono Conversaciones" class="odoo-modules__icon"></div>
                                     <span class="odoo-modules__name">Conversaciones</span>
                                 </div>
-                                <!-- Fila 4 -->
                                 <div class="odoo-modules__item sun-animate-on-scroll">
-                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31334-redirect/icon.svg" alt="Documentos" class="odoo-modules__icon"></div>
+                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31334-redirect/icon.svg" alt="Icono Documentos" class="odoo-modules__icon"></div>
                                     <span class="odoo-modules__name">Documentos</span>
                                 </div>
                                 <div class="odoo-modules__item sun-animate-on-scroll">
-                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31335-redirect/icon.svg" alt="Proyecto" class="odoo-modules__icon"></div>
+                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31335-redirect/icon.svg" alt="Icono Proyecto" class="odoo-modules__icon"></div>
                                     <span class="odoo-modules__name">Proyecto</span>
                                 </div>
                                 <div class="odoo-modules__item sun-animate-on-scroll">
-                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31336-redirect/icon.svg" alt="Partes de horas" class="odoo-modules__icon"></div>
+                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31336-redirect/icon.svg" alt="Icono Partes de horas" class="odoo-modules__icon"></div>
                                     <span class="odoo-modules__name">Partes de horas</span>
                                 </div>
-                                <!-- Fila 5 -->
                                 <div class="odoo-modules__item sun-animate-on-scroll">
-                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31337-redirect/icon.svg" alt="Servicio externo" class="odoo-modules__icon"></div>
+                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31337-redirect/icon.svg" alt="Icono Servicio externo" class="odoo-modules__icon"></div>
                                     <span class="odoo-modules__name">Servicio externo</span>
                                 </div>
                                 <div class="odoo-modules__item sun-animate-on-scroll">
-                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31338-redirect/icon.svg" alt="Planificación" class="odoo-modules__icon"></div>
+                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31338-redirect/icon.svg" alt="Icono Planificación" class="odoo-modules__icon"></div>
                                     <span class="odoo-modules__name">Planificación</span>
                                 </div>
                                 <div class="odoo-modules__item sun-animate-on-scroll">
-                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31339-redirect/icon.svg" alt="Servicio de asistencia" class="odoo-modules__icon"></div>
+                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31339-redirect/icon.svg" alt="Icono Servicio de asistencia" class="odoo-modules__icon"></div>
                                     <span class="odoo-modules__name">Servicio de asistencia</span>
                                 </div>
-                                <!-- Fila 6 -->
                                 <div class="odoo-modules__item sun-animate-on-scroll">
-                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31340-redirect/icon.svg" alt="Sitio web" class="odoo-modules__icon"></div>
+                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31340-redirect/icon.svg" alt="Icono Sitio web" class="odoo-modules__icon"></div>
                                     <span class="odoo-modules__name">Sitio web</span>
                                 </div>
                                 <div class="odoo-modules__item sun-animate-on-scroll">
-                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31341-redirect/icon.svg" alt="Marketing social" class="odoo-modules__icon"></div>
+                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31341-redirect/icon.svg" alt="Icono Marketing social" class="odoo-modules__icon"></div>
                                     <span class="odoo-modules__name">Marketing social</span>
                                 </div>
                                 <div class="odoo-modules__item sun-animate-on-scroll">
-                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31342-redirect/icon.svg" alt="Marketing por emailing" class="odoo-modules__icon"></div>
+                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31342-redirect/icon.svg" alt="Icono Marketing por emailing" class="odoo-modules__icon"></div>
                                     <span class="odoo-modules__name">Marketing por emailing</span>
                                 </div>
-                                <!-- Fila 7 -->
                                 <div class="odoo-modules__item sun-animate-on-scroll">
-                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31343-redirect/icon.svg" alt="Compra" class="odoo-modules__icon"></div>
+                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31343-redirect/icon.svg" alt="Icono Compra" class="odoo-modules__icon"></div>
                                     <span class="odoo-modules__name">Compra</span>
                                 </div>
                                 <div class="odoo-modules__item sun-animate-on-scroll">
-                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31344-redirect/icon.svg" alt="Inventario" class="odoo-modules__icon"></div>
+                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31344-redirect/icon.svg" alt="Icono Inventario" class="odoo-modules__icon"></div>
                                     <span class="odoo-modules__name">Inventario</span>
                                 </div>
                                 <div class="odoo-modules__item sun-animate-on-scroll">
-                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31345-redirect/icon.svg" alt="Fabricación" class="odoo-modules__icon"></div>
+                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31345-redirect/icon.svg" alt="Icono Fabricación" class="odoo-modules__icon"></div>
                                     <span class="odoo-modules__name">Fabricación</span>
                                 </div>
-                                <!-- Fila 8 -->
                                 <div class="odoo-modules__item sun-animate-on-scroll">
-                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31346-redirect/icon.svg" alt="Ventas" class="odoo-modules__icon"></div>
+                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31346-redirect/icon.svg" alt="Icono Ventas" class="odoo-modules__icon"></div>
                                     <span class="odoo-modules__name">Ventas</span>
                                 </div>
                                 <div class="odoo-modules__item sun-animate-on-scroll">
-                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31347-redirect/icon.svg" alt="RR. HH." class="odoo-modules__icon"></div>
+                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31347-redirect/icon.svg" alt="Icono RR. HH." class="odoo-modules__icon"></div>
                                     <span class="odoo-modules__name">RR. HH.</span>
                                 </div>
                                 <div class="odoo-modules__item sun-animate-on-scroll">
-                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31348-redirect/icon.svg" alt="Tablero" class="odoo-modules__icon"></div>
+                                    <div class="odoo-modules__icon-container"><img src="https://www.sunname.com.mx/web/image/31348-redirect/icon.svg" alt="Icono Tablero" class="odoo-modules__icon"></div>
                                     <span class="odoo-modules__name">Tablero</span>
                                 </div>
+
                             </div>
-                        </div>
+
+                            </div>
                     </div>
-                    <div class="odoo-modules__cta-text" style="margin-top:2.5rem;text-align:center;font-size:1.25rem;max-width:700px;margin-left:auto;margin-right:auto;">
-                        Imagina todo lo que tu equipo puede alcanzar con una plataforma flexible y adaptable. <span class="odoo-hero__highlight">Nosotros te capacitamos</span> para aprovecharla al máximo.
-                    </div>
+                    <p class="odoo-modules__cta-text" style="margin-top:2.5rem;text-align:center;font-size:1.25rem;max-width:700px;margin-left:auto;margin-right:auto;">
+                        Imagina todo lo que tu equipo puede alcanzar con una plataforma flexible y adaptable. <span class="odoo-cta-highlight">Nosotros te capacitamos</span> para aprovecharla al máximo.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- 2. SECCIÓN SERVICIOS -->
+
+        
+
+        <!-- =============== SECCIÓN SERVICIOS (Tarjetas de servicios) =============== -->
         <section class="sun__section sun__section--white" id="Nuestros-Servicios" aria-labelledby="services-title">
             <div class="sun__container">
-                <header class="sun-header">
+                <header class="sun-header u-text-center">
                     <h2 id="services-title" class="sun-header__title">Nuestros Servicios</h2>
                     <p class="sun-header__subtitle">
                         Soluciones tecnológicas pensadas para hacer crecer tu empresa y optimizar tus procesos.
                     </p>
                 </header>
-          
+
                 <div class="sun-grid sun-grid--3col" role="list">
-                    <!-- Servicio 1 -->
-                    <article class="sun-card sun-service-card" role="listitem" aria-labelledby="service-erp-title" style="--order: 1">
-                        <div class="sun-icon-circle">
+                    <article class="sun-service-card sun-card" role="listitem" aria-labelledby="service-erp-title" style="--order: 1">
+                        <div class="sun-icon-circle u-flex-center">
                             <i class="fas fa-cogs" aria-hidden="true"></i>
                         </div>
                         <h3 id="service-erp-title" class="sun-card__title">Implementación de ERP (Odoo)</h3>
@@ -219,9 +216,8 @@
                         </ul>
                     </article>
 
-                    <!-- Servicio 2 -->
-                    <article class="sun-card sun-service-card" role="listitem" aria-labelledby="service-dev-title" style="--order: 2">
-                        <div class="sun-icon-circle">
+                    <article class="sun-service-card sun-card" role="listitem" aria-labelledby="service-dev-title" style="--order: 2">
+                        <div class="sun-icon-circle u-flex-center">
                             <i class="fas fa-code" aria-hidden="true"></i>
                         </div>
                         <h3 id="service-dev-title" class="sun-card__title">Desarrollo a la Medida</h3>
@@ -235,9 +231,8 @@
                         </ul>
                     </article>
 
-                    <!-- Servicio 3 -->
-                    <article class="sun-card sun-service-card" role="listitem" aria-labelledby="service-strategy-title" style="--order: 3">
-                        <div class="sun-icon-circle">
+                    <article class="sun-service-card sun-card" role="listitem" aria-labelledby="service-strategy-title" style="--order: 3">
+                        <div class="sun-icon-circle u-flex-center">
                             <i class="fas fa-chart-line" aria-hidden="true"></i>
                         </div>
                         <h3 id="service-strategy-title" class="sun-card__title">Estrategia y definición de procesos</h3>
@@ -251,9 +246,8 @@
                         </ul>
                     </article>
 
-                    <!-- Servicio 4 -->
-                    <article class="sun-card sun-service-card" role="listitem" aria-labelledby="service-ecommerce-title" style="--order: 4">
-                        <div class="sun-icon-circle">
+                    <article class="sun-service-card sun-card" role="listitem" aria-labelledby="service-ecommerce-title" style="--order: 4">
+                        <div class="sun-icon-circle u-flex-center">
                             <i class="fas fa-store" aria-hidden="true"></i>
                         </div>
                         <h3 id="service-ecommerce-title" class="sun-card__title">Creación de Tiendas en Línea</h3>
@@ -267,9 +261,8 @@
                         </ul>
                     </article>
 
-                    <!-- Servicio 5 -->
-                    <article class="sun-card sun-service-card" role="listitem" aria-labelledby="service-support-title" style="--order: 5">
-                        <div class="sun-icon-circle">
+                    <article class="sun-service-card sun-card" role="listitem" aria-labelledby="service-support-title" style="--order: 5">
+                        <div class="sun-icon-circle u-flex-center">
                             <i class="fas fa-tools" aria-hidden="true"></i>
                         </div>
                         <h3 id="service-support-title" class="sun-card__title">Soporte Técnico y Mantenimiento</h3>
@@ -282,41 +275,56 @@
                             <li class="sun-list__item">Atención personalizada y tiempos de respuesta garantizados.</li>
                         </ul>
                     </article>
+
+
+                    <article class="sun-service-card sun-card" role="listitem" aria-labelledby="service-support-title" style="--order: 5">
+                        <div class="sun-icon-circle u-flex-center">
+                            <i class="fas fa-envelope-open-text" aria-hidden="true"></i>
+                        </div>
+                        <h3 id="service-support-title" class="sun-card__title">Email Marketing Automatizado</h3>
+                        <p class="sun-card__text">Conecta tu ERP con campañas de correo para fidelizar clientes y aumentar tus ventas.   
+                        </p>
+                        <ul class="sun-list">
+                            <li class="sun-list__item">Segmentación de clientes desde tu base de datos.</li>
+                            <li class="sun-list__item">Automatización de correos y seguimiento de resultados.</li>
+                            <li class="sun-list__item">Integración con Odoo o plataformas externas.</li>
+                        </ul>
+                    </article>                    
                 </div>
             </div>
         </section>
 
-        <!-- 3. SECCIÓN PROCESO -->
+        <!-- =============== SECCIÓN PROCESO (Pasos de trabajo) =============== -->
         <section class="sun__section sun__section--light" id="Proceso" aria-labelledby="process-title">
             <div class="sun__container">
-                <header class="sun-header">
+                <header class="sun-header u-text-center">
                     <h2 id="process-title" class="sun-header__title">Nuestro Proceso</h2>
                 </header>
                 <div class="sun-grid sun-grid--4col" role="list">
-                    <div class="sun-process-step" role="listitem">
-                        <div class="sun-icon-circle sun-icon-circle--large">
-                            <i class="fas fa-calendar-check"></i>
+                    <div class="sun-process-step sun-card" role="listitem">
+                        <div class="sun-icon-circle sun-icon-circle--large u-flex-center">
+                            <i class="fas fa-calendar-check" aria-hidden="true"></i>
                         </div>
                         <h3 class="sun-process-step__title">Programamos una demo</h3>
                         <p class="sun-process-step__description">Hacemos un levantamiento de alto nivel a su propósito.</p>
                     </div>
-                    <div class="sun-process-step" role="listitem">
-                        <div class="sun-icon-circle sun-icon-circle--large">
-                            <i class="fas fa-file-alt"></i>
+                    <div class="sun-process-step sun-card" role="listitem">
+                        <div class="sun-icon-circle sun-icon-circle--large u-flex-center">
+                            <i class="fas fa-file-alt" aria-hidden="true"></i>
                         </div>
                         <h3 class="sun-process-step__title">Te damos una propuesta</h3>
                         <p class="sun-process-step__description">Adaptamos nuestra solución a sus necesidades específicas.</p>
                     </div>
-                    <div class="sun-process-step" role="listitem">
-                        <div class="sun-icon-circle sun-icon-circle--large">
-                            <i class="fas fa-search"></i>
+                    <div class="sun-process-step sun-card" role="listitem">
+                        <div class="sun-icon-circle sun-icon-circle--large u-flex-center">
+                            <i class="fas fa-search" aria-hidden="true"></i>
                         </div>
                         <h3 class="sun-process-step__title">Hacemos análisis</h3>
                         <p class="sun-process-step__description">Validamos todos los requerimientos técnicos.</p>
                     </div>
-                    <div class="sun-process-step" role="listitem">
-                        <div class="sun-icon-circle sun-icon-circle--large">
-                            <i class="fas fa-rocket"></i>
+                    <div class="sun-process-step sun-card" role="listitem">
+                        <div class="sun-icon-circle sun-icon-circle--large u-flex-center">
+                            <i class="fas fa-rocket" aria-hidden="true"></i>
                         </div>
                         <h3 class="sun-process-step__title">Implementación</h3>
                         <p class="sun-process-step__description">Comenzamos el desarrollo de su solución.</p>
@@ -325,397 +333,22 @@
             </div>
         </section>
 
-        <!-- 4. SECCIÓN CASOS DE ÉXITO -->
-        <section class="sun__section sun__section--light" id="Casos-Exito" aria-labelledby="case-studies-title">
-            <div class="sun__container">
-                <header class="sun-header">
-                    <h2 id="case-studies-title" class="sun-header__title">Casos de Éxito</h2>
-                    <p class="sun-header__subtitle">
-                        Descubre cómo hemos ayudado a empresas como la tuya a transformar sus operaciones con Odoo
-                    </p>
-                </header>
-                
-                <div class="sun-grid sun-grid--3col" role="list">
-                    <!-- Caso de Éxito 1 -->
-                    <article class="sun-case-study" role="listitem">
-                        <div class="sun-case-study__header">
-                            <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Fábrica de Manufacturas Industriales" class="sun-case-study__image" loading="lazy">
-                            <div class="sun-case-study__overlay">
-                                <img src="https://www.sunname.com.mx/web/image/33009-46c4d09b/referencias_01.webp" alt="Logo de Manufacturas Industriales" class="sun-case-study__logo" loading="lazy">
-                            </div>
-                        </div>
-                        <div class="sun-case-study__content">
-                            <span class="sun-case-study__category">Manufactura</span>
-                            <h3 class="sun-case-study__title">Optimización de procesos de producción</h3>
-                            <p class="sun-case-study__description">
-                                Implementamos Odoo Manufacturing para una empresa de manufactura industrial, integrando inventario, compras y producción en un solo sistema. Esto permitió una visibilidad completa de la cadena de suministro y optimizó los tiempos de producción.
-                            </p>
-                            <div class="sun-case-study__results">
-                                <div class="sun-case-study__result">
-                                    <div class="sun-case-study__result-number">35%</div>
-                                    <div class="sun-case-study__result-label">Reducción de tiempo</div>
-                                </div>
-                                <div class="sun-case-study__result">
-                                    <div class="sun-case-study__result-number">28%</div>
-                                    <div class="sun-case-study__result-label">Ahorro en costos</div>
-                                </div>
-                                <div class="sun-case-study__result">
-                                    <div class="sun-case-study__result-number">40%</div>
-                                    <div class="sun-case-study__result-label">Menos errores</div>
-                                </div>
-                            </div>
-                            <div class="sun-case-study__footer">
-                                <div class="sun-case-study__client">
-                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto de Roberto Méndez" class="sun-case-study__client-image" loading="lazy">
-                                    <div class="sun-case-study__client-info">
-                                        <div class="sun-case-study__client-name">Roberto Méndez</div>
-                                        <div class="sun-case-study__client-position">Director de Operaciones</div>
-                                    </div>
-                                </div>
-                                <a href="#" class="sun-case-study__link">
-                                    Ver caso completo <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <!-- Caso de Éxito 2 -->
-                    <article class="sun-case-study" role="listitem">
-                        <div class="sun-case-study__header">
-                            <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Oficinas de Servicios Financieros" class="sun-case-study__image" loading="lazy">
-                            <div class="sun-case-study__overlay">
-                                <img src="https://www.sunname.com.mx/web/image/33010-0aa494dc/referencias_02.webp" alt="Logo de Servicios Financieros" class="sun-case-study__logo" loading="lazy">
-                            </div>
-                        </div>
-                        <div class="sun-case-study__content">
-                            <span class="sun-case-study__category">Servicios Financieros</span>
-                            <h3 class="sun-case-study__title">Automatización de procesos contables</h3>
-                            <p class="sun-case-study__description">
-                                Implementamos Odoo Accounting y CRM para una empresa de servicios financieros, automatizando la facturación, el seguimiento de clientes y los reportes financieros. Esto permitió una gestión más eficiente y precisa de las finanzas.
-                            </p>
-                            <div class="sun-case-study__results">
-                                <div class="sun-case-study__result">
-                                    <div class="sun-case-study__result-number">50%</div>
-                                    <div class="sun-case-study__result-label">Menos tiempo en reportes</div>
-                                </div>
-                                <div class="sun-case-study__result">
-                                    <div class="sun-case-study__result-number">99%</div>
-                                    <div class="sun-case-study__result-label">Precisión en datos</div>
-                                </div>
-                                <div class="sun-case-study__result">
-                                    <div class="sun-case-study__result-number">45%</                                    <div class="sun-case-study__result-label">Aumento en ventas</div>
-                                </div>
-                            </div>
-                            <div class="sun-case-study__footer">
-                                <div class="sun-case-study__client">
-                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Foto de Ana Gómez" class="sun-case-study__client-image" loading="lazy">
-                                    <div class="sun-case-study__client-info">
-                                        <div class="sun-case-study__client-name">Ana Gómez</div>
-                                        <div class="sun-case-study__client-position">Directora Financiera</div>
-                                    </div>
-                                </div>
-                                <a href="#" class="sun-case-study__link">
-                                    Ver caso completo <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <!-- Caso de Éxito 3 -->
-                    <article class="sun-case-study" role="listitem">
-                        <div class="sun-case-study__header">
-                            <img src="https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Tienda de Retail" class="sun-case-study__image" loading="lazy">
-                            <div class="sun-case-study__overlay">
-                                <img src="https://www.sunname.com.mx/web/image/33011-55981491/referencias_03.webp" alt="Logo de Retail Express" class="sun-case-study__logo" loading="lazy">
-                            </div>
-                        </div>
-                        <div class="sun-case-study__content">
-                            <span class="sun-case-study__category">Retail</span>
-                            <h3 class="sun-case-study__title">Integración de tienda física y online</h3>
-                            <p class="sun-case-study__description">
-                                Desarrollamos una solución integral con Odoo POS y E-commerce para una cadena de tiendas retail, permitiendo una gestión unificada del inventario, ventas y clientes tanto en tiendas físicas como online.
-                            </p>
-                            <div class="sun-case-study__results">
-                                <div class="sun-case-study__result">
-                                    <div class="sun-case-study__result-number">120%</div>
-                                    <div class="sun-case-study__result-label">Aumento en ventas online</div>
-                                </div>
-                                <div class="sun-case-study__result">
-                                    <div class="sun-case-study__result-number">30%</div>
-                                    <div class="sun-case-study__result-label">Reducción de inventario</div>
-                                </div>
-                                <div class="sun-case-study__result">
-                                    <div class="sun-case-study__result-number">25%</div>
-                                    <div class="sun-case-study__result-label">Aumento en retención</div>
-                                </div>
-                            </div>
-                            <div class="sun-case-study__footer">
-                                <div class="sun-case-study__client">
-                                    <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Foto de Carlos Vega" class="sun-case-study__client-image" loading="lazy">
-                                    <div class="sun-case-study__client-info">
-                                        <div class="sun-case-study__client-name">Carlos Vega</div>
-                                        <div class="sun-case-study__client-position">Gerente General</div>
-                                    </div>
-                                </div>
-                                <a href="#" class="sun-case-study__link">
-                                    Ver caso completo <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                
-                <div class="sun-team__cta">
-                    <a href="#Contacto-Formulario" class="sun-btn sun-btn--primary">Quiero un caso de éxito para mi empresa</a>
-                </div>
-            </div>
-        </section>
+ 
 
-        <!-- 5. SECCIÓN PLANES/COMPARATIVA -->
-        <section class="sun__section sun__section--light" id="Planes" aria-labelledby="pricing-title">
-            <div class="sun__container">
-                <header class="sun-header">
-                    <h2 id="pricing-title" class="sun-header__title">Nuestros Planes</h2>
-                    <p class="sun-header__subtitle">
-                        Soluciones flexibles que se adaptan a las necesidades y presupuesto de tu empresa
-                    </p>
-                </header>
-                
-                <div class="sun-pricing__toggle">
-                    <span class="sun-pricing__toggle-label sun-pricing__toggle-label--active">Pago Mensual</span>
-                    <label class="sun-pricing__toggle-switch">
-                        <input type="checkbox" class="sun-pricing__toggle-input">
-                        <span class="sun-pricing__toggle-slider"></span>
-                    </label>
-                    <span class="sun-pricing__toggle-label">Pago Anual (20% descuento)</span>
-                </div>
-                
-                <table class="sun-pricing-table">
-                    <thead class="sun-pricing-table__head">
-                        <tr>
-                            <th>Características</th>
-                            <th>Básico</th>
-                            <th class="sun-pricing-table__popular">Profesional</th>
-                            <th>Empresarial</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="sun-pricing-table__feature-row">
-                            <td class="sun-pricing-table__feature-name">Usuarios incluidos</td>
-                            <td class="sun-pricing-table__feature-value">3</td>
-                            <td class="sun-pricing-table__feature-value">10</td>
-                            <td class="sun-pricing-table__feature-value">Ilimitados</td>
-                        </tr>
-                        <tr class="sun-pricing-table__feature-row">
-                            <td class="sun-pricing-table__feature-name">Módulos incluidos</td>
-                            <td class="sun-pricing-table__feature-value">5</td>
-                            <td class="sun-pricing-table__feature-value">10</td>
-                            <td class="sun-pricing-table__feature-value">Todos</td>
-                        </tr>
-                        <tr class="sun-pricing-table__feature-row">
-                            <td class="sun-pricing-table__feature-name">Implementación</td>
-                            <td class="sun-pricing-table__feature-value"><i class="fas fa-check sun-pricing-table__feature-check"></i></td>
-                            <td class="sun-pricing-table__feature-value"><i class="fas fa-check sun-pricing-table__feature-check"></i></td>
-                            <td class="sun-pricing-table__feature-value"><i class="fas fa-check sun-pricing-table__feature-check"></i></td>
-                        </tr>
-                        <tr class="sun-pricing-table__feature-row">
-                            <td class="sun-pricing-table__feature-name">Capacitación</td>
-                            <td class="sun-pricing-table__feature-value">4 horas</td>
-                            <td class="sun-pricing-table__feature-value">10 horas</td>
-                            <td class="sun-pricing-table__feature-value">20 horas</td>
-                        </tr>
-                        <tr class="sun-pricing-table__feature-row">
-                            <td class="sun-pricing-table__feature-name">Soporte técnico</td>
-                            <td class="sun-pricing-table__feature-value">Horario laboral</td>
-                            <td class="sun-pricing-table__feature-value">Horario extendido</td>
-                            <td class="sun-pricing-table__feature-value">24/7</td>
-                        </tr>
-                        <tr class="sun-pricing-table__feature-row">
-                            <td class="sun-pricing-table__feature-name">Personalización</td>
-                            <td class="sun-pricing-table__feature-value"><i class="fas fa-times sun-pricing-table__feature-cross"></i></td>
-                            <td class="sun-pricing-table__feature-value">Básica</td>
-                            <td class="sun-pricing-table__feature-value">Avanzada</td>
-                        </tr>
-                        <tr class="sun-pricing-table__feature-row">
-                            <td class="sun-pricing-table__feature-name">Integraciones</td>
-                            <td class="sun-pricing-table__feature-value">1</td>
-                            <td class="sun-pricing-table__feature-value">3</td>
-                            <td class="sun-pricing-table__feature-value">Ilimitadas</td>
-                        </tr>
-                        <tr class="sun-pricing-table__feature-row">
-                            <td class="sun-pricing-table__feature-name">Actualizaciones</td>
-                            <td class="sun-pricing-table__feature-value">Anuales</td>
-                            <td class="sun-pricing-table__feature-value">Semestrales</td>
-                            <td class="sun-pricing-table__feature-value">Trimestrales</td>
-                        </tr>
-                        <tr class="sun-pricing-table__feature-row">
-                            <td class="sun-pricing-table__feature-name">Tiempo de respuesta</td>
-                            <td class="sun-pricing-table__feature-value">48 horas</td>
-                            <td class="sun-pricing-table__feature-value">24 horas</td>
-                            <td class="sun-pricing-table__feature-value">4 horas</td>
-                        </tr>
-                        <tr class="sun-pricing-table__price-row">
-                            <td class="sun-pricing-table__price-label">Precio mensual</td>
-                            <td class="sun-pricing-table__price">$15,000 MXN</td>
-                            <td class="sun-pricing-table__price">$30,000 MXN</td>
-                            <td class="sun-pricing-table__price">$60,000 MXN</td>
-                        </tr>
-                        <tr class="sun-pricing-table__cta-row">
-                            <td></td>
-                            <td class="sun-pricing-table__cta-cell">
-                                <a href="#Contacto-Formulario" class="sun-pricing-table__cta-btn sun-pricing-table__cta-btn--secondary">Elegir plan</a>
-                            </td>
-                            <td class="sun-pricing-table__cta-cell">
-                                <a href="#Contacto-Formulario" class="sun-pricing-table__cta-btn">Elegir plan</a>
-                            </td>
-                            <td class="sun-pricing-table__cta-cell">
-                                <a href="#Contacto-Formulario" class="sun-pricing-table__cta-btn sun-pricing-table__cta-btn--accent">Elegir plan</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-                <p class="sun-pricing__note">* Los precios no incluyen IVA. Consulta con nuestro equipo para planes personalizados según tus necesidades específicas.</p>
-            </div>
-        </section>
-
-        <!-- 6. SECCIÓN EQUIPO -->
-        <section class="sun__section sun__section--white" id="Equipo" aria-labelledby="team-title">
-            <div class="sun__container">
-                <header class="sun-header">
-                    <h2 id="team-title" class="sun-header__title">Nuestro Equipo</h2>
-                    <p class="sun-header__subtitle">
-                        Conoce a los expertos detrás de Sunname que hacen posible el éxito de cada proyecto
-                    </p>
-                </header>
-                
-                <div class="sun-grid sun-grid--4col" role="list">
-                    <!-- Miembro del Equipo 1 -->
-                    <article class="sun-team-card" role="listitem" aria-labelledby="team-member-1">
-                        <div class="sun-team-card__badge">Fundador</div>
-                        <div class="sun-team-card__image-container">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto de Carlos Rodríguez" class="sun-team-card__image" loading="lazy">
-                            <div class="sun-team-card__overlay"></div>
-                        </div>
-                        <div class="sun-team-card__content">
-                            <h3 id="team-member-1" class="sun-team-card__name">Carlos Rodríguez</h3>
-                            <span class="sun-team-card__position">Director General</span>
-                            <p class="sun-team-card__description">
-                                Con más de 15 años de experiencia en implementación de ERP y transformación digital para empresas de diversos sectores.
-                            </p>
-                            <div class="sun-team-card__social">
-                                <a href="#" class="sun-team-card__social-link" aria-label="LinkedIn de Carlos Rodríguez">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="#" class="sun-team-card__social-link" aria-label="Twitter de Carlos Rodríguez">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="#" class="sun-team-card__social-link" aria-label="Email de Carlos Rodríguez">
-                                    <i class="fas fa-envelope"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <!-- Miembro del Equipo 2 -->
-                    <article class="sun-team-card" role="listitem" aria-labelledby="team-member-2">
-                        <div class="sun-team-card__image-container">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Foto de Laura Méndez" class="sun-team-card__image" loading="lazy">
-                            <div class="sun-team-card__overlay"></div>
-                        </div>
-                        <div class="sun-team-card__content">
-                            <h3 id="team-member-2" class="sun-team-card__name">Laura Méndez</h3>
-                            <span class="sun-team-card__position">Directora de Proyectos</span>
-                            <p class="sun-team-card__description">
-                                Especialista en gestión de proyectos Odoo con certificación PMP y más de 8 años liderando implementaciones exitosas.
-                            </p>
-                            <div class="sun-team-card__social">
-                                <a href="#" class="sun-team-card__social-link" aria-label="LinkedIn de Laura Méndez">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="#" class="sun-team-card__social-link" aria-label="Twitter de Laura Méndez">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="#" class="sun-team-card__social-link" aria-label="Email de Laura Méndez">
-                                    <i class="fas fa-envelope"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <!-- Miembro del Equipo 3 -->
-                    <article class="sun-team-card" role="listitem" aria-labelledby="team-member-3">
-                        <div class="sun-team-card__image-container">
-                            <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Foto de Miguel Torres" class="sun-team-card__image" loading="lazy">
-                            <div class="sun-team-card__overlay"></div>
-                        </div>
-                        <div class="sun-team-card__content">
-                            <h3 id="team-member-3" class="sun-team-card__name">Miguel Torres</h3>
-                            <span class="sun-team-card__position">Desarrollador Senior</span>
-                            <p class="sun-team-card__description">
-                                Experto en desarrollo de módulos personalizados para Odoo y soluciones de integración con más de 10 años de experiencia.
-                            </p>
-                            <div class="sun-team-card__social">
-                                <a href="#" class="sun-team-card__social-link" aria-label="LinkedIn de Miguel Torres">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="#" class="sun-team-card__social-link" aria-label="GitHub de Miguel Torres">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="#" class="sun-team-card__social-link" aria-label="Email de Miguel Torres">
-                                    <i class="fas fa-envelope"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <!-- Miembro del Equipo 4 -->
-                    <article class="sun-team-card" role="listitem" aria-labelledby="team-member-4">
-                        <div class="sun-team-card__image-container">
-                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Foto de Ana Gómez" class="sun-team-card__image" loading="lazy">
-                            <div class="sun-team-card__overlay"></div>
-                        </div>
-                        <div class="sun-team-card__content">
-                            <h3 id="team-member-4" class="sun-team-card__name">Ana Gómez</h3>
-                            <span class="sun-team-card__position">Consultora Funcional</span>
-                            <p class="sun-team-card__description">
-                                Especialista en análisis de procesos de negocio y configuración de módulos financieros y de inventario en Odoo.
-                            </p>
-                            <div class="sun-team-card__social">
-                                <a href="#" class="sun-team-card__social-link" aria-label="LinkedIn de Ana Gómez">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="#" class="sun-team-card__social-link" aria-label="Twitter de Ana Gómez">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="#" class="sun-team-card__social-link" aria-label="Email de Ana Gómez">
-                                    <i class="fas fa-envelope"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                
-                <div class="sun-team__cta">
-                    <p class="sun-team__cta-text">¿Quieres formar parte de nuestro equipo?</p>
-                    <a href="#Contacto" class="sun-btn sun-btn--primary">Envíanos tu CV</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- 7. SECCIÓN PARTNERS -->
+ 
+        <!-- =============== SECCIÓN PARTNERS (Certificaciones y partners) =============== -->
         <section class="sun__section sun__section--light" id="Partners" aria-labelledby="partners-title">
             <div class="sun__container">
-                <header class="sun-header">
+                <header class="sun-header u-text-center">
                     <h2 id="partners-title" class="sun-header__title">Respaldados por los Mejores</h2>
                     <p class="sun-header__subtitle">
                         Nuestros expertos certificados te garantizan implementaciones exitosas, sin complicaciones.
                     </p>
                 </header>
-                
+
                 <div class="sun-grid sun-grid--2col" role="list">
-                    <article class="sun-card sun-partner-card" role="listitem" aria-labelledby="odoo-title" style="--order: 1">
-                        <div class="sun-partner-card__header">
+                    <article class="sun-partner-card sun-card" role="listitem" aria-labelledby="odoo-title" style="--order: 1">
+                        <div class="sun-partner-card__header u-flex-center">
                             <div class="sun-partner-card__logo-container">
                                 <img class="sun-partner-card__logo" src="https://odoocdn.com/openerp_website/static/src/img/assets/svg/odoo_learning_partner_rgb.svg" alt="Logo Odoo Learning Partner" width="200" height="80" loading="lazy">
                             </div>
@@ -726,12 +359,12 @@
                                 Como partner oficial de Odoo, contamos con el respaldo y la certificación necesaria para ofrecer implementaciones, personalizaciones y capacitaciones de la más alta calidad. Nuestro equipo está certificado para ayudarte a aprovechar al máximo esta potente plataforma.
                             </p>
 
-                            <button class="sun-btn sun-btn--primary" type="button">Explorar soluciones</button>
+                            <button class="sun-btn sun-btn--primary" type="button">Explorar</button>
                         </div>
                     </article>
 
-                    <article class="sun-card sun-partner-card" role="listitem" aria-labelledby="certification-title" style="--order: 2">
-                        <div class="sun-partner-card__header">
+                    <article class="sun-partner-card sun-card" role="listitem" aria-labelledby="certification-title" style="--order: 2">
+                        <div class="sun-partner-card__header u-flex-center">
                             <div class="sun-partner-card__certification">
                                 <i class="fas fa-certificate" aria-hidden="true"></i>
                                 <h3 id="certification-title">Experiencia Certificada</h3>
@@ -755,46 +388,40 @@
             </div>
         </section>
 
-        <!-- 8. SECCIÓN CONFIANZA -->
+        <!-- =============== SECCIÓN CLIENTES (Logos de confianza) =============== -->
         <section class="sun__section sun__section--light" id="Clientes" aria-labelledby="trust-title">
             <div class="sun__container">
-                <header class="sun-header">
+                <header class="sun-header u-text-center">
                     <h2 id="trust-title" class="sun-header__title">Confianza que Nos Impulsa</h2>
                     <p class="sun-header__subtitle">
                         Estamos orgullosos de trabajar con marcas líderes en el mercado que comparten nuestro compromiso con la calidad y la innovación.
                     </p>
                 </header>
-                
-                <div class="sun-grid sun-grid--6col" role="list">
-                    <!-- Logo 1 -->
-                    <div class="sun-brand-card" role="listitem">
-                        <img class="sn-trust__brand-img" src="https://www.sunname.com.mx/web/image/33009-46c4d09b/referencias_01.webp" alt="Logo referencia 1" loading="lazy">
+
+                <div class="sun-grid sun-grid--6col sun-brand__grid" role="list">
+                    <div class="sun-brand-card sun-brand__card" role="listitem">
+                        <img class="sun-brand__img" src="https://www.sunname.com.mx/web/image/33009-46c4d09b/referencias_01.webp" alt="Logo referencia 1" loading="lazy">
                     </div>
-                    <!-- Logo 2 -->
-                    <div class="sun-brand-card" role="listitem">
-                        <img class="sn-trust__brand-img" src="https://www.sunname.com.mx/web/image/33010-0aa494dc/referencias_02.webp" alt="Logo referencia 2" loading="lazy">
+                    <div class="sun-brand-card sun-brand__card" role="listitem">
+                        <img class="sun-brand__img" src="https://www.sunname.com.mx/web/image/33010-0aa494dc/referencias_02.webp" alt="Logo referencia 2" loading="lazy">
                     </div>
-                    <!-- Logo 3 -->
-                    <div class="sun-brand-card" role="listitem">
-                        <img class="sn-trust__brand-img" src="https://www.sunname.com.mx/web/image/33011-55981491/referencias_03.webp" alt="Logo referencia 3" loading="lazy">
+                    <div class="sun-brand-card sun-brand__card" role="listitem">
+                        <img class="sun-brand__img" src="https://www.sunname.com.mx/web/image/33011-55981491/referencias_03.webp" alt="Logo referencia 3" loading="lazy">
                     </div>
-                    <!-- Logo 4 -->
-                    <div class="sun-brand-card" role="listitem">
-                        <img class="sn-trust__brand-img" src="https://www.sunname.com.mx/web/image/33012-2d129d51/referencias_04.webp" alt="Logo referencia 4" loading="lazy">
+                    <div class="sun-brand-card sun-brand__card" role="listitem">
+                        <img class="sun-brand__img" src="https://www.sunname.com.mx/web/image/33012-2d129d51/referencias_04.webp" alt="Logo referencia 4" loading="lazy">
                     </div>
-                    <!-- Logo 5 -->
-                    <div class="sun-brand-card" role="listitem">
-                        <img class="sn-trust__brand-img" src="https://www.sunname.com.mx/web/image/33013-4f5181f7/referencias_05.webp" alt="Logo referencia 5" loading="lazy">
+                    <div class="sun-brand-card sun-brand__card" role="listitem">
+                        <img class="sun-brand__img" src="https://www.sunname.com.mx/web/image/33013-4f5181f7/referencias_05.webp" alt="Logo referencia 5" loading="lazy">
                     </div>
-                    <!-- Logo 6 -->
-                    <div class="sun-brand-card" role="listitem">
-                        <img class="sn-trust__brand-img" src="https://www.sunname.com.mx/web/image/33014-53d98983/referencias_06.webp" alt="Logo referencia 6" loading="lazy">
+                    <div class="sun-brand-card sun-brand__card" role="listitem">
+                        <img class="sun-brand__img" src="https://www.sunname.com.mx/web/image/33014-53d98983/referencias_06.webp" alt="Logo referencia 6" loading="lazy">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 9. SECCIÓN RESULTADOS -->
+        <!-- =============== SECCIÓN RESULTADOS (Resultados y beneficios) =============== -->
         <section class="sun__section sun__section--white" id="Resultados" aria-labelledby="results-title">
             <div class="sun__container">
                 <div class="sun-results__content">
@@ -803,49 +430,49 @@
                             <h2 id="results-title" class="sun-header__title sun-header__title--left">Cuidamos los resultados</h2>
                         </header>
                         <p class="sun-results__lead">
-                            Con más de 45 proyectos exitosos, combinamos pasión y estrategia para impulsar el éxito de nuestros clientes, asegurando resultados que marcan la diferencia en el futuro.
+                            Con más de 60 proyectos exitosos, combinamos pasión y estrategia para impulsar el éxito de nuestros clientes, asegurando resultados que marcan la diferencia en el futuro.
                         </p>
-                        
+
                         <div class="sun-results__info-box">
                             <h3 class="sun-results__info-title">Más información</h3>
                             <ul class="sun-list">
                                 <li class="sun-list__item--check-circle">
-                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-check-circle" aria-hidden="true"></i>
                                     <span>Soluciones adaptadas a tus necesidades</span>
                                 </li>
                                 <li class="sun-list__item--check-circle">
-                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-check-circle" aria-hidden="true"></i>
                                     <span>Enfoque personalizado en cada proyecto</span>
                                 </li>
                                 <li class="sun-list__item--check-circle">
-                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-check-circle" aria-hidden="true"></i>
                                     <span>Resultados medibles y garantizados</span>
                                 </li>
                             </ul>
-                            
-                            <div class="sun-quote">
-                                <p>"Como socio comprometido, creamos soluciones personalizadas que brindan tranquilidad y confianza. En OdooExperts, buscamos siempre superar tus expectativas para que te enfoques en lo que realmente importa: hacer crecer tu negocio."</p>
-                            </div>
-                            
+
+                            <figure class="sun-quote">
+                                <blockquote>"Como socio comprometido, creamos soluciones personalizadas que brindan tranquilidad y confianza. En OdooExperts, buscamos siempre superar tus expectativas para que te enfoques en lo que realmente importa: hacer crecer tu negocio."</blockquote>
+                            </figure>
+
                             <button class="sun-btn sun-btn--primary">Descubrir más</button>
                         </div>
                     </div>
-                    
+
                     <div class="sun-results__image">
                         <div class="sun-results__image-placeholder">
-                            <img src="https://www.sunname.com.mx/web/image/31307-f605dcc9/apps-odoo-boton-v15.svg" alt="Dashboard Odoo en acción" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
+                             <img src="https://www.sunname.com.mx/web/image/31307-f605dcc9/apps-odoo-boton-v15.svg" alt="Dashboard Odoo en acción" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 10. SECCIÓN ESTADÍSTICAS -->
+        <!-- =============== SECCIÓN ESTADÍSTICAS (Números clave) =============== -->
         <section class="sun__section sun__section--gradient" id="Estadisticas" aria-labelledby="stats-title">
             <div class="sun__container">
                 <div class="sun-grid sun-grid--4col" role="list">
                     <div class="sun-stats-card" role="listitem">
-                        <div class="sun-stats-card__number">+45</div>
+                        <div class="sun-stats-card__number">+60</div>
                         <div class="sun-stats-card__label">Empresas felices</div>
                     </div>
                     <div class="sun-stats-card" role="listitem">
@@ -864,291 +491,69 @@
             </div>
         </section>
 
-        <!-- 11. SECCIÓN TESTIMONIOS -->
-        <section class="sun__section sun__section--white" id="Testimonios" aria-labelledby="testimonial-title">
-            <div class="sun__container">
-                <div class="sun-testimonial-card">
-                    <div class="sun-testimonial-card__content">
-                        <blockquote class="sun-quote sun-quote--large">
-                            "Más de 50,000 empresas utilizan Odoo para hacer crecer su negocio. Confíenos y juntos mejoraremos su empresa"
-                        </blockquote>
-                        <div class="sun-testimonial-card__cta">
-                            <a href="#Contacto" class="sun-btn sun-btn--primary">Confíenos</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- 12. SECCIÓN TESTIMONIOS DE CLIENTES -->
+        <!-- =============== SECCIÓN TESTIMONIOS DE CLIENTES =============== -->
         <section class="sun__section sun__section--light" id="TestimoniosClientes" aria-labelledby="clientes-testimonios-title">
             <div class="sun__container">
-                <header class="sun-header">
+                <header class="sun-header u-text-center">
                     <h2 id="clientes-testimonios-title" class="sun-header__title">Testimonios de Clientes</h2>
                     <p class="sun-header__subtitle">Lo que dicen quienes ya confiaron en nosotros</p>
                 </header>
-                <div class="sun-grid sun-grid--3col">
-                    <article class="sun-card" style="text-align:center;">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto cliente 1" style="width:70px;height:70px;border-radius:50%;margin:0 auto 1.5rem auto;box-shadow:0 2px 8px #46c2ce33;display:block;padding:0.6rem 0.6rem 0.6rem 0.6rem;background:#f7fafc;">
-                        <blockquote class="sun-quote">"El equipo de Sunname superó nuestras expectativas. La implementación fue rápida y el soporte excelente."</blockquote>
-                        <div style="font-weight:700;">Carlos Méndez</div>
-                        <div style="font-size:0.95rem;color:#263980;">Director de Operaciones, Grupo MZ</div>
+                <div class="sun-grid sun-grid--3col sun-clientes-testimonios">
+                    <article class="sun-card" role="article">
+                        <div class="sun-clientes-testimonios__avatar">RG</div>
+                        <blockquote class="sun-quote">"La implementación realizada por Sunname ha ayudado a resolver muchas de nuestras necesidades y a mejorar los procesos, y por lo tanto nos abre nuevas oportunidades de negocio. Por otra parte, la consultora siempre ha estado atenta a nuestras dudas y requerimientos, resolviéndolos oportunamente y logrando así una implementación exitosa."</blockquote>
+                        <div class="sun-clientes-testimonios__name">Rebeca Gómez</div>
+                        <div class="sun-clientes-testimonios__position">Gerente de Ventas, Ediciones El Naranjo</div>
                     </article>
-                    <article class="sun-card" style="text-align:center;">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Foto cliente 2" style="width:70px;height:70px;border-radius:50%;margin:0 auto 1.5rem auto;box-shadow:0 2px 8px #46c2ce33;display:block;padding:0.6rem 0.6rem 0.6rem 0.6rem;background:#f7fafc;">
-                        <blockquote class="sun-quote">"Gracias a Sunname, nuestros procesos son más eficientes y el equipo está mucho más motivado."</blockquote>
-                        <div style="font-weight:700;">Laura Torres</div>
-                        <div style="font-size:0.95rem;color:#263980;">CEO, Tienda Nova</div>
+                    <article class="sun-card" role="article">
+                        <div class="sun-clientes-testimonios__avatar">LT</div>
+                        <blockquote class="sun-quote">"Gracias al trabajo realizado por Sunname, logramos hacer más eficientes nuestros procesos internos y al mismo tiempo fortalecer el compromiso del equipo, que ahora se siente más motivado y enfocado. Esta transformación ha tenido un impacto muy positivo en nuestras operaciones diarias."</blockquote>
+                        <div class="sun-clientes-testimonios__name">Laura Torres</div>
+                        <div class="sun-clientes-testimonios__position">CEO, Tienda Nova</div>
                     </article>
-                    <article class="sun-card" style="text-align:center;">
-                        <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Foto cliente 3" style="width:70px;height:70px;border-radius:50%;margin:0 auto 1.5rem auto;box-shadow:0 2px 8px #46c2ce33;display:block;padding:0.6rem 0.6rem 0.6rem 0.6rem;background:#f7fafc;">
-                        <blockquote class="sun-quote">"La personalización y el acompañamiento de Sunname fue clave para el éxito de nuestro proyecto."</blockquote>
-                        <div style="font-weight:700;">Javier López</div>
-                        <div style="font-size:0.95rem;color:#263980;">Gerente IT, Logística Express</div>
+                    <article class="sun-card" role="article">
+                        <div class="sun-clientes-testimonios__avatar">JL</div>
+                        <blockquote class="sun-quote">"La personalización brindada por Sunname y el acompañamiento cercano durante todo el proceso fueron clave para alcanzar los objetivos de nuestro proyecto. Su atención a los detalles y comprensión de nuestras necesidades marcaron la diferencia y contribuyeron directamente al éxito de la implementación."</blockquote>
+                        <div class="sun-clientes-testimonios__name">Javier López</div>
+                        <div class="sun-clientes-testimonios__position">Gerente IT, Logística Express</div>
                     </article>
                 </div>
             </div>
         </section>
-
-        <!-- 13. SECCIÓN FAQ -->
-        <section class="sun__section sun__section--light" id="FAQ" aria-labelledby="faq-title">
-            <div class="sun__container">
-                <header class="sun-header">
-                    <h2 id="faq-title" class="sun-header__title">Preguntas Frecuentes</h2>
-                    <p class="sun-header__subtitle">
-                        Resolvemos tus dudas sobre nuestros servicios y la implementación de Odoo
-                    </p>
-                </header>
-                
-                <div class="sun-faq__categories">
-                    <button class="sun-faq__category active" data-category="all">Todas</button>
-                    <button class="sun-faq__category" data-category="implementation">Implementación</button>
-                    <button class="sun-faq__category" data-category="pricing">Precios</button>
-                    <button class="sun-faq__category" data-category="support">Soporte</button>
-                    <button class="sun-faq__category" data-category="technical">Aspectos Técnicos</button>
-                </div>
-                
-                <div class="sun-faq">
-                    <!-- Pregunta 1 -->
-                    <div class="sun-faq__item" data-category="implementation">
-                        <div class="sun-faq__question">
-                            <div class="sun-faq__question-text">¿Cuánto tiempo toma implementar Odoo en mi empresa?</div>
-                            <i class="fas fa-chevron-down sun-faq__icon"></i>
-                        </div>
-                        <div class="sun-faq__answer">
-                            <p class="sun-faq__answer-text">
-                                El tiempo de implementación varía según la complejidad de tu negocio y los módulos que necesites. Para una implementación básica, el proceso puede tomar entre 4 y 8 semanas. Para implementaciones más complejas con personalizaciones extensas, puede tomar de 3 a 6 meses. Durante nuestra consulta inicial, evaluaremos tus necesidades específicas y te proporcionaremos un cronograma detallado.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Pregunta 2 -->
-                    <div class="sun-faq__item" data-category="pricing">
-                        <div class="sun-faq__question">
-                            <div class="sun-faq__question-text">¿Cuál es el costo de implementar Odoo con Sunname?</div>
-                            <i class="fas fa-chevron-down sun-faq__icon"></i>
-                        </div>
-                        <div class="sun-faq__answer">
-                            <p class="sun-faq__answer-text">
-                                Nuestros precios varían según el alcance del proyecto, el número de usuarios y los módulos requeridos. Ofrecemos planes flexibles que se adaptan a diferentes presupuestos, desde implementaciones básicas hasta soluciones empresariales completas. Contáctanos para una cotización personalizada basada en tus necesidades específicas. Todos nuestros proyectos incluyen capacitación y soporte post-implementación.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Pregunta 3 -->
-                    <div class="sun-faq__item" data-category="implementation">
-                        <div class="sun-faq__question">
-                            <div class="sun-faq__question-text">¿Qué módulos de Odoo son los más utilizados?</div>
-                            <i class="fas fa-chevron-down sun-faq__icon"></i>
-                        </div>
-                        <div class="sun-faq__answer">
-                            <p class="sun-faq__answer-text">
-                                Los módulos más utilizados de Odoo incluyen Ventas, CRM, Inventario, Compras, Contabilidad, Fabricación y Recursos Humanos. Sin embargo, la belleza de Odoo radica en su modularidad, permitiéndote comenzar con los módulos esenciales para tu negocio y expandir según sea necesario. Nuestro equipo te ayudará a identificar qué módulos son más relevantes para tus operaciones específicas.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Pregunta 4 -->
-                    <div class="sun-faq__item" data-category="support">
-                        <div class="sun-faq__question">
-                            <div class="sun-faq__question-text">¿Qué tipo de soporte ofrecen después de la implementación?</div>
-                            <i class="fas fa-chevron-down sun-faq__icon"></i>
-                        </div>
-                        <div class="sun-faq__answer">
-                            <p class="sun-faq__answer-text">
-                                Ofrecemos varios niveles de soporte post-implementación, desde soporte básico hasta pólizas de mantenimiento completas. Todos nuestros proyectos incluyen una garantía de 2 meses. Nuestras pólizas de soporte pueden incluir actualizaciones de sistema, resolución de problemas, optimizaciones continuas y capacitación adicional. También ofrecemos soporte de emergencia 24/7 para clientes con pólizas premium.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Pregunta 5 -->
-                    <div class="sun-faq__item" data-category="technical">
-                        <div class="sun-faq__question">
-                            <div class="sun-faq__question-text">¿Puedo integrar Odoo con otros sistemas que ya utilizo?</div>
-                            <i class="fas fa-chevron-down sun-faq__icon"></i>
-                        </div>
-                        <div class="sun-faq__answer">
-                            <p class="sun-faq__answer-text">
-                                Sí, Odoo es altamente flexible y puede integrarse con una amplia variedad de sistemas y plataformas. Nuestro equipo tiene experiencia en la integración de Odoo con sistemas de comercio electrónico, plataformas de pago, software de logística, sistemas CRM, herramientas de marketing y más. Desarrollamos conectores personalizados cuando es necesario para garantizar una integración perfecta con tus sistemas existentes.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Pregunta 6 -->
-                    <div class="sun-faq__item" data-category="implementation">
-                        <div class="sun-faq__question">
-                            <div class="sun-faq__question-text">¿Qué capacitación proporcionan para nuestro equipo?</div>
-                            <i class="fas fa-chevron-down sun-faq__icon"></i>
-                        </div>
-                        <div class="sun-faq__answer">
-                            <p class="sun-faq__answer-text">
-                                Proporcionamos capacitación completa para tu equipo como parte del proceso de implementación. Esto incluye sesiones prácticas para usuarios finales, capacitación administrativa para superusuarios y documentación detallada. También ofrecemos programas de capacitación avanzada para equipos técnicos si es necesario. Nuestro objetivo es asegurar que tu equipo se sienta cómodo y sea competente con el sistema antes de finalizar la implementación.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="sun-team__cta">
-                    <p class="sun-team__cta-text">¿No encuentras respuesta a tu pregunta?</p>
-                    <a href="#Contacto" class="sun-btn sun-btn--primary">Contáctanos</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- 14. SECCIÓN BLOG/RECURSOS -->
-        <section class="sun__section sun__section--white" id="Recursos" aria-labelledby="resources-title">
-            <div class="sun__container">
-                <header class="sun-header">
-                    <h2 id="resources-title" class="sun-header__title">Centro de Recursos</h2>
-                    <p class="sun-header__subtitle">
-                        Conocimiento y recursos para ayudarte a sacar el máximo provecho de Odoo
-                    </p>
-                </header>
-                
-                <div class="sun-resources__tabs">
-                    <button class="sun-resources__tab active" data-tab="blog">Blog</button>
-                    <button class="sun-resources__tab" data-tab="guides">Guías</button>
-                    <button class="sun-resources__tab" data-tab="webinars">Webinars</button>
-                    <button class="sun-resources__tab" data-tab="videos">Videos</button>
-                </div>
-                
-                <div class="sun-grid sun-grid--3col" role="list">
-                    <!-- Artículo 1 -->
-                    <article class="sun-blog-card" role="listitem">
-                        <div class="sun-blog-card__image-container">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Imagen de artículo sobre Odoo" class="sun-blog-card__image" loading="lazy">
-                            <div class="sun-blog-card__date">15 Mar 2023</div>
-                        </div>
-                        <div class="sun-blog-card__content">
-                            <div class="sun-blog-card__category">Implementación</div>
-                            <h3 class="sun-blog-card__title">5 Claves para una Implementación Exitosa de Odoo</h3>
-                            <p class="sun-blog-card__excerpt">
-                                Descubre los factores críticos que determinan el éxito en la implementación de Odoo y cómo evitar los errores más comunes que pueden afectar tu proyecto.
-                            </p>
-                            <div class="sun-blog-card__footer">
-                                <div class="sun-blog-card__author">
-                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto de Miguel Torres" class="sun-blog-card__author-image" loading="lazy">
-                                    <span class="sun-blog-card__author-name">Miguel Torres</span>
-                                </div>
-                                <a href="#" class="sun-blog-card__read-more">
-                                    Leer más <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <!-- Artículo 2 -->
-                    <article class="sun-blog-card" role="listitem">
-                        <div class="sun-blog-card__image-container">
-                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Imagen de artículo sobre Odoo" class="sun-blog-card__image" loading="lazy">
-                            <div class="sun-blog-card__date">28 Feb 2023</div>
-                        </div>
-                        <div class="sun-blog-card__content">
-                            <div class="sun-blog-card__category">Desarrollo</div>
-                            <h3 class="sun-blog-card__title">Personalización vs. Configuración: ¿Qué es mejor para tu empresa?</h3>
-                            <p class="sun-blog-card__excerpt">
-                                Analizamos las ventajas y desventajas de personalizar Odoo versus utilizar la configuración estándar, y cómo tomar la mejor decisión para tu negocio.
-                            </p>
-                            <div class="sun-blog-card__footer">
-                                <div class="sun-blog-card__author">
-                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Foto de Laura Méndez" class="sun-blog-card__author-image" loading="lazy">
-                                    <span class="sun-blog-card__author-name">Laura Méndez</span>
-                                </div>
-                                <a href="#" class="sun-blog-card__read-more">
-                                    Leer más <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <!-- Artículo 3 -->
-                    <article class="sun-blog-card" role="listitem">
-                        <div class="sun-blog-card__image-container">
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Imagen de artículo sobre Odoo" class="sun-blog-card__image" loading="lazy">
-                            <div class="sun-blog-card__date">10 Feb 2023</div>
-                        </div>
-                        <div class="sun-blog-card__content">
-                            <div class="sun-blog-card__category">Tendencias</div>
-                            <h3 class="sun-blog-card__title">Odoo 16: Novedades y mejoras que debes conocer</h3>
-                            <p class="sun-blog-card__excerpt">
-                                Exploramos las nuevas funcionalidades y mejoras de Odoo 16, y cómo estas pueden beneficiar a tu empresa en términos de productividad y eficiencia operativa.
-                            </p>
-                            <div class="sun-blog-card__footer">
-                                <div class="sun-blog-card__author">
-                                    <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Foto de Carlos Rodríguez" class="sun-blog-card__author-image" loading="lazy">
-                                    <span class="sun-blog-card__author-name">Carlos Rodríguez</span>
-                                </div>
-                                <a href="#" class="sun-blog-card__read-more">
-                                    Leer más <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                
-                <div class="sun-resources__cta">
-                    <a href="#" class="sun-btn sun-btn--primary">Ver todos los recursos</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- 15. SECCIÓN FORMULARIO DE CONTACTO -->
+ 
+        <!-- =============== SECCIÓN CONTACTO (Formulario y datos) =============== -->
         <section class="sun__section sun__section--white" id="Contacto-Formulario" aria-labelledby="contact-form-title">
             <div class="sun__container">
-                <header class="sun-header">
+                <header class="sun-header u-text-center">
                     <h2 id="contact-form-title" class="sun-header__title">Contáctanos</h2>
                     <p class="sun-header__subtitle">
                         Estamos listos para ayudarte a transformar tu negocio con soluciones Odoo a medida
                     </p>
                 </header>
-                
                 <div class="sun-grid sun-grid--2col-fixed">
                     <div class="sun-contact-form">
                         <form action="#" method="POST" id="contactForm">
                             <div class="sun-form__grid">
                                 <div class="sun-form__group">
-                                    <label for="name" class="sun-form__label">Nombre completo *</label>
-                                    <input type="text" id="name" name="name" class="sun-form__input" required>
+                                    <label for="name" class="sun-form__label">Nombre completo <span aria-hidden="true">*</span></label>
+                                    <input type="text" id="name" name="name" class="sun-form__input" required aria-required="true">
                                 </div>
-                                
                                 <div class="sun-form__group">
-                                    <label for="company" class="sun-form__label">Empresa *</label>
-                                    <input type="text" id="company" name="company" class="sun-form__input" required>
+                                    <label for="company" class="sun-form__label">Empresa <span aria-hidden="true">*</span></label>
+                                    <input type="text" id="company" name="company" class="sun-form__input" required aria-required="true">
                                 </div>
-                                
                                 <div class="sun-form__group">
-                                    <label for="email" class="sun-form__label">Correo electrónico *</label>
-                                    <input type="email" id="email" name="email" class="sun-form__input" required>
+                                    <label for="email" class="sun-form__label">Correo electrónico <span aria-hidden="true">*</span></label>
+                                    <input type="email" id="email" name="email" class="sun-form__input" required aria-required="true">
                                 </div>
-                                
                                 <div class="sun-form__group">
                                     <label for="phone" class="sun-form__label">Teléfono</label>
                                     <input type="tel" id="phone" name="phone" class="sun-form__input">
                                 </div>
-                                
                                 <div class="sun-form__group">
-                                    <label for="service" class="sun-form__label">Servicio de interés *</label>
-                                    <select id="service" name="service" class="sun-form__select" required>
+                                    <label for="service" class="sun-form__label">Servicio de interés <span aria-hidden="true">*</span></label>
+                                    <select id="service" name="service" class="sun-form__select" required aria-required="true">
                                         <option value="">Selecciona un servicio</option>
                                         <option value="implementation">Implementación de Odoo</option>
                                         <option value="development">Desarrollo a medida</option>
@@ -1158,7 +563,6 @@
                                         <option value="other">Otro</option>
                                     </select>
                                 </div>
-                                
                                 <div class="sun-form__group">
                                     <label for="budget" class="sun-form__label">Presupuesto estimado</label>
                                     <select id="budget" name="budget" class="sun-form__select">
@@ -1170,69 +574,66 @@
                                         <option value="more-500k">Más de $500,000 MXN</option>
                                     </select>
                                 </div>
-                                
                                 <div class="sun-form__group sun-form__full">
-                                    <label for="message" class="sun-form__label">Mensaje *</label>
-                                    <textarea id="message" name="message" class="sun-form__textarea" required></textarea>
+                                    <label for="message" class="sun-form__label">Mensaje <span aria-hidden="true">*</span></label>
+                                    <textarea id="message" name="message" class="sun-form__textarea" required aria-required="true"></textarea>
                                 </div>
-                                
                                 <div class="sun-form__checkbox-group sun-form__full">
-                                    <input type="checkbox" id="privacy" name="privacy" class="sun-form__checkbox" required>
+                                    <input type="checkbox" id="privacy" name="privacy" class="sun-form__checkbox" required aria-required="true">
                                     <label for="privacy" class="sun-form__checkbox-label">
-                                        Acepto la <a href="#" target="_blank">política de privacidad</a> y el tratamiento de mis datos personales.
+                                        Acepto la <a href="#" target="_blank" rel="noopener">política de privacidad</a> y el tratamiento de mis datos personales.
                                     </label>
                                 </div>
-                                
                                 <div class="sun-form__submit sun-form__full">
                                     <button type="submit" class="sun-btn sun-btn--primary">
                                         Enviar mensaje
-                                        <i class="fas fa-paper-plane"></i>
+                                        <i class="fas fa-paper-plane" aria-hidden="true"></i>
                                     </button>
                                 </div>
                             </div>
                         </form>
                     </div>
-                    
+
                     <div class="sun-contact__info">
                         <div>
                             <h3 class="sun-contact__info-title">Información de contacto</h3>
                             <p class="sun-contact__info-text">
                                 Estamos disponibles para atenderte y resolver todas tus dudas sobre nuestros servicios de implementación y desarrollo Odoo.
                             </p>
-                            
+
                             <div class="sun-contact__info-item">
-                                <div class="sun-contact__info-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
+                                <div class="sun-contact__info-icon u-flex-center">
+                                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                                 </div>
                                 <div class="sun-contact__info-content">
                                     <strong>Dirección</strong>
                                     Zimapán, Hidalgo, México
                                 </div>
                             </div>
-                            
+
                             <div class="sun-contact__info-item">
-                                <div class="sun-contact__info-icon">
-                                    <i class="fas fa-phone"></i>
+                                <div class="sun-contact__info-icon u-flex-center">
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
                                 </div>
                                 <div class="sun-contact__info-content">
                                     <strong>Teléfono</strong>
                                     +52 56 5430 4171
                                 </div>
                             </div>
-                            
+
                             <div class="sun-contact__info-item">
-                                <div class="sun-contact__info-icon">
-                                    <i class="fas fa-envelope"></i>
+                                <div class="sun-contact__info-icon u-flex-center">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
                                 </div>
                                 <div class="sun-contact__info-content">
                                     <strong>Email</strong>
                                     info@sunname.com.mx
                                 </div>
                             </div>
-                            
+
                             <div class="sun-contact__info-item">
-                                <div class="sun-contact__info-icon">
-                                    <i class="fas fa-clock"></i>
+                                <div class="sun-contact__info-icon u-flex-center">
+                                    <i class="fas fa-clock" aria-hidden="true"></i>
                                 </div>
                                 <div class="sun-contact__info-content">
                                     <strong>Horario de atención</strong>
@@ -1240,33 +641,29 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="sun-footer__social" style="justify-content: flex-start; margin-top: var(--sun-space-lg);">
-                            <a href="https://www.facebook.com/sunnametech" class="sun-footer__social-link" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.sunname.com.mx/website/social/linkedin" class="sun-footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://www.instagram.com/sunnametech" class="sun-footer__social-link" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-                            <a href="https://wa.me/5654304171?text=Hola%2C%20me%20interesa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20servicios%20que%20ofrecen" class="sun-footer__social-link" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+
+                        <div class="sun-footer__social u-flex-center u-margin-top-lg">
+                            <a href="https://www.facebook.com/sunnametech" class="sun-footer__social-link" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                            <a href="https://www.sunname.com.mx/website/social/linkedin" class="sun-footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                            <a href="https://www.instagram.com/sunnametech" class="sun-footer__social-link" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                            <a href="https://wa.me/5654304171?text=Hola%2C%20me%20interesa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20servicios%20que%20ofrecen" class="sun-footer__social-link" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
                         </div>
                     </div>
-                </div>
-                
-                <div class="sun-contact__map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14892.036890408!2d-99.38386!3d20.73778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d3a7c1c9f9a2a7%3A0x9f4a8b2f2d7a4a9a!2sZimapan%2C%20Hgo.!5e0!3m2!1ses-419!2smx!4v1620000000000!5m2!1ses-419!2smx" allowfullscreen="" loading="lazy" title="Ubicación de Sunname Technologies"></iframe>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- 16. FOOTER -->
-    <footer class="sun-footer" id="Contacto">
+    <!-- =============== FOOTER (Pie de página) =============== -->
+    <footer class="sun-footer" id="Contacto" aria-labelledby="footer-heading">
         <div class="sun__container">
             <div class="sun-footer__content">
-                <div class="sun-footer__brand" style="display:flex;flex-direction:column;align-items:center;">
-                    <img src="https://www.sunname.com.mx/web/image/website/1/logo/Sunname%20Technologies?unique=4a29342" alt="Logo Sunname Technologies" class="sun-footer__logo-img" style="max-width:260px;filter:brightness(0) invert(1);display:block;margin-bottom:1.2rem;">
+                <div class="sun-footer__brand u-flex-col u-flex-center">
+                    <img src="https://www.sunname.com.mx/web/image/website/1/logo/Sunname%20Technologies?unique=4a29342" alt="Logo Sunname Technologies" class="sun-footer__logo-img" loading="lazy">
                 </div>
-                
+
                 <div class="sun-footer__grid">
-                    <div class="sun-footer__links">
+                    <nav class="sun-footer__links" aria-label="Servicios">
                         <h3 class="sun-footer__heading">Servicios</h3>
                         <ul class="sun-footer__menu">
                             <li><a href="#Nuestros-Servicios" class="sun-footer__link">Implementación Odoo</a></li>
@@ -1274,58 +671,58 @@
                             <li><a href="#Nuestros-Servicios" class="sun-footer__link">Consultoría</a></li>
                             <li><a href="#Nuestros-Servicios" class="sun-footer__link">E-commerce</a></li>
                         </ul>
-                    </div>
-                    
-                    <div class="sun-footer__links">
+                    </nav>
+
+                    <nav class="sun-footer__links" aria-label="Empresa">
                         <h3 class="sun-footer__heading">Empresa</h3>
                         <ul class="sun-footer__menu">
                             <li><a href="#Inicio" class="sun-footer__link">Nosotros</a></li>
-                            <li><a href="#Proceso" class="sun-footer__link">Equipo</a></li>
+                            <li><a href="#Equipo" class="sun-footer__link">Equipo</a></li>
                             <li><a href="#Clientes" class="sun-footer__link">Clientes</a></li>
-                            <li><a href="#Contacto" class="sun-footer__link">Contacto</a></li>
+                            <li><a href="#Contacto-Formulario" class="sun-footer__link">Contacto</a></li>
                         </ul>
-                    </div>
-                    
+                    </nav>
+
                     <div class="sun-footer__contact">
                         <h3 class="sun-footer__heading">Contacto</h3>
                         <ul class="sun-footer__contact-list">
                             <li class="sun-footer__contact-item">
-                                <i class="fas fa-map-marker-alt"></i> 
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                                 <span>Zimapán, Hidalgo, México</span>
                             </li>
                             <li class="sun-footer__contact-item">
-                                <i class="fas fa-phone"></i> 
+                                <i class="fas fa-phone" aria-hidden="true"></i>
                                 <span>+52 56 5430 4171</span>
                             </li>
                             <li class="sun-footer__contact-item">
-                                <i class="fas fa-envelope"></i> 
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
                                 <span>info@sunname.com.mx</span>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-            
-            <div class="sun-footer__bottom">
-                <div style="display:flex;flex-direction:column;align-items:center;width:100%;">
-                    <p class="sun-footer__copyright" style="margin-bottom:0.3rem;">
-                        &copy; 2023 OdooExperts. Todos los derechos reservados.
+
+            <div class="sun-footer__bottom u-flex-col u-flex-center">
+                <div class="u-text-center u-w-full">
+                    <p class="sun-footer__copyright">
+                        &copy; 2024 OdooExperts. Todos los derechos reservados.
                     </p>
-                    <div class="sun-footer__legal" style="font-size:0.95rem;">
+                    <div class="sun-footer__legal">
                         <a href="#" class="sun-footer__link">Política de Privacidad</a>
-                        <span style="color:#46c2ce;font-weight:bold;">|</span>
+                        <span style="color:#46c2ce;font-weight:bold;" aria-hidden="true">|</span>
                         <a href="#" class="sun-footer__link">Aviso Legal</a>
                     </div>
                 </div>
-                <div class="sun-footer__social">
-                    <a href="https://www.facebook.com/sunnametech" class="sun-footer__social-link" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.sunname.com.mx/website/social/linkedin" class="sun-footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.instagram.com/sunnametech" class="sun-footer__social-link" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/5654304171?text=Hola%2C%20me%20interesa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20servicios%20que%20ofrecen" class="sun-footer__social-link" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+                <div class="sun-footer__social u-flex-center u-margin-top-md u-w-full">
+                    <a href="https://www.facebook.com/sunnametech" class="sun-footer__social-link" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="https://www.sunname.com.mx/website/social/linkedin" class="sun-footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/sunnametech" class="sun-footer__social-link" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://wa.me/5654304171?text=Hola%2C%20me%20interesa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20servicios%20que%20ofrecen" class="sun-footer__social-link" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
