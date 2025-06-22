@@ -1,0 +1,43 @@
+# Evita archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Carpetas del editor
+.vscode/
+.idea/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+*.env
+
+# Archivos temporales
+*.log
+*.bak
+*.swp
+*.tmp
+
+# Archivos de compilación
+dist/
+build/
+
+# Archivos del sistema operativo
+ehthumbs.db
+Icon?
+desktop.ini
+
+# Git ignorará este archivo si es generado por tu sistema operativo
+*.orig
+
+# Archivos de producción opcionales
+.env.local
+.env.production
+.env.development
