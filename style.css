@@ -202,23 +202,15 @@ button {
 /* ==========================================================================
    4. UTILIDADES
    ========================================================================== */
-.u-text-center {
-  text-align: center;
-}
-.u-text-left {
-  text-align: left;
-}
 .u-margin-top-md {
   margin-top: var(--sun-space-md);
 }
 .u-margin-top-lg {
   margin-top: var(--sun-space-lg);
 }
-.u-margin-bottom-md {
-  margin-bottom: var(--sun-space-md);
-}
-.u-margin-bottom-lg {
-  margin-bottom: var(--sun-space-lg);
+
+.u-text-center {
+  text-align: center;
 }
 .u-flex-center {
   display: flex;
