@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sunname Retail | Ordena, integra y crece con control</title>
+  <meta name="description" content="Sunname Retail ayuda a cadenas y tiendas a integrar inventarios, precios por sucursal, ventas en línea y POS en una sola operación con datos confiables." />
+
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Reutilizamos tu hoja de estilos base -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- CSS mínimo adicional (solo lo necesario para nuevos detalles visuales) -->
+  <style>
+    /* Etiquetas para diferenciar Retail sin crear un nuevo sistema */
+    .sun-badge--retail { background-color: var(--sun-color-secondary); color: #fff; }
+    .retail-hero .odoo-hero__badge { background: var(--sun-color-secondary-20); color: var(--sun-color-white); border: 1px solid var(--sun-color-white-20); }
+    .retail-hero .odoo-hero__description { color: var(--sun-color-white-80); }
+
+    /* Sección de “dolores → soluciones” */
+    .sun-pain-solution { display: grid; gap: var(--sun-space-lg); grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .sun-pain { border-left: 4px solid #ef444433; background: #fff7ed; }
+    .sun-solution { border-left: 4px solid var(--sun-color-secondary); background: var(--sun-color-secondary-10); }
+    .sun-pain, .sun-solution { padding: var(--sun-space-lg); border-radius: var(--sun-radius-lg); box-shadow: var(--sun-shadow-sm); }
+
+    /* Tarjetas de conectores */
+    .sun-integration { display: grid; gap: var(--sun-space-lg); grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .sun-integration .sun-card__body { display: grid; gap: .5rem; place-items: start; }
+    .sun-integration .sun-card__title { font-size: 1.1rem; }
+
+    /* Paso a paso compacto */
+    .sun-steps { display: grid; gap: var(--sun-space-lg); grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); }
+    .sun-step__num { font-weight: 700; font-size: 0.85rem; letter-spacing: .08em; color: var(--sun-color-secondary); }
+
+    /* Lista de módulos clave (POS + Sucursales + E-com) */
+    .sun-mod-bullets { columns: 2; column-gap: var(--sun-space-lg); }
+    @media (max-width: 800px){ .sun-mod-bullets { columns: 1; } }
+
+    /* Bloque de resultados */
+    .sun-kpis { display: grid; gap: var(--sun-space-lg); grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); }
+    .sun-kpi { background: var(--sun-color-white); border-radius: var(--sun-radius-lg); padding: var(--sun-space-lg); box-shadow: var(--sun-shadow-sm); text-align: center; }
+    .sun-kpi strong { font-size: 2rem; color: var(--sun-color-primary); display: block; }
+
+    /* CTA barra pegajosa (opcional) */
+    .retail-cta-sticky { position: sticky; bottom: 0; background: var(--sun-color-white); border-top: 1px solid #e5e7eb; padding: .75rem; z-index: 20; }
+    .retail-cta-sticky .sun__container { display: flex; gap: .75rem; justify-content: center; flex-wrap: wrap; }
+
+    /* FAQ simple */
+    details.sun-faq { background: var(--sun-color-white); border-radius: var(--sun-radius-md); padding: 1rem 1.25rem; box-shadow: var(--sun-shadow-sm); }
+    details.sun-faq summary { cursor: pointer; font-weight: 600; color: var(--sun-color-primary); }
+    details.sun-faq + details.sun-faq { margin-top: .75rem; }
+
+    /* Corrección de contraste y evitar rojos fuertes en tarjetas de “dolor” */
+    .sun-pain i { color: #f97316; } /* naranja suave del sistema */
+  </style>
+</head>
+
+<body class="sun">
+  <main>
+    <!-- ======================= HERO ======================= -->
+    <section class="odoo-hero retail-hero" id="inicio" aria-labelledby="hero-title">
+      <div class="odoo-hero__container sun__container">
+        <div class="odoo-hero__content">
+          <div class="odoo-hero__text">
+            <span class="odoo-hero__badge sun-badge sun-badge--retail">RETAIL · MULTI-SUCURSAL</span>
+            <h1 id="hero-title" class="odoo-hero__title">
+              Ordena tu operación <span class="odoo-hero__highlight">Retail</span> y crece con control
+            </h1>
+            <p class="odoo-hero__description">
+              Inventarios unificados, precios por sucursal, reportes confiables y ventas en línea sincronizadas.
+              El objetivo no es “otro sistema”, es una <strong>estructura clara con datos confiables</strong>.
+            </p>
+
+            <div class="odoo-hero__buttons">
+              <a href="#contacto" class="odoo-hero__button sun-btn sun-btn--primary">
+                Agendar demo <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+              </a>
+              <a href="#como-funciona" class="odoo-hero__button sun-btn sun-btn--secondary">
+                Ver cómo funciona <i class="fa-solid fa-circle-play" aria-hidden="true"></i>
+              </a>
+            </div>
+
+            <div class="odoo-hero__clients">
+              <div class="odoo-hero__avatars">
+                <div class="odoo-hero__avatar" style="background-color: var(--sun-color-secondary)"></div>
+                <div class="odoo-hero__avatar" style="background-color: var(--sun-color-primary)"></div>
+                <div class="odoo-hero__avatar" style="background-color: var(--sun-color-accent)"></div>
+              </div>
+              <div class="odoo-hero__client-text">Equipos Retail ya confían en Sunname</div>
+            </div>
+          </div>
+
+          <div class="odoo-hero__image">
+            <figure class="odoo-hero__dashboard-container" aria-label="Panel Retail Sunname">
+              <img class="odoo-hero__dashboard-image" src="https://images.unsplash.com/photo-1515165562835-c3b8c7c60a3a?q=80&w=1600&auto=format&fit=crop" alt="Panel con ventas por sucursal e inventarios en tiempo real" />
+              <figcaption class="odoo-hero__version-badge">Retail listo para escalar</figcaption>
+            </figure>
+            <div class="odoo-hero__glow-effect" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== DOLOR → SOLUCIÓN =============== -->
+    <section class="sun__section sun__section--white" id="retail-problemas" aria-labelledby="ps-title">
+      <div class="sun__container">
+        <header class="sun-header u-text-center">
+          <h2 id="ps-title" class="sun-header__title">Cuando el Retail crece, también crecen los problemas</h2>
+          <p class="sun-header__subtitle">
+            Te ayudamos a resolverlos con proceso, integración y visibilidad de punta a punta.
+          </p>
+        </header>
+
+        <div class="sun-pain-solution">
+          <article class="sun-pain sun-card">
+            <div class="sun-card__body">
+              <h3 class="sun-card__title"><i class="fa-solid fa-boxes-stacked"></i> Inventarios duplicados</h3>
+              <p class="sun-card__text">Diferencias entre tiendas, ajustes manuales y falta de trazabilidad.</p>
+            </div>
+          </article>
+          <article class="sun-solution sun-card">
+            <div class="sun-card__body">
+              <h3 class="sun-card__title"><i class="fa-solid fa-shuffle"></i> Stock único y reglas por sucursal</h3>
+              <p class="sun-card__text">Catálogo y existencias unificados, reposición automática y conteos cíclicos.</p>
+            </div>
+          </article>
+
+          <article class="sun-pain sun-card">
+            <div class="sun-card__body">
+              <h3 class="sun-card__title"><i class="fa-solid fa-tags"></i> Precios disparejos</h3>
+              <p class="sun-card__text">Listas de precio distintas y promociones fuera de control.</p>
+            </div>
+          </article>
+          <article class="sun-solution sun-card">
+            <div class="sun-card__body">
+              <h3 class="sun-card__title"><i class="fa-solid fa-chart-simple"></i> Políticas y listas centralizadas</h3>
+              <p class="sun-card__text">Controla precios por tienda, temporadas y combos desde un solo lugar.</p>
+            </div>
+          </article>
+
+          <article class="sun-pain sun-card">
+            <div class="sun-card__body">
+              <h3 class="sun-card__title"><i class="fa-solid fa-globe"></i> E-commerce desincronizado</h3>
+              <p class="sun-card__text">Ventas en línea que no reflejan inventario real ni pedidos de tienda.</p>
+            </div>
+          </article>
+          <article class="sun-solution sun-card">
+            <div class="sun-card__body">
+              <h3 class="sun-card__title"><i class="fa-solid fa-plug"></i> Omnicanal real</h3>
+              <p class="sun-card__text">Integramos Marketplace + Web + POS para stock, pedidos y precios consistentes.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== CÓMO FUNCIONA =============== -->
+    <section class="sun__section sun__section--light" id="como-funciona" aria-labelledby="how-title">
+      <div class="sun__container">
+        <header class="sun-header u-text-center">
+          <h2 id="how-title" class="sun-header__title">Así funciona Sunname Retail</h2>
+          <p class="sun-header__subtitle">Una implementación guiada que prioriza claridad operativa y datos confiables.</p>
+        </header>
+
+        <div class="sun-steps">
+          <article class="sun-process-step">
+            <div class="sun-icon-circle"><i class="fa-solid fa-compass"></i></div>
+            <div class="sun-step__num">PASO 1</div>
+            <h3 class="sun-process-step__title">Diagnóstico y objetivos</h3>
+            <p class="sun-process-step__description">Levantamos procesos, roles y reglas de negocio por sucursal.</p>
+          </article>
+
+          <article class="sun-process-step">
+            <div class="sun-icon-circle"><i class="fa-solid fa-sitemap"></i></div>
+            <div class="sun-step__num">PASO 2</div>
+            <h3 class="sun-process-step__title">Modelo Retail unificado</h3>
+            <p class="sun-process-step__description">Catálogo maestro, listas de precio y políticas de stock.</p>
+          </article>
+
+          <article class="sun-process-step">
+            <div class="sun-icon-circle"><i class="fa-solid fa-cash-register"></i></div>
+            <div class="sun-step__num">PASO 3</div>
+            <h3 class="sun-process-step__title">POS + Marketplace + Web</h3>
+            <p class="sun-process-step__description">Conectamos canales para omnicanal y trazabilidad.</p>
+          </article>
+
+          <article class="sun-process-step">
+            <div class="sun-icon-circle"><i class="fa-solid fa-gauge-high"></i></div>
+            <div class="sun-step__num">PASO 4</div>
+            <h3 class="sun-process-step__title">KPIs y tableros</h3>
+            <p class="sun-process-step__description">Visibilidad por tienda, categoría y vendedor en tiempo real.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== MÓDULOS CLAVE RETAIL =============== -->
+    <section class="sun__section sun__section--white" id="modulos" aria-labelledby="mods-title">
+      <div class="sun__container">
+        <header class="sun-header u-text-center">
+          <h2 id="mods-title" class="sun-header__title">Lo esencial para Retail, en un solo lugar</h2>
+          <p class="sun-header__subtitle">Operación diaria sin fricción y con control por tienda.</p>
+        </header>
+
+        <ul class="sun-list sun-mod-bullets">
+          <li class="sun-list__item">POS con perfiles de cajero y corte por turno</li>
+          <li class="sun-list__item">Inventario por sucursal con reposición automática</li>
+          <li class="sun-list__item">Precios, promociones y combos por tienda</li>
+          <li class="sun-list__item">Compras y reabasto por mínimos/máximos</li>
+          <li class="sun-list__item">Catálogo maestro y variantes (talla, color, etc.)</li>
+          <li class="sun-list__item">Etiquetas y códigos de barras</li>
+          <li class="sun-list__item">Tableros de ventas y rentabilidad</li>
+          <li class="sun-list__item">Cortes de caja, arqueos y medios de pago</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =============== CONECTORES CANALES =============== -->
+    <section class="sun__section sun__section--light" id="conectores" aria-labelledby="connect-title">
+      <div class="sun__container">
+        <header class="sun-header u-text-center">
+          <h2 id="connect-title" class="sun-header__title">Conecta tus canales de venta</h2>
+          <p class="sun-header__subtitle">Sincronizamos catálogo, inventario, pedidos y precios.</p>
+        </header>
+
+        <div class="sun-integration">
+          <article class="sun-card">
+            <div class="sun-card__body">
+              <div class="sun-icon-circle"><i class="fa-brands fa-amazon"></i></div>
+              <h3 class="sun-card__title">Amazon</h3>
+              <p class="sun-card__text">Publicación y actualización de existencias y precios.</p>
+            </div>
+          </article>
+
+          <article class="sun-card">
+            <div class="sun-card__body">
+              <div class="sun-icon-circle"><i class="fa-solid fa-store"></i></div>
+              <h3 class="sun-card__title">Mercado Libre</h3>
+              <p class="sun-card__text">Gestión de ofertas, pedidos y logística integrada.</p>
+            </div>
+          </article>
+
+          <article class="sun-card">
+            <div class="sun-card__body">
+              <div class="sun-icon-circle"><i class="fa-solid fa-bag-shopping"></i></div>
+              <h3 class="sun-card__title">Liverpool</h3>
+              <p class="sun-card__text">Sincronización de catálogo y confirmación de ventas.</p>
+            </div>
+          </article>
+
+          <article class="sun-card">
+            <div class="sun-card__body">
+              <div class="sun-icon-circle"><i class="fa-brands fa-tiktok"></i></div>
+              <h3 class="sun-card__title">TikTok Shop</h3>
+              <p class="sun-card__text">Inventario en tiempo real y pedidos al ERP.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="u-text-center u-margin-top-lg">
+          <a href="#contacto" class="sun-btn sun-btn--primary">
+            Solicitar evaluación de conectores <i class="fa-solid fa-plug-circle-check"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== RESULTADOS =============== -->
+    <section class="sun__section sun__section--white" id="resultados" aria-labelledby="results-title">
+      <div class="sun__container">
+        <header class="sun-header u-text-center">
+          <h2 id="results-title" class="sun-header__title">Resultados que puedes medir</h2>
+          <p class="sun-header__subtitle">Con operaciones claras, los números hablan solos.</p>
+        </header>
+
+        <div class="sun-kpis">
+          <div class="sun-kpi">
+            <strong>−35%</strong>
+            Diferencias de inventario por sucursal
+          </div>
+          <div class="sun-kpi">
+            <strong>+22%</strong>
+            Ticket promedio con promociones controladas
+          </div>
+          <div class="sun-kpi">
+            <strong>99.5%</strong>
+            Órdenes registradas con datos completos
+          </div>
+          <div class="sun-kpi">
+            <strong>2–4 sem</strong>
+            Tiempo típico para operar POS + stock
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== CASO BREVE =============== -->
+    <section class="sun__section sun__section--light" id="caso" aria-labelledby="case-title">
+      <div class="sun__container">
+        <header class="sun-header">
+          <h2 id="case-title" class="sun-header__title sun-header__title--left">Caso breve · Retail multi-sucursal</h2>
+          <p class="sun-header__subtitle">Estandarizamos catálogo, listas de precio y cortes de caja; conectamos e-commerce y POS.</p>
+        </header>
+
+        <div class="sun-grid sun-grid--2col">
+          <article class="sun-results__info-box">
+            <h3 class="sun-results__info-title"><i class="fa-solid fa-list-check"></i> Qué hicimos</h3>
+            <ul class="sun-list">
+              <li class="sun-list__item">Catálogo maestro con variantes.</li>
+              <li class="sun-list__item">Listas de precio por tienda y temporada.</li>
+              <li class="sun-list__item">Reposición y mínimos/máximos por sucursal.</li>
+              <li class="sun-list__item">POS con perfiles y arqueos.</li>
+              <li class="sun-list__item">KPIs de ventas y rotación.</li>
+            </ul>
+          </article>
+          <article class="sun-results__info-box">
+            <h3 class="sun-results__info-title"><i class="fa-solid fa-star"></i> Impacto</h3>
+            <ul class="sun-list">
+              <li class="sun-list__item">Inventario confiable por tienda.</li>
+              <li class="sun-list__item">Promociones controladas y medibles.</li>
+              <li class="sun-list__item">Operación omnicanal en una sola plataforma.</li>
+            </ul>
+            <div class="u-margin-top-md">
+              <a href="#contacto" class="sun-btn sun-btn--secondary">Quiero un diagnóstico</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== FAQ =============== -->
+    <section class="sun__section sun__section--white" id="faq" aria-labelledby="faq-title">
+      <div class="sun__container">
+        <header class="sun-header u-text-center">
+          <h2 id="faq-title" class="sun-header__title">Preguntas frecuentes</h2>
+          <p class="sun-header__subtitle">Transparencia total antes de empezar.</p>
+        </header>
+
+        <div class="sun-grid">
+          <details class="sun-faq">
+            <summary>¿Cuánto tiempo toma estar operando POS e inventario?</summary>
+            <p>Generalmente entre 2 y 4 semanas para el arranque base. Proyectos con conectores y reportes avanzados pueden requerir más tiempo.</p>
+          </details>
+          <details class="sun-faq">
+            <summary>¿Puedo iniciar sin e-commerce y conectarlo después?</summary>
+            <p>Sí. Empezamos por catálogo, inventarios, precios y POS. El canal en línea se conecta cuando tu operación esté sólida.</p>
+          </details>
+          <details class="sun-faq">
+            <summary>¿Trabajan con precios por sucursal y combos?</summary>
+            <p>Definimos listas y reglas por tienda/temporada, además de combos y promociones medibles con impacto en KPIs.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== CONTACTO =============== -->
+    <section class="sun__section sun__section--light" id="contacto" aria-labelledby="contact-title">
+      <div class="sun__container">
+        <header class="sun-header u-text-center">
+          <h2 id="contact-title" class="sun-header__title">Hablemos de tu operación Retail</h2>
+          <p class="sun-header__subtitle">Agenda una demo o solicita un diagnóstico sin costo.</p>
+        </header>
+
+        <div class="sun-contact-form">
+          <form action="https://formsubmit.co/contacto@sunname.com.mx" method="POST">
+            <div class="sun-form__grid">
+              <div class="sun-form__group">
+                <label class="sun-form__label" for="nombre">Nombre</label>
+                <input class="sun-form__input" type="text" id="nombre" name="nombre" required />
+              </div>
+              <div class="sun-form__group">
+                <label class="sun-form__label" for="email">Email</label>
+                <input class="sun-form__input" type="email" id="email" name="email" required />
+              </div>
+              <div class="sun-form__group sun-form__full">
+                <label class="sun-form__label" for="mensaje">Mensaje</label>
+                <textarea class="sun-form__textarea" id="mensaje" name="mensaje" placeholder="Cuéntanos tus sucursales, canales y principales retos"></textarea>
+              </div>
+            </div>
+            <button class="sun-btn sun-btn--primary" type="submit">
+              Enviar <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA STICKY -->
+    <div class="retail-cta-sticky" role="region" aria-label="Acción rápida">
+      <div class="sun__container">
+        <a href="#contacto" class="sun-btn sun-btn--primary">
+          Agendar demo <i class="fa-solid fa-calendar-check"></i>
+        </a>
+        <a href="#como-funciona" class="sun-btn sun-btn--secondary">
+          Ver cómo funciona <i class="fa-solid fa-circle-play"></i>
+        </a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
+
+<!-- Referencias de diseño reutilizado (invisibles para el usuario) -->
+<!-- :contentReference[oaicite:0]{index=0} -->
+<!-- :contentReference[oaicite:1]{index=1} -->

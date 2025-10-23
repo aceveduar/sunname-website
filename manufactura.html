@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sunname Manufacturing - Digitaliza tu planta de manufactura con control en tiempo real">
+    <title>Sunname Manufacturing | Digitaliza tu Planta en Tiempo Real</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* Variables CSS */
+        :root {
+            --sun-color-primary: #263980;
+            --sun-color-secondary: #46c2ce;
+            --sun-color-dark: #2c1a56;
+            --sun-color-accent: #f59e0b;
+            --sun-color-text: #2d3748;
+            --sun-color-text-light: #4a5568;
+            --sun-color-white: #ffffff;
+            --sun-color-light: #f7fafc;
+            --sun-color-success: #10b981;
+            --sun-color-danger: #ef4444;
+            --sun-space-sm: 1rem;
+            --sun-space-md: 1.5rem;
+            --sun-space-lg: 2rem;
+            --sun-space-xl: 3rem;
+            --sun-radius-sm: 4px;
+            --sun-radius-md: 8px;
+            --sun-radius-lg: 12px;
+            --sun-radius-full: 9999px;
+            --sun-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --sun-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+            --sun-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+            --sun-gradient-primary: linear-gradient(135deg, var(--sun-color-primary) 0%, var(--sun-color-secondary) 100%);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: "Segoe UI", "Roboto", sans-serif; line-height: 1.6; color: var(--sun-color-text); background: var(--sun-color-light); }
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; }
+
+        /* Layout */
+        .sun__container { max-width: 1200px; margin: 0 auto; padding: 0 var(--sun-space-md); }
+        .sun__section { padding: var(--sun-space-xl) 0; }
+        .sun__section--white { background: var(--sun-color-white); }
+        .sun__section--light { background: var(--sun-color-light); }
+        .sun__section--gradient { background: var(--sun-gradient-primary); color: white; }
+
+        /* Grid */
+        .sun-grid { display: grid; gap: var(--sun-space-lg); }
+        .sun-grid--2col { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+        .sun-grid--3col { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+        .sun-grid--4col { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+        /* Typography */
+        .sun-header { margin-bottom: var(--sun-space-xl); text-align: center; }
+        .sun-header__title { font-size: 3rem; color: var(--sun-color-primary); margin-bottom: var(--sun-space-md); font-weight: 700; position: relative; padding-bottom: var(--sun-space-md); }
+        .sun-header__title::after { content: ""; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 100px; height: 4px; background: var(--sun-gradient-primary); border-radius: var(--sun-radius-sm); }
+        .sun-header__subtitle { font-size: 1.4rem; color: var(--sun-color-text-light); max-width: 800px; margin: 0 auto; }
+
+        /* Cards */
+        .sun-card { background: white; border-radius: var(--sun-radius-lg); padding: var(--sun-space-lg); box-shadow: var(--sun-shadow-sm); transition: transform 0.3s, box-shadow 0.3s; }
+        .sun-card:hover { transform: translateY(-5px); box-shadow: var(--sun-shadow-lg); }
+        .sun-card__title { font-size: 1.6rem; color: var(--sun-color-primary); margin-bottom: var(--sun-space-sm); font-weight: 700; }
+        .sun-card__text { margin-bottom: var(--sun-space-md); color: var(--sun-color-text); }
+
+        /* Buttons */
+        .sun-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; border-radius: var(--sun-radius-full); font-weight: 600; cursor: pointer; transition: all 0.3s; border: none; font-size: 1rem; }
+        .sun-btn--primary { background: var(--sun-gradient-primary); color: white; box-shadow: var(--sun-shadow-sm); }
+        .sun-btn--primary:hover { transform: translateY(-2px); box-shadow: var(--sun-shadow-md); }
+        .sun-btn--secondary { background: transparent; color: var(--sun-color-primary); border: 2px solid var(--sun-color-primary); }
+        .sun-btn--secondary:hover { background: var(--sun-color-primary); color: white; }
+
+        /* Hero Section */
+        .manufacturing-hero { background: linear-gradient(135deg, var(--sun-color-primary), var(--sun-color-dark), var(--sun-color-secondary)); color: white; padding: 5rem 0; min-height: 90vh; display: flex; align-items: center; position: relative; overflow: hidden; }
+        .manufacturing-hero::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath fill='%23ffffff' fill-opacity='0.05' d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7z'%3E%3C/path%3E%3C/svg%3E"); opacity: 0.1; }
+        .hero__content { position: relative; z-index: 1; display: flex; align-items: center; gap: 3rem; }
+        .hero__text { flex: 1; }
+        .hero__badge { display: inline-block; background: rgba(70, 194, 206, 0.2); color: var(--sun-color-secondary); padding: 0.5rem 1rem; border-radius: var(--sun-radius-full); font-size: 0.875rem; font-weight: 600; margin-bottom: 1.5rem; }
+        .hero__title { font-size: 3.5rem; font-weight: 700; line-height: 1.2; margin-bottom: 1.5rem; }
+        .hero__highlight { color: var(--sun-color-secondary); }
+        .hero__description { font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9; line-height: 1.6; }
+        .hero__buttons { display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; }
+        .hero__image { flex: 1; }
+        .hero__dashboard { background: rgba(38, 57, 128, 0.3); backdrop-filter: blur(4px); border-radius: var(--sun-radius-lg); padding: 1.5rem; border: 1px solid rgba(255, 255, 255, 0.1); }
+
+        /* Pain Points */
+        .pain-point { display: flex; align-items: flex-start; gap: 1rem; padding: 1.5rem; background: white; border-radius: var(--sun-radius-md); box-shadow: var(--sun-shadow-sm); transition: all 0.3s; }
+        .pain-point:hover { transform: translateX(5px); box-shadow: var(--sun-shadow-md); }
+        .pain-point__icon { font-size: 2rem; color: var(--sun-color-danger); flex-shrink: 0; }
+        .pain-point__title { font-size: 1.2rem; font-weight: 700; color: var(--sun-color-primary); margin-bottom: 0.5rem; }
+        .pain-point__text { color: var(--sun-color-text); }
+
+        /* Features */
+        .feature-card { padding: var(--sun-space-lg); }
+        .feature-icon { width: 70px; height: 70px; border-radius: 50%; background: var(--sun-gradient-primary); color: white; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-bottom: 1rem; box-shadow: var(--sun-shadow-sm); }
+        .feature-list { list-style: none; margin-top: 1rem; }
+        .feature-list li { position: relative; padding-left: 1.5rem; margin-bottom: 0.5rem; color: var(--sun-color-text); }
+        .feature-list li::before { content: "✓"; position: absolute; left: 0; color: var(--sun-color-success); font-weight: bold; }
+
+        /* Stats */
+        .stat-card { text-align: center; padding: 2rem; background: rgba(255, 255, 255, 0.1); border-radius: var(--sun-radius-lg); }
+        .stat-card__number { font-size: 3.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .stat-card__label { font-size: 1.1rem; opacity: 0.9; }
+
+        /* Industries */
+        .industry-badge { display: flex; align-items: center; gap: 0.75rem; padding: 1rem 1.5rem; background: white; border-radius: var(--sun-radius-md); box-shadow: var(--sun-shadow-sm); transition: all 0.3s; }
+        .industry-badge:hover { transform: translateY(-3px); box-shadow: var(--sun-shadow-md); background: var(--sun-color-light); }
+        .industry-badge__icon { font-size: 1.5rem; color: var(--sun-color-primary); }
+
+        /* Comparison Table */
+        .comparison-table { background: white; border-radius: var(--sun-radius-lg); overflow: hidden; box-shadow: var(--sun-shadow-md); }
+        .comparison-row { display: grid; grid-template-columns: 1fr 1fr 1fr; border-bottom: 1px solid var(--sun-color-light); }
+        .comparison-row:last-child { border-bottom: none; }
+        .comparison-cell { padding: 1.5rem; display: flex; align-items: center; }
+        .comparison-cell:first-child { font-weight: 600; background: var(--sun-color-light); }
+        .comparison-cell--header { background: var(--sun-gradient-primary); color: white; font-weight: 700; justify-content: center; }
+        .comparison-icon { font-size: 1.2rem; margin: 0 auto; }
+        .comparison-icon--success { color: var(--sun-color-success); }
+        .comparison-icon--danger { color: var(--sun-color-danger); }
+
+        /* Process Steps */
+        .process-step { position: relative; }
+        .process-step__number { width: 50px; height: 50px; background: var(--sun-gradient-primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; margin: 0 auto 1rem; }
+        .process-step__title { font-size: 1.3rem; color: var(--sun-color-primary); font-weight: 700; margin-bottom: 0.5rem; text-align: center; }
+        .process-step__description { text-align: center; color: var(--sun-color-text); }
+
+        /* FAQ */
+        .faq-item { background: white; border-radius: var(--sun-radius-md); padding: 1.5rem; margin-bottom: 1rem; box-shadow: var(--sun-shadow-sm); }
+        .faq-question { font-size: 1.2rem; font-weight: 700; color: var(--sun-color-primary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; }
+        .faq-answer { color: var(--sun-color-text); }
+
+        /* Footer */
+        .sun-footer { background: var(--sun-color-dark); color: white; padding: var(--sun-space-xl) 0 var(--sun-space-md); }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--sun-space-lg); margin-bottom: var(--sun-space-lg); }
+        .footer-bottom { text-align: center; padding-top: var(--sun-space-md); border-top: 1px solid rgba(255, 255, 255, 0.1); opacity: 0.8; }
+
+        /* Responsive */
+        @media (max-width: 991px) {
+            .hero__content { flex-direction: column; text-align: center; }
+            .hero__title { font-size: 2.5rem; }
+            .hero__buttons { justify-content: center; }
+            .sun-grid--2col, .sun-grid--3col, .sun-grid--4col { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 767px) {
+            .sun-header__title { font-size: 2rem; }
+            .hero__title { font-size: 2rem; }
+            .comparison-row { grid-template-columns: 1fr; }
+            .comparison-cell:first-child { background: var(--sun-color-primary); color: white; }
+        }
+    </style>
+</head>
+<body>
+    <!-- HERO SECTION -->
+    <section class="manufacturing-hero">
+        <div class="sun__container">
+            <div class="hero__content">
+                <div class="hero__text">
+                    <div class="hero__badge">PARA MANUFACTURA Y ENSAMBLE</div>
+                    <h1 class="hero__title">Digitaliza tu planta de <span class="hero__highlight">manufactura</span> en tiempo real</h1>
+                    <p class="hero__description">Transforma tus procesos de fabricación y ensamble con tecnología inteligente. Control total desde la planeación hasta el producto terminado.</p>
+                    <div class="hero__buttons">
+                        <a href="#contacto" class="sun-btn sun-btn--primary">
+                            <i class="fas fa-calendar-check"></i>
+                            Agenda una demo
+                        </a>
+                        <a href="#como-funciona" class="sun-btn sun-btn--secondary">
+                            <i class="fas fa-play-circle"></i>
+                            Ver cómo funciona
+                        </a>
+                    </div>
+                </div>
+                <div class="hero__image">
+                    <div class="hero__dashboard">
+                        <img src="https://www.sunname.com.mx/web/image/33986-301e94df/toda_tecnologia_una_plataforma_web.webp" alt="Dashboard de manufactura" style="border-radius: 8px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAIN POINTS -->
+    <section class="sun__section sun__section--light">
+        <div class="sun__container">
+            <header class="sun-header">
+                <h2 class="sun-header__title">¿Te suena familiar?</h2>
+                <p class="sun-header__subtitle">Estos son los problemas más comunes que enfrentan las plantas de manufactura sin digitalización</p>
+            </header>
+            <div class="sun-grid sun-grid--2col">
+                <div class="pain-point">
+                    <div class="pain-point__icon">📊</div>
+                    <div>
+                        <h3 class="pain-point__title">Falta de visibilidad</h3>
+                        <p class="pain-point__text">No sabes en qué etapa está cada orden hasta que preguntas en piso de producción</p>
+                    </div>
+                </div>
+                <div class="pain-point">
+                    <div class="pain-point__icon">💰</div>
+                    <div>
+                        <h3 class="pain-point__title">Costos descontrolados</h3>
+                        <p class="pain-point__text">Descubres sobrecostos hasta que ya es demasiado tarde para actuar</p>
+                    </div>
+                </div>
+                <div class="pain-point">
+                    <div class="pain-point__icon">📦</div>
+                    <div>
+                        <h3 class="pain-point__title">Caos en materiales</h3>
+                        <p class="pain-point__text">Paros de producción por falta de materiales que creías tener en inventario</p>
+                    </div>
+                </div>
+                <div class="pain-point">
+                    <div class="pain-point__icon">⏰</div>
+                    <div>
+                        <h3 class="pain-point__title">Retrasos constantes</h3>
+                        <p class="pain-point__text">Fechas de entrega comprometidas sin conocer la capacidad real de tu planta</p>
+                    </div>
+                </div>
+                <div class="pain-point">
+                    <div class="pain-point__icon">🔍</div>
+                    <div>
+                        <h3 class="pain-point__title">Sin trazabilidad</h3>
+                        <p class="pain-point__text">Imposible rastrear qué lote se usó en qué producto para recalls o auditorías de calidad</p>
+                    </div>
+                </div>
+                <div class="pain-point">
+                    <div class="pain-point__icon">📋</div>
+                    <div>
+                        <h3 class="pain-point__title">Procesos manuales</h3>
+                        <p class="pain-point__text">Horas perdidas capturando información en Excel que ya está obsoleta</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="sun__section sun__section--white">
+        <div class="sun__container">
+            <header class="sun-header">
+                <h2 class="sun-header__title">Todo lo que necesitas para una manufactura inteligente</h2>
+                <p class="sun-header__subtitle">Soluciones completas diseñadas específicamente para empresas de fabricación y ensamble</p>
+            </header>
+            <div class="sun-grid sun-grid--2col">
+                <div class="sun-card feature-card">
+                    <div class="feature-icon"><i class="fas fa-chart-gantt"></i></div>
+                    <h3 class="sun-card__title">Planeación de Producción Inteligente</h3>
+                    <p class="sun-card__text">Optimiza tu producción con base en la capacidad real de tu planta</p>
+                    <ul class="feature-list">
+                        <li>Programa órdenes de trabajo con capacidad real</li>
+                        <li>Visualiza cuellos de botella antes de que ocurran</li>
+                        <li>Ajusta prioridades en tiempo real según demanda</li>
+                        <li>Calcula tiempos de entrega precisos automáticamente</li>
+                    </ul>
+                </div>
+                <div class="sun-card feature-card">
+                    <div class="feature-icon"><i class="fas fa-boxes"></i></div>
+                    <h3 class="sun-card__title">Control Total de Materiales</h3>
+                    <p class="sun-card__text">Inventario actualizado automáticamente con cada movimiento</p>
+                    <ul class="feature-list">
+                        <li>Inventario en tiempo real por ubicación y lote</li>
+                        <li>Alertas de reorden antes de quedarte sin stock</li>
+                        <li>Trazabilidad completa por número de lote</li>
+                        <li>Gestión de proveedores y órdenes de compra</li>
+                    </ul>
+                </div>
+                <div class="sun-card feature-card">
+                    <div class="feature-icon"><i class="fas fa-dollar-sign"></i></div>
+                    <h3 class="sun-card__title">Costeo Preciso por Orden</h3>
+                    <p class="sun-card__text">Calcula costos reales vs estimados en tiempo real</p>
+                    <ul class="feature-list">
+                        <li>Costeo automático de materiales y mano de obra</li>
+                        <li>Incluye overhead distribuido por centro de costo</li>
+                        <li>Detecta desviaciones antes de finalizar producción</li>
+                        <li>Reportes de rentabilidad por producto y cliente</li>
+                    </ul>
+                </div>
+                <div class="sun-card feature-card">
+                    <div class="feature-icon"><i class="fas fa-qrcode"></i></div>
+                    <h3 class="sun-card__title">Trazabilidad de Lote a Producto</h3>
+                    <p class="sun-card__text">Rastrea cada componente desde recepción hasta producto final</p>
+                    <ul class="feature-list">
+                        <li>Trazabilidad bidireccional completa</li>
+                        <li>Reportes de trazabilidad en segundos</li>
+                        <li>Gestión de recalls con precisión quirúrgica</li>
+                        <li>Cumplimiento de certificaciones y auditorías</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFITS / STATS -->
+    <section class="sun__section sun__section--gradient">
+        <div class="sun__container">
+            <header class="sun-header">
+                <h2 class="sun-header__title" style="color: white;">Resultados que verás en los primeros 90 días</h2>
+                <p class="sun-header__subtitle" style="color: rgba(255,255,255,0.9);">Métricas reales obtenidas por empresas que ya digitalizaron su manufactura</p>
+            </header>
+            <div class="sun-grid sun-grid--4col">
+                <div class="stat-card">
+                    <div class="stat-card__number">35%</div>
+                    <div class="stat-card__label">Más eficiente en planeación</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card__number">20%</div>
+                    <div class="stat-card__label">Menos costos en desperdicio</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card__number">50%</div>
+                    <div class="stat-card__label">Más rápido en reportes</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card__number">99%</div>
+                    <div class="stat-card__label">Precisión en inventarios</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="sun__section sun__section--white" id="como-funciona">
+        <div class="sun__container">
+            <header class="sun-header">
+                <h2 class="sun-header__title">Implementación sin dolor</h2>
+                <p class="sun-header__subtitle">Te acompañamos en cada paso para garantizar el éxito de tu proyecto</p>
+            </header>
+            <div class="sun-grid sun-grid--3col">
+                <div class="sun-card process-step">
+                    <div class="process-step__number">1</div>
+                    <h3 class="process-step__title">Configuración rápida</h3>
+                    <p class="process-step__description">1-2 semanas para mapear procesos, cargar catálogos y entrenar a tu equipo</p>
+                </div>
+                <div class="sun-card process-step">
+                    <div class="process-step__number">2</div>
+                    <h3 class="process-step__title">Producción paralela</h3>
+                    <p class="process-step__description">2-3 semanas de operación piloto con acompañamiento constante y ajustes en vivo</p>
+                </div>
+                <div class="sun-card process-step">
+                    <div class="process-step__number">3</div>
+                    <h3 class="process-step__title">Escalamiento total</h3>
+                    <p class="process-step__description">Expande a toda la planta a tu ritmo con soporte continuo y mejora constante</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INDUSTRIES -->
+    <section class="sun__section sun__section--light">
+        <div class="sun__container">
+            <header class="sun-header">
+                <h2 class="sun-header__title">Perfecto para tu tipo de manufactura</h2>
+                <p class="sun-header__subtitle">Soluciones adaptadas a diferentes procesos productivos</p>
+            </header>
+            <div class="sun-grid sun-grid--3col">
+                <div class="industry-badge">
+                    <div class="industry-badge__icon">🔩</div>
+                    <div><strong>Ensamble y manufactura discreta</strong></div>
+                </div>
+                <div class="industry-badge">
+                    <div class="industry-badge__icon">🏗️</div>
+                    <div><strong>Fabricación bajo pedido (MTO)</strong></div>
+                </div>
+                <div class="industry-badge">
+                    <div class="industry-badge__icon">📦</div>
+                    <div><strong>Empaque y co-packing</strong></div>
+                </div>
+                <div class="industry-badge">
+                    <div class="industry-badge__icon">🔧</div>
+                    <div><strong>Maquinado y herramentales</strong></div>
+                </div>
+                <div class="industry-badge">
+                    <div class="industry-badge__icon">🏭</div>
+                    <div><strong>Producción por lotes</strong></div>
+                </div>
+                <div class="industry-badge">
+                    <div class="industry-badge__icon">⚙️</div>
+                    <div><strong>Manufactura híbrida</strong></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPARISON -->
+    <section class="sun__section sun__section--white">
+        <div class="sun__container">
+            <header class="sun-header">
+                <h2 class="sun-header__title">La diferencia es clara</h2>
+                <p class="sun-header__subtitle">Compara tu operación actual vs una manufactura digitalizada</p>
+            </header>
+            <div class="comparison-table">
+                <div class="comparison-row">
+                    <div class="comparison-cell comparison-cell--header"></div>
+                    <div class="comparison-cell comparison-cell--header">Procesos manuales</div>
+                    <div class="comparison-cell comparison-cell--header">Sunname Manufacturing</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">Visibilidad de producción</div>
+                    <div class="comparison-cell">Excel y papel</div>
+                    <div class="comparison-cell">Dashboard en tiempo real</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">Actualización de datos</div>
+                    <div class="comparison-cell">Al final del turno</div>
+                    <div class="comparison-cell">Automática en vivo</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">Trazabilidad de lotes</div>
+                    <div class="comparison-cell">Búsqueda manual</div>
+                    <div class="comparison-cell">En segundos con código</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">Costeo de órdenes</div>
+                    <div class="comparison-cell">Estimaciones</div>
+                    <div class="comparison-cell">Costos reales automáticos</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">Control de inventario</div>
+                    <div class="comparison-cell">Desactualizado</div>
+                    <div class="comparison-cell">Conteo perpetuo en vivo</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="sun__section sun__section--light">
+        <div class="sun__container">
+            <header class="sun-header">
+                <h2 class="sun-header__title">Preguntas frecuentes

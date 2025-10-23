@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sunname Manufacturing: digitaliza tu planta de manufactura y ensamble con visibilidad en tiempo real, trazabilidad por lote, costeo preciso e implementación guiada." />
+  <title>Sunname Manufacturing | Digitaliza tu planta en tiempo real</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <!-- Sistema de diseño Sunname -->
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Ajustes mínimos específicos de esta landing (sin romper el design system) */
+    .mf-hero__badges {
+      display:flex; gap:.5rem; flex-wrap:wrap; margin-bottom:1rem;
+    }
+    .mf-kpis { display:grid; gap: var(--sun-space-lg); grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); }
+    .mf-kpi { text-align:center; padding:var(--sun-space-lg); border-radius:var(--sun-radius-lg); background:var(--sun-color-white); box-shadow:var(--sun-shadow-sm); }
+    .mf-kpi__number{ font-size:2.25rem; font-weight:var(--sun-font-weight-black); color:var(--sun-color-primary);} 
+    .mf-kpi__label{ color:var(--sun-color-text-light);} 
+    .mf-pains__grid,.mf-features__grid,.mf-industries__grid{ display:grid; gap:var(--sun-space-lg); grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); }
+    .mf-compare { overflow:auto; }
+    .mf-compare table{ width:100%; border-collapse:separate; border-spacing:0; }
+    .mf-compare th, .mf-compare td{ padding:1rem 1rem; border-bottom:1px solid #e5e7eb; vertical-align:top; }
+    .mf-compare thead th{ background: var(--sun-color-secondary-10); color: var(--sun-color-primary); position:sticky; top:0; }
+    .mf-process__steps{ display:grid; gap:var(--sun-space-lg); grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); }
+    .mf-faq details{ background:#fff; border-radius:var(--sun-radius-md); padding:1rem 1.25rem; box-shadow:var(--sun-shadow-sm);} 
+    .mf-faq summary{ cursor:pointer; font-weight:var(--sun-font-weight-bold); color:var(--sun-color-primary);} 
+    .mf-faq details + details{ margin-top:var(--sun-space-md);} 
+    .mf-integrations__logos{ display:flex; gap:1rem; flex-wrap:wrap; align-items:center;} 
+    .mf-integrations__logo{ background:var(--sun-color-white); border:1px dashed var(--sun-color-secondary-30); padding:.75rem 1rem; border-radius:var(--sun-radius-full); font-weight:600; }
+    .mf-hero__media{ position:relative; }
+    .mf-hero__video-badge{ position:absolute; bottom:12px; right:12px; background:var(--sun-color-white-80); backdrop-filter:saturate(1.2) blur(4px); padding:.4rem .6rem; border-radius:var(--sun-radius-full); font-size:.8rem; }
+    .mf-contact__form{ display:grid; gap:var(--sun-space-md); grid-template-columns:1fr; max-width:760px; margin:0 auto; }
+    .mf-contact__row{ display:grid; gap:var(--sun-space-md); grid-template-columns:1fr; }
+    @media (min-width: 720px){ .mf-contact__row{ grid-template-columns:1fr 1fr; }}
+    .mf-contact__form input, .mf-contact__form select, .mf-contact__form textarea{ width:100%; padding:.9rem 1rem; border-radius:var(--sun-radius-md); border:1px solid #e5e7eb; font:inherit; }
+    .mf-contact__hint{ color:var(--sun-color-text-light); font-size:.95rem; text-align:center; margin-top:.5rem; }
+  </style>
+</head>
+<body>
+  <main class="sun">
+
+    <!-- ================= HERO ================= -->
+    <section class="odoo-hero" id="Inicio" aria-labelledby="hero-title">
+      <div class="odoo-hero__container sun__container">
+        <div class="odoo-hero__content">
+          <div class="odoo-hero__text">
+            <div class="mf-hero__badges">
+              <span class="sun-badge sun-badge--secondary">MANUFACTURA & ENSAMBLE</span>
+              <span class="sun-badge sun-badge--primary">Implementación guiada</span>
+            </div>
+            <h1 id="hero-title" class="odoo-hero__title">Digitaliza tu planta de manufactura <span class="odoo-hero__highlight">en tiempo real</span></h1>
+            <p class="odoo-hero__description">Transforma tus procesos de fabricación y ensamble con tecnología inteligente. <strong>Control total</strong> desde la planeación hasta el producto terminado.</p>
+            <div class="odoo-hero__buttons">
+              <a href="#Contacto-Formulario" class="odoo-hero__button sun-btn sun-btn--primary">Agenda una demo <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+              <a href="#Como-Funciona" class="odoo-hero__button sun-btn sun-btn--secondary"><i class="fa fa-circle-play" aria-hidden="true"></i> Ver cómo funciona</a>
+            </div>
+            <div class="odoo-hero__clients">
+              <div class="odoo-hero__avatars">
+                <div class="odoo-hero__avatar" style="background-color: var(--sun-color-secondary)"></div>
+                <div class="odoo-hero__avatar" style="background-color: var(--sun-color-primary)"></div>
+                <div class="odoo-hero__avatar" style="background-color: var(--sun-color-dark)"></div>
+              </div>
+              <div class="odoo-hero__client-text"><span class="odoo-hero__highlight">+60</span> empresas confían en Sunname</div>
+            </div>
+          </div>
+          <div class="odoo-hero__image mf-hero__media">
+            <figure class="odoo-hero__dashboard-container">
+              <!-- Puedes reemplazar por mockup/ilustración del dashboard de planta -->
+              <img src="https://www.sunname.com.mx/web/image/33986-301e94df/toda_tecnologia_una_plataforma_web.webp" alt="Dashboard de producción en tiempo real" class="odoo-hero__dashboard-image" />
+              <figcaption class="odoo-hero__version-badge">Visibilidad en vivo</figcaption>
+            </figure>
+            <div class="odoo-hero__glow-effect"></div>
+            <span class="mf-hero__video-badge"><i class="fa fa-chart-line"></i> Métricas de producción</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROBLEMA ================= -->
+    <section class="sun__section sun__section--white" id="Problemas" aria-labelledby="pains-title">
+      <div class="sun__container">
+        <header class="sun-header u-text-center">
+          <h2 id="pains-title" class="sun-header__title">¿Te suena familiar?</h2>
+          <p class="sun-header__subtitle">Los retos que frenan la productividad y elevan los costos en planta.</p>
+        </header>
+        <div class="mf-pains__grid" role="list">
+          <article class="sun-card sun-service-card" role="listitem">
+            <div class="sun-icon-circle u-flex-center"><i class="fa fa-eye-slash" aria-hidden="true"></i></div>
+            <h3 class="sun-card__title">Falta de visibilidad</h3>
+            <p class="sun-card__text">No sabes en qué etapa está cada orden hasta que preguntas en piso.</p>
+          </article>
+          <article class="sun-card sun-service-card" role="listitem">
+            <div class="sun-icon-circle u-flex-center"><i class="fa fa-sack-dollar" aria-hidden="true"></i></div>
+            <h3 class="sun-card__title">Costos descontrolados</h3>
+            <p class="sun-card__text">Descubres sobrecostos hasta que ya es demasiado tarde.</p>
+          </article>
+          <article class="sun-card sun-service-card" role="listitem">
+            <div class="sun-icon-circle u-flex-center"><i class="fa fa-boxes-stacked" aria-hidden="true"></i></div>
+            <h3 class="sun-card__title">Caos en materiales</h3>
+            <p class="sun-card__text">Paros de producción por falta de materiales que creías tener.</p>
+          </article>
+          <article class="sun-card sun-service-card" role="listitem">
+            <div class="sun-icon-circle u-flex-center"><i class="fa fa-clock" aria-hidden="true"></i></div>
+            <h3 class="sun-card__title">Retrasos constantes</h3>
+            <p class="sun-card__text">Fechas de entrega comprometidas sin conocer la capacidad real.</p>
+          </article>
+          <article class="sun-card sun-service-card" role="listitem">
+            <div class="sun-icon-circle u-flex-center"><i class="fa fa-magnifying-glass" aria-hidden="true"></i></div>
+            <h3 class="sun-card__title">Sin trazabilidad</h3>
+            <p class="sun-card__text">Imposible rastrear qué lote se usó en qué producto para recalls o calidad.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SOLUCIÓN ================= -->
+    <section class="sun__section sun__section--light" id="Solucion" aria-labelledby="features-title">
+      <div class="sun__container">
+        <header class="sun-header u-text-center">
+          <h2 id="features-title" class="sun-header__title">Todo lo que necesitas para una manufactura inteligente</h2>
+          <p class="sun-header__subtitle">Planeación, materiales, costos, trazabilidad y operación en vivo — en una sola plataforma.</p>
+        </header>
+        <div class="mf-features__grid" role="list">
+          <article class="sun-card sun-service-card" role="listitem">
+            <div class="sun-icon-circle u-flex-center"><i class="fa fa-bullseye" aria-hidden="true"></i></div>
+            <h3 class="sun-card__title">Planeación de Producción Inteligente</h3>
+            <ul class="sun-list">
+              <li class="sun-list__item">Programa órdenes según capacidad real</li>
+              <li class="sun-list__item">Detecta cuellos de botella antes de que ocurran</li>
+              <li class="sun-list__item">Reprioriza en tiempo real según demanda</li>
+            </ul>
+          </article>
+          <article class="sun-card sun-service-card" role="listitem">
+            <div class="sun-icon-circle u-flex-center"><i class="fa fa-pallet" aria-hidden="true"></i></div>
+            <h3 class="sun-card__title">Control Total de Materiales</h3>
+            <ul class="sun-list">
+              <li class="sun-list__item">Inventario actualizado con cada movimiento</li>
+              <li class="sun-list__item">Alertas de reorden para stock crítico</li>
+              <li class="sun-list__item">Trazabilidad por lote y proveedor</li>
+            </ul>
+          </article>
+          <article class="sun-card sun-service-card" role="listitem">
+            <div class="sun-icon-circle u-flex-center"><i class="fa fa-calculator" aria-hidden="true"></i></div>
+            <h3 class="sun-card__title">Costeo Preciso por Orden</h3>
+            <ul class="sun-list">
+              <li class="sun-list__item">Costos reales vs estimados en vivo</li>
+              <li class="sun-list__item">Incluye MO, materiales y overhead</li>
+              <li class="sun-list__item">Detecta desviaciones a tiempo</li>
+            </ul>
+          </article>
+          <article class="sun-card sun-service-card" role="listitem">
+            <div class="sun-icon-circle u-flex-center"><i class="fa fa-link" aria-hidden="true"></i></div>
+            <h3 class="sun-card__title">Trazabilidad de Lote a Producto</h3>
+            <ul class="sun-list">
+              <li class="sun-list__item">Rastreo desde recepción a producto final</li>
+              <li class="sun-list__item">Reportes rápidos para auditorías</li>
+              <li class="sun-list__item">Gestión de recalls con precisión</li>
+            </ul>
+          </article>
+          <article class="sun-card sun-service-card" role="listitem">
+            <div class="sun-icon-circle u-flex-center"><i class="fa fa-bolt" aria-hidden="true"></i></div>
+            <h3 class="sun-card__title">Operación en Tiempo Real</h3>
+            <ul class="sun-list">
+              <li class="sun-list__item">Dashboard vivo desde piso de producción</li>
+              <li class="sun-list__item">Sin capturas manuales al final del turno</li>
+              <li class="sun-list__item">Acceso desde cualquier dispositivo</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CÓMO FUNCIONA ================= -->
+    <section class="sun__section sun__section--white" id="Como-Funciona" aria-labelledby="process-title">
+      <div class="sun__container">
+        <header class="sun-header u-text-center">
+          <h2 id="process-title" class="sun-header__title">Implementación sin dolor</h2>
+          <p class="sun-header__subtitle">Arranca en semanas, no en meses. Vamos contigo paso a paso.</p>
+        </header>
+        <div class="mf-process__steps">
+          <article class="sun-card sun-process-step">
+            <div class="sun-icon-circle sun-icon-circle--large u-flex-center"><i class="fa fa-wand-magic-sparkles" aria-hidden="true"></i></div>
+            <h3 class="sun-card__title">1) Configuración rápida (1–2 semanas)</h3>
+            <ul class="sun-list">
+              <li class="sun-list__item">Mapeo de procesos actuales</li>
+              <li class="sun-list__item">Carga de catálogos y BOM</li>
+              <li class="sun-list__item">Capacitación a tu equipo</li>
+            </ul>
+          </article>
+          <article class="sun-card sun-process-step">
+            <div class="sun-icon-circle sun-icon-circle--large u-flex-center"><i class="fa fa-industry" aria-hidden="true"></i></div>
+            <h3 class="sun-card__title">2) Producción paralela (2–3 semanas)</h3>
+            <ul class="sun-list">
+              <li class="sun-list__item">Arranca con una línea de prueba</li>
+              <li class="sun-list__item">Acompañamiento constante</li>
+              <li class="sun-list__item">Ajustes en tiempo real</li>
+            </ul>
+          </article>
+          <article class="sun-card sun-process-step">
+            <div class="sun-icon-circle sun-icon-circle--large u-flex-center"><i class="fa fa-chart-simple" aria-hidden="true"></i></div>
+            <h3 class="sun-card__title">3) Escalamiento total</h3>
+            <ul class="sun-list">
+              <li class="sun-list__item">Expande al resto de la planta</li>
+              <li class="sun-list__item">Integración con ERP/contabilidad</li>
+              <li class="sun-list__item">Soporte continuo y mejora</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BENEFICIOS MEDIBLES ================= -->
+    <section class="sun__section sun__section--light" id="Resultados" aria-labelledby="benefits-title">
+      <div class="sun__container">
+        <header class="sun-header u-text-center">
+          <h2 id="benefits-title" class="sun-header__title">Resultados que verás en los primeros 90 días</h2>
+          <p class="sun-header__subtitle">KPIs claros, visibles y accionables desde el primer sprint.</p>
+        </header>
+        <div class="mf-kpis">
+          <div class="mf-kpi sun-animate-on-scroll">
+            <div class="mf-kpi__number">📈 35%</div>
+            <div class="mf-kpi__label">menos tiempo de planeación semanal</div>
+          </div>
+          <div class="mf-kpi sun-animate-on-scroll">
+            <div class="mf-kpi__number">💰 20%</div>
+            <div class="mf-kpi__label">ahorro en desperdicio de materiales</div>
+          </div>
+          <div class="mf-kpi sun-animate-on-scroll">
+            <div class="mf-kpi__number">⏱️ 50%</div>
+            <div class="mf-kpi__label">respuesta más rápida al cliente</div>
+          </div>
+          <div class="mf-kpi sun-animate-on-scroll">
+            <div class="mf-kpi__number">✅ 99%</div>
+            <div class="mf-kpi__label">precisión de inventario</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CASOS DE USO / INDUSTRIAS ================= -->
+    <section class="sun__section sun__section--white" id="Industrias" aria-labelledby="industries-title">
+      <div class="sun__container">
+        <header class="sun-header u-text-center">
+          <h2 id="industries-title" class="sun-header__title">Perfecto para tu tipo de manufactura</h2>
+          <p class="sun-header__subtitle">Nos adaptamos a tus flujos: discreta, por lotes o híbrida.</p>
+        </header>
+        <div class="mf-industries__grid" role="list">
+          <article class="sun-card sun-service-card" role="listitem">
+            <div class="sun-icon-circle u-flex-center"><i class="fa fa-screwdriver-wrench"></i></div>
+            <h3 class="sun-card__title">Ensamble y manufactura discreta</h3>
+          </article>
+          <article class="sun-card sun-service-card" role="listitem">
+            <div class="sun-icon-circle u-flex-center"><i class="fa fa-helmet-safety"></i></div>
+            <h3 class="sun-card__title">Fabricación bajo pedido (MTO)</h3>
+          </article>
+          <article class="sun-card sun-service-card" role="listitem">
+            <div class="sun-icon-circle u-flex-center"><i class="fa fa-box-open"></i></div>
+            <h3 class="sun-card__title">Empaque y co‑packing</h3>
+          </article>
+          <article class="sun-card sun-service-card" role="listitem">
+            <div class="sun-icon-circle u-flex-center"><i class="fa fa-gears"></i></div>
+            <h3 class="sun-card__title">Maquinado y herramentales</h3>
+          </article>
+          <article class="sun-card sun-service-card" role="listitem">
+            <div class="sun-icon-circle u-flex-center"><i class="fa fa-industry"></i></div>
+            <h3 class="sun-card__title">Producción por lotes</h3>
+          </article>
+          <article class="sun-card sun-service-card" role="listitem">
+            <div class="sun-icon-circle u-flex-center"><i class="fa fa-diagram-project"></i></div>
+            <h3 class="sun-card__title">Manufactura híbrida</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= COMPARACIÓN ================= -->
+    <section class="sun__section sun__section--light" id="Comparativa" aria-labelledby="compare-title">
+      <div class="sun__container">
+        <header class="sun-header u-text-center">
+          <h2 id="compare-title" class="sun-header__title">La diferencia es clara</h2>
+          <p class="sun-header__subtitle">Del papel y Excel a un tablero en vivo con trazabilidad y costeo real.</p>
+        </header>
+        <div class="sun-card mf-compare">
+          <div class="sun-card__body">
+            <table aria-label="Tabla comparativa Antes vs Después">
+              <thead>
+                <tr>
+                  <th>Antes (Procesos manuales)</th>
+                  <th>Después (Sunname Manufacturing)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Excel y papel</td><td>Dashboard en tiempo real</td></tr>
+                <tr><td>Reportes al final del turno</td><td>Actualización automática</td></tr>
+                <tr><td>Búsqueda manual de lotes</td><td>Trazabilidad en segundos</td></tr>
+                <tr><td>Estimaciones de costos</td><td>Costos reales por orden</td></tr>
+                <tr><td>Inventarios desactualizados</td><td>Conteo perpetuo automático</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TESTIMONIAL ================= -->
+    <section class="sun__section sun__section--white" id="Testimonio" aria-labelledby="testimonial-title">
+      <div class="sun__container">
+        <header class="sun-header u-text-center">
+          <h2 id="testimonial-title" class="sun-header__title">Lo que dicen los líderes de operaciones</h2>
+          <p class="sun-header__subtitle">Resultados reales en tiempos reales.</p>
+        </header>
+        <blockquote class="sun-quote" cite="#">
+          “Redujimos nuestro tiempo de planeación de 2 días a 3 horas. Ahora sabemos exactamente qué podemos comprometer y cuándo.”
+          <br>— Director de Operaciones, Empresa de Autopartes
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ================= TECNOLOGÍA / INTEGRACIONES ================= -->
+    <section class="sun__section sun__section--light" id="Integraciones" aria-labelledby="integrations-title">
+      <div class="sun__container">
+        <header class="sun-header u-text-center">
+          <h2 id="integrations-title" class="sun-header__title">Se integra con lo que ya usas</h2>
+          <p class="sun-header__subtitle">APIs abiertas y conectores listos para ERP, contabilidad e inventario.</p>
+        </header>
+        <div class="mf-integrations__logos" aria-label="Listado de integraciones">
+          <span class="mf-integrations__logo">SAP</span>
+          <span class="mf-integrations__logo">Odoo</span>
+          <span class="mf-integrations__logo">QuickBooks</span>
+          <span class="mf-integrations__logo">Sistemas Contables</span>
+          <span class="mf-integrations__logo">Inventarios</span>
+          <span class="mf-integrations__logo">API Rest</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="sun__section sun__section--white mf-faq" id="FAQ" aria-labelledby="faq-title">
+      <div class="sun__container">
+        <header class="sun-header u-text-center">
+          <h2 id="faq-title" class="sun-header__title">Preguntas frecuentes</h2>
+          <p class="sun-header__subtitle">Respuestas claras para arrancar con confianza.</p>
+        </header>
+        <div class="sun-grid">
+          <details>
+            <summary>¿Funciona sin conexión a internet en piso de producción?</summary>
+            <p>Podemos habilitar flujos con captura offline en puntos críticos y sincronización automática cuando regrese la conexión.</p>
+          </details>
+          <details>
+            <summary>¿Cuánto tiempo toma la implementación?</summary>
+            <p>El arranque suele lograrse entre 3 y 5 semanas en escenarios estándar, escalando por áreas o líneas.</p>
+          </details>
+          <details>
+            <summary>¿Puedo migrar datos de mi sistema actual?</summary>
+            <p>Sí. Migramos catálogos, listas de materiales (BOM), ubicaciones e históricos relevantes para continuidad operativa.</p>
+          </details>
+          <details>
+            <summary>¿Manejan manufactura con múltiples turnos?</summary>
+            <p>Soportamos turnos, calendarios laborales y asignación de recursos para planear capacidad real por centro de trabajo.</p>
+          </details>
+          <details>
+            <summary>¿Incluye gestión de órdenes de compra a proveedores?</summary>
+            <p>Integramos compras y abastecimiento para disparar reorden, reservar materiales y asegurar disponibilidad a tiempo.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA FINAL ================= -->
+    <section class="sun__section sun__section--gradient" id="CTA-Final" aria-labelledby="cta-title">
+      <div class="sun__container">
+        <header class="sun-header">
+          <h2 id="cta-title" class="sun-header__title" style="color:#fff;">Comienza a digitalizar tu manufactura hoy</h2>
+          <p class="sun-header__subtitle" style="color:var(--sun-color-white-80);">Agenda una demo de 30 minutos y te mostraremos cómo Sunname transforma tu operación con ejemplos de tu industria.</p>
+        </header>
+        <div class="u-text-center">
+          <a href="#Contacto-Formulario" class="sun-btn sun-btn--primary">Agendar demo gratuita <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+          <div class="u-margin-top-md" style="opacity:.95;">
+            <span class="sun-badge sun-badge--secondary">✅ Sin contratos largos</span>
+            <span class="sun-badge sun-badge--secondary">✅ Implementación guiada</span>
+            <span class="sun-badge sun-badge--secondary">✅ Soporte en español</span>
+            <span class="sun-badge sun-badge--secondary">✅ Prueba con una línea primero</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACTO ================= -->
+    <section class="sun__section sun__section--white" id="Contacto-Formulario" aria-labelledby="contact-title">
+      <div class="sun__container">
+        <header class="sun-header u-text-center">
+          <h2 id="contact-title" class="sun-header__title">Conversemos</h2>
+          <p class="sun-header__subtitle">Compártenos tus datos y agenda una llamada con nuestro equipo.</p>
+        </header>
+        <form class="mf-contact__form" action="#" method="post">
+          <div class="mf-contact__row">
+            <div>
+              <label for="nombre" class="u-hidden">Nombre</label>
+              <input id="nombre" name="nombre" type="text" placeholder="Nombre" required />
+            </div>
+            <div>
+              <label for="empresa" class="u-hidden">Empresa</label>
+              <input id="empresa" name="empresa" type="text" placeholder="Empresa" required />
+            </div>
+          </div>
+          <div class="mf-contact__row">
+            <div>
+              <label for="email" class="u-hidden">Email</label>
+              <input id="email" name="email" type="email" placeholder="Email" required />
+            </div>
+            <div>
+              <label for="telefono" class="u-hidden">Teléfono</label>
+              <input id="telefono" name="telefono" type="tel" placeholder="Teléfono" required />
+            </div>
+          </div>
+          <div>
+            <label for="plantasize" class="u-hidden">¿Cuántas personas trabajan en tu planta?</label>
+            <select id="plantasize" name="plantasize" required>
+              <option value="" disabled selected>¿Cuántas personas trabajan en tu planta?</option>
+              <option value="1-20">1–20</option>
+              <option value="21-50">21–50</option>
+              <option value="51-100">51–100</option>
+              <option value=">100">Más de 100</option>
+            </select>
+          </div>
+          <div>
+            <label for="mensaje" class="u-hidden">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos brevemente tu operación (líneas, turnos, productos)…"></textarea>
+          </div>
+          <div class="u-text-center">
+            <button type="submit" class="sun-btn sun-btn--primary">Enviar <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+          </div>
+          <p class="mf-contact__hint">Al enviar aceptas ser contactado/a por Sunname. Respuesta en menos de 24 h hábiles.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
