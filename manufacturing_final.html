@@ -14,10 +14,15 @@
            ========================================================================== */
 
         /* Hero Section */
-        .mfg-hero .odoo-hero__badge {
-            background: var(--sun-color-secondary-20);
-            color: var(--sun-color-white);
-            border: 1px solid var(--sun-color-white-20);
+        .hero__badge {
+            display: inline-block;
+            background: rgba(70, 194, 206, 0.2);
+            color: var(--sun-color-secondary);
+            padding: 0.5rem 1rem;
+            border-radius: var(--sun-radius-full);
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
         }
         .mfg-hero .odoo-hero__description { color: var(--sun-color-white-80); }
 
@@ -355,6 +360,52 @@
             margin-top: 0.5rem;
         }
 
+        /* Navegación Sticky */
+        .sun-nav-sticky {
+            position: sticky;
+            top: 0;
+            background: var(--sun-color-white);
+            border-bottom: 1px solid #e5e7eb;
+            padding: 0.75rem 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+        .sun-nav-sticky__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .sun-nav-sticky__logo a {
+            font-weight: var(--sun-font-weight-bold);
+            color: var(--sun-color-primary);
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        .sun-nav-sticky__menu {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .sun-nav-sticky__link {
+            color: var(--sun-color-text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color var(--sun-transition-fast);
+            padding: 0.5rem 0;
+        }
+        .sun-nav-sticky__link:hover,
+        .sun-nav-sticky__link:focus {
+            color: var(--sun-color-primary);
+        }
+        @media (max-width: 768px) {
+            .sun-nav-sticky__menu {
+                display: none; /* Podría expandirse con un menú móvil */
+            }
+        }
+
         /* CTA Sticky */
         .mfg-cta-sticky {
             position: sticky;
@@ -412,6 +463,83 @@
             .comparison-row { grid-template-columns: 1fr; }
             .comparison-cell:first-child { background: var(--sun-color-primary); color: white; }
         }
+        /* Animaciones para la sección de presupuesto */
+        .odoo-hero__content {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .odoo-hero__text {
+            animation: fadeInLeft 0.8s ease-out 0.2s both;
+        }
+
+        .odoo-hero__image {
+            animation: fadeInRight 0.8s ease-out 0.4s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Hover effects para botones */
+        .odoo-hero__button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        /* Responsive para móviles */
+        @media (max-width: 768px) {
+            .odoo-hero__container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .odoo-hero__text {
+                order: 2;
+            }
+
+            .odoo-hero__image {
+                order: 1;
+                margin-bottom: 2rem;
+            }
+
+            .odoo-hero__buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .odoo-hero__clients {
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -421,20 +549,17 @@
             <div class="odoo-hero__container sun__container">
                 <div class="odoo-hero__content">
                     <div class="odoo-hero__text">
-                        <div class="mf-hero__badges">
-                            <span class="sun-badge sun-badge--secondary">MANUFACTURA & ENSAMBLE</span>
-                            <span class="sun-badge sun-badge--primary">Implementación guiada</span>
-                        </div>
-                        <h1 id="hero-title" class="odoo-hero__title">Digitaliza tu <span class="odoo-hero__highlight">planta de manufactura</span> en tiempo real</h1>
+                        <div class="odoo-hero__badge sun-badge sun-badge--secondary">PARA MANUFACTURA Y ENSAMBLE</div>
+                        <h1 id="hero-title" class="odoo-hero__title">Digitaliza tu planta de <span class="odoo-hero__highlight">manufactura</span> en tiempo real</h1>
                         <p class="odoo-hero__description">Transforma tus operaciones de manufactura y ensamble con <strong>Sunname Manufacturing</strong>. Control total de producción, inventario, calidad y trazabilidad en una sola plataforma diseñada para la industria mexicana.</p>
                         <div class="odoo-hero__buttons">
                             <a href="#Contacto" class="odoo-hero__button sun-btn sun-btn--primary">
-                                Agendar demo
-                                <i class="fa fa-calendar-check" aria-hidden="true"></i>
+                                Solicitar demo
+                                <i class="fa fa-industry" aria-hidden="true"></i>
                             </a>
-                            <a href="#Como-Funciona" class="odoo-hero__button sun-btn sun-btn--secondary">
-                                <i class="fa fa-circle-play" aria-hidden="true"></i>
-                                Ver cómo funciona
+                            <a href="#Modulos" class="odoo-hero__button sun-btn sun-btn--secondary">
+                                <i class="fa fa-list-check odoo-hero__play-icon" aria-hidden="true"></i>
+                                Ver módulos clave
                             </a>
                         </div>
                         <div class="odoo-hero__clients">
@@ -450,7 +575,7 @@
                     </div>
                     <div class="odoo-hero__image mf-hero__media">
                         <figure class="odoo-hero__dashboard-container">
-                            <img src="https://www.sunname.com.mx/web/image/33986-301e94df/toda_tecnologia_una_plataforma_web.webp" alt="Dashboard de producción en tiempo real" class="odoo-hero__dashboard-image" />
+                            <img src="assets/manufactura.png" alt="Dashboard de producción en tiempo real" class="odoo-hero__dashboard-image" />
                             <figcaption class="odoo-hero__version-badge">Visibilidad en vivo</figcaption>
                         </figure>
                         <div class="odoo-hero__glow-effect"></div>
@@ -515,6 +640,7 @@
                 </div>
             </div>
         </section>
+
 
         <!-- =============== DOLOR → SOLUCIÓN =============== -->
         <section class="sun__section sun__section--light" id="Solucion" aria-labelledby="ps-title">
@@ -979,6 +1105,7 @@
 
     </main>
 
+
     <!-- CTA STICKY -->
     <div class="mfg-cta-sticky" role="region" aria-label="Acción rápida">
         <div class="sun__container">
@@ -986,7 +1113,7 @@
                 Agendar demo <i class="fa-solid fa-calendar-check"></i>
             </a>
             <a href="#Como-Funciona" class="sun-btn sun-btn--secondary">
-                Ver cómo funciona <i class="fa-solid fa-circle-play"></i>
+                Ver proceso de implementación <i class="fa-solid fa-circle-play"></i>
             </a>
         </div>
     </div>
@@ -1188,6 +1315,76 @@
                                 <div class="sun-contact__info-content">
                                     <strong>WhatsApp</strong>
                                     <a href="https://wa.me/8148071309?text=Hola%2C%20me%20interesa%20Sunname%20Manufacturing" style="color: white;">+52 81 4807 1309</a>
+    <script>
+        // Validación del formulario de presupuesto
+        document.addEventListener('DOMContentLoaded', function() {
+            const budgetForm = document.querySelector('#Contacto form');
+
+            if (budgetForm) {
+                budgetForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+
+                    // Validación básica
+                    const requiredFields = budgetForm.querySelectorAll('[required]');
+                    let isValid = true;
+
+                    requiredFields.forEach(field => {
+                        if (!field.value.trim()) {
+                            field.style.borderColor = 'red';
+                            isValid = false;
+                        } else {
+                            field.style.borderColor = '#e5e7eb';
+                        }
+                    });
+
+                    if (isValid) {
+                        // Simular envío exitoso
+                        alert('¡Gracias! Tu solicitud de presupuesto ha sido enviada. Te contactaremos en las próximas 24 horas.');
+                        budgetForm.reset();
+                    } else {
+                        alert('Por favor, completa todos los campos requeridos.');
+                    }
+                });
+
+                // Validación en tiempo real
+                const inputs = budgetForm.querySelectorAll('input, select, textarea');
+                inputs.forEach(input => {
+                    input.addEventListener('blur', function() {
+                        if (this.hasAttribute('required') && !this.value.trim()) {
+                            this.style.borderColor = 'red';
+                        } else {
+                            this.style.borderColor = '#e5e7eb';
+                        }
+                    });
+                });
+            }
+
+            // Animación de scroll para elementos
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Aplicar animación a tarjetas de módulos
+            document.querySelectorAll('.mf-module__card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
                                 </div>
                             </div>
 
@@ -1264,10 +1461,10 @@
                         <nav class="sun-footer__links" aria-label="Soluciones">
                             <h3 class="sun-footer__heading">Soluciones</h3>
                             <ul class="sun-footer__menu">
-                                <li><a href="#Soluciones" class="sun-footer__link">Gestión de Producción</a></li>
-                                <li><a href="#Soluciones" class="sun-footer__link">Control de Inventario</a></li>
-                                <li><a href="#Soluciones" class="sun-footer__link">Control de Calidad</a></li>
-                                <li><a href="#Soluciones" class="sun-footer__link">Mantenimiento</a></li>
+                                <li><a href="#Modulos" class="sun-footer__link">Gestión de Producción</a></li>
+                                <li><a href="#Modulos" class="sun-footer__link">Control de Inventario</a></li>
+                                <li><a href="#Modulos" class="sun-footer__link">Control de Calidad</a></li>
+                                <li><a href="#Modulos" class="sun-footer__link">Mantenimiento</a></li>
                             </ul>
                         </nav>
 
