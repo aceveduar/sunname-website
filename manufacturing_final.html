@@ -9,47 +9,409 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Estilos adicionales para elementos específicos */
-        .mfg-hero .odoo-hero__badge { background: var(--sun-color-secondary-20); color: var(--sun-color-white); border: 1px solid var(--sun-color-white-20); }
+        /* ==========================================================================
+           ESTILOS ESPECÍFICOS PARA MANUFACTURING - SISTEMA BEM
+           ========================================================================== */
+
+        /* Hero Section */
+        .mfg-hero .odoo-hero__badge {
+            background: var(--sun-color-secondary-20);
+            color: var(--sun-color-white);
+            border: 1px solid var(--sun-color-white-20);
+        }
         .mfg-hero .odoo-hero__description { color: var(--sun-color-white-80); }
-        .sun-grid--kpis { display: grid; gap: var(--sun-space-lg); grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); }
-        .sun-kpi { background: var(--sun-color-white); border-radius: var(--sun-radius-lg); padding: var(--sun-space-lg); box-shadow: var(--sun-shadow-sm); text-align: center; }
-        .sun-kpi strong { font-size: 2rem; color: var(--sun-color-primary); display: block; }
-        .mfg-steps { display: grid; gap: var(--sun-space-lg); grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); }
-        .sun-mod-bullets { columns: 2; column-gap: var(--sun-space-lg); }
-        @media (max-width: 800px){ .sun-mod-bullets { columns: 1; } }
-        .sun-pain-solution { display: grid; gap: var(--sun-space-lg); grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-        .sun-pain { border-left: 4px solid rgba(245,158,11,.35); background: #fff8eb; }
-        .sun-solution { border-left: 4px solid var(--sun-color-secondary); background: var(--sun-color-secondary-10); }
-        .sun-pain, .sun-solution { padding: var(--sun-space-lg); border-radius: var(--sun-radius-lg); box-shadow: var(--sun-shadow-sm); }
-        .mfg-cta-sticky { position: sticky; bottom: 0; background: var(--sun-color-white); border-top: 1px solid #e5e7eb; padding: .75rem; z-index: 20; }
-        .mfg-cta-sticky .sun__container { display: flex; gap: .75rem; justify-content: center; flex-wrap: wrap; }
-        details.sun-faq { background: var(--sun-color-white); border-radius: var(--sun-radius-md); padding: 1rem 1.25rem; box-shadow: var(--sun-shadow-sm); }
-        details.sun-faq summary { cursor: pointer; font-weight: 600; color: var(--sun-color-primary); }
-        details.sun-faq + details.sun-faq { margin-top: .75rem; }
-        .mf-hero__badges { display:flex; gap:.5rem; flex-wrap:wrap; margin-bottom:1rem; }
-        .mf-kpis { display:grid; gap: var(--sun-space-lg); grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); }
-        .mf-kpi { text-align:center; padding:var(--sun-space-lg); border-radius:var(--sun-radius-lg); background:var(--sun-color-white); box-shadow:var(--sun-shadow-sm); }
-        .mf-kpi__number{ font-size:2.25rem; font-weight:var(--sun-font-weight-black); color:var(--sun-color-primary);} 
-        .mf-kpi__label{ color:var(--sun-color-text-light);} 
-        .mf-pains__grid,.mf-features__grid,.mf-industries__grid{ display:grid; gap:var(--sun-space-lg); grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); }
-        .mf-compare { overflow:auto; }
-        .mf-compare table{ width:100%; border-collapse:separate; border-spacing:0; }
-        .mf-compare th, .mf-compare td{ padding:1rem 1rem; border-bottom:1px solid #e5e7eb; vertical-align:top; }
-        .mf-compare thead th{ background: var(--sun-color-secondary-10); color: var(--sun-color-primary); position:sticky; top:0; }
-        .mf-process__steps{ display:grid; gap:var(--sun-space-lg); grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); }
-        .mf-faq details{ background:#fff; border-radius:var(--sun-radius-md); padding:1rem 1.25rem; box-shadow:var(--sun-shadow-sm);} 
-        .mf-faq summary{ cursor:pointer; font-weight:var(--sun-font-weight-bold); color:var(--sun-color-primary);} 
-        .mf-faq details + details{ margin-top:var(--sun-space-md);} 
-        .mf-integrations__logos{ display:flex; gap:1rem; flex-wrap:wrap; align-items:center;} 
-        .mf-integrations__logo{ background:var(--sun-color-white); border:1px dashed var(--sun-color-secondary-30); padding:.75rem 1rem; border-radius:var(--sun-radius-full); font-weight:600; }
-        .mf-hero__media{ position:relative; }
-        .mf-hero__video-badge{ position:absolute; bottom:12px; right:12px; background:var(--sun-color-white-80); backdrop-filter:saturate(1.2) blur(4px); padding:.4rem .6rem; border-radius:var(--sun-radius-full); font-size:.8rem; }
-        .mf-contact__form{ display:grid; gap:var(--sun-space-md); grid-template-columns:1fr; max-width:760px; margin:0 auto; }
-        .mf-contact__row{ display:grid; gap:var(--sun-space-md); grid-template-columns:1fr; }
-        @media (min-width: 720px){ .mf-contact__row{ grid-template-columns:1fr 1fr; }}
-        .mf-contact__form input, .mf-contact__form select, .mf-contact__form textarea{ width:100%; padding:.9rem 1rem; border-radius:var(--sun-radius-md); border:1px solid #e5e7eb; font:inherit; }
-        .mf-contact__hint{ color:var(--sun-color-text-light); font-size:.95rem; text-align:center; margin-top:.5rem; }
+
+        /* Badges */
+        .mf-hero__badges {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        /* KPIs */
+        .mf-kpis {
+            display: grid;
+            gap: var(--sun-space-lg);
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        }
+        .mf-kpi {
+            text-align: center;
+            padding: var(--sun-space-lg);
+            border-radius: var(--sun-radius-lg);
+            background: var(--sun-color-white);
+            box-shadow: var(--sun-shadow-sm);
+            transition: transform var(--sun-transition-fast);
+        }
+        .mf-kpi:hover { transform: translateY(-2px); }
+        .mf-kpi__number {
+            font-size: 2.25rem;
+            font-weight: var(--sun-font-weight-black);
+            color: var(--sun-color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .mf-kpi__label { color: var(--sun-color-text-light); }
+
+        /* Process Steps */
+        .mf-process__steps {
+            display: grid;
+            gap: var(--sun-space-lg);
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        /* Pain/Solution Cards */
+        .sun-pain-solution {
+            display: grid;
+            gap: var(--sun-space-lg);
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+        .sun-pain {
+            border-left: 4px solid rgba(245,158,11,0.35);
+            background: #fff8eb;
+            padding: var(--sun-space-lg);
+            border-radius: var(--sun-radius-lg);
+            box-shadow: var(--sun-shadow-sm);
+            transition: transform var(--sun-transition-fast);
+        }
+        .sun-pain:hover { transform: translateX(2px); }
+        .sun-solution {
+            border-left: 4px solid var(--sun-color-secondary);
+            background: var(--sun-color-secondary-10);
+            padding: var(--sun-space-lg);
+            border-radius: var(--sun-radius-lg);
+            box-shadow: var(--sun-shadow-sm);
+            transition: transform var(--sun-transition-fast);
+        }
+        .sun-solution:hover { transform: translateX(2px); }
+
+        /* Modules */
+        .sun-mod-bullets {
+            columns: 2;
+            column-gap: var(--sun-space-lg);
+        }
+        @media (max-width: 800px) { .sun-mod-bullets { columns: 1; } }
+
+        /* Industries */
+        .mf-industries__grid {
+            display: grid;
+            gap: var(--sun-space-lg);
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        }
+
+        /* Comparison Table */
+        .mf-compare {
+            overflow: auto;
+            background: var(--sun-color-white);
+            border-radius: var(--sun-radius-lg);
+            box-shadow: var(--sun-shadow-sm);
+        }
+        .mf-compare__table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            role: table;
+        }
+        .mf-compare__header {
+            background: var(--sun-color-secondary-10);
+            color: var(--sun-color-primary);
+            font-weight: var(--sun-font-weight-bold);
+        }
+        .mf-compare__aspect {
+            font-weight: var(--sun-font-weight-bold);
+            background: var(--sun-color-light);
+        }
+        .mf-compare__cell {
+            padding: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+            vertical-align: top;
+        }
+        .mf-compare__cell--success {
+            background: rgba(16, 185, 129, 0.05);
+            border-left: 3px solid var(--sun-color-success);
+        }
+
+        /* Pain Points */
+        .mf-pains__grid {
+            display: grid;
+            gap: var(--sun-space-lg);
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        }
+        .mf-pain__point {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: var(--sun-radius-md);
+            box-shadow: var(--sun-shadow-sm);
+            transition: all 0.3s;
+        }
+        .mf-pain__point:hover {
+            transform: translateX(5px);
+            box-shadow: var(--sun-shadow-md);
+        }
+        .mf-pain__icon {
+            font-size: 2rem;
+            color: var(--sun-color-danger);
+            flex-shrink: 0;
+        }
+        .mf-pain__title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--sun-color-primary);
+            margin-bottom: 0.5rem;
+        }
+        .mf-pain__text {
+            color: var(--sun-color-text);
+        }
+
+        /* FAQ */
+        .mf-faq__grid {
+            display: grid;
+            gap: var(--sun-space-lg);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+        .mf-faq__item {
+            background: var(--sun-color-white);
+            border-radius: var(--sun-radius-md);
+            padding: 1rem 1.25rem;
+            box-shadow: var(--sun-shadow-sm);
+            margin-bottom: var(--sun-space-md);
+            transition: box-shadow var(--sun-transition-fast);
+        }
+        .mf-faq__item:hover {
+            box-shadow: var(--sun-shadow-md);
+        }
+        .mf-faq__question {
+            cursor: pointer;
+            font-weight: var(--sun-font-weight-bold);
+            color: var(--sun-color-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .mf-faq__question i {
+            color: var(--sun-color-secondary);
+        }
+        .mf-faq__answer {
+            margin-top: 0.75rem;
+            color: var(--sun-color-text);
+        }
+
+        /* FAQ */
+        .mf-faq details {
+            background: var(--sun-color-white);
+            border-radius: var(--sun-radius-md);
+            padding: 1rem 1.25rem;
+            box-shadow: var(--sun-shadow-sm);
+            margin-bottom: var(--sun-space-md);
+            transition: box-shadow var(--sun-transition-fast);
+        }
+        .mf-faq details:hover { box-shadow: var(--sun-shadow-md); }
+        .mf-faq summary {
+            cursor: pointer;
+            font-weight: var(--sun-font-weight-bold);
+            color: var(--sun-color-primary);
+        }
+
+        /* Integrations */
+        .mf-integrations__logos {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--sun-space-xl);
+        }
+        .mf-integrations__logo {
+            background: var(--sun-color-white);
+            border: 1px dashed var(--sun-color-secondary-30);
+            padding: 0.75rem 1rem;
+            border-radius: var(--sun-radius-full);
+            font-weight: 600;
+            transition: all var(--sun-transition-fast);
+        }
+        .mf-integrations__logo:hover {
+            border-color: var(--sun-color-secondary);
+            transform: translateY(-1px);
+            box-shadow: var(--sun-shadow-sm);
+        }
+        .mf-integrations__details {
+            display: grid;
+            gap: var(--sun-space-lg);
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+        .mf-integration__item {
+            background: var(--sun-color-white);
+            padding: var(--sun-space-lg);
+            border-radius: var(--sun-radius-lg);
+            box-shadow: var(--sun-shadow-sm);
+            transition: transform var(--sun-transition-fast);
+        }
+        .mf-integration__item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--sun-shadow-md);
+        }
+        .mf-integration__item h3 {
+            color: var(--sun-color-primary);
+            margin-bottom: var(--sun-space-sm);
+            font-size: 1.2rem;
+        }
+
+        /* Modules Grid */
+        .mf-modules__grid {
+            display: grid;
+            gap: var(--sun-space-lg);
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+        .mf-module__card {
+            background: var(--sun-color-white);
+            padding: var(--sun-space-lg);
+            border-radius: var(--sun-radius-lg);
+            box-shadow: var(--sun-shadow-sm);
+            text-align: center;
+            transition: transform var(--sun-transition-fast), box-shadow var(--sun-transition-fast);
+        }
+        .mf-module__card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--sun-shadow-lg);
+        }
+        .mf-module__icon {
+            width: 60px;
+            height: 60px;
+            background: var(--sun-gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--sun-space-md);
+            color: white;
+            font-size: 1.5rem;
+            transition: transform var(--sun-transition-fast);
+        }
+        .mf-module__card:hover .mf-module__icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+        .mf-module__title {
+            color: var(--sun-color-primary);
+            margin-bottom: var(--sun-space-sm);
+            font-size: 1.3rem;
+            font-weight: var(--sun-font-weight-bold);
+        }
+        .mf-module__description {
+            color: var(--sun-color-text);
+            font-size: 0.95rem;
+        }
+
+        /* Hero Media */
+        .mf-hero__media { position: relative; }
+        .mf-hero__video-badge {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            background: var(--sun-color-white-80);
+            backdrop-filter: saturate(1.2) blur(4px);
+            padding: 0.4rem 0.6rem;
+            border-radius: var(--sun-radius-full);
+            font-size: 0.8rem;
+        }
+
+        /* Contact Form */
+        .mf-contact__form {
+            display: grid;
+            gap: var(--sun-space-md);
+            grid-template-columns: 1fr;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+        .mf-contact__row {
+            display: grid;
+            gap: var(--sun-space-md);
+            grid-template-columns: 1fr;
+        }
+        @media (min-width: 720px) { .mf-contact__row { grid-template-columns: 1fr 1fr; } }
+        .mf-contact__form input,
+        .mf-contact__form select,
+        .mf-contact__form textarea {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            border-radius: var(--sun-radius-md);
+            border: 1px solid #e5e7eb;
+            font: inherit;
+            transition: border-color var(--sun-transition-fast), box-shadow var(--sun-transition-fast);
+        }
+        .mf-contact__form input:focus,
+        .mf-contact__form select:focus,
+        .mf-contact__form textarea:focus {
+            outline: none;
+            border-color: var(--sun-color-secondary);
+            box-shadow: 0 0 0 3px rgba(70, 194, 206, 0.1);
+        }
+        .mf-contact__hint {
+            color: var(--sun-color-text-light);
+            font-size: 0.95rem;
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+
+        /* CTA Sticky */
+        .mfg-cta-sticky {
+            position: sticky;
+            bottom: 0;
+            background: var(--sun-color-white);
+            border-top: 1px solid #e5e7eb;
+            padding: 0.75rem;
+            z-index: 20;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        }
+        .mfg-cta-sticky .sun__container {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Focus States */
+        .sun-btn:focus-visible,
+        .sun-form__input:focus-visible,
+        .sun-form__select:focus-visible,
+        .sun-form__textarea:focus-visible {
+            outline: 2px solid var(--sun-color-secondary);
+            outline-offset: 2px;
+        }
+
+        /* Technical Content Language */
+        .sun-mod-bullets li,
+        .mf-compare__cell,
+        .mf-kpi__label { lang: "en"; }
+
+        /* Grid System */
+        .sun-grid { display: grid; gap: var(--sun-space-lg); }
+        .sun-grid--2col { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+        .sun-grid--3col { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+        .sun-grid--4col { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+        /* Pain Points */
+        .pain-point { display: flex; align-items: flex-start; gap: 1rem; padding: 1.5rem; background: white; border-radius: var(--sun-radius-md); box-shadow: var(--sun-shadow-sm); transition: all 0.3s; }
+        .pain-point:hover { transform: translateX(5px); box-shadow: var(--sun-shadow-md); }
+        .pain-point__icon { font-size: 2rem; color: var(--sun-color-danger); flex-shrink: 0; }
+        .pain-point__title { font-size: 1.2rem; font-weight: 700; color: var(--sun-color-primary); margin-bottom: 0.5rem; }
+        .pain-point__text { color: var(--sun-color-text); }
+
+        /* Comparison Table */
+        .comparison-table { background: white; border-radius: var(--sun-radius-lg); overflow: hidden; box-shadow: var(--sun-shadow-md); }
+        .comparison-row { display: grid; grid-template-columns: 1fr 1fr 1fr; border-bottom: 1px solid var(--sun-color-light); }
+        .comparison-row:last-child { border-bottom: none; }
+        .comparison-cell { padding: 1.5rem; display: flex; align-items: center; }
+        .comparison-cell:first-child { font-weight: 600; background: var(--sun-color-light); }
+        .comparison-cell--header { background: var(--sun-gradient-primary); color: white; font-weight: 700; justify-content: center; }
+
+        /* Responsive */
+        @media (max-width: 767px) {
+            .comparison-row { grid-template-columns: 1fr; }
+            .comparison-cell:first-child { background: var(--sun-color-primary); color: white; }
+        }
     </style>
 </head>
 <body>
@@ -99,57 +461,57 @@
         </section>
 
         <!-- =============== SECCIÓN PROBLEMAS QUE RESOLVEMOS =============== -->
-        <section class="sun__section sun__section--white" id="Problemas" aria-labelledby="problems-title">
+        <section class="sun__section sun__section--light" id="Problemas" aria-labelledby="problems-title">
             <div class="sun__container">
                 <header class="sun-header u-text-center">
                     <h2 id="problems-title" class="sun-header__title">¿Te suena familiar?</h2>
                     <p class="sun-header__subtitle">
-                        Estos son los desafíos más comunes que enfrentan las plantas de manufactura en México
+                        Estos son los problemas más comunes que enfrentan las plantas de manufactura sin digitalización
                     </p>
                 </header>
-                <div class="sun-grid sun-grid--3col" role="list">
-                    <article class="sun-service-card sun-card" role="listitem">
-                        <div class="sun-icon-circle u-flex-center">
-                            <i class="fas fa-eye-slash" aria-hidden="true"></i>
+                <div class="sun-grid sun-grid--3col">
+                    <div class="pain-point">
+                        <div class="pain-point__icon">📊</div>
+                        <div>
+                            <h3 class="pain-point__title">Falta de visibilidad</h3>
+                            <p class="pain-point__text">No sabes en qué etapa está cada orden hasta que preguntas en piso de producción</p>
                         </div>
-                        <h3 class="sun-card__title">Falta de visibilidad</h3>
-                        <p class="sun-card__text">No sabes en qué etapa está cada orden hasta que preguntas en piso de producción</p>
-                    </article>
-                    <article class="sun-service-card sun-card" role="listitem">
-                        <div class="sun-icon-circle u-flex-center">
-                            <i class="fas fa-sack-dollar" aria-hidden="true"></i>
+                    </div>
+                    <div class="pain-point">
+                        <div class="pain-point__icon">💰</div>
+                        <div>
+                            <h3 class="pain-point__title">Costos descontrolados</h3>
+                            <p class="pain-point__text">Descubres sobrecostos hasta que ya es demasiado tarde para actuar</p>
                         </div>
-                        <h3 class="sun-card__title">Costos descontrolados</h3>
-                        <p class="sun-card__text">Descubres sobrecostos hasta que ya es demasiado tarde para actuar</p>
-                    </article>
-                    <article class="sun-service-card sun-card" role="listitem">
-                        <div class="sun-icon-circle u-flex-center">
-                            <i class="fas fa-boxes-stacked" aria-hidden="true"></i>
+                    </div>
+                    <div class="pain-point">
+                        <div class="pain-point__icon">📦</div>
+                        <div>
+                            <h3 class="pain-point__title">Caos en materiales</h3>
+                            <p class="pain-point__text">Paros de producción por falta de materiales que creías tener en inventario</p>
                         </div>
-                        <h3 class="sun-card__title">Caos en materiales</h3>
-                        <p class="sun-card__text">Paros de producción por falta de materiales que creías tener en inventario</p>
-                    </article>
-                    <article class="sun-service-card sun-card" role="listitem">
-                        <div class="sun-icon-circle u-flex-center">
-                            <i class="fas fa-clock" aria-hidden="true"></i>
+                    </div>
+                    <div class="pain-point">
+                        <div class="pain-point__icon">⏰</div>
+                        <div>
+                            <h3 class="pain-point__title">Retrasos constantes</h3>
+                            <p class="pain-point__text">Fechas de entrega comprometidas sin conocer la capacidad real de tu planta</p>
                         </div>
-                        <h3 class="sun-card__title">Retrasos constantes</h3>
-                        <p class="sun-card__text">Fechas de entrega comprometidas sin conocer la capacidad real de tu planta</p>
-                    </article>
-                    <article class="sun-service-card sun-card" role="listitem">
-                        <div class="sun-icon-circle u-flex-center">
-                            <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+                    </div>
+                    <div class="pain-point">
+                        <div class="pain-point__icon">🔍</div>
+                        <div>
+                            <h3 class="pain-point__title">Sin trazabilidad</h3>
+                            <p class="pain-point__text">Imposible rastrear qué lote se usó en qué producto para recalls o auditorías de calidad</p>
                         </div>
-                        <h3 class="sun-card__title">Sin trazabilidad</h3>
-                        <p class="sun-card__text">Imposible rastrear qué lote se usó en qué producto para recalls o auditorías de calidad</p>
-                    </article>
-                    <article class="sun-service-card sun-card" role="listitem">
-                        <div class="sun-icon-circle u-flex-center">
-                            <i class="fas fa-clipboard-list" aria-hidden="true"></i>
+                    </div>
+                    <div class="pain-point">
+                        <div class="pain-point__icon">📋</div>
+                        <div>
+                            <h3 class="pain-point__title">Procesos manuales</h3>
+                            <p class="pain-point__text">Horas perdidas capturando información en Excel que ya está obsoleta</p>
                         </div>
-                        <h3 class="sun-card__title">Procesos manuales</h3>
-                        <p class="sun-card__text">Horas perdidas capturando información en Excel que ya está obsoleta</p>
-                    </article>
+                    </div>
                 </div>
             </div>
         </section>
@@ -251,21 +613,53 @@
             <div class="sun__container">
                 <header class="sun-header u-text-center">
                     <h2 id="mods-title" class="sun-header__title">Lo esencial para Fabricación & Ensamble</h2>
-                    <p class="sun-header__subtitle">Procesos conectados de punta a punta.</p>
+                    <p class="sun-header__subtitle">Procesos conectados de punta a punta con módulos especializados.</p>
                 </header>
 
-                <ul class="sun-list sun-mod-bullets">
-                    <li class="sun-list__item">Listas de materiales (BoM) multinivel y variantes</li>
-                    <li class="sun-list__item">Rutas de producción y centros de trabajo</li>
-                    <li class="sun-list__item">MRP/MPS, lead times y reglas de reabasto</li>
-                    <li class="sun-list__item">Órdenes de fabricación y subensambles</li>
-                    <li class="sun-list__item">Control de calidad (Puntos/QC) y no conformidades</li>
-                    <li class="sun-list__item">Mantenimiento preventivo y correctivo</li>
-                    <li class="sun-list__item">Costeo estándar y real (materiales + mano de obra)</li>
-                    <li class="sun-list__item">Trazabilidad por lotes/series y códigos de barras</li>
-                    <li class="sun-list__item">Inventario en tiempo real por ubicación</li>
-                    <li class="sun-list__item">Tableros de OEE, scrap, eficiencia y cumplimiento</li>
-                </ul>
+                <div class="mf-modules__grid">
+                    <div class="mf-module__card">
+                        <div class="mf-module__icon">
+                            <i class="fas fa-cogs" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="mf-module__title">Gestión de Producción</h3>
+                        <p class="mf-module__description">MRP/MPS, órdenes de trabajo, rutas y centros de trabajo</p>
+                    </div>
+                    <div class="mf-module__card">
+                        <div class="mf-module__icon">
+                            <i class="fas fa-boxes" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="mf-module__title">Inventario Inteligente</h3>
+                        <p class="mf-module__description">Control por lotes, ubicaciones y reabasto automático</p>
+                    </div>
+                    <div class="mf-module__card">
+                        <div class="mf-module__icon">
+                            <i class="fas fa-clipboard-check" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="mf-module__title">Control de Calidad</h3>
+                        <p class="mf-module__description">Puntos de inspección, checklist y no conformidades</p>
+                    </div>
+                    <div class="mf-module__card">
+                        <div class="mf-module__icon">
+                            <i class="fas fa-wrench" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="mf-module__title">Mantenimiento</h3>
+                        <p class="mf-module__description">Preventivo/correctivo con órdenes de trabajo</p>
+                    </div>
+                    <div class="mf-module__card">
+                        <div class="mf-module__icon">
+                            <i class="fas fa-calculator" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="mf-module__title">Costeo Avanzado</h3>
+                        <p class="mf-module__description">Estándar vs real por orden y centro de costo</p>
+                    </div>
+                    <div class="mf-module__card">
+                        <div class="mf-module__icon">
+                            <i class="fas fa-route" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="mf-module__title">Trazabilidad Completa</h3>
+                        <p class="mf-module__description">Lote a lote desde materia prima a producto final</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -390,23 +784,36 @@
                     <h2 id="compare-title" class="sun-header__title">La diferencia es clara</h2>
                     <p class="sun-header__subtitle">Compara tu operación actual vs una manufactura digitalizada</p>
                 </header>
-                <div class="sun-card mf-compare">
-                    <div class="sun-card__body">
-                        <table aria-label="Tabla comparativa Antes vs Después">
-                            <thead>
-                                <tr>
-                                    <th>Antes (Procesos manuales)</th>
-                                    <th>Después (Sunname Manufacturing)</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>Excel y papel</td><td>Dashboard en tiempo real</td></tr>
-                                <tr><td>Reportes al final del turno</td><td>Actualización automática</td></tr>
-                                <tr><td>Búsqueda manual de lotes</td><td>Trazabilidad en segundos</td></tr>
-                                <tr><td>Estimaciones de costos</td><td>Costos reales por orden</td></tr>
-                                <tr><td>Inventarios desactualizados</td><td>Conteo perpetuo automático</td></tr>
-                            </tbody>
-                        </table>
+                <div class="comparison-table">
+                    <div class="comparison-row">
+                        <div class="comparison-cell comparison-cell--header"></div>
+                        <div class="comparison-cell comparison-cell--header">Procesos manuales</div>
+                        <div class="comparison-cell comparison-cell--header">Sunname Manufacturing</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell">Visibilidad de producción</div>
+                        <div class="comparison-cell">Excel y papel</div>
+                        <div class="comparison-cell">Dashboard en tiempo real</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell">Actualización de datos</div>
+                        <div class="comparison-cell">Al final del turno</div>
+                        <div class="comparison-cell">Automática en vivo</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell">Trazabilidad de lotes</div>
+                        <div class="comparison-cell">Búsqueda manual</div>
+                        <div class="comparison-cell">En segundos con código</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell">Costeo de órdenes</div>
+                        <div class="comparison-cell">Estimaciones</div>
+                        <div class="comparison-cell">Costos reales automáticos</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell">Control de inventario</div>
+                        <div class="comparison-cell">Desactualizado</div>
+                        <div class="comparison-cell">Conteo perpetuo en vivo</div>
                     </div>
                 </div>
             </div>
@@ -584,37 +991,100 @@
         </div>
     </div>
 
-    <!-- =============== FOOTER =============== -->
-        <section class="sun__section sun__section--white mf-faq" id="FAQ" aria-labelledby="faq-title">
-            <div class="sun__container">
-                <header class="sun-header u-text-center">
-                    <h2 id="faq-title" class="sun-header__title">Preguntas frecuentes</h2>
-                    <p class="sun-header__subtitle">Respuestas claras para arrancar con confianza.</p>
-                </header>
-                <div class="sun-grid">
-                    <details>
-                        <summary>¿Funciona sin conexión a internet en piso de producción?</summary>
-                        <p>Podemos habilitar flujos con captura offline en puntos críticos y sincronización automática cuando regrese la conexión.</p>
-                    </details>
-                    <details>
-                        <summary>¿Cuánto tiempo toma la implementación?</summary>
-                        <p>El arranque suele lograrse entre 3 y 5 semanas en escenarios estándar, escalando por áreas o líneas.</p>
-                    </details>
-                    <details>
-                        <summary>¿Puedo migrar datos de mi sistema actual?</summary>
-                        <p>Sí. Migramos catálogos, listas de materiales (BOM), ubicaciones e históricos relevantes para continuidad operativa.</p>
-                    </details>
-                    <details>
-                        <summary>¿Manejan manufactura con múltiples turnos?</summary>
-                        <p>Soportamos turnos, calendarios laborales y asignación de recursos para planear capacidad real por centro de trabajo.</p>
-                    </details>
-                    <details>
-                        <summary>¿Incluye gestión de órdenes de compra a proveedores?</summary>
-                        <p>Integramos compras y abastecimiento para disparar reorden, reservar materiales y asegurar disponibilidad a tiempo.</p>
-                    </details>
+    <!-- =============== INTEGRACIONES =============== -->
+    <section class="sun__section sun__section--light" id="Integraciones" aria-labelledby="integrations-title">
+        <div class="sun__container">
+            <header class="sun-header u-text-center">
+                <h2 id="integrations-title" class="sun-header__title">Se integra con lo que ya usas</h2>
+                <p class="sun-header__subtitle">APIs abiertas y conectores listos para ERP, contabilidad e inventario existentes.</p>
+            </header>
+
+            <div class="mf-integrations__content">
+                <div class="mf-integrations__logos">
+                    <span class="mf-integrations__logo">SAP</span>
+                    <span class="mf-integrations__logo">Odoo</span>
+                    <span class="mf-integrations__logo">QuickBooks</span>
+                    <span class="mf-integrations__logo">Sistemas Contables</span>
+                    <span class="mf-integrations__logo">Inventarios</span>
+                    <span class="mf-integrations__logo">API Rest</span>
+                </div>
+
+                <div class="mf-integrations__details">
+                    <div class="mf-integration__item">
+                        <h3>ERP y Sistemas Empresariales</h3>
+                        <p>Sincronización bidireccional con SAP, Oracle, Microsoft Dynamics y otros ERPs líderes.</p>
+                    </div>
+                    <div class="mf-integration__item">
+                        <h3>Contabilidad y Finanzas</h3>
+                        <p>Integración automática con sistemas contables para costeo y reportes financieros.</p>
+                    </div>
+                    <div class="mf-integration__item">
+                        <h3>Equipos de Producción</h3>
+                        <p>Conectores IoT para máquinas CNC, PLCs y sensores de piso de planta.</p>
+                    </div>
+                    <div class="mf-integration__item">
+                        <h3>E-commerce y Ventas</h3>
+                        <p>Enlace directo con plataformas de venta online y sistemas CRM.</p>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+
+    <!-- =============== FAQ =============== -->
+    <section class="sun__section sun__section--light" id="FAQ" aria-labelledby="faq-title">
+        <div class="sun__container">
+            <header class="sun-header u-text-center">
+                <h2 id="faq-title" class="sun-header__title">Preguntas frecuentes</h2>
+                <p class="sun-header__subtitle">Transparencia antes de empezar.</p>
+            </header>
+
+            <div class="mf-faq__grid">
+                <details class="mf-faq__item">
+                    <summary class="mf-faq__question">
+                        <i class="fas fa-question-circle" aria-hidden="true"></i>
+                        ¿Cuánto tiempo toma operar producción básica?
+                    </summary>
+                    <p class="mf-faq__answer">Entre 3 y 6 semanas para BoM, rutas, órdenes y registros en piso. Con costeo avanzado o integraciones, el plazo puede extenderse.</p>
+                </details>
+                <details class="mf-faq__item">
+                    <summary class="mf-faq__question">
+                        <i class="fas fa-question-circle" aria-hidden="true"></i>
+                        ¿Puedo iniciar solo con inventarios y después sumar MRP?
+                    </summary>
+                    <p class="mf-faq__answer">Sí. Podemos arrancar por inventario/lotificación y agregar MRP cuando tu operación lo requiera.</p>
+                </details>
+                <details class="mf-faq__item">
+                    <summary class="mf-faq__question">
+                        <i class="fas fa-question-circle" aria-hidden="true"></i>
+                        ¿Cómo se maneja la trazabilidad por lotes/series?
+                    </summary>
+                    <p class="mf-faq__answer">Desde la recepción de MP hasta el producto terminado, con rastreo ascendente/descendente y reportes para auditoría.</p>
+                </details>
+                <details class="mf-faq__item">
+                    <summary class="mf-faq__question">
+                        <i class="fas fa-question-circle" aria-hidden="true"></i>
+                        ¿Funciona sin conexión a internet en piso de producción?
+                    </summary>
+                    <p class="mf-faq__answer">Podemos habilitar flujos con captura offline en puntos críticos y sincronización automática cuando regrese la conexión.</p>
+                </details>
+                <details class="mf-faq__item">
+                    <summary class="mf-faq__question">
+                        <i class="fas fa-question-circle" aria-hidden="true"></i>
+                        ¿Manejan manufactura con múltiples turnos?
+                    </summary>
+                    <p class="mf-faq__answer">Soportamos turnos, calendarios laborales y asignación de recursos para planear capacidad real por centro de trabajo.</p>
+                </details>
+                <details class="mf-faq__item">
+                    <summary class="mf-faq__question">
+                        <i class="fas fa-question-circle" aria-hidden="true"></i>
+                        ¿Incluye gestión de órdenes de compra a proveedores?
+                    </summary>
+                    <p class="mf-faq__answer">Integramos compras y abastecimiento para disparar reorden, reservar materiales y asegurar disponibilidad a tiempo.</p>
+                </details>
+            </div>
+        </div>
+    </section>
 
         <!-- =============== CONTACTO =============== -->
         <section class="sun__section sun__section--gradient" id="Contacto" aria-labelledby="contact-title">
