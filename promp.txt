@@ -1,0 +1,292 @@
+Actúa como un especialista senior en copywriting web, UX writing y marketing digital B2B,
+con experiencia en sitios web de consultorías ERP y partners de Odoo, enfocados en empresas
+de manufactura y retail.
+
+Voy a actualizar los textos de mi sitio web: https://www.sunname.com.mx/
+
+OBJETIVO GENERAL:
+Renovar y optimizar los textos de la página de inicio para:
+- Aumentar conversiones
+- Comunicar claramente nuestra especialización
+- Guiar al usuario con llamados a la acción claros (CTAs)
+- Mantener un tono profesional, confiable y orientado a negocio
+
+CONTEXTO DEL NEGOCIO:
+Sunname es una consultora especializada en Odoo.
+Nos enfocamos principalmente en empresas:
+- De MANUFACTURA (fabricación)
+- De RETAIL (ventas físicas y omnicanal)
+
+REQUERIMIENTOS ESPECÍFICOS:
+
+1. MENSAJE CLAVE
+   - Reforzar claramente que somos especialistas en empresas de manufactura y retail.
+   - Comunicar valor en términos de procesos, eficiencia, escalabilidad y control operativo.
+   - Evitar textos genéricos o demasiado técnicos.
+
+2. CTAs (CALL TO ACTION)
+   - Agregar más CTAs estratégicos a lo largo del home.
+   - Personalizar los CTAs según la sección.
+   - CTAs deben dirigir a:
+     • Formulario de contacto
+     • Agenda una reunión (calendario)
+     • WhatsApp
+   - Ejemplos de tono esperado:
+     • “Agenda una demo”
+     • “Habla con un consultor”
+     • “Optimiza tus procesos hoy”
+     • “Lleva tu manufactura al siguiente nivel”
+
+3. CONTENIDO EXISTENTE
+   - Si eres capaz de analizar el sitio web directamente, hazlo para entender estructura, tono e intención.
+   - Si no es posible, usarás EXCLUSIVAMENTE los textos que pegaré a continuación (corresponden a la página de inicio).
+
+4. ESTRUCTURA Y MEJORAS
+   - Antes de reescribir los textos, dame:
+     a) Observaciones generales de mejora del website
+     b) Sugerencias de nuevas secciones o ajustes (ej. enfoque por industria, beneficios, diferenciadores, visuales)
+     c) Recomendaciones de imágenes o elementos visuales (tipo de imágenes, íconos, dashboards, casos reales, etc.)
+
+5. RESULTADO ESPERADO
+   - Versión optimizada de los textos del HOME:
+     • Hero principal
+     • Secciones de servicios
+     • Proceso de trabajo
+     • Especialización por industrias
+     • Testimonios (si aplica)
+     • Bloques con CTAs
+   - Textos claros, escaneables y orientados a conversión.
+   - Mantener consistencia de voz en todo el sitio.
+
+6. VALIDACIÓN
+   - Si necesitas información adicional ANTES de comenzar la reescritura
+     (por ejemplo, cliente ideal, ticket promedio, tipo de proyectos, o tono deseado),
+     pregúntame primero antes de entregar los textos finales.
+
+A continuación te comparto el CONTENIDO ACTUAL DE LA PÁGINA DE INICIO para que trabajes sobre él.
+
+
+
+====== CONTENIDO DE MI SITIO WEB ======
+
+(Badge) SOLUCIONES ERP PREMIUM
+(Titulo principal) Impulsa tu negocio con Odoo
+(Texto que acompaña al titulo principal) En Sunname, adaptamos Odoo a las necesidades de tu empresa y entrenamos a tu equipo para sacar el máximo provecho de cada módulo, optimizando tus procesos y facilitando el crecimiento.
+
+(Botón Cta) Contáctanos
+(Botón Cta) Ver servicios
+
+(Texto pequeño que acompaña iconos) +60 empresas confían en nosotros
+
+(hay una imagen que acompaña todo lo anterior) 
+
+-------------------------------------------------------------------------
+
+(Titulo) Unifica tu negocio en una sola plataforma
+(Texto que acompaña al titulo) ¿Buscas optimizar algún proceso? Tenemos la herramienta perfecta para ti.
+(tengo una cuadricula en forma de sitio web que contiene los siguiente iconos)
+odoo.com
+Contabilidad
+Información
+Firma
+CRM
+Studio
+Suscripciones
+Alquiler
+Punto de venta
+Conversaciones
+Documentos
+Proyecto
+Partes de horas
+Servicio externo
+Planificación
+Servicio de asistencia
+Sitio web
+Marketing social
+Marketing por emailing
+Compra
+Inventario
+Fabricación
+Ventas
+RR. HH.
+Tablero
+
+(texto debajo de la cuadricula en forma de sitio web)
+Imagina todo lo que tu equipo puede alcanzar con una plataforma flexible y adaptable. Nosotros te capacitamos para aprovecharla al máximo.
+
+-------------------------------------------------------------------------
+(Titulo) Nuestros Servicios
+(Texto que acompaña el titulo) Soluciones tecnológicas pensadas para hacer crecer tu empresa y optimizar tus procesos.
+(A continuacion es cards de 3 x 3, donde tiene un titulo, un stracto y puntos detalle)
+
+Implementación de ERP (Odoo)
+Implementamos y configuramos Odoo adaptado a las necesidades específicas de tu empresa.
+
+Configuración, personalización y capacitación.
+Soporte post-implementación.
+Experiencia en múltiples industrias y sectores.
+Desarrollo a la Medida
+Creamos soluciones personalizadas que se adaptan perfectamente a tus procesos de negocio.
+
+Adaptación de módulos y procesos específicos.
+Integración con sistemas actuales.
+Desarrollo de funcionalidades exclusivas para tu empresa.
+Estrategia y definición de procesos
+Analizamos y optimizamos tus procesos para maximizar la eficiencia y productividad.
+
+Optimización de procesos internos.
+Estrategia a medida para impulsar tu negocio.
+Consultoría especializada en transformación digital.
+Creación de Tiendas en Línea
+Desarrollamos plataformas de e-commerce integradas con tu sistema ERP para una gestión unificada.
+
+Desarrollo de e-commerce.
+Carga automática de productos con web scraping.
+Integración completa con tu inventario y logística.
+Soporte Técnico y Mantenimiento
+Ofrecemos soporte continuo para garantizar el óptimo funcionamiento de tus sistemas.
+
+Pólizas de soporte, mantenimiento y actualizaciones.
+Garantía de 2 meses tras la implementación.
+Atención personalizada y tiempos de respuesta garantizados.
+Email Marketing Automatizado
+Conecta tu ERP con campañas de correo para fidelizar clientes y aumentar tus ventas.
+
+Segmentación de clientes desde tu base de datos.
+Automatización de correos y seguimiento de resultados.
+Integración con Odoo o plataformas externas.
+
+
+
+-------------------------------------------------------------------------
+
+(Titulo) Nuestro Proceso
+
+(Son 4 cards con titulo, icono, texto)
+Programamos una demo
+Hacemos un levantamiento de alto nivel a su propósito.
+
+Te damos una propuesta
+Adaptamos nuestra solución a sus necesidades específicas.
+
+Hacemos análisis
+Validamos todos los requerimientos técnicos.
+
+Implementación
+Comenzamos el desarrollo de su solución.
+
+-------------------------------------------------------------------------
+
+(Titulo) Respaldados por los Mejores
+(Texto que acompaña el titulo) Nuestros expertos certificados te garantizan implementaciones exitosas, sin complicaciones.
+(son dos cards)
+Logo Odoo Learning Partner
+Odoo Learning Partner
+Como partner oficial de Odoo, contamos con el respaldo y la certificación necesaria para ofrecer implementaciones, personalizaciones y capacitaciones de la más alta calidad. Nuestro equipo está certificado para ayudarte a aprovechar al máximo esta potente plataforma.
+
+Explorar
+Experiencia Certificada
+Expertos en Implementación
+Nuestro equipo cuenta con amplia experiencia en la implementación y personalización de Odoo para diferentes industrias. Hemos ayudado a numerosas empresas a optimizar sus procesos y maximizar el retorno de su inversión en tecnología.
+
+Manufactura
+Retail
+Servicios
+Logística
+Ver casos de éxito
+
+-------------------------------------------------------------------------
+
+
+
+(Titulo) Confianza que Nos Impulsa
+(Texto que acompaña el titulo) Estamos orgullosos de trabajar con marcas líderes en el mercado que comparten nuestro compromiso con la calidad y la innovación.
+
+Logo referencia 1
+Logo referencia 2
+Logo referencia 3
+Logo referencia 4
+Logo referencia 5
+Logo referencia 6
+
+
+-------------------------------------------------------------------------
+
+
+(Titulo) Cuidamos los resultados
+(Texto que acompaña el titulo) Con más de 60 proyectos exitosos, combinamos pasión y estrategia para impulsar el éxito de nuestros clientes, asegurando resultados que marcan la diferencia en el futuro.
+
+Más información
+Soluciones adaptadas a tus necesidades
+Enfoque personalizado en cada proyecto
+Resultados medibles y garantizados
+"Como socio comprometido, creamos soluciones personalizadas que brindan tranquilidad y confianza. En OdooExperts, buscamos siempre superar tus expectativas para que te enfoques en lo que realmente importa: hacer crecer tu negocio."
+Descubrir más
+
+
+Dashboard Odoo en acción
+-------------------------------------------------------------------------
+
++60
+Empresas felices
+10
+Empresas de fabricación
+15
+Páginas increíbles
+10
+Puntos de venta
+
+-------------------------------------------------------------------------
+
+(Titulo)Testimonios de Clientes
+(Texto que acompaña el titulo) Lo que dicen quienes ya confiaron en nosotros
+
+RG
+"La implementación realizada por Sunname ha ayudado a resolver muchas de nuestras necesidades y a mejorar los procesos, y por lo tanto nos abre nuevas oportunidades de negocio. Por otra parte, la consultora siempre ha estado atenta a nuestras dudas y requerimientos, resolviéndolos oportunamente y logrando así una implementación exitosa."
+Rebeca Gómez
+Gerente de Ventas, Ediciones El Naranjo
+LT
+"Gracias al trabajo realizado por Sunname, logramos hacer más eficientes nuestros procesos internos y al mismo tiempo fortalecer el compromiso del equipo, que ahora se siente más motivado y enfocado. Esta transformación ha tenido un impacto muy positivo en nuestras operaciones diarias."
+Laura Torres
+CEO, Tienda Nova
+JL
+"La personalización brindada por Sunname y el acompañamiento cercano durante todo el proceso fueron clave para alcanzar los objetivos de nuestro proyecto. Su atención a los detalles y comprensión de nuestras necesidades marcaron la diferencia y contribuyeron directamente al éxito de la implementación."
+Javier López
+Gerente IT, Logística Express
+
+
+-------------------------------------------------------------------------
+(Titulo) Contáctanos
+(Texto que acompaña el titulo) Estamos listos para ayudarte a transformar tu negocio con soluciones Odoo a medida
+
+Nombre *
+María Dolores Martínez Martínez
+Empresa o Negocio *
+SUNNAME TECHNOLOGIES
+Email *
+mmartinez@sunname.com.mx
+Teléfono
++52 771 497 0051 ext. 300
+Motivo de tu mensaje *
+Consulta sobre el proyecto X
+¿En qué podemos ayudarte? *
+Cuéntanos sobre tu proyecto o necesidades...
+
+
+
+
+
+
+Información de contacto
+Estamos disponibles para atenderte y resolver todas tus dudas sobre nuestros servicios de implementación y desarrollo Odoo.
+
+Dirección
+Zimapán, Hidalgo, México
+Teléfono
++52 81 4807 1309
+Email
+info@sunname.com.mx
+Horario de atención
+Lunes a Viernes: 9:00 AM - 6:00 PM
+
+====== FIN CONTENIDO DE MI SITIO WEB ======
