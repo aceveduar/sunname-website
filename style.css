@@ -747,7 +747,7 @@ button {
   border-radius: var(--sun-radius-sm);
   box-shadow: var(--sun-shadow-sm);
   transition: transform 0.4s cubic-bezier(0.4, 1.4, 0.6, 1);
-  cursor: zoom-in;
+  cursor: default;
 }
 
 .odoo-hero__dashboard-image:hover {
@@ -784,6 +784,60 @@ button {
   border-radius: 50%;
   z-index: 0;
   animation: pulse 8s infinite ease-in-out;
+}
+
+/* -------------------------
+   Hero - trust badges & microcopy
+   ------------------------- */
+.odoo-hero__microcopy {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.78);
+  margin-top: 0.5rem;
+}
+
+.odoo-hero__trust-badges {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.9rem;
+  margin-top: 0.6rem;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.odoo-hero__trust-badges span {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 500;
+}
+
+/* Mejor contraste del botón secundario dentro del hero */
+.odoo-hero .sun-btn--secondary {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--sun-color-white);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+}
+
+.odoo-hero .sun-btn--secondary:hover {
+  background: rgba(255, 255, 255, 0.10);
+  color: var(--sun-color-white);
+  border-color: rgba(255, 255, 255, 0.28);
+  transform: translateY(-2px);
+}
+
+/* Ajuste de jerarquía visual del título */
+.odoo-hero__title {
+  font-size: 2.8rem;
+}
+
+.odoo-hero__highlight {
+  display: block;
+  color: var(--sun-color-secondary);
+  font-size: 3.25rem;
+  font-weight: var(--sun-font-weight-black);
+  margin-top: 0.25rem;
+  line-height: 1.05;
 }
 
 /* 7.2 Módulos Odoo */
@@ -937,6 +991,28 @@ button {
   color: var(--sun-color-text);
   text-align: center;
   margin-top: 0.5rem;
+}
+
+.odoo-modules__cta-hybrid {
+  margin-top: var(--sun-space-xl);
+  padding: var(--sun-space-xl) var(--sun-space-lg);
+  background-color: var(--sun-color-light);
+  border-radius: var(--sun-radius-lg);
+  border: 2px solid var(--sun-color-secondary-20);
+  transition: all var(--sun-transition-normal);
+}
+
+.odoo-modules__cta-hybrid:hover {
+  border-color: var(--sun-color-secondary);
+  box-shadow: 0 4px 12px var(--sun-color-secondary-10);
+  transform: translateY(-2px);
+}
+
+.odoo-modules__cta-title {
+  font-size: 1.5rem;
+  color: var(--sun-color-primary);
+  margin-bottom: var(--sun-space-md);
+  font-weight: var(--sun-font-weight-bold);
 }
 
 .odoo-cta-highlight {
