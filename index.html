@@ -754,22 +754,6 @@
                         </div>
 
                         <div class="sun-results__info-box">
-                            <h3 class="sun-results__info-title">Más información</h3>
-                            <ul class="sun-list">
-                                <li class="sun-list__item--check-circle">
-                                    <i class="fas fa-check-circle" aria-hidden="true"></i>
-                                    <span>Soluciones adaptadas a tus necesidades</span>
-                                </li>
-                                <li class="sun-list__item--check-circle">
-                                    <i class="fas fa-check-circle" aria-hidden="true"></i>
-                                    <span>Enfoque personalizado en cada proyecto</span>
-                                </li>
-                                <li class="sun-list__item--check-circle">
-                                    <i class="fas fa-check-circle" aria-hidden="true"></i>
-                                    <span>Resultados medibles y garantizados</span>
-                                </li>
-                            </ul>
-
                             <figure class="sun-quote">
                                 <blockquote>"En Sunname no vendemos software, entregamos soluciones que
                                     funcionan. Nos comprometemos con el éxito de tu proyecto porque
@@ -893,13 +877,13 @@
                         <form action="#" method="POST" id="contactForm">
                             <div class="sun-form__grid">
                                 <div class="sun-form__group">
-                                    <label for="name" class="sun-form__label">Nombre completo <span
+                                    <label for="name" class="sun-form__label">Nombre completo<span
                                             aria-hidden="true">*</span></label>
                                     <input type="text" id="name" name="name" class="sun-form__input" required
                                         aria-required="true">
                                 </div>
                                 <div class="sun-form__group">
-                                    <label for="company" class="sun-form__label">Empresa <span
+                                    <label for="company" class="sun-form__label">Nombre de tu empresa<span
                                             aria-hidden="true">*</span></label>
                                     <input type="text" id="company" name="company" class="sun-form__input" required
                                         aria-required="true">
@@ -911,19 +895,20 @@
                                         aria-required="true">
                                 </div>
                                 <div class="sun-form__group">
-                                    <label for="phone" class="sun-form__label">Teléfono</label>
+                                    <label for="phone" class="sun-form__label">WhatsApp / Teléfono</label>
                                     <input type="tel" id="phone" name="phone" class="sun-form__input">
                                 </div>
                                 <div class="sun-form__group">
-                                    <label for="service" class="sun-form__label">Servicio de interés <span
+                                    <label for="service" class="sun-form__label">¿Qué buscas implementar?<span
                                             aria-hidden="true">*</span></label>
                                     <select id="service" name="service" class="sun-form__select" required
                                         aria-required="true">
                                         <option value="">Selecciona un servicio</option>
-                                        <option value="implementation">Implementación de Odoo</option>
-                                        <option value="development">Desarrollo a medida</option>
-                                        <option value="consulting">Consultoría</option>
-                                        <option value="ecommerce">Tienda en línea</option>
+                                        <option value="implementation">Implementación completa de Odoo</option>
+                                        <option value="development">Módulos específicos (Manufactura/POS/Inventario)
+                                        </option>
+                                        <option value="consulting">Desarrollo personalizado</option>
+                                        <option value="ecommerce">Consultoría de procesos</option>
                                         <option value="support">Soporte técnico</option>
                                         <option value="other">Otro</option>
                                     </select>
@@ -940,10 +925,11 @@
                                     </select>
                                 </div>
                                 <div class="sun-form__group sun-form__full">
-                                    <label for="message" class="sun-form__label">Mensaje <span
-                                            aria-hidden="true">*</span></label>
+                                    <label for="message" class="sun-form__label">Cuéntanos sobre tu operación
+                                        actual<span aria-hidden="true">*</span></label>
                                     <textarea id="message" name="message" class="sun-form__textarea" required
-                                        aria-required="true"></textarea>
+                                        aria-required="true"
+                                        placeholder="Ej: Somos una fábrica de 50 empleados con 3 líneas de producción y necesitamos controlar inventarios y órdenes de trabajo..."></textarea>
                                 </div>
                                 <div class="sun-form__checkbox-group sun-form__full">
                                     <input type="checkbox" id="privacy" name="privacy" class="sun-form__checkbox"
@@ -956,7 +942,7 @@
                                 </div>
                                 <div class="sun-form__submit sun-form__full">
                                     <button type="submit" class="sun-btn sun-btn--primary">
-                                        Enviar mensaje
+                                        Enviar solicitud
                                         <i class="fas fa-paper-plane" aria-hidden="true"></i>
                                     </button>
                                 </div>
