@@ -580,14 +580,15 @@ button {
 
 /* 7.1 Hero Section */
 .odoo-hero {
-  padding: 4rem 0 6rem;
+  padding: 3rem 0 4rem;
   background: linear-gradient(135deg, var(--sun-color-primary), var(--sun-color-dark), var(--sun-color-secondary));
   color: var(--sun-color-white);
   overflow: hidden;
   position: relative;
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .odoo-hero::before {
@@ -604,16 +605,24 @@ button {
 .odoo-hero__container {
   position: relative;
   z-index: 1;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
 .odoo-hero__content {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 3rem;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .odoo-hero__text {
   flex: 1;
+  width: 100%;
+  text-align: center;
 }
 
 .odoo-hero__badge {
@@ -634,7 +643,7 @@ button {
 }
 
 .odoo-hero__title {
-  font-size: 3.5rem;
+  font-size: clamp(1.8rem, 5vw, 3.5rem);
   font-weight: bold;
   line-height: 1.2;
   margin-bottom: 1.5rem;
@@ -673,14 +682,16 @@ button {
 
 .odoo-hero__buttons {
   display: flex;
+  flex-direction: column;
   gap: 1rem;
   margin-bottom: 2rem;
-  flex-wrap: wrap;
+  width: 100%;
 }
 
 .odoo-hero__button {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
   border-radius: var(--sun-radius-sm);
@@ -691,6 +702,8 @@ button {
   font-size: 1rem;
   position: relative;
   overflow: hidden;
+  width: 100%;
+  min-height: 44px;
 }
 
 .odoo-hero__clients {
@@ -710,11 +723,67 @@ button {
   border: 2px solid #1e293b;
   margin-right: -0.5rem;
   transition: transform var(--sun-transition-normal);
+  display: none; /* Ocultar avatares antiguos */
 }
 
 .odoo-hero__avatars:hover .odoo-hero__avatar {
   transform: translateY(-5px);
 }
+
+/* NUEVOS ESTILOS PARA ÍCONOS DE INDUSTRIAS */
+.odoo-hero__industry-icons {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.odoo-hero__industry-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: rgba(70, 194, 206, 0.15);
+  border: 2px solid rgba(70, 194, 206, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: help;
+  position: relative;
+  animation: fadeInIcon 0.4s ease-out backwards;
+}
+
+.odoo-hero__industry-icon i {
+  font-size: 1.1rem;
+  color: var(--sun-color-secondary);
+  transition: transform 0.3s ease;
+}
+
+.odoo-hero__industry-icon:hover {
+  background: rgba(70, 194, 206, 0.25);
+  border-color: var(--sun-color-secondary);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(70, 194, 206, 0.3);
+}
+
+.odoo-hero__industry-icon:hover i {
+  transform: scale(1.15);
+}
+
+@keyframes fadeInIcon {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.odoo-hero__industry-icon:nth-child(1) { animation-delay: 0.1s; }
+.odoo-hero__industry-icon:nth-child(2) { animation-delay: 0.2s; }
+.odoo-hero__industry-icon:nth-child(3) { animation-delay: 0.3s; }
+.odoo-hero__industry-icon:nth-child(4) { animation-delay: 0.4s; }
 
 .odoo-hero__client-text {
   color: var(--sun-color-white-60);
@@ -723,6 +792,8 @@ button {
 .odoo-hero__image {
   flex: 1;
   position: relative;
+  width: 100%;
+  max-width: 500px;
 }
 
 .odoo-hero__dashboard-container {
@@ -784,6 +855,166 @@ button {
   border-radius: 50%;
   z-index: 0;
   animation: pulse 8s infinite ease-in-out;
+}
+
+/* ==========================================================================
+   RESPONSIVE HERO - MEDIA QUERIES
+   ========================================================================== */
+
+/* TABLET (768px - 1024px) - Layout vertical optimizado */
+@media (min-width: 768px) {
+  .odoo-hero {
+    padding: 4rem 0 5rem;
+    min-height: auto;
+  }
+
+  .odoo-hero__container {
+    max-width: 700px;
+    padding: 0 2rem;
+  }
+
+  .odoo-hero__content {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .odoo-hero__text {
+    text-align: center;
+  }
+
+  .odoo-hero__title {
+    font-size: clamp(2.2rem, 4vw, 3rem);
+  }
+
+  .odoo-hero__description {
+    font-size: 1rem;
+  }
+
+  .odoo-hero__buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .odoo-hero__image {
+    max-width: 600px;
+  }
+}
+
+/* LAPTOP (1024px - 1280px) - Transición a layout horizontal compacto */
+@media (min-width: 1024px) {
+  .odoo-hero {
+    padding: 5rem 0 6rem;
+    min-height: 90vh;
+  }
+
+  .odoo-hero__container {
+    max-width: 95%;
+    padding: 0 2rem;
+  }
+
+  .odoo-hero__content {
+    flex-direction: row;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .odoo-hero__text {
+    flex: 1;
+    text-align: left;
+  }
+
+  .odoo-hero__title {
+    font-size: clamp(2.4rem, 3.5vw, 3rem);
+  }
+
+  .odoo-hero__description {
+    font-size: 1.05rem;
+  }
+
+  .odoo-hero__buttons {
+    flex-direction: row;
+    width: auto;
+  }
+
+  .odoo-hero__image {
+    flex: 1;
+    max-width: 100%;
+  }
+}
+
+/* DESKTOP (1280px - 1920px) - Layout horizontal balanceado */
+@media (min-width: 1280px) {
+  .odoo-hero {
+    padding: 5rem 0 6rem;
+    min-height: 100vh;
+  }
+
+  .odoo-hero__container {
+    max-width: 1400px;
+    padding: 0 2rem;
+  }
+
+  .odoo-hero__content {
+    gap: 4rem;
+  }
+
+  .odoo-hero__title {
+    font-size: clamp(2.8rem, 3.5vw, 3.2rem);
+  }
+
+  .odoo-hero__image {
+    max-width: 100%;
+  }
+}
+
+/* DESKTOP LARGE (1920px+) - Máximo aprovechamiento */
+@media (min-width: 1920px) {
+  .odoo-hero {
+    padding: 6rem 0 8rem;
+    min-height: 100vh;
+  }
+
+  .odoo-hero__container {
+    max-width: 1500px;
+    padding: 0 3rem;
+  }
+
+  .odoo-hero__content {
+    gap: 9rem;
+  }
+
+  .odoo-hero__title {
+    font-size: 3.5rem;
+  }
+}
+
+/* RESPONSIVE - Industry Icons */
+@media (max-width: 1023px) {
+  .odoo-hero__industry-icons {
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .odoo-hero__clients {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .odoo-hero__industry-icon {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+  
+  .odoo-hero__industry-icon i {
+    font-size: 1rem;
+  }
+  
+  .odoo-hero__industry-icons {
+    gap: 0.4rem;
+  }
 }
 
 /* -------------------------
