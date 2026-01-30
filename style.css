@@ -1355,7 +1355,7 @@ button {
 .odoo-cta-highlight {
   color: var(--sun-color-secondary);
   position: relative;
-  font-weight: bold;
+  font-weight: 700;
   cursor: pointer;
   transition: color 0.3s;
 }
@@ -1368,6 +1368,40 @@ button {
   width: 100%;
   height: 4px;
   background: var(--sun-color-secondary);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.odoo-cta-highlight:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* CTA Micro-copy */
+.cta-microcopy {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--sun-color-text-light);
+}
+
+.cta-microcopy span {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+@media (max-width: 768px) {
+  .cta-microcopy {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+    padding-left: 1rem;
+  }
+}
   border-radius: 2px;
   transform: scaleX(0);
   transform-origin: right;
