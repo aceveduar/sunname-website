@@ -1390,9 +1390,11 @@ button {
   width: 100%;
   height: 4px;
   background: var(--sun-color-secondary);
+  border-radius: 2px;
   transform: scaleX(0);
   transform-origin: right;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.4, 1.4, 0.6, 1);
+  opacity: 0.18;
 }
 
 .odoo-cta-highlight:hover::after {
@@ -1453,12 +1455,6 @@ button {
   .cta-microcopy span {
     white-space: normal;
   }
-}
-  border-radius: 2px;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.3s cubic-bezier(0.4, 1.4, 0.6, 1);
-  opacity: 0.18;
 }
 
 .odoo-cta-highlight:hover {

@@ -180,9 +180,9 @@ Comenzamos el desarrollo de su solución.
 (Titulo) Respaldados por los Mejores
 (Texto que acompaña el titulo) Nuestros expertos certificados te garantizan implementaciones exitosas, sin complicaciones.
 (son dos cards)
-Logo Odoo Learning Partner
-Odoo Learning Partner
-Como partner oficial de Odoo, contamos con el respaldo y la certificación necesaria para ofrecer implementaciones, personalizaciones y capacitaciones de la más alta calidad. Nuestro equipo está certificado para ayudarte a aprovechar al máximo esta potente plataforma.
+Logo Odoo Ready Partner
+Odoo Ready Partner
+Como Odoo Ready Partner oficial, contamos con respaldo para ofrecer implementaciones, personalizaciones y optimización de procesos de la más alta calidad. Nuestro equipo aporta experiencia práctica en proyectos reales para ayudarte a aprovechar al máximo esta potente plataforma.
 
 Explorar
 Experiencia Certificada
