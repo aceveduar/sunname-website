@@ -375,6 +375,47 @@ button {
   line-height: 1.5;
 }
 
+/* Módulos clave - Badges */
+.modules-badges-container {
+  margin-bottom: var(--sun-space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.modules-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.module-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(70, 194, 206, 0.1);
+  border: 1px solid rgba(70, 194, 206, 0.3);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  color: var(--sun-color-primary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.module-badge i {
+  font-size: 0.9rem;
+  color: var(--sun-color-secondary);
+}
+
+.module-badge:hover {
+  background: rgba(70, 194, 206, 0.2);
+  border-color: rgba(70, 194, 206, 0.5);
+  transform: translateY(-2px);
+}
+
 /* 6.4 Botones */
 .sun-btn {
   display: inline-flex;
@@ -710,6 +751,7 @@ button {
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 .odoo-hero__avatars {
@@ -1017,6 +1059,60 @@ button {
   }
 }
 
+/* EXTRA SMALL (< 480px) - Optimización para móviles muy pequeños */
+@media (max-width: 479px) {
+  .odoo-hero {
+    padding: 2rem 0 3rem;
+  }
+
+  .odoo-hero__container {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  .odoo-hero__title {
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    margin-bottom: 1rem;
+  }
+
+  .odoo-hero__description {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .odoo-hero__button {
+    font-size: 0.95rem;
+    padding: 0.65rem 1.25rem;
+    min-height: 40px;
+  }
+
+  .odoo-hero__industry-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .odoo-hero__industry-icon i {
+    font-size: 0.9rem;
+  }
+
+  .odoo-hero__industry-icons {
+    gap: 0.3rem;
+  }
+
+  .odoo-hero__microcopy {
+    font-size: 0.75rem;
+  }
+
+  .odoo-hero__trust-badges {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .odoo-hero__trust-badges span {
+    font-size: 0.8rem;
+  }
+}
+
 /* -------------------------
    Hero - trust badges & microcopy
    ------------------------- */
@@ -1244,6 +1340,16 @@ button {
   color: var(--sun-color-primary);
   margin-bottom: var(--sun-space-md);
   font-weight: var(--sun-font-weight-bold);
+}
+
+.odoo-modules__cta-subtitle {
+  font-size: 0.95rem;
+  color: var(--sun-color-text-light);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .odoo-cta-highlight {
