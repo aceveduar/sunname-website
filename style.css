@@ -1378,28 +1378,58 @@ button {
   transform-origin: left;
 }
 
+/* Módulos CTA - Textos y wrapper */
+.odoo-modules__cta-text {
+  margin-top: 2.5rem;
+  text-align: center;
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+  color: var(--sun-color-text);
+}
+
+.odoo-modules__cta-wrapper {
+  text-align: center;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
 /* CTA Micro-copy */
 .cta-microcopy {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
-  margin-top: 1rem;
+  margin-top: 0;
   font-size: 0.85rem;
   color: var(--sun-color-text-light);
+  flex-wrap: wrap;
 }
 
 .cta-microcopy span {
   display: flex;
   align-items: center;
-  gap: 0.3rem;
+  gap: 0.35rem;
+  white-space: nowrap;
 }
 
 @media (max-width: 768px) {
+  .odoo-modules__cta-text {
+    font-size: 1.1rem;
+  }
+
   .cta-microcopy {
     flex-direction: column;
-    gap: 0.5rem;
-    align-items: flex-start;
-    padding-left: 1rem;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  .cta-microcopy span {
+    white-space: normal;
   }
 }
   border-radius: 2px;
@@ -2819,6 +2849,68 @@ button {
     break-inside: avoid;
     box-shadow: none !important;
     border: 1px solid #ddd;
+  }
+}
+
+/* ========== ESTILOS PARA MINI-CTAs EN CARDS ========== */
+.service-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--sun-color-secondary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.service-link:hover {
+  color: var(--sun-color-primary);
+  transform: translateX(3px);
+}
+
+/* ========== ESTILOS PARA CONTENEDOR CTA MEJORADO ========== */
+.services-cta-block {
+  background: rgba(70, 194, 206, 0.05);
+  border: 1px solid rgba(70, 194, 206, 0.2);
+  border-radius: 12px;
+  padding: 2.5rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.services-cta-block h3 {
+  font-size: 1.5rem;
+  color: var(--sun-color-primary);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Responsive para móvil */
+@media (max-width: 768px) {
+  .services-cta-block {
+    padding: 2rem 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .services-cta-block h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .cta-buttons .sun-btn {
+    width: 100%;
   }
 }
 
