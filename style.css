@@ -1469,6 +1469,19 @@ strong {
   white-space: nowrap;
 }
 
+.sun-results__cta .cta-microcopy {
+  margin-top: 0.75rem;
+}
+
+/* Dashboard Title */
+.dashboard-title {
+  text-align: center;
+  color: var(--sun-color-primary);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
 @media (max-width: 768px) {
   .odoo-modules__cta-text {
     font-size: 1.1rem;
