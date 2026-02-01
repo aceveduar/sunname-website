@@ -1,292 +1,188 @@
-Actúa como un especialista senior en copywriting web, UX writing y marketing digital B2B,
-con experiencia en sitios web de consultorías ERP y partners de Odoo, enfocados en empresas
-de manufactura y retail.
-
-Voy a actualizar los textos de mi sitio web: https://www.sunname.com.mx/
-
-OBJETIVO GENERAL:
-Renovar y optimizar los textos de la página de inicio para:
-- Aumentar conversiones
-- Comunicar claramente nuestra especialización
-- Guiar al usuario con llamados a la acción claros (CTAs)
-- Mantener un tono profesional, confiable y orientado a negocio
-
-CONTEXTO DEL NEGOCIO:
-Sunname es una consultora especializada en Odoo.
-Nos enfocamos principalmente en empresas:
-- De MANUFACTURA (fabricación)
-- De RETAIL (ventas físicas y omnicanal)
-
-REQUERIMIENTOS ESPECÍFICOS:
-
-1. MENSAJE CLAVE
-   - Reforzar claramente que somos especialistas en empresas de manufactura y retail.
-   - Comunicar valor en términos de procesos, eficiencia, escalabilidad y control operativo.
-   - Evitar textos genéricos o demasiado técnicos.
-
-2. CTAs (CALL TO ACTION)
-   - Agregar más CTAs estratégicos a lo largo del home.
-   - Personalizar los CTAs según la sección.
-   - CTAs deben dirigir a:
-     • Formulario de contacto
-     • Agenda una reunión (calendario)
-     • WhatsApp
-   - Ejemplos de tono esperado:
-     • “Agenda una demo”
-     • “Habla con un consultor”
-     • “Optimiza tus procesos hoy”
-     • “Lleva tu manufactura al siguiente nivel”
-
-3. CONTENIDO EXISTENTE
-   - Si eres capaz de analizar el sitio web directamente, hazlo para entender estructura, tono e intención.
-   - Si no es posible, usarás EXCLUSIVAMENTE los textos que pegaré a continuación (corresponden a la página de inicio).
-
-4. ESTRUCTURA Y MEJORAS
-   - Antes de reescribir los textos, dame:
-     a) Observaciones generales de mejora del website
-     b) Sugerencias de nuevas secciones o ajustes (ej. enfoque por industria, beneficios, diferenciadores, visuales)
-     c) Recomendaciones de imágenes o elementos visuales (tipo de imágenes, íconos, dashboards, casos reales, etc.)
-
-5. RESULTADO ESPERADO
-   - Versión optimizada de los textos del HOME:
-     • Hero principal
-     • Secciones de servicios
-     • Proceso de trabajo
-     • Especialización por industrias
-     • Testimonios (si aplica)
-     • Bloques con CTAs
-   - Textos claros, escaneables y orientados a conversión.
-   - Mantener consistencia de voz en todo el sitio.
-
-6. VALIDACIÓN
-   - Si necesitas información adicional ANTES de comenzar la reescritura
-     (por ejemplo, cliente ideal, ticket promedio, tipo de proyectos, o tono deseado),
-     pregúntame primero antes de entregar los textos finales.
-
-A continuación te comparto el CONTENIDO ACTUAL DE LA PÁGINA DE INICIO para que trabajes sobre él.
-
-
-
-====== CONTENIDO DE MI SITIO WEB ======
-
-(Badge) SOLUCIONES ERP PREMIUM
-(Titulo principal) Impulsa tu negocio con Odoo
-(Texto que acompaña al titulo principal) En Sunname, adaptamos Odoo a las necesidades de tu empresa y entrenamos a tu equipo para sacar el máximo provecho de cada módulo, optimizando tus procesos y facilitando el crecimiento.
-
-(Botón Cta) Contáctanos
-(Botón Cta) Ver servicios
-
-(Texto pequeño que acompaña iconos) +60 empresas confían en nosotros
-
-(hay una imagen que acompaña todo lo anterior) 
-
--------------------------------------------------------------------------
-
-(Titulo) Unifica tu negocio en una sola plataforma
-(Texto que acompaña al titulo) ¿Buscas optimizar algún proceso? Tenemos la herramienta perfecta para ti.
-(tengo una cuadricula en forma de sitio web que contiene los siguiente iconos)
-odoo.com
-Contabilidad
-Información
-Firma
-CRM
-Studio
-Suscripciones
-Alquiler
-Punto de venta
-Conversaciones
-Documentos
-Proyecto
-Partes de horas
-Servicio externo
-Planificación
-Servicio de asistencia
-Sitio web
-Marketing social
-Marketing por emailing
-Compra
-Inventario
-Fabricación
-Ventas
-RR. HH.
-Tablero
 
-(texto debajo de la cuadricula en forma de sitio web)
-Imagina todo lo que tu equipo puede alcanzar con una plataforma flexible y adaptable. Nosotros te capacitamos para aprovecharla al máximo.
+**Contexto y rol**
 
--------------------------------------------------------------------------
-(Titulo) Nuestros Servicios
-(Texto que acompaña el titulo) Soluciones tecnológicas pensadas para hacer crecer tu empresa y optimizar tus procesos.
-(A continuacion es cards de 3 x 3, donde tiene un titulo, un stracto y puntos detalle)
+Actúa como **Experto Senior en UX/UI, Branding Digital y Frontend Engineering** con amplia experiencia en:
 
-Implementación de ERP (Odoo)
-Implementamos y configuramos Odoo adaptado a las necesidades específicas de tu empresa.
+* Sitios corporativos B2B
+* Optimización de CSS escalable y mantenible
+* Integraciones compatibles con **Odoo Website Builder**
+* Metodologías **BEM**, **DRY**, **KISS**, **mobile-first**
+* Diseño visual coherente y elegante orientado a conversión
 
-Configuración, personalización y capacitación.
-Soporte post-implementación.
-Experiencia en múltiples industrias y sectores.
-Desarrollo a la Medida
-Creamos soluciones personalizadas que se adaptan perfectamente a tus procesos de negocio.
+Voy a compartirte **mi proyecto web completo (HTML, CSS y JS)** para una **revisión, optimización y mejora integral**.
 
-Adaptación de módulos y procesos específicos.
-Integración con sistemas actuales.
-Desarrollo de funcionalidades exclusivas para tu empresa.
-Estrategia y definición de procesos
-Analizamos y optimizamos tus procesos para maximizar la eficiencia y productividad.
+---
 
-Optimización de procesos internos.
-Estrategia a medida para impulsar tu negocio.
-Consultoría especializada en transformación digital.
-Creación de Tiendas en Línea
-Desarrollamos plataformas de e-commerce integradas con tu sistema ERP para una gestión unificada.
+## 🎯 OBJETIVO GENERAL
 
-Desarrollo de e-commerce.
-Carga automática de productos con web scraping.
-Integración completa con tu inventario y logística.
-Soporte Técnico y Mantenimiento
-Ofrecemos soporte continuo para garantizar el óptimo funcionamiento de tus sistemas.
+Quiero que mi sitio web sea:
 
-Pólizas de soporte, mantenimiento y actualizaciones.
-Garantía de 2 meses tras la implementación.
-Atención personalizada y tiempos de respuesta garantizados.
-Email Marketing Automatizado
-Conecta tu ERP con campañas de correo para fidelizar clientes y aumentar tus ventas.
-
-Segmentación de clientes desde tu base de datos.
-Automatización de correos y seguimiento de resultados.
-Integración con Odoo o plataformas externas.
-
-
-
--------------------------------------------------------------------------
-
-(Titulo) Nuestro Proceso
-
-(Son 4 cards con titulo, icono, texto)
-Programamos una demo
-Hacemos un levantamiento de alto nivel a su propósito.
-
-Te damos una propuesta
-Adaptamos nuestra solución a sus necesidades específicas.
-
-Hacemos análisis
-Validamos todos los requerimientos técnicos.
-
-Implementación
-Comenzamos el desarrollo de su solución.
-
--------------------------------------------------------------------------
+* Visualmente **atractivo, armónico y coherente**
+* Totalmente alineado con el **branding de Sunname**
+* **Responsivo real** (mobile, tablet, desktop)
+* Optimizado a nivel **UX, UI, CSS y performance**
+* **100% compatible con Odoo** (copiar/pegar directo)
 
-(Titulo) Respaldados por los Mejores
-(Texto que acompaña el titulo) Nuestros expertos certificados te garantizan implementaciones exitosas, sin complicaciones.
-(son dos cards)
-Logo Odoo Ready Partner
-Odoo Ready Partner
-Como Odoo Ready Partner oficial, contamos con respaldo para ofrecer implementaciones, personalizaciones y optimización de procesos de la más alta calidad. Nuestro equipo aporta experiencia práctica en proyectos reales para ayudarte a aprovechar al máximo esta potente plataforma.
+⚠️ **NO quiero que elimines, modifiques ni acortes ningún texto existente.**
+⚠️ **NO debes agregar menús ni estilos de navegación.**
+⚠️ **Todas las secciones actuales deben permanecer intactas.**
 
-Explorar
-Experiencia Certificada
-Expertos en Implementación
-Nuestro equipo cuenta con amplia experiencia en la implementación y personalización de Odoo para diferentes industrias. Hemos ayudado a numerosas empresas a optimizar sus procesos y maximizar el retorno de su inversión en tecnología.
-
-Manufactura
-Retail
-Servicios
-Logística
-Ver casos de éxito
+---
 
--------------------------------------------------------------------------
+## 🎨 PALETA DE COLORES OFICIAL (ORDEN DE USO OBLIGATORIO)
 
+Usa estrictamente esta paleta y su jerarquía:
 
+* **Color Primario:** `#263980` → color base, identidad principal
+* **Color Secundario:** `#46C2CE` → apoyo visual, CTAs secundarios
+* **Color Complementario 1:** `#2C1A56` → textos importantes, fondos profundos
+* **Color Complementario 2:** `#7F52A0` → acentos, hover, focus, detalles UX
 
-(Titulo) Confianza que Nos Impulsa
-(Texto que acompaña el titulo) Estamos orgullosos de trabajar con marcas líderes en el mercado que comparten nuestro compromiso con la calidad y la innovación.
+Implementa estas tonalidades mediante **CSS Variables en `:root`**.
 
-Logo referencia 1
-Logo referencia 2
-Logo referencia 3
-Logo referencia 4
-Logo referencia 5
-Logo referencia 6
+---
 
+## 🧱 RESTRICCIONES TECNOLÓGICAS
 
--------------------------------------------------------------------------
+* **HTML:** puro (semántico, accesible)
+* **CSS:** puro, estructurado con **BEM estricto**
+* **JS:** SOLO vanilla JS mínimo e indispensable
+* ❌ Sin frameworks
+* ❌ Sin librerías externas innecesarias
+* ❌ Sin preprocessors
+* ❌ Sin estilos ni scripts de menú
 
+Todo debe ser **Odoo-friendly**.
 
-(Titulo) Cuidamos los resultados
-(Texto que acompaña el titulo) Con más de 60 proyectos exitosos, combinamos pasión y estrategia para impulsar el éxito de nuestros clientes, asegurando resultados que marcan la diferencia en el futuro.
+---
 
-Más información
-Soluciones adaptadas a tus necesidades
-Enfoque personalizado en cada proyecto
-Resultados medibles y garantizados
-"Como socio comprometido, creamos soluciones personalizadas que brindan tranquilidad y confianza. En OdooExperts, buscamos siempre superar tus expectativas para que te enfoques en lo que realmente importa: hacer crecer tu negocio."
-Descubrir más
+## 📂 ESTRUCTURA Y COMPATIBILIDAD ODOO
 
+* Mantén la **estructura de archivos existente** si funciona correctamente
+* Código debe reflejarse correctamente dentro del builder de Odoo
+* Usa rutas relativas para assets
+* Evita selectores frágiles o dependencias del DOM de Odoo
+* El código final debe ser **listo para producción**
 
-Dashboard Odoo en acción
--------------------------------------------------------------------------
+---
 
-+60
-Empresas felices
-10
-Empresas de fabricación
-15
-Páginas increíbles
-10
-Puntos de venta
+## 🔍 TAREAS ESPECÍFICAS A REALIZAR
 
--------------------------------------------------------------------------
+### 1️⃣ Auditoría visual y coherencia de diseño (SIN MENÚ)
 
-(Titulo)Testimonios de Clientes
-(Texto que acompaña el titulo) Lo que dicen quienes ya confiaron en nosotros
+* Aplica correctamente la paleta de colores según prioridad
+* Unifica:
 
-RG
-"La implementación realizada por Sunname ha ayudado a resolver muchas de nuestras necesidades y a mejorar los procesos, y por lo tanto nos abre nuevas oportunidades de negocio. Por otra parte, la consultora siempre ha estado atenta a nuestras dudas y requerimientos, resolviéndolos oportunamente y logrando así una implementación exitosa."
-Rebeca Gómez
-Gerente de Ventas, Ediciones El Naranjo
-LT
-"Gracias al trabajo realizado por Sunname, logramos hacer más eficientes nuestros procesos internos y al mismo tiempo fortalecer el compromiso del equipo, que ahora se siente más motivado y enfocado. Esta transformación ha tenido un impacto muy positivo en nuestras operaciones diarias."
-Laura Torres
-CEO, Tienda Nova
-JL
-"La personalización brindada por Sunname y el acompañamiento cercano durante todo el proceso fueron clave para alcanzar los objetivos de nuestro proyecto. Su atención a los detalles y comprensión de nuestras necesidades marcaron la diferencia y contribuyeron directamente al éxito de la implementación."
-Javier López
-Gerente IT, Logística Express
+  * botones
+  * headings
+  * enlaces
+  * badges
+* Mejora spacing, ritmo visual y jerarquía
+* Ajusta contrastes para legibilidad y accesibilidad
+* No agregues nuevos componentes innecesarios
 
+---
 
--------------------------------------------------------------------------
-(Titulo) Contáctanos
-(Texto que acompaña el titulo) Estamos listos para ayudarte a transformar tu negocio con soluciones Odoo a medida
+### 2️⃣ Responsividad total (Mobile-first, SIN MENÚ)
 
-Nombre *
-María Dolores Martínez Martínez
-Empresa o Negocio *
-SUNNAME TECHNOLOGIES
-Email *
-mmartinez@sunname.com.mx
-Teléfono
-+52 771 497 0051 ext. 300
-Motivo de tu mensaje *
-Consulta sobre el proyecto X
-¿En qué podemos ayudarte? *
-Cuéntanos sobre tu proyecto o necesidades...
+* Asegura correcta visualización en:
 
+  * móvil
+  * tablet
+  * desktop
+* Usa breakpoints CSS estándar compatibles con Odoo
+* Optimiza grids, flexbox e imágenes
+* Mantén **exactamente los mismos textos y secciones**
+* No agregues hamburgers ni navegación
 
+---
 
+### 3️⃣ Optimización avanzada de CSS (BEM + performance)
 
+* Elimina **CSS y JS innecesario o no usado**
+* Refactoriza reglas repetidas (DRY)
+* Ordena CSS por:
 
+  1. Variables
+  2. Utilities
+  3. Layout
+  4. Components
+  5. Sections
+* Reduce especificidad excesiva
+* Evita `!important` salvo casos muy justificados
+* Mejora escalabilidad futura
 
-Información de contacto
-Estamos disponibles para atenderte y resolver todas tus dudas sobre nuestros servicios de implementación y desarrollo Odoo.
+---
 
-Dirección
-Zimapán, Hidalgo, México
-Teléfono
-+52 81 4807 1309
-Email
-info@sunname.com.mx
-Horario de atención
-Lunes a Viernes: 9:00 AM - 6:00 PM
+### 4️⃣ Mejoras UX y microinteracciones (SIN MENÚ)
 
-====== FIN CONTENIDO DE MI SITIO WEB ======
+* Mejora:
+
+  * hover
+  * focus
+  * active
+* Usa transiciones CSS suaves y sutiles
+* Aplica micro-detalles UX profesionales (sin sobrecargar)
+* Asegura consistencia visual en todo el sitio
+
+---
+
+### 5️⃣ JavaScript mínimo y limpio
+
+* Mantén solo JS realmente necesario
+* Refactoriza JS existente si hay redundancias
+* Asegura compatibilidad cross-browser
+* Elimina código muerto
+
+---
+
+## 📦 ENTREGA ESPERADA
+
+Quiero que me entregues:
+
+1. **HTML optimizado** (mismo contenido, mejor estructura)
+2. **CSS optimizado y ordenado**, con variables y BEM estricto
+3. **JS mínimo** (solo si es realmente necesario)
+4. **Resumen claro de cambios realizados**
+5. **Explicación breve del porqué de las decisiones importantes**
+6. **Sugerencia de estructura de archivos ideal para Odoo**
+7. Código **listo para copiar y pegar en Odoo**
+8. **Sin menú actual ni estilos de navegación**
+9. Logo correctamente implementado sin interferir con menú futuro
+
+---
+
+## 📎 ARCHIVOS QUE TE COMPARTIRÉ
+
+* `index.html` (sin menú)
+* `style.css`
+* `app.js` (si aplica)
+
+Usa estos archivos como base real del trabajo.
+Optimiza, limpia y mejora **sin romper el diseño ni el contenido**.
+
+---
+
+### 🎯 CRITERIO FINAL
+
+El resultado debe sentirse como:
+
+> “El mismo sitio, pero en versión **más profesional, más elegante, más coherente, más rápido y listo para escalar**”.
+
+---
+
+Si luego quieres, en otro prompt podemos hacer:
+
+* revisión **ultra-fina de micro-UX**
+* subida de conversión (CTAs)
+* preparación para futura integración del menú en Odoo
+
+---
+
+Si quieres, en el siguiente mensaje puedo:
+
+* **revisar tu prompt y subirlo aún más a nivel elite**, o
+* **adaptarlo específicamente a Cursor o Gemini**, o
+* **preparar un checklist para validar que Claude sí cumplió todo**.
+
+Tú dime 😎
