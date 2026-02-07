@@ -446,6 +446,7 @@ strong {
   background: rgba(70, 194, 206, 0.2);
   border-color: rgba(70, 194, 206, 0.5);
   transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(70, 194, 206, 0.2);
 }
 
 /* 6.4 Botones */
@@ -764,7 +765,7 @@ strong {
 .odoo-hero__highlight {
   color: var(--sun-color-secondary);
   position: relative;
-  display: inline-block;
+  display: inline;
 }
 
 .odoo-hero__highlight::after {
@@ -1242,15 +1243,6 @@ strong {
   font-size: 2.8rem;
 }
 
-.odoo-hero__highlight {
-  display: block;
-  color: var(--sun-color-secondary);
-  font-size: 3.25rem;
-  font-weight: var(--sun-font-weight-black);
-  margin-top: 0.25rem;
-  line-height: 1.05;
-}
-
 /* 7.2 Módulos Odoo */
 .odoo-modules {
   background: var(--sun-color-white);
@@ -1515,20 +1507,20 @@ strong {
   .quote-block {
     padding: 2rem 1.5rem;
   }
-  
+
   .quote-text {
     font-size: 1.05rem;
   }
-  
+
   .cta-container {
     flex-direction: column;
     gap: 1rem;
   }
-  
+
   .cta-primary {
     width: 100%;
   }
-  
+
   .cta-secondary {
     width: 100%;
     justify-content: center;
@@ -1885,7 +1877,7 @@ strong {
 }
 
 .cta-secondary::after {
-  content: '→';
+  content: "→";
   font-size: 1.2rem;
   transition: transform 0.3s ease;
 }
