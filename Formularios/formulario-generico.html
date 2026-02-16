@@ -1,20 +1,22 @@
 <t t-name="website.formulario-generico">
     <t t-call="website.layout">
         <!-- ======================= WRAP (estructura Odoo) ======================= -->
-        <div id="wrap" class="oe_structure oe_empty"/>
+        <div id="wrap" class="oe_structure oe_empty" />
         <!-- ===================================================================== -->
 
         <!-- ======================= SECCIÓN PRINCIPAL (overlay) ================== -->
-        <section class="s_website_form_overlay pt64 pb64 o_colored_level" data-snippet="s_website_form_overlay" data-name="Superponer forma">
+        <section class="s_website_form_overlay pt64 pb64 o_colored_level" data-snippet="s_website_form_overlay"
+            data-name="Superponer forma">
 
             <div class="container">
                 <div class="row" style="gap: 2rem;">
 
                     <!-- =================== CARD: FORMULARIO DE CONTACTO ============== -->
-                    <div class="o_cc o_cc1 px-4 py-5 o_colored_level col-lg-6 pb0 shadow rounded" style="background-color: rgba(255, 255, 255, 0.95); z-index: 1; position: relative; overflow: hidden; box-shadow: rgba(0, 0, 0, 0.15) 0px 8px 16px 0px !important; border-color: rgb(206, 0, 0) !important; border-radius: 6px !important;">
+                    <div class="o_cc o_cc1 px-4 py-5 o_colored_level col-lg-6 pb0 shadow rounded"
+                        style="background-color: rgba(255, 255, 255, 0.95); z-index: 1; position: relative; overflow: hidden; box-shadow: rgba(0, 0, 0, 0.15) 0px 8px 16px 0px !important; border-color: rgb(206, 0, 0) !important; border-radius: 6px !important;">
 
                         <!-- Franja superior (Sunname) -->
-                        <div class="sunname-form-bar"/>
+                        <div class="sunname-form-bar" />
 
                         <!-- Título y descripción -->
                         <h2 class="mb-3">
@@ -25,103 +27,178 @@
                         </p>
 
                         <!-- ===================== FORMULARIO ODOO ======================= -->
-                        <section class="s_website_form pt16 pb16" data-vcss="001" data-snippet="s_website_form" data-name="Formulario">
+                        <section class="s_website_form pt16 pb16" data-vcss="001" data-snippet="s_website_form"
+                            data-name="Formulario">
 
                             <div class="container-fluid">
-                                <form action="/website/form/" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-pre-fill="true" data-model_name="crm.lead" data-success-mode="redirect" data-success-page="/contactus-thank-you">
+                                <form action="/website/form/" method="post" enctype="multipart/form-data"
+                                    class="o_mark_required" data-mark="*" data-pre-fill="true"
+                                    data-model_name="crm.lead" data-success-mode="redirect"
+                                    data-success-page="/contactus-thank-you">
 
                                     <div class="s_website_form_rows row s_col_no_bgcolor">
 
                                         <!-- Campo: Nombre (contact_name) -->
-                                        <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_required col-lg-12" data-type="char">
-                                            <label class="s_website_form_label d-block mb-1" style="width: auto; font-weight: 600;" for="oit9q8kqdlkp">
+                                        <div data-name="Field"
+                                            class="s_website_form_field mb-3 col-12 s_website_form_required col-lg-12"
+                                            data-type="char">
+                                            <label class="s_website_form_label d-block mb-1"
+                                                style="width: auto; font-weight: 600;" for="oit9q8kqdlkp">
                                                 <span class="s_website_form_label_content">Nombre</span>
                                                 <span class="s_website_form_mark"> *</span>
                                             </label>
-                                            <div class="sun-form-input-group d-flex align-items-center" style="position: relative;">
-                                                <i class="fa fa-user" style="position: absolute; left: 1rem; color: #46c3ce; font-size: 1.1rem; z-index: 1;"/>
-                                                <input class="form-control s_website_form_input ps-5" type="text" name="contact_name" required="1" placeholder="Juan Pérez" id="oit9q8kqdlkp" data-fill-with="name" style="border-radius: .5rem; border: 1px solid #dee2e6; transition: all 0.3s; box-shadow: none !important;" onfocus="this.style.borderColor='#263980'; this.style.boxShadow='0 0 0 .15rem rgba(38, 57, 128, .25)'" onblur="this.style.borderColor='#dee2e6'; this.style.boxShadow='none'"/>
+                                            <div class="sun-form-input-group d-flex align-items-center"
+                                                style="position: relative;">
+                                                <i class="fa fa-user"
+                                                    style="position: absolute; left: 1rem; color: #46c3ce; font-size: 1.1rem; z-index: 1;" />
+                                                <input class="form-control s_website_form_input ps-5" type="text"
+                                                    name="contact_name" required="1" placeholder="Juan Pérez"
+                                                    id="oit9q8kqdlkp" data-fill-with="name"
+                                                    style="border-radius: .5rem; border: 1px solid #dee2e6; transition: all 0.3s; box-shadow: none !important;"
+                                                    onfocus="this.style.borderColor='#263980'; this.style.boxShadow='0 0 0 .15rem rgba(38, 57, 128, .25)'"
+                                                    onblur="this.style.borderColor='#dee2e6'; this.style.boxShadow='none'" />
                                             </div>
                                         </div>
 
                                         <!-- Campo: Empresa/Negocio (partner_name) -->
-                                        <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_required" data-type="char">
-                                            <label class="s_website_form_label d-block mb-1" style="width: auto; font-weight: 600;" for="oo2eq1h2747">
+                                        <div data-name="Field"
+                                            class="s_website_form_field mb-3 col-12 s_website_form_required"
+                                            data-type="char">
+                                            <label class="s_website_form_label d-block mb-1"
+                                                style="width: auto; font-weight: 600;" for="oo2eq1h2747">
                                                 <span class="s_website_form_label_content">Empresa o Negocio</span>
                                                 <span class="s_website_form_mark"> *</span>
                                             </label>
-                                            <div class="sun-form-input-group d-flex align-items-center" style="position: relative;">
-                                                <i class="fa fa-building" style="position: absolute; left: 1rem; color: #46c3ce; font-size: 1.1rem; z-index: 1;"/>
-                                                <input class="form-control s_website_form_input ps-5" type="text" name="partner_name" required="1" placeholder="Nombre de tu empresa o negocio" id="oo2eq1h2747" data-fill-with="commercial_company_name" style="border-radius: .5rem; border: 1px solid #dee2e6; transition: all 0.3s; box-shadow: none !important;" onfocus="this.style.borderColor='#263980'; this.style.boxShadow='0 0 0 .15rem rgba(38, 57, 128, .25)'" onblur="this.style.borderColor='#dee2e6'; this.style.boxShadow='none'"/>
+                                            <div class="sun-form-input-group d-flex align-items-center"
+                                                style="position: relative;">
+                                                <i class="fa fa-building"
+                                                    style="position: absolute; left: 1rem; color: #46c3ce; font-size: 1.1rem; z-index: 1;" />
+                                                <input class="form-control s_website_form_input ps-5" type="text"
+                                                    name="partner_name" required="1"
+                                                    placeholder="Nombre de tu empresa o negocio" id="oo2eq1h2747"
+                                                    data-fill-with="commercial_company_name"
+                                                    style="border-radius: .5rem; border: 1px solid #dee2e6; transition: all 0.3s; box-shadow: none !important;"
+                                                    onfocus="this.style.borderColor='#263980'; this.style.boxShadow='0 0 0 .15rem rgba(38, 57, 128, .25)'"
+                                                    onblur="this.style.borderColor='#dee2e6'; this.style.boxShadow='none'" />
                                             </div>
                                         </div>
 
                                         <!-- Campo: Email (email_from) -->
-                                        <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_required col-lg-6" data-type="email">
-                                            <label class="s_website_form_label d-block mb-1" style="width: auto; font-weight: 600;" for="ofxagqhtzg1e">
+                                        <div data-name="Field"
+                                            class="s_website_form_field mb-3 col-12 s_website_form_required col-lg-6"
+                                            data-type="email">
+                                            <label class="s_website_form_label d-block mb-1"
+                                                style="width: auto; font-weight: 600;" for="ofxagqhtzg1e">
                                                 <span class="s_website_form_label_content">Email</span>
                                                 <span class="s_website_form_mark"> *</span>
                                             </label>
-                                            <div class="sun-form-input-group d-flex align-items-center" style="position: relative;">
-                                                <i class="fa fa-envelope" style="position: absolute; left: 1rem; color: #46c3ce; font-size: 1.1rem; z-index: 1;"/>
-                                                <input class="form-control s_website_form_input ps-5" type="email" name="email_from" required="1" placeholder="juan_perez@ejemplo.com" id="ofxagqhtzg1e" data-fill-with="email" style="border-radius: .5rem; border: 1px solid #dee2e6; transition: all 0.3s; box-shadow: none !important;" onfocus="this.style.borderColor='#263980'; this.style.boxShadow='0 0 0 .15rem rgba(38, 57, 128, .25)'" onblur="this.style.borderColor='#dee2e6'; this.style.boxShadow='none'"/>
+                                            <div class="sun-form-input-group d-flex align-items-center"
+                                                style="position: relative;">
+                                                <i class="fa fa-envelope"
+                                                    style="position: absolute; left: 1rem; color: #46c3ce; font-size: 1.1rem; z-index: 1;" />
+                                                <input class="form-control s_website_form_input ps-5" type="email"
+                                                    name="email_from" required="1" placeholder="juan_perez@ejemplo.com"
+                                                    id="ofxagqhtzg1e" data-fill-with="email"
+                                                    style="border-radius: .5rem; border: 1px solid #dee2e6; transition: all 0.3s; box-shadow: none !important;"
+                                                    onfocus="this.style.borderColor='#263980'; this.style.boxShadow='0 0 0 .15rem rgba(38, 57, 128, .25)'"
+                                                    onblur="this.style.borderColor='#dee2e6'; this.style.boxShadow='none'" />
                                             </div>
                                         </div>
 
                                         <!-- Campo: Teléfono (phone) -->
-                                        <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_required col-lg-6" data-type="tel">
-                                            <label class="s_website_form_label d-block mb-1" style="width: auto; font-weight: 600;" for="o6ljffr5oddq">
+                                        <div data-name="Field"
+                                            class="s_website_form_field mb-3 col-12 s_website_form_required col-lg-6"
+                                            data-type="tel">
+                                            <label class="s_website_form_label d-block mb-1"
+                                                style="width: auto; font-weight: 600;" for="o6ljffr5oddq">
                                                 <span class="s_website_form_label_content">Teléfono</span>
                                                 <span class="s_website_form_mark"> *</span>
                                             </label>
-                                            <div class="sun-form-input-group d-flex align-items-center" style="position: relative;">
-                                                <i class="fa fa-phone" style="position: absolute; left: 1rem; color: #46c3ce; font-size: 1.1rem; z-index: 1;"/>
-                                                <input class="form-control s_website_form_input ps-5" type="tel" name="phone" required="1" placeholder="+52 (81) 1234 5678" id="o6ljffr5oddq" data-fill-with="phone" style="border-radius: .5rem; border: 1px solid #dee2e6; transition: all 0.3s; box-shadow: none !important;" onfocus="this.style.borderColor='#263980'; this.style.boxShadow='0 0 0 .15rem rgba(38, 57, 128, .25)'" onblur="this.style.borderColor='#dee2e6'; this.style.boxShadow='none'"/>
+                                            <div class="sun-form-input-group d-flex align-items-center"
+                                                style="position: relative;">
+                                                <i class="fa fa-phone"
+                                                    style="position: absolute; left: 1rem; color: #46c3ce; font-size: 1.1rem; z-index: 1;" />
+                                                <input class="form-control s_website_form_input ps-5" type="tel"
+                                                    name="phone" required="1" placeholder="+52 (81) 1234 5678"
+                                                    id="o6ljffr5oddq" data-fill-with="phone"
+                                                    style="border-radius: .5rem; border: 1px solid #dee2e6; transition: all 0.3s; box-shadow: none !important;"
+                                                    onfocus="this.style.borderColor='#263980'; this.style.boxShadow='0 0 0 .15rem rgba(38, 57, 128, .25)'"
+                                                    onblur="this.style.borderColor='#dee2e6'; this.style.boxShadow='none'" />
                                             </div>
                                         </div>
 
                                         <!-- Campo: Motivo (name / asunto) -->
-                                        <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_model_required" data-type="char">
-                                            <label class="s_website_form_label d-block mb-1" style="width: auto; font-weight: 600;" for="ohbodvubiy2g">
+                                        <div data-name="Field"
+                                            class="s_website_form_field mb-3 col-12 s_website_form_model_required"
+                                            data-type="char">
+                                            <label class="s_website_form_label d-block mb-1"
+                                                style="width: auto; font-weight: 600;" for="ohbodvubiy2g">
                                                 <span class="s_website_form_label_content">Motivo de tu mensaje</span>
                                                 <span class="s_website_form_mark"> *</span>
                                             </label>
-                                            <div class="sun-form-input-group d-flex align-items-center" style="position: relative;">
-                                                <i class="fa fa-tag" style="position: absolute; left: 1rem; color: #46c3ce; font-size: 1.1rem; z-index: 1;"/>
-                                                <input class="form-control s_website_form_input ps-5" type="text" name="name" required="" placeholder="Consulta sobre el proyecto X" id="ohbodvubiy2g" style="border-radius: .5rem; border: 1px solid #dee2e6; transition: all 0.3s; box-shadow: none !important;" onfocus="this.style.borderColor='#263980'; this.style.boxShadow='0 0 0 .15rem rgba(38, 57, 128, .25)'" onblur="this.style.borderColor='#dee2e6'; this.style.boxShadow='none'"/>
+                                            <div class="sun-form-input-group d-flex align-items-center"
+                                                style="position: relative;">
+                                                <i class="fa fa-tag"
+                                                    style="position: absolute; left: 1rem; color: #46c3ce; font-size: 1.1rem; z-index: 1;" />
+                                                <input class="form-control s_website_form_input ps-5" type="text"
+                                                    name="name" required="" placeholder="Consulta sobre el proyecto X"
+                                                    id="ohbodvubiy2g"
+                                                    style="border-radius: .5rem; border: 1px solid #dee2e6; transition: all 0.3s; box-shadow: none !important;"
+                                                    onfocus="this.style.borderColor='#263980'; this.style.boxShadow='0 0 0 .15rem rgba(38, 57, 128, .25)'"
+                                                    onblur="this.style.borderColor='#dee2e6'; this.style.boxShadow='none'" />
                                             </div>
                                         </div>
 
                                         <!-- Campo: Descripción (description) -->
-                                        <div data-name="Field" class="s_website_form_field mb-3 col-12 col-lg-12 s_website_form_required" data-type="text">
-                                            <label class="s_website_form_label d-block mb-1" style="width: auto; font-weight: 600;" for="ory8u1efij3q">
-                                                <span class="s_website_form_label_content">¿En qué podemos ayudarte?</span>
+                                        <div data-name="Field"
+                                            class="s_website_form_field mb-3 col-12 col-lg-12 s_website_form_required"
+                                            data-type="text">
+                                            <label class="s_website_form_label d-block mb-1"
+                                                style="width: auto; font-weight: 600;" for="ory8u1efij3q">
+                                                <span class="s_website_form_label_content">¿En qué podemos
+                                                    ayudarte?</span>
                                                 <span class="s_website_form_mark"> *</span>
                                             </label>
-                                            <div class="sun-form-input-group d-flex align-items-center" style="position: relative;">
-                                                <i class="fa fa-comment-dots" style="position: absolute; left: 1rem; top: 1rem; color: #46c3ce; font-size: 1.1rem; z-index: 1;"/>
-                                                <textarea class="form-control s_website_form_input ps-5" name="description" required="1" placeholder="Cuéntanos sobre tu proyecto o necesidades..." id="ory8u1efij3q" rows="3" style="border-radius: .5rem; border: 1px solid #dee2e6; transition: all 0.3s; box-shadow: none !important;" onfocus="this.style.borderColor='#263980'; this.style.boxShadow='0 0 0 .15rem rgba(38, 57, 128, .25)'" onblur="this.style.borderColor='#dee2e6'; this.style.boxShadow='none'"/>
+                                            <div class="sun-form-input-group d-flex align-items-center"
+                                                style="position: relative;">
+                                                <i class="fa fa-comment-dots"
+                                                    style="position: absolute; left: 1rem; top: 1rem; color: #46c3ce; font-size: 1.1rem; z-index: 1;" />
+                                                <textarea class="form-control s_website_form_input ps-5"
+                                                    name="description" required="1"
+                                                    placeholder="Cuéntanos sobre tu proyecto o necesidades..."
+                                                    id="ory8u1efij3q" rows="3"
+                                                    style="border-radius: .5rem; border: 1px solid #dee2e6; transition: all 0.3s; box-shadow: none !important;"
+                                                    onfocus="this.style.borderColor='#263980'; this.style.boxShadow='0 0 0 .15rem rgba(38, 57, 128, .25)'"
+                                                    onblur="this.style.borderColor='#dee2e6'; this.style.boxShadow='none'" />
                                             </div>
                                         </div>
 
                                         <!-- Campo oculto: user_id -->
-                                        <div data-name="Field" class="s_website_form_field mb-3 col-12 s_website_form_dnone">
+                                        <div data-name="Field"
+                                            class="s_website_form_field mb-3 col-12 s_website_form_dnone">
                                             <div class="row s_col_no_resize s_col_no_bgcolor">
-                                                <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px">
-                                                    <span class="s_website_form_label_content"/>
+                                                <label class="col-form-label col-sm-auto s_website_form_label"
+                                                    style="width: 200px">
+                                                    <span class="s_website_form_label_content" />
                                                 </label>
                                                 <div class="col-sm">
-                                                    <input type="hidden" class="form-control s_website_form_input" name="user_id" value="2"/>
+                                                    <input type="hidden" class="form-control s_website_form_input"
+                                                        name="user_id" value="2" />
                                                 </div>
                                             </div>
                                         </div>
 
                                         <!-- Botón Enviar -->
-                                        <div class="mb-0 py-2 col-12 s_website_form_submit text-center s_website_form_no_submit_label" data-name="Submit Button">
-                                            <div style="width: 200px;" class="s_website_form_label"/>
-                                            <span id="s_website_form_result"/>
-                                            <a href="#" role="button" class="btn btn-primary s_website_form_send text-white" style="background-image: linear-gradient(90deg, rgb(38, 57, 128) 0%, rgb(70, 194, 206) 100%); border: none; padding: 0.75rem 2.5rem; font-size: 1.1rem; border-radius: 50px; transition: 0.3s; box-shadow: rgba(38, 57, 128, 0.4) 0px 4px 15px; filter: brightness(1);" onmouseover="this.style.filter='brightness(1.1)'; this.style.boxShadow='0 6px 20px rgba(38, 57, 128, 0.6)'" onmouseout="this.style.filter='brightness(1.0)'; this.style.boxShadow='0 4px 15px rgba(38, 57, 128, 0.4)'">
-                                                <span class="fa fa-paper-plane"/> Enviar
+                                        <div class="mb-0 py-2 col-12 s_website_form_submit text-center s_website_form_no_submit_label"
+                                            data-name="Submit Button">
+                                            <div style="width: 200px;" class="s_website_form_label" />
+                                            <span id="s_website_form_result" />
+                                            <a href="#" role="button"
+                                                class="btn btn-primary s_website_form_send text-white"
+                                                style="background-image: linear-gradient(90deg, rgb(38, 57, 128) 0%, rgb(70, 194, 206) 100%); border: none; padding: 0.75rem 2.5rem; font-size: 1.1rem; border-radius: 50px; transition: 0.3s; box-shadow: rgba(38, 57, 128, 0.4) 0px 4px 15px; filter: brightness(1);"
+                                                onmouseover="this.style.filter='brightness(1.1)'; this.style.boxShadow='0 6px 20px rgba(38, 57, 128, 0.6)'"
+                                                onmouseout="this.style.filter='brightness(1.0)'; this.style.boxShadow='0 4px 15px rgba(38, 57, 128, 0.4)'">
+                                                <span class="fa fa-paper-plane" /> Enviar
                                             </a>
                                         </div>
 
@@ -135,79 +212,105 @@
                     <!-- ================= /CARD: FORMULARIO DE CONTACTO ================ -->
 
                     <!-- =================== CARD: INFO DE CONTACTO ===================== -->
-                    <div class="col-lg-5 rounded px-4 py-5 o_colored_level sun-contact__info pb256 pt48 o_cc o_cc1" style="z-index: 2; background-image: linear-gradient(135deg, rgb(38, 57, 128) 0%, rgb(70, 194, 206) 100%);">
+                    <div class="col-lg-5 rounded px-4 py-5 o_colored_level sun-contact__info pb256 pt48 o_cc o_cc1"
+                        style="z-index: 2; background-image: linear-gradient(135deg, rgb(38, 57, 128) 0%, rgb(70, 194, 206) 100%);">
 
                         <!-- Bloque de información -->
                         <div>
-                            <h3 class="sun-contact__info-title" style="color: white; font-weight: 600; margin-bottom: 1rem;">
+                            <h3 class="sun-contact__info-title"
+                                style="color: white; font-weight: 600; margin-bottom: 1rem;">
                                 Información de contacto
                             </h3>
-                            <p class="sun-contact__info-text" style="color: rgba(255, 255, 255, 0.9); margin-bottom: 2rem; line-height: 1.6;">
+                            <p class="sun-contact__info-text"
+                                style="color: rgba(255, 255, 255, 0.9); margin-bottom: 2rem; line-height: 1.6;">
                                 Estamos disponibles para atenderte y resolver todas tus dudas sobre nuestros servicios
                                 de implementación y desarrollo Odoo.
                             </p>
 
                             <!-- Ítem: Dirección -->
-                            <div class="sun-contact__info-item" style="display: flex; align-items: center; margin-bottom: 1.5rem;">
-                                <div class="sun-contact__info-icon" style="margin-right: 1rem; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                    <i class="fa fa-map-marker-alt" style="color: white; font-size: 1.2rem;"/>
+                            <div class="sun-contact__info-item"
+                                style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                                <div class="sun-contact__info-icon"
+                                    style="margin-right: 1rem; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="fa fa-map-marker-alt" style="color: white; font-size: 1.2rem;" />
                                 </div>
                                 <div class="sun-contact__info-content" style="font-size: 1rem; color: white;">
-                                    <strong style="display: block; font-weight: 600; margin-bottom: 0.2rem;">Dirección</strong>
+                                    <strong
+                                        style="display: block; font-weight: 600; margin-bottom: 0.2rem;">Dirección</strong>
                                     <span style="opacity: 0.9;">Zimapán, Hidalgo, México</span>
                                 </div>
                             </div>
 
                             <!-- Ítem: Teléfono -->
-                            <div class="sun-contact__info-item" style="display: flex; align-items: center; margin-bottom: 1.5rem;">
-                                <div class="sun-contact__info-icon" style="margin-right: 1rem; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                    <i class="fa fa-phone" style="color: white; font-size: 1.2rem;"/>
+                            <div class="sun-contact__info-item"
+                                style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                                <div class="sun-contact__info-icon"
+                                    style="margin-right: 1rem; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="fa fa-phone" style="color: white; font-size: 1.2rem;" />
                                 </div>
                                 <div class="sun-contact__info-content" style="font-size: 1rem; color: white;">
-                                    <strong style="display: block; font-weight: 600; margin-bottom: 0.2rem;">Teléfono</strong>
-                                    <span style="opacity: 0.9;">+52 81 4807 1309</span>
+                                    <strong
+                                        style="display: block; font-weight: 600; margin-bottom: 0.2rem;">Teléfono</strong>
+                                    <span style="opacity: 0.9;">+52 1 771 101 4687</span>
                                 </div>
                             </div>
 
                             <!-- Ítem: Email -->
-                            <div class="sun-contact__info-item" style="display: flex; align-items: center; margin-bottom: 1.5rem;">
-                                <div class="sun-contact__info-icon" style="margin-right: 1rem; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                    <i class="fa fa-envelope" style="color: white; font-size: 1.2rem;"/>
+                            <div class="sun-contact__info-item"
+                                style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                                <div class="sun-contact__info-icon"
+                                    style="margin-right: 1rem; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="fa fa-envelope" style="color: white; font-size: 1.2rem;" />
                                 </div>
                                 <div class="sun-contact__info-content" style="font-size: 1rem; color: white;">
-                                    <strong style="display: block; font-weight: 600; margin-bottom: 0.2rem;">Email</strong>
+                                    <strong
+                                        style="display: block; font-weight: 600; margin-bottom: 0.2rem;">Email</strong>
                                     <span style="opacity: 0.9;">info@sunname.com.mx</span>
                                 </div>
                             </div>
 
                             <!-- Ítem: Horario -->
-                            <div class="sun-contact__info-item" style="display: flex; align-items: center; margin-bottom: 1.5rem;">
-                                <div class="sun-contact__info-icon" style="margin-right: 1rem; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                    <i class="fa fa-clock" style="color: white; font-size: 1.2rem;"/>
+                            <div class="sun-contact__info-item"
+                                style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                                <div class="sun-contact__info-icon"
+                                    style="margin-right: 1rem; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="fa fa-clock" style="color: white; font-size: 1.2rem;" />
                                 </div>
                                 <div class="sun-contact__info-content" style="font-size: 1rem; color: white;">
-                                    <strong style="display: block; font-weight: 600; margin-bottom: 0.2rem;">Horario de atención</strong>
+                                    <strong style="display: block; font-weight: 600; margin-bottom: 0.2rem;">Horario de
+                                        atención</strong>
                                     <span style="opacity: 0.9;">Lunes a Viernes: 9:00 AM - 6:00 PM</span>
                                 </div>
                             </div>
                         </div>
 
                         <!-- ============== REDES SOCIALES (alineación como referencia) === -->
-                        <div class="sun-footer__social" style="display: flex; justify-content: center; align-items: center; gap: 1.25rem; margin-top: 2.5rem;">
-                            <a href="https://www.facebook.com/sunnametech" class="sun-footer__social-link" target="_blank" rel="noopener" aria-label="Facebook" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.12); color: white; text-decoration: none; transition: all 0.3s ease;">
-                                <i class="fa fa-facebook-f" style="font-size: 1rem;"/>
+                        <div class="sun-footer__social"
+                            style="display: flex; justify-content: center; align-items: center; gap: 1.25rem; margin-top: 2.5rem;">
+                            <a href="https://www.facebook.com/sunnametech" class="sun-footer__social-link"
+                                target="_blank" rel="noopener" aria-label="Facebook"
+                                style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.12); color: white; text-decoration: none; transition: all 0.3s ease;">
+                                <i class="fa fa-facebook-f" style="font-size: 1rem;" />
                             </a>
-                            <a href="https://www.sunname.com.mx/website/social/linkedin" class="sun-footer__social-link" target="_blank" rel="noopener" aria-label="LinkedIn" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.12); color: white; text-decoration: none; transition: all 0.3s ease;">
-                                <i class="fa fa-linkedin-in" style="font-size: 1rem;"/>
+                            <a href="https://www.sunname.com.mx/website/social/linkedin" class="sun-footer__social-link"
+                                target="_blank" rel="noopener" aria-label="LinkedIn"
+                                style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.12); color: white; text-decoration: none; transition: all 0.3s ease;">
+                                <i class="fa fa-linkedin-in" style="font-size: 1rem;" />
                             </a>
-                            <a href="https://www.instagram.com/sunnametech" class="sun-footer__social-link" target="_blank" rel="noopener" aria-label="Instagram" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.12); color: white; text-decoration: none; transition: all 0.3s ease;">
-                                <i class="fa fa-instagram" style="font-size: 1rem;"/>
+                            <a href="https://www.instagram.com/sunnametech" class="sun-footer__social-link"
+                                target="_blank" rel="noopener" aria-label="Instagram"
+                                style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.12); color: white; text-decoration: none; transition: all 0.3s ease;">
+                                <i class="fa fa-instagram" style="font-size: 1rem;" />
                             </a>
-                            <a href="https://www.youtube.com/@sunnametech" class="sun-footer__social-link" target="_blank" rel="noopener" aria-label="YouTube" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.12); color: white; text-decoration: none; transition: all 0.3s ease;">
-                                <i class="fa fa-youtube" style="font-size: 1rem;"/>
+                            <a href="https://www.youtube.com/@sunnametech" class="sun-footer__social-link"
+                                target="_blank" rel="noopener" aria-label="YouTube"
+                                style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.12); color: white; text-decoration: none; transition: all 0.3s ease;">
+                                <i class="fa fa-youtube" style="font-size: 1rem;" />
                             </a>
-                            <a href="https://wa.me/8148071309?text=Hola%2C%20me%20interesa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20servicios%20que%20ofrecen" class="sun-footer__social-link" target="_blank" rel="noopener" aria-label="WhatsApp" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.12); color: white; text-decoration: none; transition: all 0.3s ease;">
-                                <i class="fa fa-whatsapp" style="font-size: 1rem;"/>
+                            <a href="https://wa.me/5217711014687?text=Hola%2C%20me%20interesa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20servicios%20que%20ofrecen"
+                                class="sun-footer__social-link" target="_blank" rel="noopener" aria-label="WhatsApp"
+                                style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.12); color: white; text-decoration: none; transition: all 0.3s ease;">
+                                <i class="fa fa-whatsapp" style="font-size: 1rem;" />
                             </a>
                         </div>
                         <!-- ============== /REDES SOCIALES ============================== -->
@@ -225,11 +328,13 @@
             .sunname-form-bar {
                 height: 10px;
                 width: 100%;
-                background: linear-gradient(to right, #263a80, #46c3cd); /* Morado → Aqua Sunname */
+                background: linear-gradient(to right, #263a80, #46c3cd);
+                /* Morado → Aqua Sunname */
                 position: absolute;
                 top: 0;
                 left: 0;
-                border-top-left-radius: 0.75rem; /* coincide con .rounded */
+                border-top-left-radius: 0.75rem;
+                /* coincide con .rounded */
                 border-top-right-radius: 0.75rem;
                 box-shadow: 0 2px 8px rgba(0, 0, 0, .05);
             }

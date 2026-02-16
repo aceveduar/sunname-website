@@ -1,3 +1,60 @@
+//
+// This file is meant to regroup your design customizations. For example, doing
+// this will separate your footer with a dotted border using your primary color.
+//
+// footer {
+//     border-top: 5px dotted map-get($theme-colors, 'primary');
+// }
+//
+
+
+/* ==========================================================================
+   Transiciones suaves al navegar entre páginas
+   ========================================================================== */
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-group(*) {
+    animation-duration: 0.5s;
+}
+
+
+
+
+
+
+/* ==========================================================================
+   Eliminar márgenes y paddings del contenedor principal
+   ========================================================================== */
+
+.s_embed_code_embedded.o_not_editable.container-fluid {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+}
+
+/* Si el problema viene de elementos internos */
+.s_embed_code_embedded .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.s_embed_code_embedded .col, 
+.s_embed_code_embedded [class*="col-"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+
+
+
+
+
+
+
+
+
 /* ==========================================================================
    SISTEMA DE DISEÑO SUNNAME - CSS OPTIMIZADO
    ========================================================================== */

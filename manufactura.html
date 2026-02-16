@@ -1,1544 +1,1595 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Sunname Manufacturing - Digitaliza tu planta de manufactura y ensamble con soluciones ERP especializadas" />
-        <title>
-            Sunname Manufacturing | Digitalización para Manufactura y Ensamble
-        </title>
-        <!--Font Awesome-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-        <link rel="stylesheet" href="style.css" />
-        <style>
-            /* ==========================================================================
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Sunname Manufacturing - Digitaliza tu planta de manufactura y ensamble con soluciones ERP especializadas" />
+    <title>
+        Sunname Manufacturing | Digitalización para Manufactura y Ensamble
+    </title>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* ==========================================================================
            ESTILOS ESPECÍFICOS PARA MANUFACTURING - SISTEMA BEM
            ========================================================================== */
 
-            /* Hero Section */
-            .hero__badge {
-                display: inline-block;
-                background: rgba(70, 194, 206, 0.2);
-                color: var(--sun-color-secondary);
-                padding: 0.5rem 1rem;
-                border-radius: var(--sun-radius-full);
-                font-size: 0.875rem;
-                font-weight: 600;
-                margin-bottom: 1.5rem;
-            }
+        /* Hero Section */
+        .hero__badge {
+            display: inline-block;
+            background: rgba(70, 194, 206, 0.2);
+            color: var(--sun-color-secondary);
+            padding: 0.5rem 1rem;
+            border-radius: var(--sun-radius-full);
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
 
-            .mfg-hero .odoo-hero__description {
-                color: var(--sun-color-white-80);
-            }
+        .mfg-hero .odoo-hero__description {
+            color: var(--sun-color-white-80);
+        }
 
-            /* Badges */
-            .mf-hero__badges {
-                display: flex;
-                gap: 0.5rem;
-                flex-wrap: wrap;
-                margin-bottom: 1rem;
-            }
+        /* Badges */
+        .mf-hero__badges {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
 
-            /* KPIs */
-            .mf-kpis {
-                display: grid;
-                gap: var(--sun-space-lg);
-                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            }
+        /* KPIs */
+        .mf-kpis {
+            display: grid;
+            gap: var(--sun-space-lg);
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        }
 
-            .mf-kpi {
-                text-align: center;
-                padding: var(--sun-space-lg);
-                border-radius: var(--sun-radius-lg);
-                background: var(--sun-color-white);
-                box-shadow: var(--sun-shadow-sm);
-                transition: transform var(--sun-transition-fast);
-            }
+        .mf-kpi {
+            text-align: center;
+            padding: var(--sun-space-lg);
+            border-radius: var(--sun-radius-lg);
+            background: var(--sun-color-white);
+            box-shadow: var(--sun-shadow-sm);
+            transition: transform var(--sun-transition-fast);
+        }
 
-            .mf-kpi:hover {
-                transform: translateY(-2px);
-            }
+        .mf-kpi:hover {
+            transform: translateY(-2px);
+        }
 
-            .mf-kpi__number {
-                font-size: 2.25rem;
-                font-weight: var(--sun-font-weight-black);
-                color: var(--sun-color-primary);
-                display: block;
-                margin-bottom: 0.5rem;
-            }
+        .mf-kpi__number {
+            font-size: 2.25rem;
+            font-weight: var(--sun-font-weight-black);
+            color: var(--sun-color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
 
-            .mf-kpi__label {
-                color: var(--sun-color-text-light);
-            }
+        .mf-kpi__label {
+            color: var(--sun-color-text-light);
+        }
 
-            /* Process Steps */
-            .mf-process__steps {
-                display: grid;
-                gap: var(--sun-space-lg);
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            }
+        /* Process Steps */
+        .mf-process__steps {
+            display: grid;
+            gap: var(--sun-space-lg);
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
 
-            /* Pain/Solution Cards */
-            .sun-pain-solution {
-                display: grid;
-                gap: var(--sun-space-lg);
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            }
+        /* Pain/Solution Cards */
+        .sun-pain-solution {
+            display: grid;
+            gap: var(--sun-space-lg);
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
 
-            .sun-pain {
-                border-left: 4px solid rgba(245, 158, 11, 0.35);
-                background: #fff8eb;
-                padding: var(--sun-space-lg);
-                border-radius: var(--sun-radius-lg);
-                box-shadow: var(--sun-shadow-sm);
-                transition: transform var(--sun-transition-fast);
-            }
+        .sun-pain {
+            border-left: 4px solid rgba(245, 158, 11, 0.35);
+            background: #fff8eb;
+            padding: var(--sun-space-lg);
+            border-radius: var(--sun-radius-lg);
+            box-shadow: var(--sun-shadow-sm);
+            transition: transform var(--sun-transition-fast);
+        }
 
-            .sun-pain:hover {
-                transform: translateX(2px);
-            }
+        .sun-pain:hover {
+            transform: translateX(2px);
+        }
 
-            .sun-solution {
-                border-left: 4px solid var(--sun-color-secondary);
-                background: var(--sun-color-secondary-10);
-                padding: var(--sun-space-lg);
-                border-radius: var(--sun-radius-lg);
-                box-shadow: var(--sun-shadow-sm);
-                transition: transform var(--sun-transition-fast);
-            }
+        .sun-solution {
+            border-left: 4px solid var(--sun-color-secondary);
+            background: var(--sun-color-secondary-10);
+            padding: var(--sun-space-lg);
+            border-radius: var(--sun-radius-lg);
+            box-shadow: var(--sun-shadow-sm);
+            transition: transform var(--sun-transition-fast);
+        }
 
-            .sun-solution:hover {
-                transform: translateX(2px);
-            }
+        .sun-solution:hover {
+            transform: translateX(2px);
+        }
 
-            /* Modules */
+        /* Modules */
+        .sun-mod-bullets {
+            columns: 2;
+            column-gap: var(--sun-space-lg);
+        }
+
+        @media (max-width: 800px) {
             .sun-mod-bullets {
-                columns: 2;
-                column-gap: var(--sun-space-lg);
+                columns: 1;
             }
+        }
 
-            @media (max-width: 800px) {
-                .sun-mod-bullets {
-                    columns: 1;
-                }
-            }
+        /* Industries */
+        .mf-industries__grid {
+            display: grid;
+            gap: var(--sun-space-lg);
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        }
 
-            /* Industries */
-            .mf-industries__grid {
-                display: grid;
-                gap: var(--sun-space-lg);
-                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            }
+        /* Comparison Table */
+        .mf-compare {
+            overflow: auto;
+            background: var(--sun-color-white);
+            border-radius: var(--sun-radius-lg);
+            box-shadow: var(--sun-shadow-sm);
+        }
 
-            /* Comparison Table */
-            .mf-compare {
-                overflow: auto;
-                background: var(--sun-color-white);
-                border-radius: var(--sun-radius-lg);
-                box-shadow: var(--sun-shadow-sm);
-            }
+        .mf-compare__table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            role: table;
+        }
 
-            .mf-compare__table {
-                width: 100%;
-                border-collapse: separate;
-                border-spacing: 0;
-                role: table;
-            }
+        .mf-compare__header {
+            background: var(--sun-color-secondary-10);
+            color: var(--sun-color-primary);
+            font-weight: var(--sun-font-weight-bold);
+        }
 
-            .mf-compare__header {
-                background: var(--sun-color-secondary-10);
-                color: var(--sun-color-primary);
-                font-weight: var(--sun-font-weight-bold);
-            }
+        .mf-compare__aspect {
+            font-weight: var(--sun-font-weight-bold);
+            background: var(--sun-color-light);
+        }
 
-            .mf-compare__aspect {
-                font-weight: var(--sun-font-weight-bold);
-                background: var(--sun-color-light);
-            }
+        .mf-compare__cell {
+            padding: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+            vertical-align: top;
+        }
 
-            .mf-compare__cell {
-                padding: 1rem;
-                border-bottom: 1px solid #e5e7eb;
-                vertical-align: top;
-            }
+        .mf-compare__cell--success {
+            background: rgba(16, 185, 129, 0.05);
+            border-left: 3px solid var(--sun-color-success);
+        }
 
-            .mf-compare__cell--success {
-                background: rgba(16, 185, 129, 0.05);
-                border-left: 3px solid var(--sun-color-success);
-            }
+        /* Pain Points */
+        .mf-pains__grid {
+            display: grid;
+            gap: var(--sun-space-lg);
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        }
 
-            /* Pain Points */
-            .mf-pains__grid {
-                display: grid;
-                gap: var(--sun-space-lg);
-                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            }
+        .mf-pain__point {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: var(--sun-radius-md);
+            box-shadow: var(--sun-shadow-sm);
+            transition: all 0.3s;
+        }
 
-            .mf-pain__point {
-                display: flex;
-                align-items: flex-start;
-                gap: 1rem;
-                padding: 1.5rem;
-                background: white;
-                border-radius: var(--sun-radius-md);
-                box-shadow: var(--sun-shadow-sm);
-                transition: all 0.3s;
-            }
+        .mf-pain__point:hover {
+            transform: translateX(5px);
+            box-shadow: var(--sun-shadow-md);
+        }
 
-            .mf-pain__point:hover {
-                transform: translateX(5px);
-                box-shadow: var(--sun-shadow-md);
-            }
+        .mf-pain__icon {
+            font-size: 2rem;
+            color: var(--sun-color-danger);
+            flex-shrink: 0;
+        }
 
-            .mf-pain__icon {
-                font-size: 2rem;
-                color: var(--sun-color-danger);
-                flex-shrink: 0;
-            }
+        .mf-pain__title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--sun-color-primary);
+            margin-bottom: 0.5rem;
+        }
 
-            .mf-pain__title {
-                font-size: 1.2rem;
-                font-weight: 700;
-                color: var(--sun-color-primary);
-                margin-bottom: 0.5rem;
-            }
+        .mf-pain__text {
+            color: var(--sun-color-text);
+        }
 
-            .mf-pain__text {
-                color: var(--sun-color-text);
-            }
+        /* FAQ */
+        .mf-faq__grid {
+            display: grid;
+            gap: var(--sun-space-lg);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
 
-            /* FAQ */
-            .mf-faq__grid {
-                display: grid;
-                gap: var(--sun-space-lg);
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            }
+        .mf-faq__item {
+            background: var(--sun-color-white);
+            border-radius: var(--sun-radius-md);
+            padding: 1rem 1.25rem;
+            box-shadow: var(--sun-shadow-sm);
+            margin-bottom: var(--sun-space-md);
+            transition: box-shadow var(--sun-transition-fast);
+        }
 
-            .mf-faq__item {
-                background: var(--sun-color-white);
-                border-radius: var(--sun-radius-md);
-                padding: 1rem 1.25rem;
-                box-shadow: var(--sun-shadow-sm);
-                margin-bottom: var(--sun-space-md);
-                transition: box-shadow var(--sun-transition-fast);
-            }
+        .mf-faq__item:hover {
+            box-shadow: var(--sun-shadow-md);
+        }
 
-            .mf-faq__item:hover {
-                box-shadow: var(--sun-shadow-md);
-            }
+        .mf-faq__question {
+            cursor: pointer;
+            font-weight: var(--sun-font-weight-bold);
+            color: var(--sun-color-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
 
-            .mf-faq__question {
-                cursor: pointer;
-                font-weight: var(--sun-font-weight-bold);
-                color: var(--sun-color-primary);
-                display: flex;
-                align-items: center;
-                gap: 0.5rem;
-            }
+        .mf-faq__question i {
+            color: var(--sun-color-secondary);
+        }
 
-            .mf-faq__question i {
-                color: var(--sun-color-secondary);
-            }
+        .mf-faq__answer {
+            margin-top: 0.75rem;
+            color: var(--sun-color-text);
+        }
 
-            .mf-faq__answer {
-                margin-top: 0.75rem;
-                color: var(--sun-color-text);
-            }
+        /* FAQ */
+        .mf-faq details {
+            background: var(--sun-color-white);
+            border-radius: var(--sun-radius-md);
+            padding: 1rem 1.25rem;
+            box-shadow: var(--sun-shadow-sm);
+            margin-bottom: var(--sun-space-md);
+            transition: box-shadow var(--sun-transition-fast);
+        }
 
-            /* FAQ */
-            .mf-faq details {
-                background: var(--sun-color-white);
-                border-radius: var(--sun-radius-md);
-                padding: 1rem 1.25rem;
-                box-shadow: var(--sun-shadow-sm);
-                margin-bottom: var(--sun-space-md);
-                transition: box-shadow var(--sun-transition-fast);
-            }
+        .mf-faq details:hover {
+            box-shadow: var(--sun-shadow-md);
+        }
 
-            .mf-faq details:hover {
-                box-shadow: var(--sun-shadow-md);
-            }
+        .mf-faq summary {
+            cursor: pointer;
+            font-weight: var(--sun-font-weight-bold);
+            color: var(--sun-color-primary);
+        }
 
-            .mf-faq summary {
-                cursor: pointer;
-                font-weight: var(--sun-font-weight-bold);
-                color: var(--sun-color-primary);
-            }
+        /* Integrations */
+        .mf-integrations__logos {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--sun-space-xl);
+        }
 
-            /* Integrations */
-            .mf-integrations__logos {
-                display: flex;
-                gap: 1rem;
-                flex-wrap: wrap;
-                align-items: center;
-                justify-content: center;
-                margin-bottom: var(--sun-space-xl);
-            }
+        .mf-integrations__logo {
+            background: var(--sun-color-white);
+            border: 1px dashed var(--sun-color-secondary-30);
+            padding: 0.75rem 1rem;
+            border-radius: var(--sun-radius-full);
+            font-weight: 600;
+            transition: all var(--sun-transition-fast);
+        }
 
-            .mf-integrations__logo {
-                background: var(--sun-color-white);
-                border: 1px dashed var(--sun-color-secondary-30);
-                padding: 0.75rem 1rem;
-                border-radius: var(--sun-radius-full);
-                font-weight: 600;
-                transition: all var(--sun-transition-fast);
-            }
+        .mf-integrations__logo:hover {
+            border-color: var(--sun-color-secondary);
+            transform: translateY(-1px);
+            box-shadow: var(--sun-shadow-sm);
+        }
 
-            .mf-integrations__logo:hover {
-                border-color: var(--sun-color-secondary);
-                transform: translateY(-1px);
-                box-shadow: var(--sun-shadow-sm);
-            }
+        .mf-integrations__details {
+            display: grid;
+            gap: var(--sun-space-lg);
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
 
-            .mf-integrations__details {
-                display: grid;
-                gap: var(--sun-space-lg);
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            }
+        .mf-integration__item {
+            background: var(--sun-color-white);
+            padding: var(--sun-space-lg);
+            border-radius: var(--sun-radius-lg);
+            box-shadow: var(--sun-shadow-sm);
+            transition: transform var(--sun-transition-fast);
+        }
 
-            .mf-integration__item {
-                background: var(--sun-color-white);
-                padding: var(--sun-space-lg);
-                border-radius: var(--sun-radius-lg);
-                box-shadow: var(--sun-shadow-sm);
-                transition: transform var(--sun-transition-fast);
-            }
+        .mf-integration__item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--sun-shadow-md);
+        }
 
-            .mf-integration__item:hover {
-                transform: translateY(-2px);
-                box-shadow: var(--sun-shadow-md);
-            }
+        .mf-integration__item h3 {
+            color: var(--sun-color-primary);
+            margin-bottom: var(--sun-space-sm);
+            font-size: 1.2rem;
+        }
 
-            .mf-integration__item h3 {
-                color: var(--sun-color-primary);
-                margin-bottom: var(--sun-space-sm);
-                font-size: 1.2rem;
-            }
+        /* Modules Grid */
+        .mf-modules__grid {
+            display: grid;
+            gap: var(--sun-space-lg);
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
 
-            /* Modules Grid */
-            .mf-modules__grid {
-                display: grid;
-                gap: var(--sun-space-lg);
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            }
+        .mf-module__card {
+            background: var(--sun-color-white);
+            padding: var(--sun-space-lg);
+            border-radius: var(--sun-radius-lg);
+            box-shadow: var(--sun-shadow-sm);
+            text-align: center;
+            transition: transform var(--sun-transition-fast), box-shadow var(--sun-transition-fast);
+        }
 
-            .mf-module__card {
-                background: var(--sun-color-white);
-                padding: var(--sun-space-lg);
-                border-radius: var(--sun-radius-lg);
-                box-shadow: var(--sun-shadow-sm);
-                text-align: center;
-                transition: transform var(--sun-transition-fast), box-shadow var(--sun-transition-fast);
-            }
+        .mf-module__card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--sun-shadow-lg);
+        }
 
-            .mf-module__card:hover {
-                transform: translateY(-3px);
-                box-shadow: var(--sun-shadow-lg);
-            }
+        .mf-module__icon {
+            width: 60px;
+            height: 60px;
+            background: var(--sun-gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--sun-space-md);
+            color: white;
+            font-size: 1.5rem;
+            transition: transform var(--sun-transition-fast);
+        }
 
-            .mf-module__icon {
-                width: 60px;
-                height: 60px;
-                background: var(--sun-gradient-primary);
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: 0 auto var(--sun-space-md);
-                color: white;
-                font-size: 1.5rem;
-                transition: transform var(--sun-transition-fast);
-            }
+        .mf-module__card:hover .mf-module__icon {
+            transform: scale(1.1) rotate(5deg);
+        }
 
-            .mf-module__card:hover .mf-module__icon {
-                transform: scale(1.1) rotate(5deg);
-            }
+        .mf-module__title {
+            color: var(--sun-color-primary);
+            margin-bottom: var(--sun-space-sm);
+            font-size: 1.3rem;
+            font-weight: var(--sun-font-weight-bold);
+        }
 
-            .mf-module__title {
-                color: var(--sun-color-primary);
-                margin-bottom: var(--sun-space-sm);
-                font-size: 1.3rem;
-                font-weight: var(--sun-font-weight-bold);
-            }
+        .mf-module__description {
+            color: var(--sun-color-text);
+            font-size: 0.95rem;
+        }
 
-            .mf-module__description {
-                color: var(--sun-color-text);
-                font-size: 0.95rem;
-            }
+        /* Hero Media */
+        .mf-hero__media {
+            position: relative;
+        }
 
-            /* Hero Media */
-            .mf-hero__media {
-                position: relative;
-            }
+        .mf-hero__video-badge {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            background: var(--sun-color-white-80);
+            backdrop-filter: saturate(1.2) blur(4px);
+            padding: 0.4rem 0.6rem;
+            border-radius: var(--sun-radius-full);
+            font-size: 0.8rem;
+        }
 
-            .mf-hero__video-badge {
-                position: absolute;
-                bottom: 12px;
-                right: 12px;
-                background: var(--sun-color-white-80);
-                backdrop-filter: saturate(1.2) blur(4px);
-                padding: 0.4rem 0.6rem;
-                border-radius: var(--sun-radius-full);
-                font-size: 0.8rem;
-            }
+        /* Contact Form */
+        .mf-contact__form {
+            display: grid;
+            gap: var(--sun-space-md);
+            grid-template-columns: 1fr;
+            max-width: 760px;
+            margin: 0 auto;
+        }
 
-            /* Contact Form */
-            .mf-contact__form {
-                display: grid;
-                gap: var(--sun-space-md);
-                grid-template-columns: 1fr;
-                max-width: 760px;
-                margin: 0 auto;
-            }
+        .mf-contact__row {
+            display: grid;
+            gap: var(--sun-space-md);
+            grid-template-columns: 1fr;
+        }
 
+        @media (min-width: 720px) {
             .mf-contact__row {
-                display: grid;
-                gap: var(--sun-space-md);
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
             }
+        }
 
-            @media (min-width: 720px) {
-                .mf-contact__row {
-                    grid-template-columns: 1fr 1fr;
-                }
-            }
+        .mf-contact__form input,
+        .mf-contact__form select,
+        .mf-contact__form textarea {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            border-radius: var(--sun-radius-md);
+            border: 1px solid #e5e7eb;
+            font: inherit;
+            transition: border-color var(--sun-transition-fast), box-shadow var(--sun-transition-fast);
+        }
 
-            .mf-contact__form input,
-            .mf-contact__form select,
-            .mf-contact__form textarea {
-                width: 100%;
-                padding: 0.9rem 1rem;
-                border-radius: var(--sun-radius-md);
-                border: 1px solid #e5e7eb;
-                font: inherit;
-                transition: border-color var(--sun-transition-fast), box-shadow var(--sun-transition-fast);
-            }
+        .mf-contact__form input:focus,
+        .mf-contact__form select:focus,
+        .mf-contact__form textarea:focus {
+            outline: none;
+            border-color: var(--sun-color-secondary);
+            box-shadow: 0 0 0 3px rgba(70, 194, 206, 0.1);
+        }
 
-            .mf-contact__form input:focus,
-            .mf-contact__form select:focus,
-            .mf-contact__form textarea:focus {
-                outline: none;
-                border-color: var(--sun-color-secondary);
-                box-shadow: 0 0 0 3px rgba(70, 194, 206, 0.1);
-            }
+        .mf-contact__hint {
+            color: var(--sun-color-text-light);
+            font-size: 0.95rem;
+            text-align: center;
+            margin-top: 0.5rem;
+        }
 
-            .mf-contact__hint {
-                color: var(--sun-color-text-light);
-                font-size: 0.95rem;
-                text-align: center;
-                margin-top: 0.5rem;
-            }
+        /* Navegación Sticky */
+        .sun-nav-sticky {
+            position: sticky;
+            top: 0;
+            background: var(--sun-color-white);
+            border-bottom: 1px solid #e5e7eb;
+            padding: 0.75rem 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
 
-            /* Navegación Sticky */
-            .sun-nav-sticky {
-                position: sticky;
-                top: 0;
-                background: var(--sun-color-white);
-                border-bottom: 1px solid #e5e7eb;
-                padding: 0.75rem 0;
-                z-index: 100;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-                backdrop-filter: blur(10px);
-            }
+        .sun-nav-sticky__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-            .sun-nav-sticky__content {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
+        .sun-nav-sticky__logo a {
+            font-weight: var(--sun-font-weight-bold);
+            color: var(--sun-color-primary);
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
 
-            .sun-nav-sticky__logo a {
-                font-weight: var(--sun-font-weight-bold);
-                color: var(--sun-color-primary);
-                text-decoration: none;
-                font-size: 1.1rem;
-            }
+        .sun-nav-sticky__menu {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
 
+        .sun-nav-sticky__link {
+            color: var(--sun-color-text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color var(--sun-transition-fast);
+            padding: 0.5rem 0;
+        }
+
+        .sun-nav-sticky__link:hover,
+        .sun-nav-sticky__link:focus {
+            color: var(--sun-color-primary);
+        }
+
+        @media (max-width: 768px) {
             .sun-nav-sticky__menu {
-                display: flex;
-                gap: 1.5rem;
-                list-style: none;
-                margin: 0;
-                padding: 0;
+                display: none;
+                /* Podría expandirse con un menú móvil */
             }
+        }
 
-            .sun-nav-sticky__link {
-                color: var(--sun-color-text);
-                text-decoration: none;
-                font-weight: 500;
-                transition: color var(--sun-transition-fast);
-                padding: 0.5rem 0;
-            }
+        /* CTA Sticky */
+        .mfg-cta-sticky {
+            position: sticky;
+            bottom: 0;
+            background: var(--sun-color-white);
+            border-top: 1px solid #e5e7eb;
+            padding: 0.75rem;
+            z-index: 20;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        }
 
-            .sun-nav-sticky__link:hover,
-            .sun-nav-sticky__link:focus {
-                color: var(--sun-color-primary);
-            }
+        .mfg-cta-sticky .sun__container {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
-            @media (max-width: 768px) {
-                .sun-nav-sticky__menu {
-                    display: none;
-                    /* Podría expandirse con un menú móvil */
-                }
-            }
+        /* Focus States */
+        .sun-btn:focus-visible,
+        .sun-form__input:focus-visible,
+        .sun-form__select:focus-visible,
+        .sun-form__textarea:focus-visible {
+            outline: 2px solid var(--sun-color-secondary);
+            outline-offset: 2px;
+        }
 
-            /* CTA Sticky */
-            .mfg-cta-sticky {
-                position: sticky;
-                bottom: 0;
-                background: var(--sun-color-white);
-                border-top: 1px solid #e5e7eb;
-                padding: 0.75rem;
-                z-index: 20;
-                box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-            }
+        /* Technical Content Language */
+        .sun-mod-bullets li,
+        .mf-compare__cell,
+        .mf-kpi__label {
+            lang: "en";
+        }
 
-            .mfg-cta-sticky .sun__container {
-                display: flex;
-                gap: 0.75rem;
-                justify-content: center;
-                flex-wrap: wrap;
-            }
+        /* Grid System */
+        .sun-grid {
+            display: grid;
+            gap: var(--sun-space-lg);
+        }
 
-            /* Focus States */
-            .sun-btn:focus-visible,
-            .sun-form__input:focus-visible,
-            .sun-form__select:focus-visible,
-            .sun-form__textarea:focus-visible {
-                outline: 2px solid var(--sun-color-secondary);
-                outline-offset: 2px;
-            }
+        .sun-grid--2col {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
 
-            /* Technical Content Language */
-            .sun-mod-bullets li,
-            .mf-compare__cell,
-            .mf-kpi__label {
-                lang: "en";
-            }
+        .sun-grid--3col {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
 
-            /* Grid System */
-            .sun-grid {
-                display: grid;
-                gap: var(--sun-space-lg);
-            }
+        .sun-grid--4col {
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        }
 
-            .sun-grid--2col {
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            }
+        /* Pain Points */
+        .pain-point {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: var(--sun-radius-md);
+            box-shadow: var(--sun-shadow-sm);
+            transition: all 0.3s;
+        }
 
-            .sun-grid--3col {
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            }
+        .pain-point:hover {
+            transform: translateX(5px);
+            box-shadow: var(--sun-shadow-md);
+        }
 
-            .sun-grid--4col {
-                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            }
+        .pain-point__icon {
+            font-size: 2rem;
+            color: var(--sun-color-danger);
+            flex-shrink: 0;
+        }
 
-            /* Pain Points */
-            .pain-point {
-                display: flex;
-                align-items: flex-start;
-                gap: 1rem;
-                padding: 1.5rem;
-                background: white;
-                border-radius: var(--sun-radius-md);
-                box-shadow: var(--sun-shadow-sm);
-                transition: all 0.3s;
-            }
+        .pain-point__title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--sun-color-primary);
+            margin-bottom: 0.5rem;
+        }
 
-            .pain-point:hover {
-                transform: translateX(5px);
-                box-shadow: var(--sun-shadow-md);
-            }
+        .pain-point__text {
+            color: var(--sun-color-text);
+        }
 
-            .pain-point__icon {
-                font-size: 2rem;
-                color: var(--sun-color-danger);
-                flex-shrink: 0;
-            }
+        /* Comparison Table */
+        .comparison-table {
+            background: white;
+            border-radius: var(--sun-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--sun-shadow-md);
+        }
 
-            .pain-point__title {
-                font-size: 1.2rem;
-                font-weight: 700;
-                color: var(--sun-color-primary);
-                margin-bottom: 0.5rem;
-            }
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            border-bottom: 1px solid var(--sun-color-light);
+        }
 
-            .pain-point__text {
-                color: var(--sun-color-text);
-            }
+        .comparison-row:last-child {
+            border-bottom: none;
+        }
 
-            /* Comparison Table */
-            .comparison-table {
-                background: white;
-                border-radius: var(--sun-radius-lg);
-                overflow: hidden;
-                box-shadow: var(--sun-shadow-md);
-            }
+        .comparison-cell {
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
 
+        .comparison-cell:first-child {
+            font-weight: 600;
+            background: var(--sun-color-light);
+        }
+
+        .comparison-cell--header {
+            background: var(--sun-gradient-primary);
+            color: white;
+            font-weight: 700;
+            justify-content: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 767px) {
             .comparison-row {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                border-bottom: 1px solid var(--sun-color-light);
-            }
-
-            .comparison-row:last-child {
-                border-bottom: none;
-            }
-
-            .comparison-cell {
-                padding: 1.5rem;
-                display: flex;
-                align-items: center;
+                grid-template-columns: 1fr;
             }
 
             .comparison-cell:first-child {
-                font-weight: 600;
-                background: var(--sun-color-light);
-            }
-
-            .comparison-cell--header {
-                background: var(--sun-gradient-primary);
+                background: var(--sun-color-primary);
                 color: white;
-                font-weight: 700;
-                justify-content: center;
+            }
+        }
+
+        /* Animaciones para la sección de presupuesto */
+        .odoo-hero__content {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .odoo-hero__text {
+            animation: fadeInLeft 0.8s ease-out 0.2s both;
+        }
+
+        .odoo-hero__image {
+            animation: fadeInRight 0.8s ease-out 0.4s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
             }
 
-            /* Responsive */
-            @media (max-width: 767px) {
-                .comparison-row {
-                    grid-template-columns: 1fr;
-                }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-                .comparison-cell:first-child {
-                    background: var(--sun-color-primary);
-                    color: white;
-                }
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
             }
 
-            /* Animaciones para la sección de presupuesto */
-            .odoo-hero__content {
-                animation: fadeInUp 0.8s ease-out;
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Hover effects para botones */
+        .odoo-hero__button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Responsive para móviles */
+        @media (max-width: 768px) {
+            .odoo-hero__container {
+                flex-direction: column;
+                text-align: center;
             }
 
             .odoo-hero__text {
-                animation: fadeInLeft 0.8s ease-out 0.2s both;
+                order: 2;
             }
 
             .odoo-hero__image {
-                animation: fadeInRight 0.8s ease-out 0.4s both;
+                order: 1;
+                margin-bottom: 2rem;
             }
 
-            @keyframes fadeInUp {
-                from {
-                    opacity: 0;
-                    transform: translateY(30px);
-                }
-
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
+            .odoo-hero__buttons {
+                flex-direction: column;
+                gap: 1rem;
             }
 
-            @keyframes fadeInLeft {
-                from {
-                    opacity: 0;
-                    transform: translateX(-30px);
-                }
+            .odoo-hero__clients {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
 
-                to {
-                    opacity: 1;
-                    transform: translateX(0);
-                }
+<body>
+    <main class="sun">
+        <!-- ================= SECCIÓN HERO ================= -->
+        <section class="odoo-hero mfg-hero" id="Inicio" aria-labelledby="hero-title">
+            <div class="odoo-hero__container sun__container">
+                <div class="odoo-hero__content">
+                    <div class="odoo-hero__text">
+                        <div class="odoo-hero__badge sun-badge sun-badge--secondary">
+                            PARA MANUFACTURA Y ENSAMBLE
+                        </div>
+                        <h1 id="hero-title" class="odoo-hero__title">
+                            Digitaliza tu planta de
+                            <span class="odoo-hero__highlight">manufactura</span> en tiempo real
+                        </h1>
+                        <p class="odoo-hero__description">
+                            Transforma tus operaciones de manufactura y ensamble con
+                            <strong>Sunname Manufacturing</strong>. Control total de producción, inventario, calidad y
+                            trazabilidad en una sola plataforma diseñada para la industria mexicana.
+                        </p>
+                        <div class="odoo-hero__buttons">
+                            <a href="#Hablemos-de-tu-planta" class="odoo-hero__button sun-btn sun-btn--primary">
+                                Solicitar demo
+                                <i class="fa fa-industry" aria-hidden="true"></i>
+                            </a>
+                            <a href="#Modulos" class="odoo-hero__button sun-btn sun-btn--secondary">
+                                <i class="fa fa-list-check odoo-hero__play-icon" aria-hidden="true"></i>
+                                Ver módulos clave
+                            </a>
+                        </div>
+                        <div class="odoo-hero__clients">
+                            <div class="odoo-hero__avatars">
+                                <div class="odoo-hero__avatar" style="background-color: var(--sun-color-secondary);">
+                                </div>
+                                <div class="odoo-hero__avatar" style="background-color: var(--sun-color-primary);">
+                                </div>
+                                <div class="odoo-hero__avatar" style="background-color: var(--sun-color-accent);"></div>
+                            </div>
+                            <div class="odoo-hero__client-text"><span class="odoo-hero__highlight">+10</span> plantas de
+                                manufactura optimizadas</div>
+                        </div>
+                    </div>
+                    <div class="odoo-hero__image mf-hero__media">
+                        <figure class="odoo-hero__dashboard-container">
+                            <img src="https://www.sunname.com.mx/web/image/35843-c7a13b07/manufactura.png?height=256"
+                                alt="Dashboard de producción en tiempo real" class="odoo-hero__dashboard-image" />
+                            <figcaption class="odoo-hero__version-badge">
+                                Visibilidad en vivo
+                            </figcaption>
+                        </figure>
+                        <div class="odoo-hero__glow-effect"></div>
+                        <span class="mf-hero__video-badge"><i class="fa fa-chart-line"></i> Métricas de
+                            producción</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =============== SECCIÓN PROBLEMAS QUE RESOLVEMOS =============== -->
+        <section class="sun__section sun__section--light" id="Problemas" aria-labelledby="problems-title">
+            <div class="sun__container">
+                <header class="sun-header u-text-center">
+                    <h2 id="problems-title" class="sun-header__title">
+                        ¿Te suena familiar?
+                    </h2>
+                    <p class="sun-header__subtitle">
+                        Estos son los problemas más comunes que enfrentan las plantas de manufactura sin digitalización
+                    </p>
+                </header>
+                <div class="sun-grid sun-grid--3col">
+                    <div class="pain-point">
+                        <div class="pain-point__icon">📊</div>
+                        <div>
+                            <h3 class="pain-point__title">Falta de visibilidad</h3>
+                            <p class="pain-point__text">
+                                No sabes en qué etapa está cada orden hasta que preguntas en piso de producción
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pain-point">
+                        <div class="pain-point__icon">💰</div>
+                        <div>
+                            <h3 class="pain-point__title">Costos descontrolados</h3>
+                            <p class="pain-point__text">
+                                Descubres sobrecostos hasta que ya es demasiado tarde para actuar
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pain-point">
+                        <div class="pain-point__icon">📦</div>
+                        <div>
+                            <h3 class="pain-point__title">Caos en materiales</h3>
+                            <p class="pain-point__text">
+                                Paros de producción por falta de materiales que creías tener en inventario
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pain-point">
+                        <div class="pain-point__icon">⏰</div>
+                        <div>
+                            <h3 class="pain-point__title">Retrasos constantes</h3>
+                            <p class="pain-point__text">
+                                Fechas de entrega comprometidas sin conocer la capacidad real de tu planta
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pain-point">
+                        <div class="pain-point__icon">🔍</div>
+                        <div>
+                            <h3 class="pain-point__title">Sin trazabilidad</h3>
+                            <p class="pain-point__text">
+                                Imposible rastrear qué lote se usó en qué producto para recalls o auditorías de calidad
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pain-point">
+                        <div class="pain-point__icon">📋</div>
+                        <div>
+                            <h3 class="pain-point__title">Procesos manuales</h3>
+                            <p class="pain-point__text">
+                                Horas perdidas capturando información en Excel que ya está obsoleta
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <!-- =============== DOLOR → SOLUCIÓN =============== -->
+        <section class="sun__section sun__section--light" id="Solucion" aria-labelledby="ps-title">
+            <div class="sun__container">
+                <header class="sun-header u-text-center">
+                    <h2 id="ps-title" class="sun-header__title">
+                        De cuellos de botella a flujo continuo
+                    </h2>
+                    <p class="sun-header__subtitle">
+                        El objetivo no es "otro sistema", es una
+                        <strong>estructura que funcione</strong> con claridad y datos confiables.
+                    </p>
+                </header>
+
+                <div class="sun-pain-solution">
+                    <article class="sun-pain sun-card">
+                        <div class="sun-card__body">
+                            <h3 class="sun-card__title"><i class="fa-solid fa-diagram-project"></i> Planeación reactiva
+                            </h3>
+                            <p class="sun-card__text">
+                                Órdenes atrasadas, cambios de última hora y baja visibilidad de capacidades.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="sun-solution sun-card">
+                        <div class="sun-card__body">
+                            <h3 class="sun-card__title"><i class="fa-solid fa-calendar-check"></i> MPS/MRP con capacidad
+                            </h3>
+                            <p class="sun-card__text">
+                                Programa maestro y requerimientos de materiales con carga por centro de trabajo.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="sun-pain sun-card">
+                        <div class="sun-card__body">
+                            <h3 class="sun-card__title"><i class="fa-solid fa-screwdriver-wrench"></i> Pérdidas y merma
+                                sin control</h3>
+                            <p class="sun-card__text">
+                                Costos invisibles, scrap sin causa y consumos no registrados.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="sun-solution sun-card">
+                        <div class="sun-card__body">
+                            <h3 class="sun-card__title"><i class="fa-solid fa-scale-balanced"></i> Costeo estándar/real
+                            </h3>
+                            <p class="sun-card__text">
+                                Consumo por BoM, tiempos por operación y variaciones de costo trazables.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="sun-pain sun-card">
+                        <div class="sun-card__body">
+                            <h3 class="sun-card__title"><i class="fa-solid fa-barcode"></i> Trazabilidad limitada</h3>
+                            <p class="sun-card__text">
+                                Dificultad para rastrear lotes/series y cumplir auditorías.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="sun-solution sun-card">
+                        <div class="sun-card__body">
+                            <h3 class="sun-card__title"><i class="fa-solid fa-route"></i> Lote a lote</h3>
+                            <p class="sun-card__text">
+                                Rastreabilidad ascendente/descendente desde materia prima hasta producto terminado.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =============== CÓMO FUNCIONA =============== -->
+        <section class="sun__section sun__section--white" id="Como-Funciona" aria-labelledby="how-title">
+            <div class="sun__container">
+                <header class="sun-header u-text-center">
+                    <h2 id="how-title" class="sun-header__title">
+                        Implementación sin dolor
+                    </h2>
+                    <p class="sun-header__subtitle">
+                        Arranca en semanas, no en meses. Vamos contigo paso a paso.
+                    </p>
+                </header>
+                <div class="mf-process__steps">
+                    <article class="sun-card sun-process-step">
+                        <div class="sun-icon-circle sun-icon-circle--large u-flex-center">
+                            <i class="fa fa-wand-magic-sparkles" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="sun-card__title">
+                            1) Configuración rápida (1–2 semanas)
+                        </h3>
+                        <ul class="sun-list">
+                            <li class="sun-list__item">Mapeo de procesos actuales</li>
+                            <li class="sun-list__item">Carga de catálogos y BOM</li>
+                            <li class="sun-list__item">Capacitación a tu equipo</li>
+                        </ul>
+                    </article>
+                    <article class="sun-card sun-process-step">
+                        <div class="sun-icon-circle sun-icon-circle--large u-flex-center">
+                            <i class="fa fa-industry" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="sun-card__title">
+                            2) Producción paralela (2–3 semanas)
+                        </h3>
+                        <ul class="sun-list">
+                            <li class="sun-list__item">Arranca con una línea de prueba</li>
+                            <li class="sun-list__item">Acompañamiento constante</li>
+                            <li class="sun-list__item">Ajustes en tiempo real</li>
+                        </ul>
+                    </article>
+                    <article class="sun-card sun-process-step">
+                        <div class="sun-icon-circle sun-icon-circle--large u-flex-center">
+                            <i class="fa fa-chart-simple" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="sun-card__title">3) Escalamiento total</h3>
+                        <ul class="sun-list">
+                            <li class="sun-list__item">Expande al resto de la planta</li>
+                            <li class="sun-list__item">Integración con ERP/contabilidad</li>
+                            <li class="sun-list__item">Soporte continuo y mejora</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =============== MÓDULOS CLAVE =============== -->
+        <section class="sun__section sun__section--light" id="Modulos" aria-labelledby="mods-title">
+            <div class="sun__container">
+                <header class="sun-header u-text-center">
+                    <h2 id="mods-title" class="sun-header__title">
+                        Lo esencial para Fabricación & Ensamble
+                    </h2>
+                    <p class="sun-header__subtitle">
+                        Procesos conectados de punta a punta con módulos especializados.
+                    </p>
+                </header>
+
+                <div class="mf-modules__grid">
+                    <div class="mf-module__card">
+                        <div class="mf-module__icon">
+                            <i class="fas fa-cogs" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="mf-module__title">Gestión de Producción</h3>
+                        <p class="mf-module__description">
+                            MRP/MPS, órdenes de trabajo, rutas y centros de trabajo
+                        </p>
+                    </div>
+                    <div class="mf-module__card">
+                        <div class="mf-module__icon">
+                            <i class="fas fa-boxes" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="mf-module__title">Inventario Inteligente</h3>
+                        <p class="mf-module__description">
+                            Control por lotes, ubicaciones y reabasto automático
+                        </p>
+                    </div>
+                    <div class="mf-module__card">
+                        <div class="mf-module__icon">
+                            <i class="fas fa-clipboard-check" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="mf-module__title">Control de Calidad</h3>
+                        <p class="mf-module__description">
+                            Puntos de inspección, checklist y no conformidades
+                        </p>
+                    </div>
+                    <div class="mf-module__card">
+                        <div class="mf-module__icon">
+                            <i class="fas fa-wrench" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="mf-module__title">Mantenimiento</h3>
+                        <p class="mf-module__description">
+                            Preventivo/correctivo con órdenes de trabajo
+                        </p>
+                    </div>
+                    <div class="mf-module__card">
+                        <div class="mf-module__icon">
+                            <i class="fas fa-calculator" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="mf-module__title">Costeo Avanzado</h3>
+                        <p class="mf-module__description">
+                            Estándar vs real por orden y centro de costo
+                        </p>
+                    </div>
+                    <div class="mf-module__card">
+                        <div class="mf-module__icon">
+                            <i class="fas fa-route" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="mf-module__title">Trazabilidad Completa</h3>
+                        <p class="mf-module__description">
+                            Lote a lote desde materia prima a producto final
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =============== RESULTADOS =============== -->
+        <section class="sun__section sun__section--white" id="Resultados" aria-labelledby="benefits-title">
+            <div class="sun__container">
+                <header class="sun-header u-text-center">
+                    <h2 id="benefits-title" class="sun-header__title">
+                        Resultados que verás en los primeros 90 días
+                    </h2>
+                    <p class="sun-header__subtitle">
+                        KPIs claros, visibles y accionables desde el primer sprint.
+                    </p>
+                </header>
+                <div class="mf-kpis">
+                    <div class="mf-kpi sun-animate-on-scroll">
+                        <div class="mf-kpi__number">📈 35%</div>
+                        <div class="mf-kpi__label">
+                            menos tiempo de planeación semanal
+                        </div>
+                    </div>
+                    <div class="mf-kpi sun-animate-on-scroll">
+                        <div class="mf-kpi__number">💰 20%</div>
+                        <div class="mf-kpi__label">
+                            ahorro en desperdicio de materiales
+                        </div>
+                    </div>
+                    <div class="mf-kpi sun-animate-on-scroll">
+                        <div class="mf-kpi__number">⏱️ 50%</div>
+                        <div class="mf-kpi__label">respuesta más rápida al cliente</div>
+                    </div>
+                    <div class="mf-kpi sun-animate-on-scroll">
+                        <div class="mf-kpi__number">✅ 99%</div>
+                        <div class="mf-kpi__label">precisión de inventario</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =============== INDUSTRIAS =============== -->
+        <section class="sun__section sun__section--light" id="Industrias" aria-labelledby="industries-title">
+            <div class="sun__container">
+                <header class="sun-header u-text-center">
+                    <h2 id="industries-title" class="sun-header__title">
+                        Experiencia en tu industria
+                    </h2>
+                    <p class="sun-header__subtitle">
+                        Hemos implementado soluciones de manufactura en diversos sectores industriales
+                    </p>
+                </header>
+
+                <div class="sun-grid sun-grid--3col" role="list">
+                    <article class="sun-card" role="listitem">
+                        <div class="sun-card__body">
+                            <div style="text-align: center; margin-bottom: 1rem;">
+                                <i class="fas fa-microchip"
+                                    style="font-size: 3rem; color: var(--sun-color-primary);"></i>
+                            </div>
+                            <h3 class="sun-card__title" style="text-align: center;">
+                                Electrónica y Ensamble
+                            </h3>
+                            <p class="sun-card__text" style="text-align: center;">
+                                Control de componentes, ensamble de PCBs, trazabilidad de lotes y gestión de maquilas.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="sun-card" role="listitem">
+                        <div class="sun-card__body">
+                            <div style="text-align: center; margin-bottom: 1rem;">
+                                <i class="fas fa-car" style="font-size: 3rem; color: var(--sun-color-primary);"></i>
+                            </div>
+                            <h3 class="sun-card__title" style="text-align: center;">
+                                Automotriz
+                            </h3>
+                            <p class="sun-card__text" style="text-align: center;">
+                                Manufactura de autopartes, control de calidad PPAP, trazabilidad y certificaciones.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="sun-card" role="listitem">
+                        <div class="sun-card__body">
+                            <div style="text-align: center; margin-bottom: 1rem;">
+                                <i class="fas fa-box" style="font-size: 3rem; color: var(--sun-color-primary);"></i>
+                            </div>
+                            <h3 class="sun-card__title" style="text-align: center;">
+                                Empaque y Embalaje
+                            </h3>
+                            <p class="sun-card__text" style="text-align: center;">
+                                Producción de empaques, control de materiales, órdenes de trabajo y entregas JIT.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="sun-card" role="listitem">
+                        <div class="sun-card__body">
+                            <div style="text-align: center; margin-bottom: 1rem;">
+                                <i class="fas fa-utensils"
+                                    style="font-size: 3rem; color: var(--sun-color-primary);"></i>
+                            </div>
+                            <h3 class="sun-card__title" style="text-align: center;">
+                                Alimentos y Bebidas
+                            </h3>
+                            <p class="sun-card__text" style="text-align: center;">
+                                Control de lotes, fechas de caducidad, trazabilidad alimentaria y cumplimiento
+                                normativo.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="sun-card" role="listitem">
+                        <div class="sun-card__body">
+                            <div style="text-align: center; margin-bottom: 1rem;">
+                                <i class="fas fa-hammer" style="font-size: 3rem; color: var(--sun-color-primary);"></i>
+                            </div>
+                            <h3 class="sun-card__title" style="text-align: center;">
+                                Metal-Mecánica
+                            </h3>
+                            <p class="sun-card__text" style="text-align: center;">
+                                Fabricación de piezas, control de herramentales, mantenimiento de maquinaria CNC.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="sun-card" role="listitem">
+                        <div class="sun-card__body">
+                            <div style="text-align: center; margin-bottom: 1rem;">
+                                <i class="fas fa-prescription-bottle"
+                                    style="font-size: 3rem; color: var(--sun-color-primary);"></i>
+                            </div>
+                            <h3 class="sun-card__title" style="text-align: center;">
+                                Farmacéutica y Química
+                            </h3>
+                            <p class="sun-card__text" style="text-align: center;">
+                                Formulación, control de lotes, cumplimiento GMP y trazabilidad completa.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =============== LA DIFERENCIA ES CLARA =============== -->
+        <section class="sun__section sun__section--white" id="Comparativa" aria-labelledby="compare-title">
+            <div class="sun__container">
+                <header class="sun-header u-text-center">
+                    <h2 id="compare-title" class="sun-header__title">
+                        La diferencia es clara
+                    </h2>
+                    <p class="sun-header__subtitle">
+                        Compara tu operación actual vs una manufactura digitalizada
+                    </p>
+                </header>
+                <div class="comparison-table">
+                    <div class="comparison-row">
+                        <div class="comparison-cell comparison-cell--header"></div>
+                        <div class="comparison-cell comparison-cell--header">
+                            ❌ Procesos manuales
+                        </div>
+                        <div class="comparison-cell comparison-cell--header">
+                            ✅ Sunname Manufacturing
+                        </div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell">Visibilidad de producción</div>
+                        <div class="comparison-cell comparison-cell--manual">
+                            <span class="comparison-icon comparison-icon--bad">❌</span>
+                            <span>Excel y papel</span>
+                        </div>
+                        <div class="comparison-cell comparison-cell--sunname">
+                            <span class="comparison-icon comparison-icon--good">✅</span>
+                            <span>Dashboard en tiempo real</span>
+                        </div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell">Actualización de datos</div>
+                        <div class="comparison-cell comparison-cell--manual">
+                            <span class="comparison-icon comparison-icon--bad">❌</span>
+                            <span>Al final del turno</span>
+                        </div>
+                        <div class="comparison-cell comparison-cell--sunname">
+                            <span class="comparison-icon comparison-icon--good">✅</span>
+                            <span>Automática en vivo</span>
+                        </div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell">Trazabilidad de lotes</div>
+                        <div class="comparison-cell comparison-cell--manual">
+                            <span class="comparison-icon comparison-icon--bad">❌</span>
+                            <span>Búsqueda manual</span>
+                        </div>
+                        <div class="comparison-cell comparison-cell--sunname">
+                            <span class="comparison-icon comparison-icon--good">✅</span>
+                            <span>En segundos con código</span>
+                        </div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell">Costeo de órdenes</div>
+                        <div class="comparison-cell comparison-cell--manual">
+                            <span class="comparison-icon comparison-icon--bad">❌</span>
+                            <span>Estimaciones</span>
+                        </div>
+                        <div class="comparison-cell comparison-cell--sunname">
+                            <span class="comparison-icon comparison-icon--good">✅</span>
+                            <span>Costos reales automáticos</span>
+                        </div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell">Control de inventario</div>
+                        <div class="comparison-cell comparison-cell--manual">
+                            <span class="comparison-icon comparison-icon--bad">❌</span>
+                            <span>Desactualizado</span>
+                        </div>
+                        <div class="comparison-cell comparison-cell--sunname">
+                            <span class="comparison-icon comparison-icon--good">✅</span>
+                            <span>Conteo perpetuo en vivo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =============== TESTIMONIOS =============== -->
+        <section class="sun__section sun__section--light" id="Testimonios" aria-labelledby="testimonials-title">
+            <div class="sun__container">
+                <header class="sun-header u-text-center">
+                    <h2 id="testimonials-title" class="sun-header__title">
+                        Lo que dicen nuestros clientes
+                    </h2>
+                    <p class="sun-header__subtitle">
+                        Casos de éxito reales en plantas de manufactura
+                    </p>
+                </header>
+
+                <div class="sun-grid sun-grid--3col">
+                    <article class="sun-card">
+                        <div class="sun-card__body">
+                            <div style="text-align: center; margin-bottom: 1rem;">
+                                <div class="sun-clientes-testimonios__avatar">JM</div>
+                            </div>
+                            <blockquote class="sun-quote">
+                                "Antes teníamos paros constantes por falta de material. Ahora con el sistema de Sunname
+                                tenemos visibilidad completa del inventario y reabastecimiento automático. Redujimos
+                                paros en 60%."
+                            </blockquote>
+                            <div style="text-align: center;">
+                                <div style="font-weight: bold; color: var(--sun-color-primary);">
+                                    Jorge Martínez
+                                </div>
+                                <div style="color: var(--sun-color-text-light);">
+                                    Gerente de Producción - Electrónica del Norte
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="sun-card">
+                        <div class="sun-card__body">
+                            <div style="text-align: center; margin-bottom: 1rem;">
+                                <div class="sun-clientes-testimonios__avatar">AR</div>
+                            </div>
+                            <blockquote class="sun-quote">
+                                "La trazabilidad completa nos permitió pasar auditorías de clientes automotrices sin
+                                problemas. Ahora podemos rastrear cualquier componente en minutos, no en días."
+                            </blockquote>
+                            <div style="text-align: center;">
+                                <div style="font-weight: bold; color: var(--sun-color-primary);">
+                                    Ana Rodríguez
+                                </div>
+                                <div style="color: var(--sun-color-text-light);">
+                                    Directora de Calidad - Autopartes Monterrey
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="sun-card">
+                        <div class="sun-card__body">
+                            <div style="text-align: center; margin-bottom: 1rem;">
+                                <div class="sun-clientes-testimonios__avatar">CS</div>
+                            </div>
+                            <blockquote class="sun-quote">
+                                "El módulo de mantenimiento preventivo cambió nuestra operación. Pasamos de apagar
+                                incendios a prevenir problemas. La disponibilidad de equipos mejoró 35%."
+                            </blockquote>
+                            <div style="text-align: center;">
+                                <div style="font-weight: bold; color: var(--sun-color-primary);">
+                                    Carlos Sánchez
+                                </div>
+                                <div style="color: var(--sun-color-text-light);">
+                                    Jefe de Mantenimiento - Empaques Industriales
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =============== CASO DE ÉXITO =============== -->
+        <style>
+            .sun-success-story-featured {
+                display: grid;
+                grid-template-columns: auto 1fr auto;
+                /* Logo | Contenido | Botón */
+                align-items: center;
+                gap: var(--sun-space-lg);
+                background-color: var(--sun-color-white);
+                border-radius: var(--sun-radius-lg);
+                padding: var(--sun-space-xl);
+                box-shadow: var(--sun-shadow-md);
+                border-left: 5px solid var(--sun-color-secondary);
+                transition: transform var(--sun-transition-normal), box-shadow var(--sun-transition-normal);
+                margin-top: var(--sun-space-xl);
+                /* Espacio después del título */
             }
 
-            @keyframes fadeInRight {
-                from {
-                    opacity: 0;
-                    transform: translateX(30px);
-                }
-
-                to {
-                    opacity: 1;
-                    transform: translateX(0);
-                }
+            .sun-success-story-featured:hover {
+                transform: translateY(-5px);
+                box-shadow: var(--sun-shadow-lg);
             }
 
-            /* Hover effects para botones */
-            .odoo-hero__button:hover {
-                transform: translateY(-2px);
-                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            .sun-success-story__logo {
+                width: 80px;
+                height: 80px;
+                background: var(--sun-gradient-primary);
+                border-radius: 50%;
+                color: var(--sun-color-white);
+                font-size: 2.5rem;
+                flex-shrink: 0;
+                /* Reutilizamos tu clase de utilidad para centrar */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .sun-success-story__title {
+                font-size: 1.5rem;
+                font-weight: var(--sun-font-weight-bold);
+                color: var(--sun-color-primary);
+                margin-top: var(--sun-space-xs);
+                margin-bottom: var(--sun-space-sm);
+                line-height: 1.3;
+            }
+
+            .sun-success-story__text {
+                color: var(--sun-color-text-light);
+                margin: 0;
+            }
+
+            .sun-success-story__action .sun-btn {
+                min-width: 200px;
+                /* Hacemos el botón un poco más grande */
             }
 
             /* Responsive para móviles */
-            @media (max-width: 768px) {
-                .odoo-hero__container {
-                    flex-direction: column;
-                    text-align: center;
-                }
-
-                .odoo-hero__text {
-                    order: 2;
-                }
-
-                .odoo-hero__image {
-                    order: 1;
-                    margin-bottom: 2rem;
-                }
-
-                .odoo-hero__buttons {
-                    flex-direction: column;
-                    gap: 1rem;
-                }
-
-                .odoo-hero__clients {
-                    justify-content: center;
-                }
-            }
-        </style>
-    </head>
-
-    <body>
-        <main class="sun">
-            <!-- ================= SECCIÓN HERO ================= -->
-            <section class="odoo-hero mfg-hero" id="Inicio" aria-labelledby="hero-title">
-                <div class="odoo-hero__container sun__container">
-                    <div class="odoo-hero__content">
-                        <div class="odoo-hero__text">
-                            <div class="odoo-hero__badge sun-badge sun-badge--secondary">
-                                PARA MANUFACTURA Y ENSAMBLE
-                            </div>
-                            <h1 id="hero-title" class="odoo-hero__title">
-                                Digitaliza tu planta de
-                                <span class="odoo-hero__highlight">manufactura</span> en tiempo real
-                            </h1>
-                            <p class="odoo-hero__description">
-                                Transforma tus operaciones de manufactura y ensamble con
-                                <strong>Sunname Manufacturing</strong>. Control total de producción, inventario, calidad y trazabilidad en una sola plataforma diseñada para la industria mexicana.
-                            </p>
-                            <div class="odoo-hero__buttons">
-                                <a href="#Hablemos-de-tu-planta" class="odoo-hero__button sun-btn sun-btn--primary">
-                                    Solicitar demo
-                                    <i class="fa fa-industry" aria-hidden="true"></i>
-                                </a>
-                                <a href="#Modulos" class="odoo-hero__button sun-btn sun-btn--secondary">
-                                    <i class="fa fa-list-check odoo-hero__play-icon" aria-hidden="true"></i>
-                                    Ver módulos clave
-                                </a>
-                            </div>
-                            <div class="odoo-hero__clients">
-                                <div class="odoo-hero__avatars">
-                                    <div class="odoo-hero__avatar" style="background-color: var(--sun-color-secondary);"></div>
-                                    <div class="odoo-hero__avatar" style="background-color: var(--sun-color-primary);"></div>
-                                    <div class="odoo-hero__avatar" style="background-color: var(--sun-color-accent);"></div>
-                                </div>
-                                <div class="odoo-hero__client-text"><span class="odoo-hero__highlight">+10</span> plantas de manufactura optimizadas</div>
-                            </div>
-                        </div>
-                        <div class="odoo-hero__image mf-hero__media">
-                            <figure class="odoo-hero__dashboard-container">
-                                <img src="https://www.sunname.com.mx/web/image/35843-c7a13b07/manufactura.png?height=256" alt="Dashboard de producción en tiempo real" class="odoo-hero__dashboard-image" />
-                                <figcaption class="odoo-hero__version-badge">
-                                    Visibilidad en vivo
-                                </figcaption>
-                            </figure>
-                            <div class="odoo-hero__glow-effect"></div>
-                            <span class="mf-hero__video-badge"><i class="fa fa-chart-line"></i> Métricas de producción</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- =============== SECCIÓN PROBLEMAS QUE RESOLVEMOS =============== -->
-            <section class="sun__section sun__section--light" id="Problemas" aria-labelledby="problems-title">
-                <div class="sun__container">
-                    <header class="sun-header u-text-center">
-                        <h2 id="problems-title" class="sun-header__title">
-                            ¿Te suena familiar?
-                        </h2>
-                        <p class="sun-header__subtitle">
-                            Estos son los problemas más comunes que enfrentan las plantas de manufactura sin digitalización
-                        </p>
-                    </header>
-                    <div class="sun-grid sun-grid--3col">
-                        <div class="pain-point">
-                            <div class="pain-point__icon">📊</div>
-                            <div>
-                                <h3 class="pain-point__title">Falta de visibilidad</h3>
-                                <p class="pain-point__text">
-                                    No sabes en qué etapa está cada orden hasta que preguntas en piso de producción
-                                </p>
-                            </div>
-                        </div>
-                        <div class="pain-point">
-                            <div class="pain-point__icon">💰</div>
-                            <div>
-                                <h3 class="pain-point__title">Costos descontrolados</h3>
-                                <p class="pain-point__text">
-                                    Descubres sobrecostos hasta que ya es demasiado tarde para actuar
-                                </p>
-                            </div>
-                        </div>
-                        <div class="pain-point">
-                            <div class="pain-point__icon">📦</div>
-                            <div>
-                                <h3 class="pain-point__title">Caos en materiales</h3>
-                                <p class="pain-point__text">
-                                    Paros de producción por falta de materiales que creías tener en inventario
-                                </p>
-                            </div>
-                        </div>
-                        <div class="pain-point">
-                            <div class="pain-point__icon">⏰</div>
-                            <div>
-                                <h3 class="pain-point__title">Retrasos constantes</h3>
-                                <p class="pain-point__text">
-                                    Fechas de entrega comprometidas sin conocer la capacidad real de tu planta
-                                </p>
-                            </div>
-                        </div>
-                        <div class="pain-point">
-                            <div class="pain-point__icon">🔍</div>
-                            <div>
-                                <h3 class="pain-point__title">Sin trazabilidad</h3>
-                                <p class="pain-point__text">
-                                    Imposible rastrear qué lote se usó en qué producto para recalls o auditorías de calidad
-                                </p>
-                            </div>
-                        </div>
-                        <div class="pain-point">
-                            <div class="pain-point__icon">📋</div>
-                            <div>
-                                <h3 class="pain-point__title">Procesos manuales</h3>
-                                <p class="pain-point__text">
-                                    Horas perdidas capturando información en Excel que ya está obsoleta
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-
-
-
-            <!-- =============== DOLOR → SOLUCIÓN =============== -->
-            <section class="sun__section sun__section--light" id="Solucion" aria-labelledby="ps-title">
-                <div class="sun__container">
-                    <header class="sun-header u-text-center">
-                        <h2 id="ps-title" class="sun-header__title">
-                            De cuellos de botella a flujo continuo
-                        </h2>
-                        <p class="sun-header__subtitle">
-                            El objetivo no es "otro sistema", es una
-                            <strong>estructura que funcione</strong> con claridad y datos confiables.
-                        </p>
-                    </header>
-
-                    <div class="sun-pain-solution">
-                        <article class="sun-pain sun-card">
-                            <div class="sun-card__body">
-                                <h3 class="sun-card__title"><i class="fa-solid fa-diagram-project"></i> Planeación reactiva</h3>
-                                <p class="sun-card__text">
-                                    Órdenes atrasadas, cambios de última hora y baja visibilidad de capacidades.
-                                </p>
-                            </div>
-                        </article>
-                        <article class="sun-solution sun-card">
-                            <div class="sun-card__body">
-                                <h3 class="sun-card__title"><i class="fa-solid fa-calendar-check"></i> MPS/MRP con capacidad</h3>
-                                <p class="sun-card__text">
-                                    Programa maestro y requerimientos de materiales con carga por centro de trabajo.
-                                </p>
-                            </div>
-                        </article>
-
-                        <article class="sun-pain sun-card">
-                            <div class="sun-card__body">
-                                <h3 class="sun-card__title"><i class="fa-solid fa-screwdriver-wrench"></i> Pérdidas y merma sin control</h3>
-                                <p class="sun-card__text">
-                                    Costos invisibles, scrap sin causa y consumos no registrados.
-                                </p>
-                            </div>
-                        </article>
-                        <article class="sun-solution sun-card">
-                            <div class="sun-card__body">
-                                <h3 class="sun-card__title"><i class="fa-solid fa-scale-balanced"></i> Costeo estándar/real</h3>
-                                <p class="sun-card__text">
-                                    Consumo por BoM, tiempos por operación y variaciones de costo trazables.
-                                </p>
-                            </div>
-                        </article>
-
-                        <article class="sun-pain sun-card">
-                            <div class="sun-card__body">
-                                <h3 class="sun-card__title"><i class="fa-solid fa-barcode"></i> Trazabilidad limitada</h3>
-                                <p class="sun-card__text">
-                                    Dificultad para rastrear lotes/series y cumplir auditorías.
-                                </p>
-                            </div>
-                        </article>
-                        <article class="sun-solution sun-card">
-                            <div class="sun-card__body">
-                                <h3 class="sun-card__title"><i class="fa-solid fa-route"></i> Lote a lote</h3>
-                                <p class="sun-card__text">
-                                    Rastreabilidad ascendente/descendente desde materia prima hasta producto terminado.
-                                </p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <!-- =============== CÓMO FUNCIONA =============== -->
-            <section class="sun__section sun__section--white" id="Como-Funciona" aria-labelledby="how-title">
-                <div class="sun__container">
-                    <header class="sun-header u-text-center">
-                        <h2 id="how-title" class="sun-header__title">
-                            Implementación sin dolor
-                        </h2>
-                        <p class="sun-header__subtitle">
-                            Arranca en semanas, no en meses. Vamos contigo paso a paso.
-                        </p>
-                    </header>
-                    <div class="mf-process__steps">
-                        <article class="sun-card sun-process-step">
-                            <div class="sun-icon-circle sun-icon-circle--large u-flex-center">
-                                <i class="fa fa-wand-magic-sparkles" aria-hidden="true"></i>
-                            </div>
-                            <h3 class="sun-card__title">
-                                1) Configuración rápida (1–2 semanas)
-                            </h3>
-                            <ul class="sun-list">
-                                <li class="sun-list__item">Mapeo de procesos actuales</li>
-                                <li class="sun-list__item">Carga de catálogos y BOM</li>
-                                <li class="sun-list__item">Capacitación a tu equipo</li>
-                            </ul>
-                        </article>
-                        <article class="sun-card sun-process-step">
-                            <div class="sun-icon-circle sun-icon-circle--large u-flex-center">
-                                <i class="fa fa-industry" aria-hidden="true"></i>
-                            </div>
-                            <h3 class="sun-card__title">
-                                2) Producción paralela (2–3 semanas)
-                            </h3>
-                            <ul class="sun-list">
-                                <li class="sun-list__item">Arranca con una línea de prueba</li>
-                                <li class="sun-list__item">Acompañamiento constante</li>
-                                <li class="sun-list__item">Ajustes en tiempo real</li>
-                            </ul>
-                        </article>
-                        <article class="sun-card sun-process-step">
-                            <div class="sun-icon-circle sun-icon-circle--large u-flex-center">
-                                <i class="fa fa-chart-simple" aria-hidden="true"></i>
-                            </div>
-                            <h3 class="sun-card__title">3) Escalamiento total</h3>
-                            <ul class="sun-list">
-                                <li class="sun-list__item">Expande al resto de la planta</li>
-                                <li class="sun-list__item">Integración con ERP/contabilidad</li>
-                                <li class="sun-list__item">Soporte continuo y mejora</li>
-                            </ul>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <!-- =============== MÓDULOS CLAVE =============== -->
-            <section class="sun__section sun__section--light" id="Modulos" aria-labelledby="mods-title">
-                <div class="sun__container">
-                    <header class="sun-header u-text-center">
-                        <h2 id="mods-title" class="sun-header__title">
-                            Lo esencial para Fabricación & Ensamble
-                        </h2>
-                        <p class="sun-header__subtitle">
-                            Procesos conectados de punta a punta con módulos especializados.
-                        </p>
-                    </header>
-
-                    <div class="mf-modules__grid">
-                        <div class="mf-module__card">
-                            <div class="mf-module__icon">
-                                <i class="fas fa-cogs" aria-hidden="true"></i>
-                            </div>
-                            <h3 class="mf-module__title">Gestión de Producción</h3>
-                            <p class="mf-module__description">
-                                MRP/MPS, órdenes de trabajo, rutas y centros de trabajo
-                            </p>
-                        </div>
-                        <div class="mf-module__card">
-                            <div class="mf-module__icon">
-                                <i class="fas fa-boxes" aria-hidden="true"></i>
-                            </div>
-                            <h3 class="mf-module__title">Inventario Inteligente</h3>
-                            <p class="mf-module__description">
-                                Control por lotes, ubicaciones y reabasto automático
-                            </p>
-                        </div>
-                        <div class="mf-module__card">
-                            <div class="mf-module__icon">
-                                <i class="fas fa-clipboard-check" aria-hidden="true"></i>
-                            </div>
-                            <h3 class="mf-module__title">Control de Calidad</h3>
-                            <p class="mf-module__description">
-                                Puntos de inspección, checklist y no conformidades
-                            </p>
-                        </div>
-                        <div class="mf-module__card">
-                            <div class="mf-module__icon">
-                                <i class="fas fa-wrench" aria-hidden="true"></i>
-                            </div>
-                            <h3 class="mf-module__title">Mantenimiento</h3>
-                            <p class="mf-module__description">
-                                Preventivo/correctivo con órdenes de trabajo
-                            </p>
-                        </div>
-                        <div class="mf-module__card">
-                            <div class="mf-module__icon">
-                                <i class="fas fa-calculator" aria-hidden="true"></i>
-                            </div>
-                            <h3 class="mf-module__title">Costeo Avanzado</h3>
-                            <p class="mf-module__description">
-                                Estándar vs real por orden y centro de costo
-                            </p>
-                        </div>
-                        <div class="mf-module__card">
-                            <div class="mf-module__icon">
-                                <i class="fas fa-route" aria-hidden="true"></i>
-                            </div>
-                            <h3 class="mf-module__title">Trazabilidad Completa</h3>
-                            <p class="mf-module__description">
-                                Lote a lote desde materia prima a producto final
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- =============== RESULTADOS =============== -->
-            <section class="sun__section sun__section--white" id="Resultados" aria-labelledby="benefits-title">
-                <div class="sun__container">
-                    <header class="sun-header u-text-center">
-                        <h2 id="benefits-title" class="sun-header__title">
-                            Resultados que verás en los primeros 90 días
-                        </h2>
-                        <p class="sun-header__subtitle">
-                            KPIs claros, visibles y accionables desde el primer sprint.
-                        </p>
-                    </header>
-                    <div class="mf-kpis">
-                        <div class="mf-kpi sun-animate-on-scroll">
-                            <div class="mf-kpi__number">📈 35%</div>
-                            <div class="mf-kpi__label">
-                                menos tiempo de planeación semanal
-                            </div>
-                        </div>
-                        <div class="mf-kpi sun-animate-on-scroll">
-                            <div class="mf-kpi__number">💰 20%</div>
-                            <div class="mf-kpi__label">
-                                ahorro en desperdicio de materiales
-                            </div>
-                        </div>
-                        <div class="mf-kpi sun-animate-on-scroll">
-                            <div class="mf-kpi__number">⏱️ 50%</div>
-                            <div class="mf-kpi__label">respuesta más rápida al cliente</div>
-                        </div>
-                        <div class="mf-kpi sun-animate-on-scroll">
-                            <div class="mf-kpi__number">✅ 99%</div>
-                            <div class="mf-kpi__label">precisión de inventario</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- =============== INDUSTRIAS =============== -->
-            <section class="sun__section sun__section--light" id="Industrias" aria-labelledby="industries-title">
-                <div class="sun__container">
-                    <header class="sun-header u-text-center">
-                        <h2 id="industries-title" class="sun-header__title">
-                            Experiencia en tu industria
-                        </h2>
-                        <p class="sun-header__subtitle">
-                            Hemos implementado soluciones de manufactura en diversos sectores industriales
-                        </p>
-                    </header>
-
-                    <div class="sun-grid sun-grid--3col" role="list">
-                        <article class="sun-card" role="listitem">
-                            <div class="sun-card__body">
-                                <div style="text-align: center; margin-bottom: 1rem;">
-                                    <i class="fas fa-microchip" style="font-size: 3rem; color: var(--sun-color-primary);"></i>
-                                </div>
-                                <h3 class="sun-card__title" style="text-align: center;">
-                                    Electrónica y Ensamble
-                                </h3>
-                                <p class="sun-card__text" style="text-align: center;">
-                                    Control de componentes, ensamble de PCBs, trazabilidad de lotes y gestión de maquilas.
-                                </p>
-                            </div>
-                        </article>
-
-                        <article class="sun-card" role="listitem">
-                            <div class="sun-card__body">
-                                <div style="text-align: center; margin-bottom: 1rem;">
-                                    <i class="fas fa-car" style="font-size: 3rem; color: var(--sun-color-primary);"></i>
-                                </div>
-                                <h3 class="sun-card__title" style="text-align: center;">
-                                    Automotriz
-                                </h3>
-                                <p class="sun-card__text" style="text-align: center;">
-                                    Manufactura de autopartes, control de calidad PPAP, trazabilidad y certificaciones.
-                                </p>
-                            </div>
-                        </article>
-
-                        <article class="sun-card" role="listitem">
-                            <div class="sun-card__body">
-                                <div style="text-align: center; margin-bottom: 1rem;">
-                                    <i class="fas fa-box" style="font-size: 3rem; color: var(--sun-color-primary);"></i>
-                                </div>
-                                <h3 class="sun-card__title" style="text-align: center;">
-                                    Empaque y Embalaje
-                                </h3>
-                                <p class="sun-card__text" style="text-align: center;">
-                                    Producción de empaques, control de materiales, órdenes de trabajo y entregas JIT.
-                                </p>
-                            </div>
-                        </article>
-
-                        <article class="sun-card" role="listitem">
-                            <div class="sun-card__body">
-                                <div style="text-align: center; margin-bottom: 1rem;">
-                                    <i class="fas fa-utensils" style="font-size: 3rem; color: var(--sun-color-primary);"></i>
-                                </div>
-                                <h3 class="sun-card__title" style="text-align: center;">
-                                    Alimentos y Bebidas
-                                </h3>
-                                <p class="sun-card__text" style="text-align: center;">
-                                    Control de lotes, fechas de caducidad, trazabilidad alimentaria y cumplimiento normativo.
-                                </p>
-                            </div>
-                        </article>
-
-                        <article class="sun-card" role="listitem">
-                            <div class="sun-card__body">
-                                <div style="text-align: center; margin-bottom: 1rem;">
-                                    <i class="fas fa-hammer" style="font-size: 3rem; color: var(--sun-color-primary);"></i>
-                                </div>
-                                <h3 class="sun-card__title" style="text-align: center;">
-                                    Metal-Mecánica
-                                </h3>
-                                <p class="sun-card__text" style="text-align: center;">
-                                    Fabricación de piezas, control de herramentales, mantenimiento de maquinaria CNC.
-                                </p>
-                            </div>
-                        </article>
-
-                        <article class="sun-card" role="listitem">
-                            <div class="sun-card__body">
-                                <div style="text-align: center; margin-bottom: 1rem;">
-                                    <i class="fas fa-prescription-bottle" style="font-size: 3rem; color: var(--sun-color-primary);"></i>
-                                </div>
-                                <h3 class="sun-card__title" style="text-align: center;">
-                                    Farmacéutica y Química
-                                </h3>
-                                <p class="sun-card__text" style="text-align: center;">
-                                    Formulación, control de lotes, cumplimiento GMP y trazabilidad completa.
-                                </p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-<!-- =============== LA DIFERENCIA ES CLARA =============== -->
-            <section class="sun__section sun__section--white" id="Comparativa" aria-labelledby="compare-title">
-                <div class="sun__container">
-                    <header class="sun-header u-text-center">
-                        <h2 id="compare-title" class="sun-header__title">
-                            La diferencia es clara
-                        </h2>
-                        <p class="sun-header__subtitle">
-                            Compara tu operación actual vs una manufactura digitalizada
-                        </p>
-                    </header>
-                    <div class="comparison-table">
-                        <div class="comparison-row">
-                            <div class="comparison-cell comparison-cell--header"></div>
-                            <div class="comparison-cell comparison-cell--header">
-                                ❌ Procesos manuales
-                            </div>
-                            <div class="comparison-cell comparison-cell--header">
-                                ✅ Sunname Manufacturing
-                            </div>
-                        </div>
-                        <div class="comparison-row">
-                            <div class="comparison-cell">Visibilidad de producción</div>
-                            <div class="comparison-cell comparison-cell--manual">
-                                <span class="comparison-icon comparison-icon--bad">❌</span>
-                                <span>Excel y papel</span>
-                            </div>
-                            <div class="comparison-cell comparison-cell--sunname">
-                                <span class="comparison-icon comparison-icon--good">✅</span>
-                                <span>Dashboard en tiempo real</span>
-                            </div>
-                        </div>
-                        <div class="comparison-row">
-                            <div class="comparison-cell">Actualización de datos</div>
-                            <div class="comparison-cell comparison-cell--manual">
-                                <span class="comparison-icon comparison-icon--bad">❌</span>
-                                <span>Al final del turno</span>
-                            </div>
-                            <div class="comparison-cell comparison-cell--sunname">
-                                <span class="comparison-icon comparison-icon--good">✅</span>
-                                <span>Automática en vivo</span>
-                            </div>
-                        </div>
-                        <div class="comparison-row">
-                            <div class="comparison-cell">Trazabilidad de lotes</div>
-                            <div class="comparison-cell comparison-cell--manual">
-                                <span class="comparison-icon comparison-icon--bad">❌</span>
-                                <span>Búsqueda manual</span>
-                            </div>
-                            <div class="comparison-cell comparison-cell--sunname">
-                                <span class="comparison-icon comparison-icon--good">✅</span>
-                                <span>En segundos con código</span>
-                            </div>
-                        </div>
-                        <div class="comparison-row">
-                            <div class="comparison-cell">Costeo de órdenes</div>
-                            <div class="comparison-cell comparison-cell--manual">
-                                <span class="comparison-icon comparison-icon--bad">❌</span>
-                                <span>Estimaciones</span>
-                            </div>
-                            <div class="comparison-cell comparison-cell--sunname">
-                                <span class="comparison-icon comparison-icon--good">✅</span>
-                                <span>Costos reales automáticos</span>
-                            </div>
-                        </div>
-                        <div class="comparison-row">
-                            <div class="comparison-cell">Control de inventario</div>
-                            <div class="comparison-cell comparison-cell--manual">
-                                <span class="comparison-icon comparison-icon--bad">❌</span>
-                                <span>Desactualizado</span>
-                            </div>
-                            <div class="comparison-cell comparison-cell--sunname">
-                                <span class="comparison-icon comparison-icon--good">✅</span>
-                                <span>Conteo perpetuo en vivo</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-            <!-- =============== TESTIMONIOS =============== -->
-            <section class="sun__section sun__section--light" id="Testimonios" aria-labelledby="testimonials-title">
-                <div class="sun__container">
-                    <header class="sun-header u-text-center">
-                        <h2 id="testimonials-title" class="sun-header__title">
-                            Lo que dicen nuestros clientes
-                        </h2>
-                        <p class="sun-header__subtitle">
-                            Casos de éxito reales en plantas de manufactura
-                        </p>
-                    </header>
-
-                    <div class="sun-grid sun-grid--3col">
-                        <article class="sun-card">
-                            <div class="sun-card__body">
-                                <div style="text-align: center; margin-bottom: 1rem;">
-                                    <div class="sun-clientes-testimonios__avatar">JM</div>
-                                </div>
-                                <blockquote class="sun-quote">
-                                    "Antes teníamos paros constantes por falta de material. Ahora con el sistema de Sunname tenemos visibilidad completa del inventario y reabastecimiento automático. Redujimos paros en 60%."
-                                </blockquote>
-                                <div style="text-align: center;">
-                                    <div style="font-weight: bold; color: var(--sun-color-primary);">
-                                        Jorge Martínez
-                                    </div>
-                                    <div style="color: var(--sun-color-text-light);">
-                                        Gerente de Producción - Electrónica del Norte
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="sun-card">
-                            <div class="sun-card__body">
-                                <div style="text-align: center; margin-bottom: 1rem;">
-                                    <div class="sun-clientes-testimonios__avatar">AR</div>
-                                </div>
-                                <blockquote class="sun-quote">
-                                    "La trazabilidad completa nos permitió pasar auditorías de clientes automotrices sin problemas. Ahora podemos rastrear cualquier componente en minutos, no en días."
-                                </blockquote>
-                                <div style="text-align: center;">
-                                    <div style="font-weight: bold; color: var(--sun-color-primary);">
-                                        Ana Rodríguez
-                                    </div>
-                                    <div style="color: var(--sun-color-text-light);">
-                                        Directora de Calidad - Autopartes Monterrey
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="sun-card">
-                            <div class="sun-card__body">
-                                <div style="text-align: center; margin-bottom: 1rem;">
-                                    <div class="sun-clientes-testimonios__avatar">CS</div>
-                                </div>
-                                <blockquote class="sun-quote">
-                                    "El módulo de mantenimiento preventivo cambió nuestra operación. Pasamos de apagar incendios a prevenir problemas. La disponibilidad de equipos mejoró 35%."
-                                </blockquote>
-                                <div style="text-align: center;">
-                                    <div style="font-weight: bold; color: var(--sun-color-primary);">
-                                        Carlos Sánchez
-                                    </div>
-                                    <div style="color: var(--sun-color-text-light);">
-                                        Jefe de Mantenimiento - Empaques Industriales
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-
-            <!-- =============== CASO DE ÉXITO =============== -->
-            <style>
+            @media (max-width: 767px) {
                 .sun-success-story-featured {
-                    display: grid;
-                    grid-template-columns: auto 1fr auto; /* Logo | Contenido | Botón */
-                    align-items: center;
-                    gap: var(--sun-space-lg);
-                    background-color: var(--sun-color-white);
-                    border-radius: var(--sun-radius-lg);
-                    padding: var(--sun-space-xl);
-                    box-shadow: var(--sun-shadow-md);
-                    border-left: 5px solid var(--sun-color-secondary);
-                    transition: transform var(--sun-transition-normal), box-shadow var(--sun-transition-normal);
-                    margin-top: var(--sun-space-xl); /* Espacio después del título */
-                }
-
-                .sun-success-story-featured:hover {
-                    transform: translateY(-5px);
-                    box-shadow: var(--sun-shadow-lg);
-                }
-
-                .sun-success-story__logo {
-                    width: 80px;
-                    height: 80px;
-                    background: var(--sun-gradient-primary);
-                    border-radius: 50%;
-                    color: var(--sun-color-white);
-                    font-size: 2.5rem;
-                    flex-shrink: 0;
-                    /* Reutilizamos tu clase de utilidad para centrar */
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-
-                .sun-success-story__title {
-                    font-size: 1.5rem;
-                    font-weight: var(--sun-font-weight-bold);
-                    color: var(--sun-color-primary);
-                    margin-top: var(--sun-space-xs);
-                    margin-bottom: var(--sun-space-sm);
-                    line-height: 1.3;
-                }
-
-                .sun-success-story__text {
-                    color: var(--sun-color-text-light);
-                    margin: 0;
-                }
-                
-                .sun-success-story__action .sun-btn {
-                    min-width: 200px; /* Hacemos el botón un poco más grande */
-                }
-
-                /* Responsive para móviles */
-                @media (max-width: 767px) {
-                    .sun-success-story-featured {
-                    grid-template-columns: 1fr; /* Apila todo */
+                    grid-template-columns: 1fr;
+                    /* Apila todo */
                     text-align: center;
                     justify-items: center;
                     gap: var(--sun-space-md);
                     padding: var(--sun-space-lg);
-                    }
-
-                    .sun-success-story__title {
-                    font-size: 1.3rem;
-                    }
-
-                    .sun-success-story__action {
-                    width: 100%;
-                    }
-                    
-                    .sun-success-story__action .sun-btn {
-                    width: 100%;
-                    }
                 }
-            </style>
 
-            <section class="sun__section sun__section--light" id="CasoExito" aria-labelledby="success-story-title">
-                <div class="sun__container">
-                    <header class="sun-header u-text-center">
-                        <h2 id="success-story-title" class="sun-header__title">
-                            Nuestro Caso de Éxito
-                        </h2>
-                        <p class="sun-header__subtitle">
-                            Mira cómo ayudamos a transformar una planta como la tuya.
-                        </p>
-                    </header>
-            
-                    <article class="sun-success-story-featured">
-                        <div class="sun-success-story__logo" aria-hidden="true">
-                            <i class="fas fa-industry"></i>
-                        </div>
-                        <div class="sun-success-story__content">
-                            <span class="sun-badge sun-badge--primary">Manufactura & Retail</span>
-                            <h3 class="sun-success-story__title">
-                                Marcos & Marcos
-                            </h3>
-                            <p class="sun-success-story__text">
-                                Esta empresa de manufactura y retail operaba con 5 sucursales desconectadas, sin visibilidad de sus costos reales. Implementamos Odoo para integrar su producción, logística y finanzas en una sola plataforma. El resultado: pasaron de los procesos manuales a tener visibilidad total y rentabilidad precisa en tiempo real.
-                            </p>
-                        </div>
-                        <div class="sun-success-story__action">
-                            <a href="https://www.sunname.com.mx/blog/casos-de-exito-19/migracion-sistema-medida-erp-odoo-sunname-11" class="sun-btn sun-btn--primary">
-                                Leer la historia completa <i class="fa fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </article>
-                </div>
-            </section>
+                .sun-success-story__title {
+                    font-size: 1.3rem;
+                }
 
+                .sun-success-story__action {
+                    width: 100%;
+                }
 
+                .sun-success-story__action .sun-btn {
+                    width: 100%;
+                }
+            }
+        </style>
 
+        <section class="sun__section sun__section--light" id="CasoExito" aria-labelledby="success-story-title">
+            <div class="sun__container">
+                <header class="sun-header u-text-center">
+                    <h2 id="success-story-title" class="sun-header__title">
+                        Nuestro Caso de Éxito
+                    </h2>
+                    <p class="sun-header__subtitle">
+                        Mira cómo ayudamos a transformar una planta como la tuya.
+                    </p>
+                </header>
 
-
-            <!-- =============== ¿ES PARA TI? =============== -->
-            <section class="sun__section sun__section--white" id="EsParaTi" aria-labelledby="for-you-title">
-                <div class="sun__container">
-                    <header class="sun-header u-text-center">
-                        <h2 id="for-you-title" class="sun-header__title">
-                            ¿Sunname Manufacturing es para ti?
-                        </h2>
-                        <p class="sun-header__subtitle">
-                            Evalúa si tu planta está lista para la transformación digital
-                        </p>
-                    </header>
-
-                    <div class="sun-grid sun-grid--2col">
-                        <div class="sun-card" style="border: 3px solid var(--sun-color-secondary);">
-                            <div class="sun-card__body">
-                                <h3 style="color: var(--sun-color-secondary); margin-bottom: 1.5rem; font-size: 1.3rem; text-align: center;">
-                                    ✅ Es perfecto para ti si:
-                                </h3>
-                                <ul style="list-style: none; padding: 0;">
-                                    <li style="margin-bottom: 1rem; display: flex; align-items: flex-start;">
-                                        <i class="fas fa-check-circle" style="color: var(--sun-color-secondary); margin-right: 0.5rem; margin-top: 0.2rem;"></i>
-                                        <span>Produces más de 50 órdenes de trabajo al mes</span>
-                                    </li>
-                                    <li style="margin-bottom: 1rem; display: flex; align-items: flex-start;">
-                                        <i class="fas fa-check-circle" style="color: var(--sun-color-secondary); margin-right: 0.5rem; margin-top: 0.2rem;"></i>
-                                        <span>Manejas más de 200 SKUs entre materias primas y productos</span>
-                                    </li>
-                                    <li style="margin-bottom: 1rem; display: flex; align-items: flex-start;">
-                                        <i class="fas fa-check-circle" style="color: var(--sun-color-secondary); margin-right: 0.5rem; margin-top: 0.2rem;"></i>
-                                        <span>Necesitas trazabilidad por lotes o números de serie</span>
-                                    </li>
-                                    <li style="margin-bottom: 1rem; display: flex; align-items: flex-start;">
-                                        <i class="fas fa-check-circle" style="color: var(--sun-color-secondary); margin-right: 0.5rem; margin-top: 0.2rem;"></i>
-                                        <span>Tienes múltiples estaciones o líneas de producción</span>
-                                    </li>
-                                    <li style="margin-bottom: 1rem; display: flex; align-items: flex-start;">
-                                        <i class="fas fa-check-circle" style="color: var(--sun-color-secondary); margin-right: 0.5rem; margin-top: 0.2rem;"></i>
-                                        <span>Requieres certificaciones de calidad (ISO, IATF, etc.)</span>
-                                    </li>
-                                    <li style="margin-bottom: 1rem; display: flex; align-items: flex-start;">
-                                        <i class="fas fa-check-circle" style="color: var(--sun-color-secondary); margin-right: 0.5rem; margin-top: 0.2rem;"></i>
-                                        <span>Quieres reducir costos y mejorar eficiencia operativa</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="sun-card">
-                            <div class="sun-card__body">
-                                <h3 style="color: var(--sun-color-primary); margin-bottom: 1.5rem; font-size: 1.3rem; text-align: center;">
-                                    💡 Considera otras opciones si:
-                                </h3>
-                                <ul style="list-style: none; padding: 0;">
-                                    <li style="color: var(--sun-color-text-light); margin-bottom: 1rem; display: flex; align-items: flex-start;">
-                                        <i class="fas fa-info-circle" style="color: var(--sun-color-primary); margin-right: 0.5rem; margin-top: 0.2rem;"></i>
-                                        <span>Eres un taller pequeño con menos de 5 empleados</span>
-                                    </li>
-                                    <li style="color: var(--sun-color-text-light); margin-bottom: 1rem; display: flex; align-items: flex-start;">
-                                        <i class="fas fa-info-circle" style="color: var(--sun-color-primary); margin-right: 0.5rem; margin-top: 0.2rem;"></i>
-                                        <span>Solo necesitas control de inventario básico (considera Sunname Lite)</span>
-                                    </li>
-                                    <li style="color: var(--sun-color-text-light); margin-bottom: 1rem; display: flex; align-items: flex-start;">
-                                        <i class="fas fa-info-circle" style="color: var(--sun-color-primary); margin-right: 0.5rem; margin-top: 0.2rem;"></i>
-                                        <span>No tienes procesos de manufactura definidos</span>
-                                    </li>
-                                    <li style="color: var(--sun-color-text-light); margin-bottom: 1rem; display: flex; align-items: flex-start;">
-                                        <i class="fas fa-info-circle" style="color: var(--sun-color-primary); margin-right: 0.5rem; margin-top: 0.2rem;"></i>
-                                        <span>Tu equipo no está listo para adoptar tecnología</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                <article class="sun-success-story-featured">
+                    <div class="sun-success-story__logo" aria-hidden="true">
+                        <i class="fas fa-industry"></i>
                     </div>
-
-                    <div style="text-align: center; margin-top: 2rem;">
-                        <p style="font-size: 1.1rem; color: var(--sun-color-text-light); margin-bottom: 1rem;"><strong>¿No estás seguro?</strong> Agenda una visita a tu planta sin costo.</p>
-                        <a href="https://www.sunname.com.mx/manufactura#Hablemos-de-tu-planta" class="sun-btn sun-btn--primary">
-                            <i class="fas fa-calendar-check" aria-hidden="true"></i>
-                            Agendar visita gratuita
+                    <div class="sun-success-story__content">
+                        <span class="sun-badge sun-badge--primary">Manufactura & Retail</span>
+                        <h3 class="sun-success-story__title">
+                            Marcos & Marcos
+                        </h3>
+                        <p class="sun-success-story__text">
+                            Esta empresa de manufactura y retail operaba con 5 sucursales desconectadas, sin visibilidad
+                            de sus costos reales. Implementamos Odoo para integrar su producción, logística y finanzas
+                            en una sola plataforma. El resultado: pasaron de los procesos manuales a tener visibilidad
+                            total y rentabilidad precisa en tiempo real.
+                        </p>
+                    </div>
+                    <div class="sun-success-story__action">
+                        <a href="https://www.sunname.com.mx/blog/casos-de-exito-19/migracion-sistema-medida-erp-odoo-sunname-11"
+                            class="sun-btn sun-btn--primary">
+                            Leer la historia completa <i class="fa fa-arrow-right"></i>
                         </a>
                     </div>
-                </div>
-            </section>
+                </article>
+            </div>
+        </section>
 
-            <!-- ================= CTA FINAL ================= -->
-            <section class="sun__section sun__section--gradient" id="CTA-Final" aria-labelledby="cta-title">
-                <div class="sun__container">
-                    <header class="sun-header">
-                        <h2 id="cta-title" class="sun-header__title" style="color: #fff;">
-                            Comienza a digitalizar tu manufactura hoy
-                        </h2>
-                        <p class="sun-header__subtitle" style="color: var(--sun-color-white-80);">
-                            Agenda una demo de 30 minutos y te mostraremos cómo Sunname transforma tu operación con ejemplos de tu industria.
-                        </p>
-                    </header>
-                    <div class="u-text-center">
-                        <a href="https://www.sunname.com.mx/manufactura#Hablemos-de-tu-planta" class="sun-btn sun-btn--primary">Agendar demo gratuita <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                        <div class="u-margin-top-md" style="opacity: 0.95;">
-                            <span class="sun-badge sun-badge--secondary">✅ Sin contratos largos</span>
-                            <span class="sun-badge sun-badge--secondary">✅ Implementación guiada</span>
-                            <span class="sun-badge sun-badge--secondary">✅ Soporte en español</span>
-                            <span class="sun-badge sun-badge--secondary">✅ Prueba con una línea primero</span>
+
+
+
+
+        <!-- =============== ¿ES PARA TI? =============== -->
+        <section class="sun__section sun__section--white" id="EsParaTi" aria-labelledby="for-you-title">
+            <div class="sun__container">
+                <header class="sun-header u-text-center">
+                    <h2 id="for-you-title" class="sun-header__title">
+                        ¿Sunname Manufacturing es para ti?
+                    </h2>
+                    <p class="sun-header__subtitle">
+                        Evalúa si tu planta está lista para la transformación digital
+                    </p>
+                </header>
+
+                <div class="sun-grid sun-grid--2col">
+                    <div class="sun-card" style="border: 3px solid var(--sun-color-secondary);">
+                        <div class="sun-card__body">
+                            <h3
+                                style="color: var(--sun-color-secondary); margin-bottom: 1.5rem; font-size: 1.3rem; text-align: center;">
+                                ✅ Es perfecto para ti si:
+                            </h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="margin-bottom: 1rem; display: flex; align-items: flex-start;">
+                                    <i class="fas fa-check-circle"
+                                        style="color: var(--sun-color-secondary); margin-right: 0.5rem; margin-top: 0.2rem;"></i>
+                                    <span>Produces más de 50 órdenes de trabajo al mes</span>
+                                </li>
+                                <li style="margin-bottom: 1rem; display: flex; align-items: flex-start;">
+                                    <i class="fas fa-check-circle"
+                                        style="color: var(--sun-color-secondary); margin-right: 0.5rem; margin-top: 0.2rem;"></i>
+                                    <span>Manejas más de 200 SKUs entre materias primas y productos</span>
+                                </li>
+                                <li style="margin-bottom: 1rem; display: flex; align-items: flex-start;">
+                                    <i class="fas fa-check-circle"
+                                        style="color: var(--sun-color-secondary); margin-right: 0.5rem; margin-top: 0.2rem;"></i>
+                                    <span>Necesitas trazabilidad por lotes o números de serie</span>
+                                </li>
+                                <li style="margin-bottom: 1rem; display: flex; align-items: flex-start;">
+                                    <i class="fas fa-check-circle"
+                                        style="color: var(--sun-color-secondary); margin-right: 0.5rem; margin-top: 0.2rem;"></i>
+                                    <span>Tienes múltiples estaciones o líneas de producción</span>
+                                </li>
+                                <li style="margin-bottom: 1rem; display: flex; align-items: flex-start;">
+                                    <i class="fas fa-check-circle"
+                                        style="color: var(--sun-color-secondary); margin-right: 0.5rem; margin-top: 0.2rem;"></i>
+                                    <span>Requieres certificaciones de calidad (ISO, IATF, etc.)</span>
+                                </li>
+                                <li style="margin-bottom: 1rem; display: flex; align-items: flex-start;">
+                                    <i class="fas fa-check-circle"
+                                        style="color: var(--sun-color-secondary); margin-right: 0.5rem; margin-top: 0.2rem;"></i>
+                                    <span>Quieres reducir costos y mejorar eficiencia operativa</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="sun-card">
+                        <div class="sun-card__body">
+                            <h3
+                                style="color: var(--sun-color-primary); margin-bottom: 1.5rem; font-size: 1.3rem; text-align: center;">
+                                💡 Considera otras opciones si:
+                            </h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li
+                                    style="color: var(--sun-color-text-light); margin-bottom: 1rem; display: flex; align-items: flex-start;">
+                                    <i class="fas fa-info-circle"
+                                        style="color: var(--sun-color-primary); margin-right: 0.5rem; margin-top: 0.2rem;"></i>
+                                    <span>Eres un taller pequeño con menos de 5 empleados</span>
+                                </li>
+                                <li
+                                    style="color: var(--sun-color-text-light); margin-bottom: 1rem; display: flex; align-items: flex-start;">
+                                    <i class="fas fa-info-circle"
+                                        style="color: var(--sun-color-primary); margin-right: 0.5rem; margin-top: 0.2rem;"></i>
+                                    <span>Solo necesitas control de inventario básico (considera Sunname Lite)</span>
+                                </li>
+                                <li
+                                    style="color: var(--sun-color-text-light); margin-bottom: 1rem; display: flex; align-items: flex-start;">
+                                    <i class="fas fa-info-circle"
+                                        style="color: var(--sun-color-primary); margin-right: 0.5rem; margin-top: 0.2rem;"></i>
+                                    <span>No tienes procesos de manufactura definidos</span>
+                                </li>
+                                <li
+                                    style="color: var(--sun-color-text-light); margin-bottom: 1rem; display: flex; align-items: flex-start;">
+                                    <i class="fas fa-info-circle"
+                                        style="color: var(--sun-color-primary); margin-right: 0.5rem; margin-top: 0.2rem;"></i>
+                                    <span>Tu equipo no está listo para adoptar tecnología</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </section>
-        </main>
 
-        <!-- CTA STICKY -->
-        <div class="mfg-cta-sticky" role="region" aria-label="Acción rápida">
-            <div class="sun__container">
-                <a href="https://www.sunname.com.mx/manufactura#Hablemos-de-tu-planta" class="sun-btn sun-btn--primary"> Agendar demo <i class="fa-solid fa-calendar-check"></i> </a>
-                <a href="#Como-Funciona" class="sun-btn sun-btn--secondary"> Ver proceso de implementación <i class="fa-solid fa-circle-play"></i> </a>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <p style="font-size: 1.1rem; color: var(--sun-color-text-light); margin-bottom: 1rem;"><strong>¿No
+                            estás seguro?</strong> Agenda una visita a tu planta sin costo.</p>
+                    <a href="https://www.sunname.com.mx/manufactura#Hablemos-de-tu-planta"
+                        class="sun-btn sun-btn--primary">
+                        <i class="fas fa-calendar-check" aria-hidden="true"></i>
+                        Agendar visita gratuita
+                    </a>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <!-- =============== INTEGRACIONES =============== -->
-        <!-- <section class="sun__section sun__section--light" id="Integraciones" aria-labelledby="integrations-title">
+        <!-- ================= CTA FINAL ================= -->
+        <section class="sun__section sun__section--gradient" id="CTA-Final" aria-labelledby="cta-title">
+            <div class="sun__container">
+                <header class="sun-header">
+                    <h2 id="cta-title" class="sun-header__title" style="color: #fff;">
+                        Comienza a digitalizar tu manufactura hoy
+                    </h2>
+                    <p class="sun-header__subtitle" style="color: var(--sun-color-white-80);">
+                        Agenda una demo de 30 minutos y te mostraremos cómo Sunname transforma tu operación con ejemplos
+                        de tu industria.
+                    </p>
+                </header>
+                <div class="u-text-center">
+                    <a href="https://www.sunname.com.mx/manufactura#Hablemos-de-tu-planta"
+                        class="sun-btn sun-btn--primary">Agendar demo gratuita <i class="fa fa-arrow-right"
+                            aria-hidden="true"></i></a>
+                    <div class="u-margin-top-md" style="opacity: 0.95;">
+                        <span class="sun-badge sun-badge--secondary">✅ Sin contratos largos</span>
+                        <span class="sun-badge sun-badge--secondary">✅ Implementación guiada</span>
+                        <span class="sun-badge sun-badge--secondary">✅ Soporte en español</span>
+                        <span class="sun-badge sun-badge--secondary">✅ Prueba con una línea primero</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- CTA STICKY -->
+    <div class="mfg-cta-sticky" role="region" aria-label="Acción rápida">
+        <div class="sun__container">
+            <a href="https://www.sunname.com.mx/manufactura#Hablemos-de-tu-planta" class="sun-btn sun-btn--primary">
+                Agendar demo <i class="fa-solid fa-calendar-check"></i> </a>
+            <a href="#Como-Funciona" class="sun-btn sun-btn--secondary"> Ver proceso de implementación <i
+                    class="fa-solid fa-circle-play"></i> </a>
+        </div>
+    </div>
+
+    <!-- =============== INTEGRACIONES =============== -->
+    <!-- <section class="sun__section sun__section--light" id="Integraciones" aria-labelledby="integrations-title">
             <div class="sun__container">
                 <header class="sun-header u-text-center">
                     <h2 id="integrations-title" class="sun-header__title">
@@ -1589,408 +1640,442 @@
             </div>
         </section> -->
 
-        <!-- =============== FAQ =============== -->
-        <section class="sun__section sun__section--light" id="FAQ" aria-labelledby="faq-title">
-            <div class="sun__container">
-                <header class="sun-header u-text-center">
-                    <h2 id="faq-title" class="sun-header__title">Preguntas frecuentes</h2>
-                    <p class="sun-header__subtitle">Transparencia antes de empezar.</p>
-                </header>
+    <!-- =============== FAQ =============== -->
+    <section class="sun__section sun__section--light" id="FAQ" aria-labelledby="faq-title">
+        <div class="sun__container">
+            <header class="sun-header u-text-center">
+                <h2 id="faq-title" class="sun-header__title">Preguntas frecuentes</h2>
+                <p class="sun-header__subtitle">Transparencia antes de empezar.</p>
+            </header>
 
-                <div class="mf-faq__grid">
-                    <details class="mf-faq__item">
-                        <summary class="mf-faq__question">
-                            <i class="fas fa-question-circle" aria-hidden="true"></i>
-                            ¿Cuánto tiempo toma operar producción básica?
-                        </summary>
-                        <p class="mf-faq__answer">
-                            Entre 3 y 6 semanas para BoM, rutas, órdenes y registros en piso. Con costeo avanzado o integraciones, el plazo puede extenderse.
-                        </p>
-                    </details>
-                    <details class="mf-faq__item">
-                        <summary class="mf-faq__question">
-                            <i class="fas fa-question-circle" aria-hidden="true"></i>
-                            ¿Puedo iniciar solo con inventarios y después sumar MRP?
-                        </summary>
-                        <p class="mf-faq__answer">
-                            Sí. Podemos arrancar por inventario/lotificación y agregar MRP cuando tu operación lo requiera.
-                        </p>
-                    </details>
-                    <details class="mf-faq__item">
-                        <summary class="mf-faq__question">
-                            <i class="fas fa-question-circle" aria-hidden="true"></i>
-                            ¿Cómo se maneja la trazabilidad por lotes/series?
-                        </summary>
-                        <p class="mf-faq__answer">
-                            Desde la recepción de MP hasta el producto terminado, con rastreo ascendente/descendente y reportes para auditoría.
-                        </p>
-                    </details>
-                    <details class="mf-faq__item">
-                        <summary class="mf-faq__question">
-                            <i class="fas fa-question-circle" aria-hidden="true"></i>
-                            ¿Funciona sin conexión a internet en piso de producción?
-                        </summary>
-                        <p class="mf-faq__answer">
-                            Podemos habilitar flujos con captura offline en puntos críticos y sincronización automática cuando regrese la conexión.
-                        </p>
-                    </details>
-                    <details class="mf-faq__item">
-                        <summary class="mf-faq__question">
-                            <i class="fas fa-question-circle" aria-hidden="true"></i>
-                            ¿Manejan manufactura con múltiples turnos?
-                        </summary>
-                        <p class="mf-faq__answer">
-                            Soportamos turnos, calendarios laborales y asignación de recursos para planear capacidad real por centro de trabajo.
-                        </p>
-                    </details>
-                    <details class="mf-faq__item">
-                        <summary class="mf-faq__question">
-                            <i class="fas fa-question-circle" aria-hidden="true"></i>
-                            ¿Incluye gestión de órdenes de compra a proveedores?
-                        </summary>
-                        <p class="mf-faq__answer">
-                            Integramos compras y abastecimiento para disparar reorden, reservar materiales y asegurar disponibilidad a tiempo.
-                        </p>
-                    </details>
-                </div>
-            </div>
-        </section>
-
-        <!-- =============== CONTACTO =============== -->
-        <section class="sun__section sun__section--gradient" id="Contacto" aria-labelledby="contact-title">
-            <div class="sun__container">
-                <header class="sun-header u-text-center">
-                    <h2 id="contact-title" class="sun-header__title" style="color: white;">
-                        Hablemos de tu planta
-                    </h2>
-                    <p class="sun-header__subtitle" style="color: rgba(255, 255, 255, 0.9);">
-                        Agenda una demo o solicita un diagnóstico sin costo.
+            <div class="mf-faq__grid">
+                <details class="mf-faq__item">
+                    <summary class="mf-faq__question">
+                        <i class="fas fa-question-circle" aria-hidden="true"></i>
+                        ¿Cuánto tiempo toma operar producción básica?
+                    </summary>
+                    <p class="mf-faq__answer">
+                        Entre 3 y 6 semanas para BoM, rutas, órdenes y registros en piso. Con costeo avanzado o
+                        integraciones, el plazo puede extenderse.
                     </p>
-                </header>
+                </details>
+                <details class="mf-faq__item">
+                    <summary class="mf-faq__question">
+                        <i class="fas fa-question-circle" aria-hidden="true"></i>
+                        ¿Puedo iniciar solo con inventarios y después sumar MRP?
+                    </summary>
+                    <p class="mf-faq__answer">
+                        Sí. Podemos arrancar por inventario/lotificación y agregar MRP cuando tu operación lo requiera.
+                    </p>
+                </details>
+                <details class="mf-faq__item">
+                    <summary class="mf-faq__question">
+                        <i class="fas fa-question-circle" aria-hidden="true"></i>
+                        ¿Cómo se maneja la trazabilidad por lotes/series?
+                    </summary>
+                    <p class="mf-faq__answer">
+                        Desde la recepción de MP hasta el producto terminado, con rastreo ascendente/descendente y
+                        reportes para auditoría.
+                    </p>
+                </details>
+                <details class="mf-faq__item">
+                    <summary class="mf-faq__question">
+                        <i class="fas fa-question-circle" aria-hidden="true"></i>
+                        ¿Funciona sin conexión a internet en piso de producción?
+                    </summary>
+                    <p class="mf-faq__answer">
+                        Podemos habilitar flujos con captura offline en puntos críticos y sincronización automática
+                        cuando regrese la conexión.
+                    </p>
+                </details>
+                <details class="mf-faq__item">
+                    <summary class="mf-faq__question">
+                        <i class="fas fa-question-circle" aria-hidden="true"></i>
+                        ¿Manejan manufactura con múltiples turnos?
+                    </summary>
+                    <p class="mf-faq__answer">
+                        Soportamos turnos, calendarios laborales y asignación de recursos para planear capacidad real
+                        por centro de trabajo.
+                    </p>
+                </details>
+                <details class="mf-faq__item">
+                    <summary class="mf-faq__question">
+                        <i class="fas fa-question-circle" aria-hidden="true"></i>
+                        ¿Incluye gestión de órdenes de compra a proveedores?
+                    </summary>
+                    <p class="mf-faq__answer">
+                        Integramos compras y abastecimiento para disparar reorden, reservar materiales y asegurar
+                        disponibilidad a tiempo.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
 
-                <div class="sun-grid sun-grid--2col-fixed">
-                    <div class="sun-contact-form">
-                        <form action="https://formsubmit.co/contacto@sunname.com.mx" method="POST">
-                            <div class="sun-form__grid">
-                                <div class="sun-form__group">
-                                    <label for="name" class="sun-form__label">Nombre completo <span aria-hidden="true">*</span></label>
-                                    <input type="text" id="name" name="name" class="sun-form__input" required aria-required="true" />
-                                </div>
-                                <div class="sun-form__group">
-                                    <label for="company" class="sun-form__label">Empresa <span aria-hidden="true">*</span></label>
-                                    <input type="text" id="company" name="company" class="sun-form__input" required aria-required="true" />
-                                </div>
-                                <div class="sun-form__group">
-                                    <label for="position" class="sun-form__label">Cargo <span aria-hidden="true">*</span></label>
-                                    <input type="text" id="position" name="position" class="sun-form__input" required aria-required="true" placeholder="Ej: Gerente de Producción" />
-                                </div>
-                                <div class="sun-form__group">
-                                    <label for="phone" class="sun-form__label">Teléfono <span aria-hidden="true">*</span></label>
-                                    <input type="tel" id="phone" name="phone" class="sun-form__input" required aria-required="true" />
-                                </div>
-                                <div class="sun-form__group">
-                                    <label for="email" class="sun-form__label">Email <span aria-hidden="true">*</span></label>
-                                    <input type="email" id="email" name="email" class="sun-form__input" required aria-required="true" />
-                                </div>
-                                <div class="sun-form__group">
-                                    <label for="industry" class="sun-form__label">Industria <span aria-hidden="true">*</span></label>
-                                    <select id="industry" name="industry" class="sun-form__select" required aria-required="true">
-                                        <option value="">Selecciona tu industria</option>
-                                        <option value="electronics">Electrónica y Ensamble</option>
-                                        <option value="automotive">Automotriz</option>
-                                        <option value="packaging">Empaque y Embalaje</option>
-                                        <option value="food">Alimentos y Bebidas</option>
-                                        <option value="metalworking">Metal-Mecánica</option>
-                                        <option value="pharma">Farmacéutica y Química</option>
-                                        <option value="other">Otra</option>
-                                    </select>
-                                </div>
-                                <div class="sun-form__group">
-                                    <label for="employees" class="sun-form__label">Número de empleados</label>
-                                    <select id="employees" name="employees" class="sun-form__select">
-                                        <option value="">Selecciona un rango</option>
-                                        <option value="10-50">10-50 empleados</option>
-                                        <option value="51-100">51-100 empleados</option>
-                                        <option value="101-250">101-250 empleados</option>
-                                        <option value="251-500">251-500 empleados</option>
-                                        <option value="500+">Más de 500 empleados</option>
-                                    </select>
-                                </div>
-                                <div class="sun-form__group">
-                                    <label for="production-orders" class="sun-form__label">Órdenes de producción mensuales</label>
-                                    <select id="production-orders" name="production-orders" class="sun-form__select">
-                                        <option value="">Selecciona un rango</option>
-                                        <option value="less-50">Menos de 50</option>
-                                        <option value="50-200">50-200</option>
-                                        <option value="201-500">201-500</option>
-                                        <option value="500+">Más de 500</option>
-                                    </select>
-                                </div>
-                                <div class="sun-form__group sun-form__full">
-                                    <label for="message" class="sun-form__label">Cuéntanos sobre tu operación <span aria-hidden="true">*</span></label>
-                                    <textarea
-                                        id="message"
-                                        name="message"
-                                        class="sun-form__textarea"
-                                        required
-                                        aria-required="true"
-                                        placeholder="¿Qué produces? ¿Cuáles son tus principales retos? ¿Qué esperas lograr con la digitalización?"
-                                    ></textarea>
-                                </div>
-                                <div class="sun-form__checkbox-group sun-form__full">
-                                    <input type="checkbox" id="privacy" name="privacy" class="sun-form__checkbox" required aria-required="true" />
-                                    <label for="privacy" class="sun-form__checkbox-label">
-                                        Acepto recibir información sobre Sunname Manufacturing y el tratamiento de mis datos personales.
-                                    </label>
-                                </div>
-                                <div class="sun-form__submit sun-form__full">
-                                    <button type="submit" class="sun-btn sun-btn--accent" style="width: 100%; background-color: white; color: var(--sun-color-primary);">
-                                        <i class="fas fa-paper-plane" aria-hidden="true"></i>
-                                        Solicitar visita gratuita
-                                    </button>
-                                </div>
+    <!-- =============== CONTACTO =============== -->
+    <section class="sun__section sun__section--gradient" id="Contacto" aria-labelledby="contact-title">
+        <div class="sun__container">
+            <header class="sun-header u-text-center">
+                <h2 id="contact-title" class="sun-header__title" style="color: white;">
+                    Hablemos de tu planta
+                </h2>
+                <p class="sun-header__subtitle" style="color: rgba(255, 255, 255, 0.9);">
+                    Agenda una demo o solicita un diagnóstico sin costo.
+                </p>
+            </header>
+
+            <div class="sun-grid sun-grid--2col-fixed">
+                <div class="sun-contact-form">
+                    <form action="https://formsubmit.co/contacto@sunname.com.mx" method="POST">
+                        <div class="sun-form__grid">
+                            <div class="sun-form__group">
+                                <label for="name" class="sun-form__label">Nombre completo <span
+                                        aria-hidden="true">*</span></label>
+                                <input type="text" id="name" name="name" class="sun-form__input" required
+                                    aria-required="true" />
                             </div>
-                        </form>
-                    </div>
-
-                    <div class="sun-contact__info">
-                        <div>
-                            <h3 class="sun-contact__info-title">
-                                ¿Prefieres hablar directamente?
-                            </h3>
-                            <p class="sun-contact__info-text">
-                                Nuestro equipo de especialistas en manufactura está disponible para resolver tus dudas y agendar una visita a tu planta.
-                            </p>
-
-                            <div class="sun-contact__info-item">
-                                <div class="sun-contact__info-icon u-flex-center">
-                                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
-                                </div>
-                                <div class="sun-contact__info-content">
-                                    <strong>WhatsApp</strong>
-                                    <a href="https://wa.me/8135061795?text=Hola%2C%20me%20interesa%20Sunname%20Manufacturing" style="color: white;">+52 81 3506 1795</a>
-                                </div>
+                            <div class="sun-form__group">
+                                <label for="company" class="sun-form__label">Empresa <span
+                                        aria-hidden="true">*</span></label>
+                                <input type="text" id="company" name="company" class="sun-form__input" required
+                                    aria-required="true" />
                             </div>
-
-                            <div class="sun-contact__info-item">
-                                <div class="sun-contact__info-icon u-flex-center">
-                                    <i class="fas fa-phone" aria-hidden="true"></i>
-                                </div>
-                                <div class="sun-contact__info-content">
-                                    <strong>Llamada directa</strong>
-                                    +52 81 3506 1795
-                                </div>
+                            <div class="sun-form__group">
+                                <label for="position" class="sun-form__label">Cargo <span
+                                        aria-hidden="true">*</span></label>
+                                <input type="text" id="position" name="position" class="sun-form__input" required
+                                    aria-required="true" placeholder="Ej: Gerente de Producción" />
                             </div>
-
-                            <div class="sun-contact__info-item">
-                                <div class="sun-contact__info-icon u-flex-center">
-                                    <i class="fas fa-envelope" aria-hidden="true"></i>
-                                </div>
-                                <div class="sun-contact__info-content">
-                                    <strong>Email</strong>
-                                    info@sunname.com.mx
-                                </div>
+                            <div class="sun-form__group">
+                                <label for="phone" class="sun-form__label">Teléfono <span
+                                        aria-hidden="true">*</span></label>
+                                <input type="tel" id="phone" name="phone" class="sun-form__input" required
+                                    aria-required="true" />
                             </div>
-
-                            <div class="sun-contact__info-item">
-                                <div class="sun-contact__info-icon u-flex-center">
-                                    <i class="fas fa-clock" aria-hidden="true"></i>
-                                </div>
-                                <div class="sun-contact__info-content">
-                                    <strong>Horario de atención</strong>
-                                    Lunes a Viernes: 8:00 AM - 6:00 PM<br />
-                                    Sábados: 9:00 AM - 2:00 PM
-                                </div>
+                            <div class="sun-form__group">
+                                <label for="email" class="sun-form__label">Email <span
+                                        aria-hidden="true">*</span></label>
+                                <input type="email" id="email" name="email" class="sun-form__input" required
+                                    aria-required="true" />
                             </div>
-
-                            <div style="background: rgba(255, 255, 255, 0.1); padding: 1.5rem; border-radius: 8px; margin-top: 2rem;">
-                                <h4 style="color: white; margin-bottom: 1rem; font-size: 1.1rem;">
-                                    📋 Visita sin costo incluye:
-                                </h4>
-                                <ul style="list-style: none; padding: 0; color: rgba(255, 255, 255, 0.9);">
-                                    <li style="margin-bottom: 0.5rem; display: flex; align-items: flex-start;">
-                                        <i class="fas fa-check" style="color: var(--sun-color-secondary); margin-right: 0.5rem; margin-top: 0.2rem;"></i>
-                                        <span>Análisis de tus procesos actuales</span>
-                                    </li>
-                                    <li style="margin-bottom: 0.5rem; display: flex; align-items: flex-start;">
-                                        <i class="fas fa-check" style="color: var(--sun-color-secondary); margin-right: 0.5rem; margin-top: 0.2rem;"></i>
-                                        <span>Demo personalizada del sistema</span>
-                                    </li>
-                                    <li style="margin-bottom: 0.5rem; display: flex; align-items: flex-start;">
-                                        <i class="fas fa-check" style="color: var(--sun-color-secondary); margin-right: 0.5rem; margin-top: 0.2rem;"></i>
-                                        <span>Propuesta de implementación</span>
-                                    </li>
-                                    <li style="display: flex; align-items: flex-start;">
-                                        <i class="fas fa-check" style="color: var(--sun-color-secondary); margin-right: 0.5rem; margin-top: 0.2rem;"></i>
-                                        <span>Estimado de ROI para tu planta</span>
-                                    </li>
-                                </ul>
+                            <div class="sun-form__group">
+                                <label for="industry" class="sun-form__label">Industria <span
+                                        aria-hidden="true">*</span></label>
+                                <select id="industry" name="industry" class="sun-form__select" required
+                                    aria-required="true">
+                                    <option value="">Selecciona tu industria</option>
+                                    <option value="electronics">Electrónica y Ensamble</option>
+                                    <option value="automotive">Automotriz</option>
+                                    <option value="packaging">Empaque y Embalaje</option>
+                                    <option value="food">Alimentos y Bebidas</option>
+                                    <option value="metalworking">Metal-Mecánica</option>
+                                    <option value="pharma">Farmacéutica y Química</option>
+                                    <option value="other">Otra</option>
+                                </select>
                             </div>
+                            <div class="sun-form__group">
+                                <label for="employees" class="sun-form__label">Número de empleados</label>
+                                <select id="employees" name="employees" class="sun-form__select">
+                                    <option value="">Selecciona un rango</option>
+                                    <option value="10-50">10-50 empleados</option>
+                                    <option value="51-100">51-100 empleados</option>
+                                    <option value="101-250">101-250 empleados</option>
+                                    <option value="251-500">251-500 empleados</option>
+                                    <option value="500+">Más de 500 empleados</option>
+                                </select>
+                            </div>
+                            <div class="sun-form__group">
+                                <label for="production-orders" class="sun-form__label">Órdenes de producción
+                                    mensuales</label>
+                                <select id="production-orders" name="production-orders" class="sun-form__select">
+                                    <option value="">Selecciona un rango</option>
+                                    <option value="less-50">Menos de 50</option>
+                                    <option value="50-200">50-200</option>
+                                    <option value="201-500">201-500</option>
+                                    <option value="500+">Más de 500</option>
+                                </select>
+                            </div>
+                            <div class="sun-form__group sun-form__full">
+                                <label for="message" class="sun-form__label">Cuéntanos sobre tu operación <span
+                                        aria-hidden="true">*</span></label>
+                                <textarea id="message" name="message" class="sun-form__textarea" required
+                                    aria-required="true"
+                                    placeholder="¿Qué produces? ¿Cuáles son tus principales retos? ¿Qué esperas lograr con la digitalización?"></textarea>
+                            </div>
+                            <div class="sun-form__checkbox-group sun-form__full">
+                                <input type="checkbox" id="privacy" name="privacy" class="sun-form__checkbox" required
+                                    aria-required="true" />
+                                <label for="privacy" class="sun-form__checkbox-label">
+                                    Acepto recibir información sobre Sunname Manufacturing y el tratamiento de mis datos
+                                    personales.
+                                </label>
+                            </div>
+                            <div class="sun-form__submit sun-form__full">
+                                <button type="submit" class="sun-btn sun-btn--accent"
+                                    style="width: 100%; background-color: white; color: var(--sun-color-primary);">
+                                    <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                                    Solicitar visita gratuita
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="sun-contact__info">
+                    <div>
+                        <h3 class="sun-contact__info-title">
+                            ¿Prefieres hablar directamente?
+                        </h3>
+                        <p class="sun-contact__info-text">
+                            Nuestro equipo de especialistas en manufactura está disponible para resolver tus dudas y
+                            agendar una visita a tu planta.
+                        </p>
+
+                        <div class="sun-contact__info-item">
+                            <div class="sun-contact__info-icon u-flex-center">
+                                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                            </div>
+                            <div class="sun-contact__info-content">
+                                <strong>WhatsApp</strong>
+                                <a href="https://wa.me/5217711014687?text=Hola%2C%20me%20interesa%20Sunname%20Manufacturing"
+                                    style="color: white;">+52 1 771 101 4687</a>
+                            </div>
+                        </div>
+
+                        <div class="sun-contact__info-item">
+                            <div class="sun-contact__info-icon u-flex-center">
+                                <i class="fas fa-phone" aria-hidden="true"></i>
+                            </div>
+                            <div class="sun-contact__info-content">
+                                <strong>Llamada directa</strong>
+                                +52 1 771 101 4687
+                            </div>
+                        </div>
+
+                        <div class="sun-contact__info-item">
+                            <div class="sun-contact__info-icon u-flex-center">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                            </div>
+                            <div class="sun-contact__info-content">
+                                <strong>Email</strong>
+                                info@sunname.com.mx
+                            </div>
+                        </div>
+
+                        <div class="sun-contact__info-item">
+                            <div class="sun-contact__info-icon u-flex-center">
+                                <i class="fas fa-clock" aria-hidden="true"></i>
+                            </div>
+                            <div class="sun-contact__info-content">
+                                <strong>Horario de atención</strong>
+                                Lunes a Viernes: 8:00 AM - 6:00 PM<br />
+                                Sábados: 9:00 AM - 2:00 PM
+                            </div>
+                        </div>
+
+                        <div
+                            style="background: rgba(255, 255, 255, 0.1); padding: 1.5rem; border-radius: 8px; margin-top: 2rem;">
+                            <h4 style="color: white; margin-bottom: 1rem; font-size: 1.1rem;">
+                                📋 Visita sin costo incluye:
+                            </h4>
+                            <ul style="list-style: none; padding: 0; color: rgba(255, 255, 255, 0.9);">
+                                <li style="margin-bottom: 0.5rem; display: flex; align-items: flex-start;">
+                                    <i class="fas fa-check"
+                                        style="color: var(--sun-color-secondary); margin-right: 0.5rem; margin-top: 0.2rem;"></i>
+                                    <span>Análisis de tus procesos actuales</span>
+                                </li>
+                                <li style="margin-bottom: 0.5rem; display: flex; align-items: flex-start;">
+                                    <i class="fas fa-check"
+                                        style="color: var(--sun-color-secondary); margin-right: 0.5rem; margin-top: 0.2rem;"></i>
+                                    <span>Demo personalizada del sistema</span>
+                                </li>
+                                <li style="margin-bottom: 0.5rem; display: flex; align-items: flex-start;">
+                                    <i class="fas fa-check"
+                                        style="color: var(--sun-color-secondary); margin-right: 0.5rem; margin-top: 0.2rem;"></i>
+                                    <span>Propuesta de implementación</span>
+                                </li>
+                                <li style="display: flex; align-items: flex-start;">
+                                    <i class="fas fa-check"
+                                        style="color: var(--sun-color-secondary); margin-right: 0.5rem; margin-top: 0.2rem;"></i>
+                                    <span>Estimado de ROI para tu planta</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- =============== FOOTER =============== -->
-        <footer class="sun-footer" aria-labelledby="footer-heading">
-            <div class="sun__container">
-                <div class="sun-footer__content">
-                    <div class="sun-footer__brand u-flex-col u-flex-center">
-                        <img src="https://www.sunname.com.mx/web/image/website/1/logo/Sunname%20Technologies?unique=4a29342" alt="Logo Sunname Technologies" class="sun-footer__logo-img" loading="lazy" />
-                        <p style="color: rgba(255, 255, 255, 0.8); text-align: center; margin-top: 1rem;">
-                            Sunname Manufacturing - Digitalización para la industria mexicana
-                        </p>
-                    </div>
-
-                    <div class="sun-footer__grid">
-                        <nav class="sun-footer__links" aria-label="Soluciones">
-                            <h3 class="sun-footer__heading">Soluciones</h3>
-                            <ul class="sun-footer__menu">
-                                <li>
-                                    <a href="#Modulos" class="sun-footer__link">Gestión de Producción</a>
-                                </li>
-                                <li>
-                                    <a href="#Modulos" class="sun-footer__link">Control de Inventario</a>
-                                </li>
-                                <li>
-                                    <a href="#Modulos" class="sun-footer__link">Control de Calidad</a>
-                                </li>
-                                <li>
-                                    <a href="#Modulos" class="sun-footer__link">Mantenimiento</a>
-                                </li>
-                            </ul>
-                        </nav>
-
-                        <nav class="sun-footer__links" aria-label="Industrias">
-                            <h3 class="sun-footer__heading">Industrias</h3>
-                            <ul class="sun-footer__menu">
-                                <li>
-                                    <a href="#Industrias" class="sun-footer__link">Electrónica</a>
-                                </li>
-                                <li>
-                                    <a href="#Industrias" class="sun-footer__link">Automotriz</a>
-                                </li>
-                                <li>
-                                    <a href="#Industrias" class="sun-footer__link">Alimentos</a>
-                                </li>
-                                <li>
-                                    <a href="#Industrias" class="sun-footer__link">Metal-Mecánica</a>
-                                </li>
-                            </ul>
-                        </nav>
-
-                        <div class="sun-footer__contact">
-                            <h3 class="sun-footer__heading">Contacto</h3>
-                            <ul class="sun-footer__contact-list">
-                                <li class="sun-footer__contact-item">
-                                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                                    <span>Zimapán, Hidalgo, México</span>
-                                </li>
-                                <li class="sun-footer__contact-item">
-                                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
-                                    <span>+52 81 3506 1795</span>
-                                </li>
-                                <li class="sun-footer__contact-item">
-                                    <i class="fas fa-envelope" aria-hidden="true"></i>
-                                    <span>info@sunname.com.mx</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+    <!-- =============== FOOTER =============== -->
+    <footer class="sun-footer" aria-labelledby="footer-heading">
+        <div class="sun__container">
+            <div class="sun-footer__content">
+                <div class="sun-footer__brand u-flex-col u-flex-center">
+                    <img src="https://www.sunname.com.mx/web/image/website/1/logo/Sunname%20Technologies?unique=4a29342"
+                        alt="Logo Sunname Technologies" class="sun-footer__logo-img" loading="lazy" />
+                    <p style="color: rgba(255, 255, 255, 0.8); text-align: center; margin-top: 1rem;">
+                        Sunname Manufacturing - Digitalización para la industria mexicana
+                    </p>
                 </div>
 
-                <div class="sun-footer__bottom u-flex-col u-flex-center">
-                    <div class="u-text-center u-w-full">
-                        <p class="sun-footer__copyright">
-                            &copy; 2025 Sunname Technologies. Todos los derechos reservados.
-                        </p>
-                        <div class="sun-footer__legal">
-                            <a href="https://www.sunname.com.mx/politica-de-privacidad" class="sun-footer__link">Política de Privacidad</a>
-                            <span style="color: #46c2ce; font-weight: bold;" aria-hidden="true">|</span>
-                            <a href="#" class="sun-footer__link">Términos y Condiciones</a>
-                        </div>
-                    </div>
-                    <div class="sun-footer__social u-flex-center u-margin-top-md u-w-full">
-                        <a href="https://www.facebook.com/sunnametech" class="sun-footer__social-link" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                        <a href="https://www.sunname.com.mx/website/social/linkedin" class="sun-footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
-                        <a href="https://www.instagram.com/sunnametech" class="sun-footer__social-link" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                        <a href="https://www.youtube.com/@sunnametech" class="sun-footer__social-link" aria-label="YouTube" target="_blank" rel="noopener"><i class="fab fa-youtube" aria-hidden="true"></i></a>
-                        <a href="https://wa.me/8135061795?text=Hola%2C%20me%20interesa%20Sunname%20Manufacturing" class="sun-footer__social-link" aria-label="WhatsApp" target="_blank" rel="noopener">
-                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
-                        </a>
+                <div class="sun-footer__grid">
+                    <nav class="sun-footer__links" aria-label="Soluciones">
+                        <h3 class="sun-footer__heading">Soluciones</h3>
+                        <ul class="sun-footer__menu">
+                            <li>
+                                <a href="#Modulos" class="sun-footer__link">Gestión de Producción</a>
+                            </li>
+                            <li>
+                                <a href="#Modulos" class="sun-footer__link">Control de Inventario</a>
+                            </li>
+                            <li>
+                                <a href="#Modulos" class="sun-footer__link">Control de Calidad</a>
+                            </li>
+                            <li>
+                                <a href="#Modulos" class="sun-footer__link">Mantenimiento</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <nav class="sun-footer__links" aria-label="Industrias">
+                        <h3 class="sun-footer__heading">Industrias</h3>
+                        <ul class="sun-footer__menu">
+                            <li>
+                                <a href="#Industrias" class="sun-footer__link">Electrónica</a>
+                            </li>
+                            <li>
+                                <a href="#Industrias" class="sun-footer__link">Automotriz</a>
+                            </li>
+                            <li>
+                                <a href="#Industrias" class="sun-footer__link">Alimentos</a>
+                            </li>
+                            <li>
+                                <a href="#Industrias" class="sun-footer__link">Metal-Mecánica</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="sun-footer__contact">
+                        <h3 class="sun-footer__heading">Contacto</h3>
+                        <ul class="sun-footer__contact-list">
+                            <li class="sun-footer__contact-item">
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                <span>Zimapán, Hidalgo, México</span>
+                            </li>
+                            <li class="sun-footer__contact-item">
+                                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                                <span>+52 1 771 101 4687</span>
+                            </li>
+                            <li class="sun-footer__contact-item">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                                <span>info@sunname.com.mx</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </footer>
-    </body>
 
-    <script>
-        // Validación del formulario de presupuesto
-        document.addEventListener("DOMContentLoaded", function () {
-            const budgetForm = document.querySelector("https://www.sunname.com.mx/manufactura#Hablemos-de-tu-planta form");
+            <div class="sun-footer__bottom u-flex-col u-flex-center">
+                <div class="u-text-center u-w-full">
+                    <p class="sun-footer__copyright">
+                        &copy; 2025 Sunname Technologies. Todos los derechos reservados.
+                    </p>
+                    <div class="sun-footer__legal">
+                        <a href="https://www.sunname.com.mx/politica-de-privacidad" class="sun-footer__link">Política de
+                            Privacidad</a>
+                        <span style="color: #46c2ce; font-weight: bold;" aria-hidden="true">|</span>
+                        <a href="#" class="sun-footer__link">Términos y Condiciones</a>
+                    </div>
+                </div>
+                <div class="sun-footer__social u-flex-center u-margin-top-md u-w-full">
+                    <a href="https://www.facebook.com/sunnametech" class="sun-footer__social-link" aria-label="Facebook"
+                        target="_blank" rel="noopener"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="https://www.sunname.com.mx/website/social/linkedin" class="sun-footer__social-link"
+                        aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"
+                            aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/sunnametech" class="sun-footer__social-link"
+                        aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"
+                            aria-hidden="true"></i></a>
+                    <a href="https://www.youtube.com/@sunnametech" class="sun-footer__social-link" aria-label="YouTube"
+                        target="_blank" rel="noopener"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                    <a href="https://wa.me/5217711014687?text=Hola%2C%20me%20interesa%20Sunname%20Manufacturing"
+                        class="sun-footer__social-link" aria-label="WhatsApp" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
 
-            if (budgetForm) {
-                budgetForm.addEventListener("submit", function (e) {
-                    e.preventDefault();
+<script>
+    // Validación del formulario de presupuesto
+    document.addEventListener("DOMContentLoaded", function () {
+        const budgetForm = document.querySelector("https://www.sunname.com.mx/manufactura#Hablemos-de-tu-planta form");
 
-                    // Validación básica
-                    const requiredFields = budgetForm.querySelectorAll("[required]");
-                    let isValid = true;
+        if (budgetForm) {
+            budgetForm.addEventListener("submit", function (e) {
+                e.preventDefault();
 
-                    requiredFields.forEach((field) => {
-                        if (!field.value.trim()) {
-                            field.style.borderColor = "red";
-                            isValid = false;
-                        } else {
-                            field.style.borderColor = "#e5e7eb";
-                        }
-                    });
+                // Validación básica
+                const requiredFields = budgetForm.querySelectorAll("[required]");
+                let isValid = true;
 
-                    if (isValid) {
-                        // Simular envío exitoso
-                        alert("¡Gracias! Tu solicitud de presupuesto ha sido enviada. Te contactaremos en las próximas 24 horas.");
-                        budgetForm.reset();
+                requiredFields.forEach((field) => {
+                    if (!field.value.trim()) {
+                        field.style.borderColor = "red";
+                        isValid = false;
                     } else {
-                        alert("Por favor, completa todos los campos requeridos.");
+                        field.style.borderColor = "#e5e7eb";
                     }
                 });
 
-                // Validación en tiempo real
-                const inputs = budgetForm.querySelectorAll("input, select, textarea");
-                inputs.forEach((input) => {
-                    input.addEventListener("blur", function () {
-                        if (this.hasAttribute("required") && !this.value.trim()) {
-                            this.style.borderColor = "red";
-                        } else {
-                            this.style.borderColor = "#e5e7eb";
-                        }
-                    });
-                });
-            }
-
-            // Animación de scroll para elementos
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: "0px 0px -50px 0px",
-            };
-
-            const observer = new IntersectionObserver(function (entries) {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = "1";
-                        entry.target.style.transform = "translateY(0)";
-                    }
-                });
-            }, observerOptions);
-
-            // Aplicar animación a tarjetas de módulos
-            document.querySelectorAll(".mf-module__card").forEach((card) => {
-                card.style.opacity = "0";
-                card.style.transform = "translateY(30px)";
-                card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-                observer.observe(card);
+                if (isValid) {
+                    // Simular envío exitoso
+                    alert("¡Gracias! Tu solicitud de presupuesto ha sido enviada. Te contactaremos en las próximas 24 horas.");
+                    budgetForm.reset();
+                } else {
+                    alert("Por favor, completa todos los campos requeridos.");
+                }
             });
+
+            // Validación en tiempo real
+            const inputs = budgetForm.querySelectorAll("input, select, textarea");
+            inputs.forEach((input) => {
+                input.addEventListener("blur", function () {
+                    if (this.hasAttribute("required") && !this.value.trim()) {
+                        this.style.borderColor = "red";
+                    } else {
+                        this.style.borderColor = "#e5e7eb";
+                    }
+                });
+            });
+        }
+
+        // Animación de scroll para elementos
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px",
+        };
+
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, observerOptions);
+
+        // Aplicar animación a tarjetas de módulos
+        document.querySelectorAll(".mf-module__card").forEach((card) => {
+            card.style.opacity = "0";
+            card.style.transform = "translateY(30px)";
+            card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+            observer.observe(card);
         });
-    </script>
+    });
+</script>
+
 </html>
