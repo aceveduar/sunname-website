@@ -1,0 +1,1637 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Pólizas de Soporte y Mantenimiento Odoo – Sunname. Atención prioritaria, desarrollo a la medida y mejora continua para tu operación en México.">
+  <title>Pólizas de Soporte Odoo | Sunname</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+    /* ══════════════════════════════════════════════════════
+       CORRECCIONES Y EXTENSIONES – NO SOBREESCRIBE style.css
+       ══════════════════════════════════════════════════════ */
+
+    /* ─ HERO ─────────────────────────────────────────────── */
+    .polizas-hero {
+      background: linear-gradient(135deg, var(--sun-color-dark) 0%, var(--sun-color-primary) 55%, #1a3a8a 100%);
+      padding: 5rem 0 4.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Patrón SVG sutil del hero del sitio */
+    .polizas-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath fill='%23ffffff' fill-opacity='0.03' d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7z'%3E%3C/path%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+
+    /* Orb decorativo cyan */
+    .polizas-hero__orb {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .polizas-hero__orb--tl {
+      width: 500px; height: 500px;
+      top: -200px; left: -150px;
+      background: radial-gradient(circle, rgba(70,194,206,0.08) 0%, transparent 70%);
+    }
+    .polizas-hero__orb--br {
+      width: 380px; height: 380px;
+      bottom: -140px; right: -100px;
+      background: radial-gradient(circle, rgba(127,82,160,0.12) 0%, transparent 70%);
+    }
+
+    .polizas-hero__inner {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .polizas-hero__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(70,194,206,0.1);
+      border: 1px solid rgba(70,194,206,0.3);
+      color: var(--sun-color-secondary);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 0.45rem 1.1rem;
+      border-radius: var(--sun-radius-full);
+      margin-bottom: 1.5rem;
+    }
+
+    .polizas-hero__title {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      color: var(--sun-color-white);
+      line-height: 1.18;
+      margin-bottom: 1.2rem;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .polizas-hero__title span {
+      color: var(--sun-color-secondary);
+    }
+
+    .polizas-hero__subtitle {
+      font-size: 1.05rem;
+      color: var(--sun-color-white-60);
+      max-width: 560px;
+      margin: 0 auto 2.2rem;
+      line-height: 1.7;
+    }
+
+    /* Hero buttons: sobre fondo oscuro usamos el patrón del sitio */
+    .polizas-hero__ctas {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    /* Botón "ghost" blanco para uso sobre fondos oscuros */
+    .sun-btn--ghost {
+      background: rgba(255,255,255,0.08);
+      border: 2px solid rgba(255,255,255,0.35);
+      color: var(--sun-color-white);
+    }
+    .sun-btn--ghost:hover {
+      background: rgba(255,255,255,0.16);
+      border-color: rgba(255,255,255,0.6);
+      color: var(--sun-color-white);
+      transform: translateY(-2px);
+    }
+
+    .polizas-hero__microcopy {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 2rem;
+    }
+
+    .polizas-hero__trust {
+      display: flex;
+      justify-content: center;
+      gap: 1.8rem;
+      flex-wrap: wrap;
+    }
+
+    .polizas-hero__trust span {
+      color: var(--sun-color-white-60);
+      font-size: 0.84rem;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .polizas-hero__trust i {
+      color: var(--sun-color-secondary);
+      font-size: 0.78rem;
+    }
+
+    /* ─ STATS BAND (confianza) ──────────────────────────── */
+    .polizas-stats {
+      background: var(--sun-color-white);
+      border-bottom: 1px solid #eef0f6;
+      padding: 2.5rem 0;
+    }
+
+    .polizas-stats__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 0;
+      text-align: center;
+    }
+
+    .polizas-stat {
+      padding: 1rem 1.5rem;
+      position: relative;
+    }
+
+    .polizas-stat + .polizas-stat::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 20%; bottom: 20%;
+      width: 1px;
+      background: #eef0f6;
+    }
+
+    .polizas-stat__number {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--sun-color-primary);
+      line-height: 1;
+      margin-bottom: 0.3rem;
+      background: var(--sun-gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .polizas-stat__label {
+      font-size: 0.82rem;
+      color: var(--sun-color-text-light);
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    /* ─ PAIN/INTRO ─────────────────────────────────────── */
+    .polizas-pain {
+      background: var(--sun-color-light);
+      padding: 4.5rem 0;
+    }
+
+    .polizas-pain__content {
+      max-width: 820px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .polizas-pain__lead {
+      font-size: 1.1rem;
+      color: var(--sun-color-text-light);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    .polizas-pain__lead strong {
+      color: var(--sun-color-primary);
+    }
+
+    .polizas-pain__callout {
+      background: var(--sun-color-white);
+      border-left: 4px solid var(--sun-color-secondary);
+      padding: 1.4rem 2rem;
+      border-radius: 0 var(--sun-radius-lg) var(--sun-radius-lg) 0;
+      box-shadow: var(--sun-shadow-sm);
+      text-align: left;
+    }
+
+    .polizas-pain__callout p {
+      font-size: 1.05rem;
+      color: var(--sun-color-primary);
+      font-style: italic;
+      font-weight: 600;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .polizas-pain__callout i {
+      color: var(--sun-color-secondary);
+      margin-right: 0.5rem;
+    }
+
+    /* ─ BENEFITS ────────────────────────────────────────── */
+    .polizas-benefits {
+      background: var(--sun-color-white);
+      padding: 5rem 0;
+    }
+
+    .polizas-benefits__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    /* Reutilizamos sun-process-step que ya tiene animación en style.css */
+    .polizas-benefit-item {
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }
+
+    .polizas-benefit-item .sun-icon-circle {
+      margin: 0 auto 1.2rem;
+    }
+
+    .polizas-benefit-item__title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--sun-color-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .polizas-benefit-item__desc {
+      font-size: 0.9rem;
+      color: var(--sun-color-text-light);
+      line-height: 1.6;
+    }
+
+    /* ─ PLANES ─────────────────────────────────────────── */
+    .polizas-plans {
+      background: var(--sun-color-light);
+      padding: 5rem 0;
+    }
+
+    .polizas-plans__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+      align-items: start;
+    }
+
+    /* ── Card base ── */
+    .plan-card {
+      background: var(--sun-color-white);
+      border: 1.5px solid #e2e5f0;
+      border-radius: var(--sun-radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform var(--sun-transition-normal), box-shadow var(--sun-transition-normal);
+    }
+
+    .plan-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--sun-shadow-lg);
+    }
+
+    /* Banda superior de color */
+    .plan-card__band {
+      height: 4px;
+      background: var(--sun-gradient-primary);
+    }
+
+    /* ── Card featured ── */
+    .plan-card--featured {
+      border-color: var(--sun-color-primary);
+      box-shadow: 0 8px 32px rgba(38,57,128,0.14);
+    }
+
+    .plan-card--featured .plan-card__band {
+      background: linear-gradient(90deg, var(--sun-color-secondary), #7F52A0, var(--sun-color-primary));
+      height: 5px;
+    }
+
+    /* Etiqueta "Más popular" */
+    .plan-card__popular {
+      background: linear-gradient(90deg, var(--sun-color-secondary), var(--sun-color-primary));
+      color: var(--sun-color-white);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 0.35rem 1rem;
+    }
+
+    /* ── Card head ── */
+    .plan-card__head {
+      padding: 1.8rem 1.8rem 1.4rem;
+      background: #f8f9fd;
+      border-bottom: 1px solid #eef0f6;
+    }
+
+    .plan-card--featured .plan-card__head {
+      background: linear-gradient(135deg, var(--sun-color-primary) 0%, var(--sun-color-dark) 100%);
+      border-bottom-color: rgba(255,255,255,0.08);
+    }
+
+    .plan-card__badge {
+      display: inline-block;
+      background: rgba(70,194,206,0.1);
+      border: 1px solid rgba(70,194,206,0.3);
+      color: var(--sun-color-primary);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 0.22rem 0.75rem;
+      border-radius: var(--sun-radius-full);
+      margin-bottom: 0.8rem;
+    }
+
+    .plan-card--featured .plan-card__badge {
+      background: rgba(70,194,206,0.15);
+      border-color: rgba(70,194,206,0.4);
+      color: var(--sun-color-secondary);
+    }
+
+    .plan-card__name {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--sun-color-primary);
+      margin-bottom: 0.3rem;
+      line-height: 1.3;
+    }
+
+    .plan-card--featured .plan-card__name {
+      color: var(--sun-color-white);
+    }
+
+    .plan-card__tagline {
+      font-size: 0.88rem;
+      color: var(--sun-color-text-light);
+      line-height: 1.5;
+      margin-bottom: 1.1rem;
+    }
+
+    .plan-card--featured .plan-card__tagline {
+      color: rgba(255,255,255,0.55);
+    }
+
+    .plan-card__price {
+      margin-top: 0.6rem;
+    }
+
+    .plan-card__amount {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--sun-color-primary);
+      letter-spacing: -1px;
+    }
+
+    .plan-card--featured .plan-card__amount {
+      color: var(--sun-color-secondary);
+    }
+
+    .plan-card__period {
+      font-size: 0.85rem;
+      color: #aab0cc;
+      margin-left: 4px;
+      font-weight: 400;
+    }
+
+    .plan-card__saving {
+      display: inline-block;
+      background: rgba(70,194,206,0.1);
+      color: #2a9ba6;
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 0.18rem 0.6rem;
+      border-radius: var(--sun-radius-full);
+      margin-left: 6px;
+      vertical-align: middle;
+      letter-spacing: 0.5px;
+    }
+
+    .plan-card--featured .plan-card__saving {
+      background: rgba(70,194,206,0.18);
+      color: var(--sun-color-secondary);
+    }
+
+    .plan-card__price-note {
+      display: block;
+      font-size: 0.75rem;
+      color: #aab0cc;
+      margin-top: 0.25rem;
+    }
+
+    .plan-card--featured .plan-card__price-note {
+      color: rgba(255,255,255,0.35);
+    }
+
+    /* ── Card body ── */
+    .plan-card__body {
+      padding: 1.6rem 1.8rem 1.8rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Lista de features usando clases nativas */
+    .plan-card__features {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1.4rem;
+      flex: 1;
+    }
+
+    .plan-card__features li {
+      position: relative;
+      padding: 0.55rem 0 0.55rem 1.6rem;
+      border-bottom: 1px solid #f2f3f8;
+      font-size: 0.9rem;
+      color: var(--sun-color-text);
+      line-height: 1.45;
+    }
+
+    .plan-card__features li:last-child {
+      border-bottom: none;
+    }
+
+    .plan-card__features li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      top: 0.55rem;
+      color: var(--sun-color-secondary);
+      font-weight: 700;
+      font-size: 0.8rem;
+    }
+
+    .plan-card__features li strong {
+      color: var(--sun-color-primary);
+      font-weight: 700;
+    }
+
+    /* Primer ítem "todo lo del plan esencial + ..." */
+    .plan-card__features li.feat-intro {
+      font-style: italic;
+      color: var(--sun-color-text-light);
+      font-size: 0.84rem;
+    }
+
+    .plan-card__features li.feat-intro::before {
+      content: '';
+    }
+
+    /* SLA pills */
+    .plan-card__sla {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      background: var(--sun-color-light);
+      border-radius: var(--sun-radius-md);
+      padding: 0.85rem 0.3rem;
+      margin-bottom: 1.4rem;
+      gap: 0;
+    }
+
+    .sla-pill {
+      text-align: center;
+      padding: 0 0.4rem;
+    }
+
+    .sla-pill + .sla-pill {
+      border-left: 1px solid #e2e5f0;
+    }
+
+    .sla-pill__val {
+      display: block;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--sun-color-primary);
+      letter-spacing: -0.5px;
+    }
+
+    .sla-pill__lbl {
+      display: block;
+      font-size: 0.64rem;
+      color: #9099b7;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-top: 2px;
+      line-height: 1.3;
+    }
+
+    .plan-card__microcopy {
+      text-align: center;
+      font-size: 0.75rem;
+      color: #aab0cc;
+      margin-top: 0.75rem;
+    }
+
+    /* ─ COMPARE ─────────────────────────────────────────── */
+    .polizas-compare {
+      background: var(--sun-color-white);
+      padding: 5rem 0;
+    }
+
+    .polizas-compare__wrap {
+      overflow-x: auto;
+      border-radius: var(--sun-radius-lg);
+      box-shadow: var(--sun-shadow-md);
+      margin-top: 2.5rem;
+    }
+
+    .polizas-compare__table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      min-width: 520px;
+    }
+
+    .polizas-compare__table thead th {
+      padding: 1rem 1.4rem;
+      text-align: left;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .polizas-compare__table thead th:first-child {
+      background: var(--sun-color-primary);
+      color: var(--sun-color-white);
+    }
+
+    .polizas-compare__table thead th:nth-child(2) {
+      background: #354da0;
+      color: rgba(255,255,255,0.85);
+      text-align: center;
+    }
+
+    .polizas-compare__table thead th:last-child {
+      background: var(--sun-color-dark);
+      color: var(--sun-color-secondary);
+      text-align: center;
+    }
+
+    .polizas-compare__table tbody tr {
+      border-bottom: 1px solid #eef0f6;
+      transition: background var(--sun-transition-fast);
+    }
+
+    .polizas-compare__table tbody tr:nth-child(even) {
+      background: #f9fafd;
+    }
+
+    .polizas-compare__table tbody tr:hover {
+      background: #eef1fc;
+    }
+
+    .polizas-compare__table tbody td {
+      padding: 0.82rem 1.4rem;
+      color: var(--sun-color-text);
+      vertical-align: middle;
+    }
+
+    .polizas-compare__table tbody td:first-child {
+      font-weight: 600;
+      color: var(--sun-color-primary);
+      font-size: 0.86rem;
+    }
+
+    .polizas-compare__table tbody td:nth-child(2),
+    .polizas-compare__table tbody td:last-child {
+      text-align: center;
+    }
+
+    .polizas-compare__table tbody td:last-child {
+      color: #6a44a0;
+      font-weight: 700;
+    }
+
+    .compare-yes { color: var(--sun-color-secondary); font-weight: 800; font-size: 1.15rem; }
+    .compare-no  { color: #d0d4e8; font-size: 1.1rem; }
+
+    /* Nota al pie de tabla */
+    .polizas-compare__note {
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--sun-color-text-light);
+      margin-top: 1.2rem;
+    }
+
+    /* ─ PROCESO ─────────────────────────────────────────── */
+    .polizas-process {
+      background: var(--sun-color-light);
+      padding: 5rem 0;
+    }
+
+    .polizas-process__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+      position: relative;
+    }
+
+    /* Línea conectora horizontal entre pasos (solo desktop) */
+    @media (min-width: 769px) {
+      .polizas-process__grid::before {
+        content: '';
+        position: absolute;
+        top: 2.2rem;
+        left: calc(12.5% + 20px);
+        right: calc(12.5% + 20px);
+        height: 2px;
+        background: linear-gradient(90deg, var(--sun-color-secondary), var(--sun-color-primary));
+        z-index: 0;
+        opacity: 0.25;
+      }
+    }
+
+    .polizas-process__step {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 2rem 1.4rem 1.6rem;
+    }
+
+    .polizas-process__num {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--sun-color-primary), var(--sun-color-dark));
+      color: var(--sun-color-white);
+      font-size: 0.95rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.1rem;
+      box-shadow: 0 4px 12px rgba(38,57,128,0.25);
+      border: 3px solid var(--sun-color-white);
+    }
+
+    .polizas-process__title {
+      font-size: 0.97rem;
+      font-weight: 700;
+      color: var(--sun-color-primary);
+      margin-bottom: 0.45rem;
+    }
+
+    .polizas-process__desc {
+      font-size: 0.86rem;
+      color: var(--sun-color-text-light);
+      line-height: 1.6;
+    }
+
+    /* Severidades */
+    .polizas-severity {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.2rem;
+      margin-top: 3rem;
+    }
+
+    .severity-card {
+      background: var(--sun-color-white);
+      border-radius: var(--sun-radius-lg);
+      padding: 1.4rem;
+      text-align: center;
+      box-shadow: var(--sun-shadow-sm);
+    }
+
+    .severity-card--p1 { border-top: 3px solid #ef4444; }
+    .severity-card--p2 { border-top: 3px solid var(--sun-color-accent); }
+    .severity-card--p3 { border-top: 3px solid var(--sun-color-secondary); }
+
+    .severity-card__emoji { font-size: 1.6rem; margin-bottom: 0.4rem; }
+    .severity-card__label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+    .severity-card--p1 .severity-card__label { color: #ef4444; }
+    .severity-card--p2 .severity-card__label { color: #d97706; }
+    .severity-card--p3 .severity-card__label { color: var(--sun-color-secondary); }
+
+    .severity-card__desc {
+      font-size: 0.82rem;
+      color: var(--sun-color-text-light);
+      line-height: 1.55;
+    }
+
+    /* ─ FAQ ─────────────────────────────────────────────── */
+    .polizas-faq {
+      background: var(--sun-color-white);
+      padding: 5rem 0;
+    }
+
+    .polizas-faq__list {
+      max-width: 780px;
+      margin: 2.5rem auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .faq-item {
+      background: var(--sun-color-light);
+      border-radius: var(--sun-radius-lg);
+      overflow: hidden;
+      border: 1px solid transparent;
+      transition: border-color var(--sun-transition-fast), box-shadow var(--sun-transition-fast);
+    }
+
+    .faq-item.open {
+      border-color: rgba(70,194,206,0.3);
+      box-shadow: var(--sun-shadow-sm);
+    }
+
+    .faq-item__q {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.2rem 1.5rem;
+      text-align: left;
+      font-size: 0.97rem;
+      font-weight: 600;
+      color: var(--sun-color-primary);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      font-family: var(--sun-font-family);
+      transition: color var(--sun-transition-fast);
+    }
+
+    .faq-item__q:hover { color: var(--sun-color-secondary); }
+
+    .faq-item__q i {
+      color: var(--sun-color-secondary);
+      font-size: 0.85rem;
+      transition: transform var(--sun-transition-normal);
+      flex-shrink: 0;
+    }
+
+    .faq-item.open .faq-item__q i {
+      transform: rotate(180deg);
+    }
+
+    .faq-item__a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.38s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    .faq-item.open .faq-item__a {
+      max-height: 320px;
+    }
+
+    .faq-item__a p {
+      padding: 0 1.5rem 1.3rem;
+      font-size: 0.93rem;
+      color: var(--sun-color-text-light);
+      line-height: 1.75;
+    }
+
+    /* ─ CTA FINAL ───────────────────────────────────────── */
+    .polizas-cta {
+      background: linear-gradient(145deg, var(--sun-color-dark) 0%, var(--sun-color-primary) 60%, #1a3a8a 100%);
+      padding: 5rem 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .polizas-cta::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath fill='%23ffffff' fill-opacity='0.03' d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7z'%3E%3C/path%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+
+    .polizas-cta__orb {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .polizas-cta__orb--tr {
+      width: 380px; height: 380px;
+      top: -150px; right: -100px;
+      background: radial-gradient(circle, rgba(70,194,206,0.09) 0%, transparent 70%);
+    }
+    .polizas-cta__orb--bl {
+      width: 300px; height: 300px;
+      bottom: -120px; left: -80px;
+      background: radial-gradient(circle, rgba(127,82,160,0.1) 0%, transparent 70%);
+    }
+
+    .polizas-cta__inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .polizas-cta h2 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 700;
+      color: var(--sun-color-white);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .polizas-cta h2 span {
+      color: var(--sun-color-secondary);
+    }
+
+    .polizas-cta p {
+      font-size: 1rem;
+      color: var(--sun-color-white-60);
+      max-width: 500px;
+      margin: 0 auto 2.2rem;
+      line-height: 1.7;
+    }
+
+    .polizas-cta__buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+
+    .polizas-cta__guarantees {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .polizas-cta__guarantees span {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.4);
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .polizas-cta__guarantees i {
+      color: var(--sun-color-secondary);
+      font-size: 0.75rem;
+    }
+
+    /* ─ STICKY WHATSAPP ─────────────────────────────────── */
+    .sticky-wa {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 999;
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      background: #25D366;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.55rem;
+      box-shadow: 0 4px 18px rgba(37,211,102,0.45);
+      transition: transform var(--sun-transition-normal), box-shadow var(--sun-transition-normal);
+      text-decoration: none;
+    }
+
+    .sticky-wa:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 24px rgba(37,211,102,0.55);
+      color: #fff;
+    }
+
+    /* ─ RESPONSIVE ──────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .polizas-hero { padding: 3.5rem 0 3rem; }
+      .polizas-hero__trust { gap: 0.8rem; }
+      .polizas-plans__grid { grid-template-columns: 1fr; }
+      .polizas-stat + .polizas-stat::before { display: none; }
+      .polizas-stats__grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    }
+
+    @media (max-width: 575px) {
+      .polizas-hero__ctas { flex-direction: column; align-items: center; }
+      .polizas-hero__ctas .sun-btn { width: 100%; max-width: 300px; }
+      .polizas-hero__trust { flex-direction: column; align-items: center; }
+      .polizas-cta__buttons { flex-direction: column; align-items: center; }
+      .polizas-cta__buttons .sun-btn { width: 100%; max-width: 300px; }
+      .polizas-cta__guarantees { flex-direction: column; align-items: center; gap: 0.5rem; }
+      .polizas-stats__grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+
+<body>
+<main class="sun">
+
+  <!-- ══════════════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════════════ -->
+  <section class="polizas-hero" id="Inicio" aria-labelledby="hero-title">
+    <div class="polizas-hero__orb polizas-hero__orb--tl"></div>
+    <div class="polizas-hero__orb polizas-hero__orb--br"></div>
+
+    <div class="sun__container">
+      <div class="polizas-hero__inner">
+
+        <div class="polizas-hero__eyebrow">
+          <i class="fas fa-shield-alt" aria-hidden="true"></i>
+          Nuevo · Pólizas de Soporte 2025
+        </div>
+
+        <h1 id="hero-title" class="polizas-hero__title">
+          Tu Odoo merece más que<br>
+          <span>soporte reactivo</span>
+        </h1>
+
+        <p class="polizas-hero__subtitle">
+          Atención prioritaria, mejora continua y un equipo experto que cuida tu operación todos los días. Protege tu inversión en Odoo con una póliza a tu medida.
+        </p>
+
+        <div class="polizas-hero__ctas">
+          <a href="#planes" class="sun-btn sun-btn--ghost">
+            <i class="fas fa-layer-group" aria-hidden="true"></i>
+            Ver planes y precios
+          </a>
+          <a href="https://www.sunname.com.mx/book/fc1b3099" class="sun-btn sun-btn--primary">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            Agendar sesión gratuita
+          </a>
+        </div>
+
+        <p class="polizas-hero__microcopy">Sin compromiso · 30 minutos · Personalizada para tu operación</p>
+
+        <div class="polizas-hero__trust" role="list">
+          <span role="listitem"><i class="fas fa-check-circle"></i> SLAs garantizados por escrito</span>
+          <span role="listitem"><i class="fas fa-check-circle"></i> Equipo 100% en México</span>
+          <span role="listitem"><i class="fas fa-check-circle"></i> Partner oficial Odoo</span>
+          <span role="listitem"><i class="fas fa-check-circle"></i> Soporte en español</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       STATS — BANDA DE CONFIANZA
+  ══════════════════════════════════════════════════════ -->
+  <div class="polizas-stats" aria-label="Números de Sunname">
+    <div class="sun__container">
+      <div class="polizas-stats__grid">
+        <div class="polizas-stat">
+          <div class="polizas-stat__number">+60</div>
+          <div class="polizas-stat__label">Empresas implementadas</div>
+        </div>
+        <div class="polizas-stat">
+          <div class="polizas-stat__number">5+</div>
+          <div class="polizas-stat__label">Años como Partner Odoo</div>
+        </div>
+        <div class="polizas-stat">
+          <div class="polizas-stat__number">&lt; 2h</div>
+          <div class="polizas-stat__label">Primera respuesta promedio</div>
+        </div>
+        <div class="polizas-stat">
+          <div class="polizas-stat__number">100%</div>
+          <div class="polizas-stat__label">Equipo en México, en español</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       PAIN / INTRO
+  ══════════════════════════════════════════════════════ -->
+  <section class="polizas-pain sun__section" aria-labelledby="pain-title">
+    <div class="sun__container">
+      <div class="polizas-pain__content">
+        <header class="sun-header u-text-center">
+          <h2 id="pain-title" class="sun-header__title">El problema que ningún ERP resuelve solo</h2>
+        </header>
+        <p class="polizas-pain__lead">
+          Has invertido en implementar Odoo. Es una decisión estratégica que merece seguimiento y cuidado constante. Sin embargo, la realidad del día a día puede hacer que los sistemas queden desatendidos: <strong>errores sin resolver, configuraciones sin optimizar</strong> y equipos que no aprovechan el sistema al máximo.
+          <br><br>
+          La continuidad operativa no es un lujo. Es una necesidad del negocio. Por eso creamos nuestras pólizas: para que tengas un equipo experto siempre disponible, sin depender de proyectos puntuales.
+        </p>
+        <div class="polizas-pain__callout" role="note">
+          <p>
+            <i class="fas fa-lightbulb" aria-hidden="true"></i>
+            "¿Cuánto le cuesta a tu empresa cada hora que Odoo no funciona como debería?"
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       BENEFICIOS
+  ══════════════════════════════════════════════════════ -->
+  <section class="polizas-benefits sun__section sun__section--white" aria-labelledby="benefits-title">
+    <div class="sun__container">
+      <header class="sun-header u-text-center">
+        <h2 id="benefits-title" class="sun-header__title">Lo que obtienes con una póliza</h2>
+        <p class="sun-header__subtitle">Más que soporte técnico: un aliado estratégico que cuida tu operación</p>
+      </header>
+      <div class="polizas-benefits__grid">
+
+        <div class="polizas-benefit-item sun-process-step sun-card">
+          <div class="sun-icon-circle sun-icon-circle--large u-flex-center">
+            <i class="fas fa-bolt" aria-hidden="true"></i>
+          </div>
+          <h3 class="sun-process-step__title">Respuesta Garantizada</h3>
+          <p class="sun-process-step__description">SLAs definidos por escrito para cada nivel de criticidad. Tus incidentes atendidos en horas, no días.</p>
+        </div>
+
+        <div class="polizas-benefit-item sun-process-step sun-card">
+          <div class="sun-icon-circle sun-icon-circle--large u-flex-center">
+            <i class="fas fa-tools" aria-hidden="true"></i>
+          </div>
+          <h3 class="sun-process-step__title">Desarrollo a la Medida</h3>
+          <p class="sun-process-step__description">Customizaciones, reportes y automatizaciones incluidas. Tu sistema evoluciona al ritmo de tu negocio.</p>
+        </div>
+
+        <div class="polizas-benefit-item sun-process-step sun-card">
+          <div class="sun-icon-circle sun-icon-circle--large u-flex-center">
+            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+          </div>
+          <h3 class="sun-process-step__title">Capacitación Continua</h3>
+          <p class="sun-process-step__description">Sesiones mensuales para que tu equipo domine Odoo, adopte buenas prácticas y use el sistema al 100%.</p>
+        </div>
+
+        <div class="polizas-benefit-item sun-process-step sun-card">
+          <div class="sun-icon-circle sun-icon-circle--large u-flex-center">
+            <i class="fas fa-chart-line" aria-hidden="true"></i>
+          </div>
+          <h3 class="sun-process-step__title">Mejora Evolutiva</h3>
+          <p class="sun-process-step__description">Revisamos tus procesos, proponemos optimizaciones e implementamos nuevas funcionalidades de Odoo.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       PLANES
+  ══════════════════════════════════════════════════════ -->
+  <section class="polizas-plans sun__section" id="planes" aria-labelledby="planes-title">
+    <div class="sun__container">
+      <header class="sun-header u-text-center">
+        <h2 id="planes-title" class="sun-header__title">Elige el plan que necesitas</h2>
+        <p class="sun-header__subtitle">Dos opciones diseñadas según el ritmo y la exigencia de tu operación</p>
+      </header>
+
+      <div class="polizas-plans__grid">
+
+        <!-- ── PLAN ESENCIAL ── -->
+        <article class="plan-card" aria-labelledby="plan-esencial-name">
+          <div class="plan-card__band"></div>
+          <div class="plan-card__head">
+            <span class="plan-card__badge">Plan Esencial</span>
+            <h3 id="plan-esencial-name" class="plan-card__name">Para operaciones en crecimiento</h3>
+            <p class="plan-card__tagline">Acompañamiento confiable, estabilidad operativa y mejoras puntuales.</p>
+            <div class="plan-card__price">
+              <span class="plan-card__amount">$5,000</span>
+              <span class="plan-card__period">MXN / mes</span>
+              <span class="plan-card__saving">-20% anual</span>
+              <span class="plan-card__price-note">O $4,000/mes pagando anual · $48,000/año</span>
+            </div>
+          </div>
+          <div class="plan-card__body">
+            <ul class="plan-card__features" role="list">
+              <li><strong>Soporte funcional</strong> L–V 9:00–18:00 CDMX por portal y WhatsApp</li>
+              <li><strong>4 sesiones de capacitación</strong> de 2 hrs al mes (grabables)</li>
+              <li><strong>3 customizaciones menores</strong> incluidas (hasta 4 h c/u)</li>
+              <li>Ajustes de configuración y buenas prácticas en Odoo</li>
+              <li>Cargas de datos hasta 1,000 registros por lote</li>
+              <li>Actualizaciones menores sin cambio de versión mayor</li>
+              <li>Reporte mensual con bitácora y recomendaciones</li>
+            </ul>
+
+            <div class="plan-card__sla" role="list" aria-label="Tiempos de respuesta SLA">
+              <div class="sla-pill" role="listitem">
+                <span class="sla-pill__val">≤ 5 h</span>
+                <span class="sla-pill__lbl">🔴 P1 Crítico</span>
+              </div>
+              <div class="sla-pill" role="listitem">
+                <span class="sla-pill__val">≤ 8 h</span>
+                <span class="sla-pill__lbl">🟠 P2 Alto</span>
+              </div>
+              <div class="sla-pill" role="listitem">
+                <span class="sla-pill__val">≤ 24 h</span>
+                <span class="sla-pill__lbl">🟡 P3 Medio</span>
+              </div>
+            </div>
+
+            <a href="https://www.sunname.com.mx/shop/pol-ese-poliza-de-soporte-y-mantenimiento-esencial-5452"
+              class="sun-btn sun-btn--secondary u-w-full"
+              style="text-align:center;display:flex;justify-content:center;">
+              Contratar Plan Esencial
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <p class="plan-card__microcopy">Pago mensual · Contrato anual · Cancelación con 30 días de aviso</p>
+          </div>
+        </article>
+
+        <!-- ── PLAN EMPRESARIAL ── -->
+        <article class="plan-card plan-card--featured" aria-labelledby="plan-empresarial-name">
+          <div class="plan-card__popular" role="note">⭐ Más popular · Recomendado</div>
+          <div class="plan-card__band"></div>
+          <div class="plan-card__head">
+            <span class="plan-card__badge">Plan Empresarial</span>
+            <h3 id="plan-empresarial-name" class="plan-card__name">Para operaciones de mayor volumen</h3>
+            <p class="plan-card__tagline">Atención prioritaria, bolsa de desarrollo y gobernanza mensual.</p>
+            <div class="plan-card__price">
+              <span class="plan-card__amount">A tu medida</span>
+              <span class="plan-card__price-note">Cotización personalizada · Agenda una sesión estratégica</span>
+            </div>
+          </div>
+          <div class="plan-card__body">
+            <ul class="plan-card__features" role="list">
+              <li class="feat-intro">Todo lo del Plan Esencial, más:</li>
+              <li><strong>Horario extendido</strong> L–V 8:00–20:00 CDMX</li>
+              <li><strong>Guardia P1 los sábados</strong> 10:00–13:00 CDMX</li>
+              <li><strong>6 sesiones de capacitación avanzada</strong> al mes, temario a medida</li>
+              <li><strong>10 horas mensuales de desarrollo</strong> acumulables hasta 2 meses</li>
+              <li><strong>Líder de cuenta asignado</strong> + reunión mensual de gobernanza</li>
+              <li>Control de versiones, staging y acta de liberación a producción</li>
+              <li>Canal dedicado en Odoo para coordinación con tu equipo</li>
+              <li>Escalamiento a Odoo Enterprise y gestión con PAC y pasarelas</li>
+              <li><strong>Service credits del 5%</strong> si ≥2 incidentes P1 incumplen SLA en el mes</li>
+            </ul>
+
+            <div class="plan-card__sla" role="list" aria-label="Tiempos de respuesta SLA">
+              <div class="sla-pill" role="listitem">
+                <span class="sla-pill__val" style="color:#7F52A0;">≤ 1 h</span>
+                <span class="sla-pill__lbl">🔴 P1 Crítico</span>
+              </div>
+              <div class="sla-pill" role="listitem">
+                <span class="sla-pill__val" style="color:#7F52A0;">≤ 6 h</span>
+                <span class="sla-pill__lbl">🟠 P2 Alto</span>
+              </div>
+              <div class="sla-pill" role="listitem">
+                <span class="sla-pill__val" style="color:#7F52A0;">≤ 8 h</span>
+                <span class="sla-pill__lbl">🟡 P3 Medio</span>
+              </div>
+            </div>
+
+            <a href="https://www.sunname.com.mx/book/fc1b3099"
+              class="sun-btn sun-btn--primary u-w-full"
+              style="text-align:center;display:flex;justify-content:center;">
+              <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+              Agendar sesión estratégica
+            </a>
+            <p class="plan-card__microcopy">Sin compromiso · 30 minutos · Cotización personalizada</p>
+          </div>
+        </article>
+
+      </div><!-- /plans grid -->
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       COMPARATIVA
+  ══════════════════════════════════════════════════════ -->
+  <section class="polizas-compare sun__section sun__section--white" aria-labelledby="compare-title">
+    <div class="sun__container">
+      <header class="sun-header u-text-center">
+        <h2 id="compare-title" class="sun-header__title">Comparativa detallada</h2>
+        <p class="sun-header__subtitle">Encuentra exactamente qué incluye cada plan</p>
+      </header>
+
+      <div class="polizas-compare__wrap">
+        <table class="polizas-compare__table" role="table">
+          <thead>
+            <tr>
+              <th scope="col">Elemento</th>
+              <th scope="col">Esencial</th>
+              <th scope="col">Empresarial</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Precio base</td>
+              <td>$5,000 MXN/mes</td>
+              <td>A medida</td>
+            </tr>
+            <tr>
+              <td>Horario de atención</td>
+              <td>L–V 9:00–18:00 h</td>
+              <td>L–V 8:00–20:00 h</td>
+            </tr>
+            <tr>
+              <td>Guardia P1 fin de semana</td>
+              <td class="compare-no">—</td>
+              <td class="compare-yes">✓ Sáb 10–13 h</td>
+            </tr>
+            <tr>
+              <td>Canales de atención</td>
+              <td>Portal + WhatsApp</td>
+              <td>Portal + WhatsApp + Canal Odoo</td>
+            </tr>
+            <tr>
+              <td>Capacitaciones / mes</td>
+              <td>4 × 2 hrs</td>
+              <td>6 × 2 hrs (a medida)</td>
+            </tr>
+            <tr>
+              <td>Customizaciones incluidas</td>
+              <td>3 menores (≤4 h c/u)</td>
+              <td>3 menores + bolsa dev</td>
+            </tr>
+            <tr>
+              <td>Bolsa de desarrollo</td>
+              <td class="compare-no">—</td>
+              <td class="compare-yes">10 h/mes (acum. 2 meses)</td>
+            </tr>
+            <tr>
+              <td>SLA respuesta P1</td>
+              <td>≤ 5 h hábiles</td>
+              <td><strong>≤ 1 h hábil</strong></td>
+            </tr>
+            <tr>
+              <td>SLA respuesta P2</td>
+              <td>≤ 8 h hábiles</td>
+              <td>≤ 6 h hábiles</td>
+            </tr>
+            <tr>
+              <td>SLA respuesta P3</td>
+              <td>≤ 24 h hábiles</td>
+              <td>≤ 8 h hábiles</td>
+            </tr>
+            <tr>
+              <td>Líder de cuenta dedicado</td>
+              <td class="compare-no">—</td>
+              <td class="compare-yes">✓</td>
+            </tr>
+            <tr>
+              <td>Reunión mensual de gobernanza</td>
+              <td>Opcional</td>
+              <td class="compare-yes">✓ Incluida</td>
+            </tr>
+            <tr>
+              <td>Escalamiento a Odoo Enterprise</td>
+              <td class="compare-no">—</td>
+              <td class="compare-yes">✓</td>
+            </tr>
+            <tr>
+              <td>Service credits por SLA</td>
+              <td class="compare-no">—</td>
+              <td class="compare-yes">5% si P1 incumple ≥2/mes</td>
+            </tr>
+            <tr>
+              <td>Reporte mensual</td>
+              <td class="compare-yes">✓</td>
+              <td class="compare-yes">✓</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="polizas-compare__note">
+        <i class="fas fa-info-circle" style="color:var(--sun-color-secondary);" aria-hidden="true"></i>
+        Los SLAs son de primera respuesta. Los tiempos de resolución dependen de la complejidad del caso y validaciones del cliente.
+      </p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       PROCESO DE ATENCIÓN
+  ══════════════════════════════════════════════════════ -->
+  <section class="polizas-process sun__section" aria-labelledby="process-title">
+    <div class="sun__container">
+      <header class="sun-header u-text-center">
+        <h2 id="process-title" class="sun-header__title">¿Cómo funciona el soporte?</h2>
+        <p class="sun-header__subtitle">Un proceso claro, trazable y sin sorpresas de principio a fin</p>
+      </header>
+
+      <!-- Pasos -->
+      <div class="polizas-process__grid" role="list">
+        <div class="polizas-process__step sun-card" role="listitem">
+          <div class="polizas-process__num">1</div>
+          <h3 class="polizas-process__title">Abres un ticket</h3>
+          <p class="polizas-process__desc">Via portal, correo o WhatsApp. Incluye módulo afectado, pasos para reproducir y severidad sugerida.</p>
+        </div>
+        <div class="polizas-process__step sun-card" role="listitem">
+          <div class="polizas-process__num">2</div>
+          <h3 class="polizas-process__title">Triaging y respuesta</h3>
+          <p class="polizas-process__desc">Clasificamos la severidad y asignamos el consultor adecuado. Respondemos dentro del SLA contratado.</p>
+        </div>
+        <div class="polizas-process__step sun-card" role="listitem">
+          <div class="polizas-process__num">3</div>
+          <h3 class="polizas-process__title">Ejecución y pruebas</h3>
+          <p class="polizas-process__desc">Si aplica desarrollo: trabajamos en staging, hacemos QA y UAT contigo antes de liberar a producción.</p>
+        </div>
+        <div class="polizas-process__step sun-card" role="listitem">
+          <div class="polizas-process__num">4</div>
+          <h3 class="polizas-process__title">Cierre y bitácora</h3>
+          <p class="polizas-process__desc">Registramos el caso en tu reporte mensual: tiempos, solución aplicada y recomendaciones de mejora.</p>
+        </div>
+      </div>
+
+      <!-- Severidades -->
+      <div style="margin-top:3.5rem;">
+        <h3 class="sun-header__title" style="font-size:1.4rem;margin-bottom:1.5rem;padding-bottom:0.8rem;">Clasificación de severidad</h3>
+        <div class="polizas-severity">
+          <div class="severity-card severity-card--p1">
+            <div class="severity-card__emoji">🔴</div>
+            <span class="severity-card__label">P1 — Crítico</span>
+            <p class="severity-card__desc">Producción detenida, caída general del sistema o imposibilidad de facturar / recepcionar mercancía.</p>
+          </div>
+          <div class="severity-card severity-card--p2">
+            <div class="severity-card__emoji">🟠</div>
+            <span class="severity-card__label">P2 — Alto</span>
+            <p class="severity-card__desc">Funcionalidad clave degradada sin impacto financiero inmediato. Existe workaround parcial disponible.</p>
+          </div>
+          <div class="severity-card severity-card--p3">
+            <div class="severity-card__emoji">🟡</div>
+            <span class="severity-card__label">P3 — Medio / Bajo</span>
+            <p class="severity-card__desc">Consultas, mejoras, parametrizaciones o tareas planificables sin urgencia operativa.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       FAQ
+  ══════════════════════════════════════════════════════ -->
+  <section class="polizas-faq sun__section sun__section--white" aria-labelledby="faq-title">
+    <div class="sun__container">
+      <header class="sun-header u-text-center">
+        <h2 id="faq-title" class="sun-header__title">Preguntas frecuentes</h2>
+        <p class="sun-header__subtitle">Todo lo que necesitas saber antes de contratar</p>
+      </header>
+
+      <div class="polizas-faq__list" role="list">
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-item__q" aria-expanded="false" aria-controls="faq-1">
+            ¿El SLA es de respuesta o de resolución?
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="faq-item__a" id="faq-1" role="region" aria-hidden="true">
+            <p>El SLA garantizado es de <strong>primera respuesta</strong>. Los tiempos de resolución dependen de la complejidad del caso, validaciones del cliente y posibles terceros (PAC, pasarelas, Odoo Enterprise). Lo que sí comprometemos: tu caso estará atendido y en seguimiento activo dentro del tiempo acordado.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-item__q" aria-expanded="false" aria-controls="faq-2">
+            ¿Qué es una customización menor?
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="faq-item__a" id="faq-2" role="region" aria-hidden="true">
+            <p>Es cualquier desarrollo o ajuste que <strong>no modifica el núcleo de Odoo</strong>, con un alcance máximo de 4 horas de trabajo efectivo por customización. Ejemplos: nuevo campo + vista + dominio simple, server action para envío de correo, reporte QWeb sencillo, regla de seguridad básica, automatización sin integraciones externas.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-item__q" aria-expanded="false" aria-controls="faq-3">
+            ¿La bolsa de horas del Plan Empresarial se acumula?
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="faq-item__a" id="faq-3" role="region" aria-hidden="true">
+            <p>Sí. Las 10 horas mensuales son <strong>acumulables hasta 2 meses</strong> (máximo 20 horas acumuladas). Después de ese período las horas no utilizadas expiran. Si un requerimiento excede la bolsa disponible, se cotiza y aprueba antes de iniciar.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-item__q" aria-expanded="false" aria-controls="faq-4">
+            ¿Qué pasa si necesito algo fuera del alcance de mi plan?
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="faq-item__a" id="faq-4" role="region" aria-hidden="true">
+            <p>Las horas adicionales se cobran a la <strong>tarifa vigente por hora</strong>, que se informa en cotización. Siempre se solicita y aprueba antes de ejecutar cualquier trabajo adicional. Desarrollos que excedan 10 horas se cotizan como proyecto independiente.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-item__q" aria-expanded="false" aria-controls="faq-5">
+            ¿La póliza incluye upgrades de versión mayor de Odoo?
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="faq-item__a" id="faq-5" role="region" aria-hidden="true">
+            <p>No. Los upgrades de versión mayor, nuevas implantaciones, integraciones complejas (API/XML/EDI) y migraciones masivas de datos <strong>se cotizan como proyectos</strong>. La póliza cubre mantenimiento, soporte y mejoras evolutivas dentro de tu versión actual de Odoo.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-item__q" aria-expanded="false" aria-controls="faq-6">
+            ¿Puedo cancelar en cualquier momento?
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="faq-item__a" id="faq-6" role="region" aria-hidden="true">
+            <p>El contrato es por <strong>12 meses</strong> y se renueva automáticamente. Cualquiera de las partes puede terminar el servicio con <strong>30 días de aviso por escrito</strong> antes de la fecha de renovación. Los saldos pendientes y entregables aprobados se facturan al corte.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       CTA FINAL
+  ══════════════════════════════════════════════════════ -->
+  <section class="polizas-cta" aria-labelledby="cta-title">
+    <div class="polizas-cta__orb polizas-cta__orb--tr"></div>
+    <div class="polizas-cta__orb polizas-cta__orb--bl"></div>
+
+    <div class="sun__container">
+      <div class="polizas-cta__inner">
+        <h2 id="cta-title">¿Listo para proteger<br>tu <span>inversión en Odoo</span>?</h2>
+        <p>Agenda una sesión de 30 minutos con nuestro equipo. Sin compromiso, te ayudamos a identificar el plan que mejor se adapta a tu operación y volumen de transacciones.</p>
+        <div class="polizas-cta__buttons">
+          <a href="https://www.sunname.com.mx/book/fc1b3099" class="sun-btn sun-btn--primary">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            Agendar sesión estratégica
+          </a>
+          <a href="https://wa.me/5217711014687?text=Hola%2C%20me%20interesa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20p%C3%B3lizas%20de%20soporte"
+            class="sun-btn sun-btn--ghost" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            Hablar por WhatsApp
+          </a>
+          <a href="https://www.sunname.com.mx/#contactanos" class="sun-btn sun-btn--ghost"
+            style="background:transparent;border-color:rgba(255,255,255,0.2);color:rgba(255,255,255,0.65);">
+            Formulario de contacto
+          </a>
+        </div>
+        <div class="polizas-cta__guarantees" role="list">
+          <span role="listitem"><i class="fas fa-check-circle"></i> Sin compromiso</span>
+          <span role="listitem"><i class="fas fa-check-circle"></i> 30 minutos</span>
+          <span role="listitem"><i class="fas fa-check-circle"></i> Cotización personalizada</span>
+          <span role="listitem"><i class="fas fa-check-circle"></i> Respuesta en menos de 24 h</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main><!-- /sun -->
+
+<!-- ══════════════════════════════════════════════════════
+     FOOTER (idéntico al resto del sitio)
+══════════════════════════════════════════════════════ -->
+<footer class="sun-footer" id="Contacto" aria-labelledby="footer-heading">
+  <div class="sun__container">
+    <div class="sun-footer__content">
+      <div class="sun-footer__brand u-flex-col u-flex-center">
+        <img src="https://www.sunname.com.mx/web/image/website/1/logo/Sunname%20Technologies?unique=4a29342"
+          alt="Logo Sunname Technologies" class="sun-footer__logo-img" loading="lazy">
+      </div>
+
+      <div class="sun-footer__grid">
+        <nav class="sun-footer__links" aria-label="Servicios">
+          <h3 class="sun-footer__heading">Servicios</h3>
+          <ul class="sun-footer__menu">
+            <li><a href="index.html#Nuestros-Servicios" class="sun-footer__link">Implementación Odoo</a></li>
+            <li><a href="index.html#Nuestros-Servicios" class="sun-footer__link">Desarrollo a Medida</a></li>
+            <li><a href="#planes" class="sun-footer__link">Pólizas de Soporte</a></li>
+            <li><a href="index.html#Nuestros-Servicios" class="sun-footer__link">Consultoría ERP</a></li>
+          </ul>
+        </nav>
+
+        <nav class="sun-footer__links" aria-label="Empresa">
+          <h3 class="sun-footer__heading">Empresa</h3>
+          <ul class="sun-footer__menu">
+            <li><a href="nosotros.html" class="sun-footer__link">Nosotros</a></li>
+            <li><a href="nosotros.html#Equipo" class="sun-footer__link">Equipo</a></li>
+            <li><a href="index.html#Clientes" class="sun-footer__link">Clientes</a></li>
+            <li><a href="https://www.sunname.com.mx/book/fc1b3099" class="sun-footer__link">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <div class="sun-footer__contact">
+          <h3 class="sun-footer__heading">Contacto</h3>
+          <ul class="sun-footer__contact-list">
+            <li class="sun-footer__contact-item">
+              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              <span>Zimapán, Hidalgo, México</span>
+            </li>
+            <li class="sun-footer__contact-item">
+              <i class="fas fa-phone" aria-hidden="true"></i>
+              <span>+52 1 771 101 4687</span>
+            </li>
+            <li class="sun-footer__contact-item">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+              <a href="mailto:contacto@sunname.mx" class="sun-footer__link">contacto@sunname.mx</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="sun-footer__bottom u-flex-col u-flex-center">
+      <div class="u-text-center u-w-full">
+        <p class="sun-footer__copyright">
+          &copy; 2025 Sunname Technologies. Todos los derechos reservados.
+        </p>
+        <div class="sun-footer__legal">
+          <a href="https://www.sunname.com.mx/politica-de-privacidad" class="sun-footer__link">Política de Privacidad</a>
+          <span style="color:#46c2ce;font-weight:bold;" aria-hidden="true">|</span>
+          <a href="#" class="sun-footer__link">Aviso Legal</a>
+        </div>
+      </div>
+      <div class="sun-footer__social u-flex-center u-margin-top-md u-w-full">
+        <a href="https://www.facebook.com/sunnametech" class="sun-footer__social-link" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+        <a href="https://www.sunname.com.mx/website/social/linkedin" class="sun-footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/sunnametech" class="sun-footer__social-link" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://www.youtube.com/@sunnametech" class="sun-footer__social-link" aria-label="YouTube" target="_blank" rel="noopener"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+        <a href="https://wa.me/5217711014687?text=Hola%2C%20me%20interesa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20servicios%20que%20ofrecen"
+          class="sun-footer__social-link" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY WHATSAPP -->
+<a href="https://wa.me/5217711014687?text=Hola%2C%20me%20interesa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20p%C3%B3lizas%20de%20soporte"
+  class="sticky-wa"
+  aria-label="Contactar por WhatsApp"
+  target="_blank"
+  rel="noopener">
+  <i class="fab fa-whatsapp" aria-hidden="true"></i>
+</a>
+
+<!-- ══════════════════════════════════════════════════════
+     JAVASCRIPT
+══════════════════════════════════════════════════════ -->
+<script>
+  /* ── FAQ Accordion ── */
+  document.querySelectorAll('.faq-item__q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+
+      // Cerrar todos
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-item__q').setAttribute('aria-expanded', 'false');
+        i.querySelector('.faq-item__a').setAttribute('aria-hidden', 'true');
+      });
+
+      // Abrir el seleccionado (si estaba cerrado)
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+        item.querySelector('.faq-item__a').setAttribute('aria-hidden', 'false');
+      }
+    });
+  });
+
+  /* ── Smooth scroll para anclas ── */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href');
+      if (id === '#') return;
+      const target = document.querySelector(id);
+      if (target) {
+        e.preventDefault();
+        const offset = 20;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+
+  /* ── Intersection Observer: activa animaciones al entrar al viewport ── */
+  const observerOpts = { threshold: 0.12, rootMargin: '0px 0px -40px 0px' };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationPlayState = 'running';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOpts);
+
+  document.querySelectorAll('.sun-card, .sun-process-step, .plan-card, .severity-card, .faq-item').forEach(el => {
+    // Solo aplica si la animación es fadeInUp (del CSS)
+    el.style.animationPlayState = 'paused';
+    observer.observe(el);
+  });
+
+  /* ── Sticky WA: ocultar al llegar al footer ── */
+  const stickyWa = document.querySelector('.sticky-wa');
+  const footer = document.querySelector('.sun-footer');
+  if (stickyWa && footer) {
+    const waObserver = new IntersectionObserver(([entry]) => {
+      stickyWa.style.opacity = entry.isIntersecting ? '0' : '1';
+      stickyWa.style.pointerEvents = entry.isIntersecting ? 'none' : 'auto';
+    }, { threshold: 0.1 });
+    waObserver.observe(footer);
+  }
+</script>
+
+</body>
+</html>
